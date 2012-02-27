@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329982900.046405:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%38b394063ef5d8eb126993041e047ea5I"logical_path;
+FI"logo/sphinx.png;
+TI"pathname;
+FI",$root/app/assets/images/logo/sphinx.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-23T02:41:37-05:00;
+FI"length;
+FI"
+18142;
+FI"digest;
+F"%5b1571fe568071ae01fc1aabcf29e5faI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

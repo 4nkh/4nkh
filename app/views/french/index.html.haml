@@ -1,0 +1,60 @@
+- content_for :head do
+  :css
+    #header_inner{-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;box-shadow:-5px 10px 10px #999;}
+    
+- content_for :hd_inner do 
+  = render :partial => 'shared/banner'
+
+.clear &nbsp;
+.clear &nbsp;
+#title.group
+  .clear &nbsp;
+  %h2.h2_title Bienvenue
+  %ul{:class => "column first"}
+    %br
+    %p 4nkh development est une entreprise qui vous offres une gamme de produits et de solutions variées pour vos besoins logiciel et internet. Nous créeons des produits personnalisées adapté et répondant à vos exigences. Notre équipe bâtira votre platforme Internet, de jeux ou d'application en ajoutant les éléments requis pour que vos clients est une expérience efficace et agréable. Avec nous vos projets ce réaliseront et respecteront un standard de qualité inégalé. 
+    %br
+    %p Différent plans et stratégies vous sont offerts au travers plusieurs services pour satisfaire vos besoins et ambitions.
+     
+  %ul.column{:style => "border-right:2px solid #EEE;border-left:2px solid #EEE;"}
+    %br
+    %p Que ce soit pour informer les gens sur l'évolution de votre entreprise ou pour offrir une platefrome commercial de vente en ligne en passant par des produits tels que des forums de discussion évolués, des interfaces de clavardage, de gestion, de vidéo conférence et biens d'avantages. 4nkh development a la solution pour atteindre vos objectifs et mettre en place l'instrument technologique désiré.
+    %br
+    %p Nous vous incitons fortement à jeter un coup d'oeil sur nos plans de référencement pour les engins de recherche car ceux-ci maximiseront votre visibilité sur la toile.
+    %br
+
+  %ul{:class => "column last"}
+    %br
+    %p Nos plans d'hébergements, de gestions, de statistiques, de référencements ainsi que plusieurs autres sont à votre disposition pour maximiser tout le potentiel et le rendement au quel vous aspirer. 
+    %br
+    %p Choisissez parmis un large éventail d'utilitaires pouvant être ajouté à vos concept. Toute suggestions et requêtes technologique peuvent être utilisé, toujours selon vos préférence et ce pour plus de flexibilité. Que ce soit pour de la mobilité ou tout autre type de projet.
+    %br
+    %p Nous nous engageons à répondre à toutes vos questions, contactez-nous! 
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+.group
+  %ul{:class => "column first"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = link_to "site internet", "", :class => "btn-more"
+    .clear &nbsp; 
+
+  %ul.column
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = link_to "à propos", "", :class => "btn-more" 
+    .clear &nbsp;
+
+  %ul{:class => "column last"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = link_to "soumission", "", :class => "btn-more" 
+    .clear &nbsp;
+

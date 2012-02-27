@@ -1,0 +1,25 @@
+Migrating to CreateFolios (20090220011950)
+Migrating to ActsAsTaggableOnMigration (20091031211524)
+Migrating to CreateUsers (20091116231732)
+Migrating to CreatePosts (20091201091117)
+Migrating to CreateMovies (20100220011950)
+Migrating to AddAttachmentsPictureToMovie (20100221065408)
+Migrating to AddAttachmentsPictureToFolio (20100221065422)
+Migrating to AddPositionToUsers (20100222032003)
+Migrating to AddPositionToMovies (20100222032004)
+Migrating to AddAttachmentsPhotoToUser (20100222032007)
+Migrating to AddAttachmentsDemoToUser (20100222032222)
+Migrating to AddPositionToFolios (20100222032750)
+Migrating to AddAttachmentsFlvToMovie (20100227044428)
+Migrating to AddExtraFieldsToMovies (20100306060917)
+Migrating to AddCountFieldsToTag (20101218205005)
+Creating scope :limit. Overwriting existing method Post.limit.
+Creating scope :limit. Overwriting existing method User.limit.
+Creating scope :limit. Overwriting existing method Post.limit.
+Creating scope :limit. Overwriting existing method User.limit.
+Creating scope :limit. Overwriting existing method Post.limit.
+Creating scope :limit. Overwriting existing method User.limit.
+Creating scope :limit. Overwriting existing method Post.limit.
+Creating scope :limit. Overwriting existing method User.limit.
+Creating scope :limit. Overwriting existing method Post.limit.
+Creating scope :limit. Overwriting existing method User.limit.

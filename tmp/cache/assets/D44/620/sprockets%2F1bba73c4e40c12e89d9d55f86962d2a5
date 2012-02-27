@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329371182.619819:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%17954b956021cc03303c773c99f2c1b4I"logical_path;
+FI"<tinymce/jscripts/tiny_mce/plugins/emotions/emotions.htm;
+TI"pathname;
+FI"Y$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/emotions/emotions.htm;
+FI"content_type;
+FI"text/html;
+FI"
+mtime;
+FI"2012-02-12T16:19:02-05:00;
+FI"length;
+FI"	4485;
+FI"digest;
+F"%a07cdbd514a27cf14084fcdf7ffd0697I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

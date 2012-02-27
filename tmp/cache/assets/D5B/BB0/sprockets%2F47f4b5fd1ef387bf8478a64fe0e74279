@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329602700.137192:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%0a09374aaf41b11c2c3de94041627fe6I"logical_path;
+FI"hpremium.jpg;
+TI"pathname;
+FI")$root/app/assets/images/hpremium.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-14T13:23:36-05:00;
+FI"length;
+FI"
+67872;
+FI"digest;
+F"%0ea297cfb60d924e1c771e4d6d7c5aa7I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

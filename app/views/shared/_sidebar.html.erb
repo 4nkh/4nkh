@@ -1,0 +1,23 @@
+<div id="right-content-inner">
+<h3 style="padding-bottom:50px;">&nbsp;</h3>
+<div class="stripe">
+<h3><%= link_to '- TAG CLOUD -', '/tag_cloud' %></h3>
+        <div class="crn_blue">
+        </div>
+          <div class="crn_blue1">
+          </div>
+</div>
+
+<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+
+ <div class="tag_cloud"><a><%= link_to tag.name,"/posts/tagged/#{tag.name}" , :class => css_class %></a></div>
+<% end %>
+
+<div class="stripe1">
+<h3>- CALENDAR -</h3>
+        <div class="crn_orange">
+        </div>
+          <div class="crn_orange1">
+          </div>
+</div>
+</div>

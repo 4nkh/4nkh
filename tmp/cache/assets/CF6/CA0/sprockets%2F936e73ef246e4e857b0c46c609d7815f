@@ -1,0 +1,9 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.594562:@value{	I"length:EFiI"digest;
+F"%d700d5942a738854a85015c2fbb16769I"source;
+FI"tinyMCE.addI18n('en.autosave',{
+restore_content: "Restore auto-saved content",
+warning_message: "If you restore the saved content, you will lose all the content that is currently in the editor.\n\nAre you sure you want to restore the saved content?"
+});
+;
+FI"_version;
+F"%8467a6ee55915adf3be7366ea805df98

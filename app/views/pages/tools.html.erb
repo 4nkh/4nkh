@@ -1,0 +1,52 @@
+<%= content_for :head do %>
+<style> 
+     #header{z-index:2;height:130px !important;}
+     #header_inner{height:0;top:77px;}
+</style>
+<% end %>
+    <ul id="clientsList">
+    <!--<li id="metro"><a href="icaxon.html" title="Icaxon"><%= image_tag "logo/icaxon.png", :alt => "Icaxon" %></a></li>
+    <li id="sanfacon"><a href="artfox.html" title="Artfox"><%= image_tag "logo/artfox.png", :alt => "Artfox" %></a></li>
+  	<li id="acq"><a href="acq.html" title="Association de la construction du Québec"><%= image_tag "logo/acq.png", :alt => "Association de la construction du Québec" %></a></li>
+  	<li id="fruitsPassion" class="highlight"><a href="muzica.html" title="Fruits &amp; Passion"><%= image_tag "logo/muzica.png", :alt => "Muzica" %></a></li>
+  	<li id="mondou"><a href="twitcook.html" title="Twitcook"><%= image_tag "logo/twitcook.png", :alt => "Twitcook" %></a></li>
+  	<li id="stm"><a href="stm.html" title="STM"><%= image_tag "logo/stm.png", :alt => "STM" %></a></li>
+  	<li id="stHubert" class="highlight"><a href="http://socialhip.net" title="Socialship"><%= image_tag "logo/socialship.png", :alt => "Socialship" %></a></li>
+  	<li id="pmtRoy"><a href="pmt-roy.html" title="PMT ROY Assurances et services financiers"><%= image_tag "logo/pmt-roy.png", :alt => "PMT ROY Assurances et services financiers" %></a></li>
+  	<li id="elexpertise"><a href="elexpertise.html" title="Élexpertise"><%= image_tag "logo/elexpertise.jpg", :alt => "Élexpertise" %></a></li>
+  	<li id="tfo"><a href="tfo.html" title="TFO"><%= image_tag "logo/tfo.jpg", :alt => "TFO" %></a></li>
+  	<li id="sourisMini" class="highlight"><a href="souris-mini.html" title="Souris Mini"><%= image_tag "logo/souris-mini.jpg", :alt => "Souris Mini" %></a></li>
+  	<li id="rabaisAssurance"><a href="rabais-assurance.html" title="Rabais Assurance"><%= image_tag "logo/rabais-assurance.png", :alt => "Rabais Assurance" %></a></li>
+  	<li id="hemaQuebec"><a href="hema-qc.html" title="Hema-Québec"><%= image_tag "logo/hema-qc.png", :alt => "Hema-Québec" %></a></li>
+  	<li id="bombardier" class="highlight"><a href="notdork.html" title="Notdork"><%= image_tag "logo/notdork.png", :alt => "Notdork" %></a></li>
+  	<li id="voxco"><a href="voxco.html" title="Voxco"><%= image_tag "logo/voxco.png", :alt => "Voxco" %></a></li>
+  	<li id="lelarge"><a href="lelarge.html" title="Les Aliments Lelarge"><%= image_tag "logo/lelarge.png", :alt => "Les Aliments Lelarge" %></a></li>
+  	<li id="karotz"><a href="karotz.html" title="Karotz"><%= image_tag "logo/karotz.jpg", :alt => "Karotz" %></a></li>
+  	<li id="ino"><a href="ino.html" title="INO"><%= image_tag "logo/ino.jpg", :alt => "INO" %></a></li>-->
+    	<!--<li id="axa"><a href="axa.html" title="AXA Canada"><%= image_tag "logo/axa.png", :alt => "AXA Canada" %></a></li>
+    	<li id="bkom"><a href="bkom.html" title="Bkom"><%= image_tag "logo/bkom.jpg", :alt => "Bkom" %></a></li>
+    	<li id="clientsButton">
+    		<p>Nos clients<br />
+    			<a href="#clients" class="doShow">Voir la liste</a><a href="#clients" class="doHide">Masquer la liste</a></p>
+    	</li>-->
+
+      <li id="metro"><%= link_to image_tag("logo/mongo.png"), "http://www.mongodb.org", :alt => "mongoDB", :title => "mongoDB", :target => "_blank" %></li>
+      <li id="sanfacon"><%= link_to image_tag("logo/backbone.png"), "http://documentcloud.github.com/backbone", :alt => "backbone.js", :title => "backbone.js", :target => "_blank" %></li>
+    	<li id="acq"><%= link_to image_tag("logo/coffee.png"), "http://coffeescript.org", :alt => "coffeescript", :title => "coffeescript", :target => "_blank" %></li>
+    	<li id="fruitsPassion" class="highlight"><%= link_to image_tag("logo/ruby.png"), "http://www.ruby-lang.org/en", :alt => "ruby", :title => "ruby", :target => "_blank" %></li>
+    	<li id="mondou"><%= link_to image_tag("logo/varnish.png"), "https://www.varnish-cache.org", :alt => "varnish", :title => "varnish", :target => "_blank" %></li>
+    	<li id="stm"><%= link_to image_tag("logo/rhomobile.png"), "http://rhomobile.com", :alt => "rhomobile", :title => "rhomobile", :target => "_blank" %></li>
+    	<li id="stHubert" class="highlight"><%= link_to image_tag("logo/unicorn.png"), "http://unicorn.bogomips.org/index.html", :alt => "unicorn", :title => "unicorn", :target => "_blank" %></li>
+    	<li id="pmtRoy"><%= link_to image_tag("logo/github.png"), "http://www.github.com", :alt => "github", :title => "github", :target => "_blank" %></li>
+    	<li id="elexpertise"><%= link_to image_tag("logo/postgresql.png"), "http://www.postgresql.org", :alt => "postgresql", :title => "postgresql", :target => "_blank" %></li>
+    	<li id="tfo"><%= link_to image_tag("logo/haml.png"), "http://haml-lang.com", :alt => "haml", :title => "haml", :target => "_blank" %></li>
+    	<li id="sourisMini" class="highlight"><%= link_to image_tag("logo/nginx.png"), "http://nginx.com", :alt => "nginx", :title => "nginx", :target => "_blank" %></li>
+    	<li id="rabaisAssurance"><%= link_to image_tag("logo/vmware.png"), "http://www.vmware.com", :alt => "vmware", :title => "vmware", :target => "_blank" %></li>
+    	<li id="hemaQuebec"><%= link_to image_tag("logo/sass.png"), "http://sass-lang.com", :alt => "sass", :title => "sass", :target => "_blank" %></li>
+    	<li id="bombardier" class="highlight"><%= link_to image_tag("logo/redis.png"), "http://redis.io", :alt => "redis", :title => "redis", :target => "_blank" %></li>
+    	<li id="voxco"><%= link_to image_tag("logo/phonegap.png"), "http://phonegap.com", :alt => "phonegap", :title => "phonegap", :target => "_blank" %></li>
+    	<li id="lelarge"><%= link_to image_tag("logo/sphinx.png"), "http://sphinxsearch.com", :alt => "sphinx", :title => "sphinx", :target => "_blank" %></li>
+      <li id="karotz"><%= link_to image_tag("logo/html5.png"), "http://www.w3.org/TR/html5", :alt => "html5", :title => "html5", :target => "_blank" %></li>
+    	<li id="ino"><div class="img_wrapping"><%= image_tag "logo/nodejs.png", :alt => "INO" %></div></li>
+
+</ul>

@@ -1,0 +1,23 @@
+<%= form_for @folio, :html => { :multipart => true } do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  
+  <fieldset>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </fieldset>
+
+   <div>
+  <%= f.label :description, 'Description' %><br/>
+  <span>Between 1 to 500 caracters!!!</span><br/>
+   <%= f.text_area :description, :cols => 10, :rows => 5 %>
+  </div> 
+   
+  <fieldset>
+    <%= f.file_field :picture %>
+  </fieldset>
+  <%= f.submit 'Add' %>
+<% end %>
+

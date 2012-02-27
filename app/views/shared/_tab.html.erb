@@ -1,0 +1,12 @@
+<% if current_page?('/posts/all/Visible') || current_page?('/all/videos/Visible') || current_page?('/post/all/Visible') || current_page?('/all/images/Visible') || current_page?('/all/links/Visible') || current_page?('/all/textos/Visible') %>
+  <div class="profile_tab">
+          <%= link_to 'Advanced Mode', '/search/posts', :style => "width:135px;text-align:center;" %>
+             </div>
+<% end %>
+
+<% if current_page?('/fr/posts/all/Visible') %>
+  <div class="profile_tab">
+          <%= link_to 'Mode Avancé', '/search/posts', :style =>"width:135px;text-align:center;" %>
+             </div>
+<% end %>
+

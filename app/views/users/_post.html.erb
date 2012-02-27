@@ -1,0 +1,24 @@
+<% @user.posts.each do |post| %>
+<%= image_tag 'tag.jpg' -%>
+<div class="post_full"> 
+
+   <% if post.url.blank? || post.url == 'http://'%><% else %>
+   <h3><%= link_to  post.url,  post.url, :popup => 'true' %></h3>
+   <% end %>
+   <h3><%= "<span>#{post.title}</span>" unless post.title.blank? %></h3>
+   <%= auto_link(simple_format(post.body), :href_options => { :target => "_new"},:rel => "nofollow") %>
+<div class="clear">&nbsp;</div>   
+  <div class="inner_bottom"></div>
+  <div class="user_box_bg">
+    <div class="user_icon">
+      <% if current_page?(dashboard_url) %>
+        <%= link_to (image_tag 'comdel.png', :mouseover => 'comdel1.png'), "/posts/#{post.id}" %>
+      <% else %>
+      <% end %>
+      <div class="icn_<%= post.model %>"></div>
+      <div class="blog_icon"><span>posted&nbsp;</span><span style="font-weight:bold;"><%= time_ago_in_words(post.created_at) %></span><span>&nbsp;ago</span></div>
+    </div> 
+  </div>
+</div>
+<div class="clear">&nbsp;</div>
+<% end %>

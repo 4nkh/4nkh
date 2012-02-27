@@ -1,0 +1,13 @@
+<tr class="tableau">
+
+<td style="width:200px; overflow:hidden;">
+      <%= link_to movie.id, "/movies/#{movie.id}" %>
+</td>
+
+<td style="width:230px;"><%= link_to truncate(movie.name,:lenght => "15",:omission => "..."), movie_url(movie.id) %></td>
+<td>&nbsp;</td>
+
+<td style="padding-left:20px;text-align:center;" class="center"><%= facebox_link_to "edit", :url => edit_movie_url(movie.id) %></td>
+    <td style="text-align:center;" class="center"><%= button_to "Destroy", { :action => 'destroy', :id => movie.id }, :confirm => "Are you sure?" %></td></br>
+
+</tr>

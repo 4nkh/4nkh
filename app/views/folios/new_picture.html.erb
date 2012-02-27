@@ -1,0 +1,10 @@
+<% form_for @movie, :html => { :multipart => true } do |f| %>
+
+<h3>Choose a square picture for your movie, NEAR 150 X 150</h3>
+<div class="clear">&nbsp;</div>
+  <fieldset>
+    <%= f.file_field :picture %>
+  </fieldset>
+  <%= f.submit 'Add' %>
+<% end %>
+

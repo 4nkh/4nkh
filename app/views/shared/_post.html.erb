@@ -1,0 +1,46 @@
+<% if post.tag_type == 'Visible' %>
+  <div class="post_full">
+    <%= image_tag 'bubble.jpg', :class => 'tag' -%>
+    <% unless post.url.blank? || post.url == 'http://'%>
+      <h3><%= link_to truncate(post.url,:lenght => "40",:omission => "..."),  post.url, :popup => 'true', :rel => 'nofollow' %></h3>
+    <% end %>
+    <h3><%= raw("<span>#{post.title}</span>") unless post.title.blank? %></h3>
+    <% unless post.photo.blank? %>
+       <div class="post_photo">
+         <%= link_to image_tag(post.photo, :size => '55x55', :style => "border:1px solid #ddd;padding:2px;"), post.photo, :popup => true, :rel => 'nofollow' %>
+       </div>
+    <% end %>
+    <div class="clear">&nbsp;</div>
+    <div class="blog_body">
+    <%= auto_link(simple_format(post.body), :href_options => { :target => "_new"},:rel => "nofollow") %>
+    </div>
+    <div class="clear">&nbsp;</div>
+
+    <div class="user_box_bg">
+      <div class="user_icon">
+         <% if current_user && current_user.id == (1) %>
+           <%= link_to (image_tag 'comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}" %>
+           <%= facebox_link_to "Edit post", :url => edit_blog_url(post.id) %>
+         <% end %>
+         <% if current_user && current_user.id == (2) %>
+           <%= link_to (image_tag 'comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}" %>
+           <%= facebox_link_to "Edit post", :url => edit_blog_url(post.id) %>
+         <% end %>
+         <div class="icn_<%= post.model %>"></div>
+         <div class="blog_icon">
+           <span>posted&nbsp;</span><span style="font-weight:bold;"><%= time_ago_in_words(post.created_at) %></span><span>&nbsp;ago</span>
+         </div>
+      </div>
+   </div>
+   
+<div class="blog_tag">
+         <%= render :partial => 'posts/tag', :collection =>  post.tags %>
+      </div>
+  <%= image_tag 'gr_post_top.jpg', :class => 'gr_post_top' %>
+       <%= image_tag post.user.photo.url(:thumb), :size => '75x75', :style => "border:1px solid #ddd;padding:2px;", :class => 'user_post' %>
+   </div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<% end %>
+

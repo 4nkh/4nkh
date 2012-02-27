@@ -1,0 +1,27 @@
+#world
+  %object{'classid' => "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000", 'codebase' => "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0", 'width' => "253", 'height' => "173", 'id' => "earth", 'align' => "middle"}
+    %param{'name' => "allowScriptAccess", 'value' => "sameDomain"}
+    %param{'name' =>"allowFullScreen", 'value' => "false"}
+    %param{'name' => "movie", 'value' => "/assets/earth.swf"}
+    %param{'name' => "quality", 'value' => "high"}
+    %param{'name' => "wmode", 'value' => "transparent"}
+    %param{'name' => "bgcolor", 'value' => "transparent"}     
+    %embed{'src' => "/assets/earth.swf", 'quality' => "high", 'bgcolor' => "transparent", 'wmode' => "transparent", 'width' => "253", 'height' => "173", 'name' => "earth", 'align' => "middle", 'allowScriptAccess' => "sameDomain", 'allowFullScreen' => "false", 'type' => "application/x-shockwave-flash", 'pluginspage' => "http://www.adobe.com/go/getflashplayer"}
+
+%a{:href => "/fr/accueil", :alt => "accueil", :title => "accueil"}
+  #link_homepage
+= link_to image_tag('logo.jpg'), accueil_path, :class => 'logo', :alt => 'For a new kind of hype', :title => 'Acceuil'
+.navi
+  %div
+    = link_to 'Blog', visiblefr_path
+  #services
+    %a{:href => "javascript:;", :onClick => "P7_autoLayers(0,'serviceslist')"} Services
+  %div
+    = link_to 'Réalisations', realisation_fr_path
+  %div
+    = link_to 'Biographie', aboutusfr_path 
+  %div
+    = link_to 'Contact', notifierfr_path
+  
+  = render 'shared/servicesfr'
+     

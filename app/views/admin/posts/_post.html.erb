@@ -1,0 +1,58 @@
+<% if current_page?("/admin/posts/#{post.id}") %>
+  <div class="post_full">
+
+<%= image_tag 'bubble.jpg', :class => 'tag' -%>
+
+   <% if post.url.blank? || post.url == 'http://'%><% else %>
+     <h3><%= link_to truncate(post.url,:lenght => "40",:omission => "..."),  post.url, :popup => 'true', :rel => 'nofollow' %></h3>
+   <% end %>
+     <h3><%= "<span>#{post.title}</span>" unless post.title.blank? %></h3>
+       <% if post.photo.blank? %>
+       <% else %>
+        <div class="post_photo">
+         <%= link_to image_tag (post.photo, :size => '55x55', :style => "border:1px solid #ddd;padding:2px;"), post.photo, :popup => true, :rel => 'nofollow' %></div>
+     <% end %>
+      <div class="clear">&nbsp;</div>
+   <div class="blog_body"><%= auto_link(simple_format(post.body), :href_options => { :target => "_new"},:rel => "nofollow") %>
+   </div>
+ <div class="clear">&nbsp;</div>
+
+    <div class="user_box_bg">
+      <div class="user_icon">
+         
+          <%= link_to (image_tag 'comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}" %>
+          
+              <%= link_to "Edit post", edit_blog_url(post.id) %>
+         
+            <div class="icn_<%= post.model %>"></div>
+        <div class="blog_icon"><span>posted&nbsp;</span><span style="font-weight:bold;"><%= time_ago_in_words(post.created_at) %></span><span>&nbsp;ago</span></div>
+</div>
+  </div>
+<div class="blog_tag">
+         <%= render :partial => 'posts/tag', :collection =>  post.tags %>
+      </div>
+  <%= image_tag 'gr_post_top.jpg', :class => 'gr_post_top' %>
+       <%= link_to image_tag (post.user.photo.url(:thumb), :size => '75x75', :style => "border:1px solid #ddd;padding:2px;"), user_url(post.user_id), :class => 'user_post' %>
+   </div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<% else %>
+
+<tr class="tableau">
+
+<td style="width:190px; overflow:hidden;">
+      <%= post.tag_type %>
+</td>
+
+<td style="width:125px;overflow:hidden;"><%= link_to truncate(post.title,:lenght => "15",:omission => "..."), post_url(post.id) %></td>
+<td>&nbsp;</td>
+
+<td style="width:115px;"><%= post.model %></td>
+
+<td style="padding-left:20px;text-align:center;" class="center"><%= link_to "edit", edit_admin_post_url(post.id) %></td>
+    <td style="text-align:center;" class="center"><%= button_to "Destroy", { :action => 'destroy', :id => post.id }, :confirm => "Are you sure?" %></td></br>
+
+</tr>
+
+<% end %>

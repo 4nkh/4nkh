@@ -1,0 +1,89 @@
+<% content_for :top_bar do %>
+<div class="language group">
+        <%= link_to 'en', user_url(@user.id), :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/users/#{@user.id}", :class => 'right' %>
+</div>
+<% end %>
+<% content_for :footer do %>
+ <%= image_tag 'smoke.jpg', :style => "z-index:-600;position:absolute;width:212px;height:418px;top:-445px;right:0;" %>
+<% end %>
+
+<% content_for :hd_inner do %>
+
+  <div class="photo">
+    <%= image_tag @user.photo.url, :size => '200x200', :title => @user.login %>
+  </div>
+<div class="user_info">
+  <h2><%= @user.login %> </h2>
+        <% if @user.tag_type.blank? %>
+        <% else %>
+          <h3><%= @user.tag_type.humanize %></h3>
+        <% end %>
+        <h3><%= @user.location %> </h3>
+        <h3><%= @user.phone %> </h3>
+        <h3><%= mail_to @user.email %></h3>
+        <h3><%= @user.dob %> </h3>
+</div>
+  <div class="share">
+    <%= render :partial => 'shared/share' %>
+  </div>
+<% end %>
+
+<div class="user_content">
+
+<div id="dialog" class="group">
+
+    <ul class="column1 first">
+<p><%= @user.par1 %>
+</p>
+    </ul>
+
+    <ul class="column1 last">
+      <p>
+        <%= @user.par2 %>
+      </p>
+    </ul>
+
+</div>
+</div>
+<div class="user_movie">
+<div id="player_wrap" style="margin-bottom:40px;">
+
+        <!-- player container and a nested play button as PNG image -->
+        <div id="player">
+         You need to have <%= link_to 'Flash Player','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash' %> installed to display this video.
+        </div>
+
+</div>
+<div id="controlbar" class="controls"></div>
+</div>
+
+<div id="blog_wrapper">
+       <div class="pusher" id="slideBlog">
+
+         <div id="blog2" name="blog" style="display:none;"><%= link_to "[-] Hide blog post", "javascript:blogger('blog1');",:id => "myHeader1", :style => 'font-size:16px;color:#39c;' %>
+         </div>
+
+         <div id="blog1" name="blog"><%= link_to "[+] Show blog post", "javascript:blogger('blog2');",:id => "myHeader2", :style => 'font-size:16px;color:#39c;' %>
+         </div>
+<div class="clear">&nbsp;</div>
+       </div>
+         <div class="gliss" id="posts" style="display:none;">
+           <%= render :partial => 'shared/post', :collection => @posts %>
+             <div style="float:left;"><%= will_paginate @posts %></div>
+         </div>
+
+</div>
+<%= stylesheet_link_tag 'blog' %>
+<%= javascript_include_tag 'swfobject', 'blog' -%>
+
+<script type="text/javascript">
+    var flashvars = { }; 
+    var params = { config: "{'clip' : {'url': '<%= @user.demo.url %>','autoPlay' : false, 'key' : '#$3bc2d7541db86753618'}}"};
+    var so = {};
+    so.wmode = "transparent";
+    var attributes = { allowFullScreen: true, autoBuffering: true, wmode: "transparent"};
+    swfobject.embedSWF("/swf/flowplayer.commercial-3.1.5.swf", "player", "300", "220", "9.0.0", flashvars, params, so, attributes); 
+</script>
+
+

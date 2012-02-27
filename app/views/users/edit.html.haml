@@ -1,0 +1,60 @@
+= javascript_include_tag 'application'
+= stylesheet_link_tag 'application' 
+:css
+
+%h3 Edit Profile
+%p.tagline Add or modify the information about your account
+.clear &nbsp;
+= form_for @user, :url => user_update_path(@user.id), :remote => true do |f| 
+  = f.error_messages
+  = f.label :login
+  %br
+  = f.text_field :login 
+  %br
+  = f.label :email
+  %br
+  = f.text_field :email 
+
+  .clear &nbsp;
+
+  #slidePass.pusher
+    #blog2{:name => "blog", :style => "display:none;"}
+      = link_to "[-]Hide password field", "javascript:blogger('blog1');",:id => "myHeader1", :style => 'font-size:14px;color:maroon;text-shadow:1px 1px 2px #999;' 
+    #blog1{:name => "blog"}
+      = link_to "[+] Show password field", "javascript:blogger('blog2');",:id => "myHeader2", :style => 'font-size:14px;color:green;text-shadow:1px 1px 2px #999;' 
+    .clear &nbsp;
+    #password
+      = f.label :password
+      %br
+      = f.password_field :password
+
+      = f.label :password_confirmation
+      %br
+      = f.password_field :password_confirmation
+
+  
+  
+  = f.label :phone
+  %br 
+  = f.text_field :phone, :value => @user.phone
+  %br 
+  = f.label :location
+  %br
+  = f.text_field :location, :value => @user.location
+  %br
+  = f.label :dob, 'Date of birth' 
+  %br
+  = f.date_select :dob, :start_year => Time.now.year - 100,:end_year => Time.now.year - 16 
+  %br
+  = f.label :tag_type, 'Title' 
+  %br
+  %span Your position in 4nkh developement
+  %br
+  - if current_user.id == (1)
+    = f.select :tag_type , User::ADMIN.sort, :class => 'left', :value => @user.tag_type 
+  - else 
+    = f.select :tag_type , User::TAG.sort, :class => 'left', :value => @user.tag_type
+ 
+  %br
+  = f.submit 'Update' 
+

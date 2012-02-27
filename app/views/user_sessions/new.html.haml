@@ -1,0 +1,30 @@
+= javascript_include_tag 'application'
+= stylesheet_link_tag 'application'
+:css
+  body {background: #EEE;}
+  h3 {text-align:center;font-weight:bold;font-size:18px;}
+  .form_wrapper{width:200px;margin:0 auto;}
+  label {font-size:12px;}
+  input[type="text"] {width:200px;}
+  input[type="password"] {width:200px;}
+.clear &nbsp;
+%h3 Login
+.clear &nbsp;  
+= form_for @user_session, :url => create_session_url, :remote => true do |f|
+  = f.error_messages 
+  .form_wrapper
+    %p
+      = f.label :login, 'Username'
+      %br
+      = f.text_field :login
+      
+    .clear &nbsp;
+    
+    %p  
+      = f.label :password
+      %br
+      = f.password_field :password
+    
+    = f.submit 'Login'
+
+

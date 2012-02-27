@@ -1,0 +1,102 @@
+<div class="language group">
+  <% if  current_page?("/") %>
+  	<%= link_to 'en', '/', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/accueil', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/fr/accueil") %>
+  	<%= link_to 'en', '/', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/accueil', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/posts/all/Visible") %>
+  	<%= link_to 'en', '/posts/all/Visible', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/posts/all/Visible', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/fr/posts/all/Visible") %>
+  	<%= link_to 'en', '/posts/all/Visible', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/posts/all/Visible', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/contactus") %>
+  	<%= link_to 'en', '/contactus', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/contact', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/fr/contact") %>
+  	<%= link_to 'en', '/contactus', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/contact', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/services") %>
+  	<%= link_to 'en', '/services', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/services', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/fr/services") %>
+  	<%= link_to 'en', '/services', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/services', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/fr/apropos") %>
+  	<%= link_to 'en', '/aboutus', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/apropos', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/aboutus") %>
+  	<%= link_to 'en', '/aboutus', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/apropos', :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/fr/folios") %>
+        <%= link_to 'en', '/folios', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/folios", :class => 'right' %>
+  <% end %>
+ 
+  <% if  current_page?("/folios") %>
+        <%= link_to 'en', '/folios', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/folios", :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/fr/seo/plan") %>
+        <%= link_to 'en', '/seo/plan', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/seo/plan", :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/seo/plan") %>
+        <%= link_to 'en', '/seo/plan', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/seo/plan", :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/fr/hosting/plan") %>
+        <%= link_to 'en', '/hosting/plan', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/hosting/plan", :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/hosting/plan") %>
+        <%= link_to 'en', '/hosting/plan', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/hosting/plan", :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/fr/business/plan") %>
+        <%= link_to 'en', '/business/plan', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/business/plan", :class => 'right' %>
+  <% end %>
+
+  <% if  current_page?("/business/plan") %>
+        <%= link_to 'en', '/business/plan', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/business/plan", :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?(mobile_fr_path) %>
+        <%= link_to 'en', '/mobile', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/mobile", :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?(mobile_path) %>
+        <%= link_to 'en', '/mobile', :class => 'right', :style => 'padding-left:4px;' %>
+        <%= link_to 'fr |', "/fr/mobile", :class => 'right' %>
+  <% end %>
+</div> 
+

@@ -1,0 +1,166 @@
+<% content_for :head do %>
+  <style type="text/css">
+          #header{height:510px !important;} 
+          #header_inner{height:420px !important;width:780px;} 
+  </style>
+<% end %>
+<% content_for :hd_inner do %>
+ <div class="clear">&nbsp;</div> 
+<div id="player_wrap">
+
+	<!-- player container and a nested <h3 style="width:780px;text-align:center;">play button as PNG image -->
+	<a id="player" href="">
+	 You need to have <%= link_to 'Flash Player','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash' %> installed to display this video.
+	</a>
+</div>
+
+<h3 style="width:780px;font:size:14px;text-align:center;padding-bottom:10px;"><%= simple_format h(@movie.name)%></h3>
+<% end %>
+
+
+<div id="clips" class="scrollable">
+  <div class="items">
+<ul class="thumb1">
+   <% @movies.each do |movie| %>
+     <% if movie.position == (1) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (2) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (3) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (4) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (5) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (6) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+   <% end %>
+</ul>
+
+<ul class="thumb1">
+   <% @movies.each do |movie| %>
+     <% if movie.position == (7) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (8) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (9) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (10) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (11) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (12) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+   <% end %>
+</ul>
+
+<ul class="thumb1">
+   <% @movies.each do |movie| %>
+     <% if movie.position == (13) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (14) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (15) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (16) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (17) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (18) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+   <% end %>
+</ul>
+
+</div>
+</div>
+
+<a class="next browse right"></a>
+<a class="prev browse left"></a>
+
+
+<h4 style="width:780px;padding-top:10px;font-size:14px !important;text-align:center;">Description</h4>
+<div style="width:510px;margin:0 auto;padding:10px;">
+            <span><%= simple_format h(@movie.description)%></span>
+</div>
+
+
+<% content_for :footer do %>
+  <% if current_user.nil? %>
+<% else %>
+<% if current_user.id == (1) %>
+<% if current_page? movie_url(@movie.id) %>
+        <ul style="float:left;" >
+
+
+           <% if @movie.picture_file_name.blank? %>
+             <li><%= facebox_link_to "Upload picture", :url => new_movie_picture_url %></li>
+
+           <% else %>
+             <li><%= button_to "Destroy picture", { :controller=>'movies', :action=>'destroy_picture' }, :confirm => "Are you sure?" %></li>
+           <% end %>
+           <li><%= facebox_link_to "Edit movie", :url => edit_movie_url %></li>
+       </ul>
+<% end %>
+<% end %>
+<% if current_user.id == (2) %>
+<% if current_page? movie_url(@movie.id) %>
+        <ul style="float:left;" >
+
+
+           <% if @movie.picture_file_name.blank? %>
+             <li><%= facebox_link_to "Upload picture", :url => new_picture_url %></li>
+
+           <% else %>
+             <li><%= button_to "Destroy picture", { :controller=>'movies', :action=>'destroy_picture' }, :confirm => "Are you sure?" %></li>
+           <% end %>
+           <li><%= facebox_link_to "Edit movie", :url => edit_movie_url %></li>
+       </ul>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+
+<%= javascript_include_tag 'swfobject', 'jquery.tool' -%>
+<%= stylesheet_link_tag 'appleplayer','appleplaylist','player' -%>
+<script type="text/javascript">
+    var flashvars = { }; 
+    var params = { config: "{'clip' : {'url': '<%= @movie.flv.url %>','autoPlay' : false, 'key' : '#$3bc2d7541db86753618'}}"  };
+    var so = {};
+    so.wmode = "transparent";
+    var attributes = { allowFullScreen: true, autoBuffering: true, wmode: "transparent"};       
+ swfobject.embedSWF("/swf/flowplayer.commercial-3.1.5.swf", "player", "300", "220", "9.0.0", flashvars, params, so, attributes);
+
+</script>
+<script>	
+
+// custom easing called "custom"
+$.easing.custom = function (x, t, b, c, d) {
+	var s = 1.70158; 
+	if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+	return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+}
+
+
+
+// use the custom easing
+$("div.scrollable").scrollable({easing: 'custom', speed: 700, circular: true});
+</script>
+

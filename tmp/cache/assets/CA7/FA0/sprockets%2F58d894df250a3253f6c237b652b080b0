@@ -1,0 +1,40 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329283139.410858:@value{	I"length:EFiÚI"digest;
+F"%2ba6b4f804475e99d4787354f13ead9dI"source;
+FI"Ú
+#player {
+        box-shadow:0px 0px 10px 5px #3e4883;-moz-box-shadow:0px 0px 10px 5px #3e4883;-webkit-box-shadow:0px 0px 15px #3e4883;
+	background-image:url(http://static.flowplayer.org/img/home/flow_eye.jpg);
+	width:400px;
+	height:300px;
+	display:block;
+	text-align:center;
+	margin:15px auto;
+	z-index:-1000;
+}
+
+/* play button */
+#player img {
+	margin-top:110px;
+	border:0px;
+}
+
+/* style for the player's wrapper element */
+#player_wrap {
+	background: url(/images/h600.png) 0 0 repeat-x;
+        margin:0 auto;
+	width:745px;
+	border:2px solid #BBB;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	z-index:-5000;
+}
+
+/* override buffer color from controls-apple.css */
+div.controls div.buffer {
+	background-color:#789;
+}
+
+
+;
+FI"_version;
+F"%0234082ee85b228af0dd637f21d78dd9

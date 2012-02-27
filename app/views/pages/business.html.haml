@@ -1,0 +1,197 @@
+- content_for :head do 
+  :css
+    #header_inner{-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;box-shadow:-5px 10px 10px #999;}
+
+:javascript
+  window.onload=function()
+  {
+  busi=getCookie('busi');
+  if (busi!=null && busi!="")
+    {
+    showbusi('busi', busi, '30');
+    }
+  else
+    {
+    showbusi('busi', 'busi1', '30');
+    }
+    //busi.style.display = 'block';
+  }
+
+
+- content_for :hd_inner do 
+  = render :partial => 'shared/banner' 
+
+
+.tab
+  - if current_page?('/business/plan') 
+    %a#myBusi1{:style => "color:#66b95f;", :href => "javascript:showbusi('busy', 'busi1', '30');"} Management
+    %a#myBusi2{:style => "color:#700201;", :href => "javascript:showbusi('busy', 'busi2', '30');"} Mail
+    %a#myBusi3{:style => "color:#5098ed;", :href => "javascript:showbusi('busy', 'busi3', '30');"} Advertising
+    %a#myBusi4{:style => "color:#ead917;", :href => "javascript:showbusi('busy', 'busi4', '30');"} Billing
+    %a#myBusi5{:style => "color:#de37e8;", :href => "javascript:showbusi('busy', 'busi5', '30');"} Language
+  - else
+    %a#myBusi1{:style => "color:#66b95f;", :href => "javascript:showbusi('busy', 'busi1', '30');"} Gestions
+    %a#myBusi2{:style => "color:#700201;", :href => "javascript:showbusi('busy', 'busi2', '30');"} Courriels
+    %a#myBusi3{:style => "color:#5098ed;", :href => "javascript:showbusi('busy', 'busi3', '30');"} Publicitées
+    %a#myBusi4{:style => "color:#ead917;", :href => "javascript:showbusi('busy', 'busi4', '30');"} Facturations
+    %a#myBusi5{:style => "color:#de37e8;", :href => "javascript:showbusi('busy', 'busi5', '30');"} Traductions
+
+
+- if current_page?('/business/plan') 
+  #busi5{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#de37e8;"} Language
+      .clear &nbsp;
+      %ul{:class => "column first"}
+        = image_tag 'language.jpg'
+      .clear &nbsp;
+      .clear &nbsp; 
+            
+  #busi4{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#ead917;"} Billing
+      .clear &nbsp;
+      %ul{:class => "column first"}
+        = image_tag 'ppcc.jpg'
+      .clear &nbsp;
+      .clear &nbsp;
+
+  #busi3{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#5098ed;"} Advertising
+      %ul{:class => "column first"}
+        = image_tag 'modad.jpg' 
+      .clear &nbsp;
+      .clear &nbsp;
+        
+  #busi2{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#700201;"} Mail
+      .clear &nbsp;
+      %ul{:class => "column first"}
+        = image_tag 'mailing.jpg'
+      %ul.column
+        %p You don't have any costumized mail address for you business. We will create for you personalized mail extension based on your domain name. For exemple: exemple@domainname.com. This plan include 1 to 50 personalized e-mail for your domain and the link between them and the websites links or forms. This will give you a professional image of your business and a way to manage your incomming and outgoing mail between department or employees. It's very usefull and pratical.
+
+      %ul{:class => "column last"}
+        %p We can help you to configure your indox and other tools to optimized the efficency of the mail services, like receaving mail on blackberry, sharing documents, adding a mail signature, etc...The creation part of this plan can be applicable even if you already have a website hosted by someone else. In this case, you have to own the domain name and getting access to the CPANEL of your VPS. Contact us to get a submission, because the price always depends on what you realy need.  </p>
+      .clear &nbsp;
+      .clear &nbsp;     
+           
+  #busi1{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#66b95f;"} Management
+      %ul{:class => "column first"}
+        = image_tag 'management.jpg'
+      %ul{:class => "column"}
+        %p The management plan can take various forms. We can help with you incomming and outgoing mails, your newsletters, billing and more... 4nkh development build customized Intranet to make your work easier. We create tools to let you deal with your website content, schedules, employees, costumers or simple users, etc...
+
+      %ul{:class => "column last"}
+        %p This plan are only for clients who are hosted by us. Other existing template can be incompatible with our tools. Grow in efficiency, reduce the time lost and keep your mind fixed on your forces. Contact our team for more explanations about all the options this plan can bring you!
+      .clear &nbsp;
+      .clear &nbsp;
+
+- else
+
+  #busi5{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#de37e8;"} Traductions
+      %ul{:class => "column first"}
+        = image_tag 'language.jpg' 
+      %ul.column
+        %p Notre service de traduction vous offre la possibilite d'avoir un site anglais et francais. Ce qui vous donneras un net avantage par a par a ceux qui desserve leur clientele dans une seule langue. Contrairement a certain plans, vous pouvez beneficier de la traduction d'un site meme si vous n'etes pas heberge par nous. 
+      %ul{:class => "column last"}
+        %p Nous metterons sous peu a votre disposition des services de traduction en espagnol, italien, portuguais et allemand. Veuillez prende note que vous devez communiquer avec nous pour davantage de details sur les travaux de cette nature. Pensez a considere ce plan incontournable pour que votre clientele soit servie adequatement.
+      .clear &nbsp;
+      .clear &nbsp;
+      
+  #busi4{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#ead917;"} Facturations
+      %ul{:class => "column first"}
+        = image_tag 'ppcc.jpg'
+      .clear &nbsp;
+      .clear &nbsp;
+
+  #busi3{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#5098ed;"} Publicitées
+      %ul{:class => "column first"}
+        = image_tag 'modad.jpg'
+      .clear &nbsp;
+      .clear &nbsp;  
+
+  #busi2{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#700201;"} Courriels
+      %ul{:class => "column first"}
+        = image_tag 'mailing.jpg'
+      %ul.column
+        %p Vous n'avez pas d'addresse couriel au nom de votre entreprise. Nous creerons pour vous une extension personalise base sur votre nom de domaine: "<span style="color:white">exemple@votredomaine.com</span>". Ce plan inclus de 1 a 50 e-mail personalize pour votre domaine et la connectivite entre ceux-ci et les liens du siteweb ou des formulaires. Ca vous procurera une image professionelle et une facon de gerer vos couriel entre different departement ou employes. C'est utile et pratique.
+      %ul{:class => "column last"}
+        %p Nous pouvons vous aider a configurer votre boite de reception et les autres outils pour plus d'efficacite, comme recevoir vos couriel sur un blackberry, echanger des documents, ajouter une signature, etc... La partie creation de ce plan peut-etre applicable meme si votre siteweb est heberge ailleur. Dans ce cas, vous devez etre proprietaire du domaine et avoir un acces au CPANEL de votre VPS. Contactez-nous pour avoir une soumission, car les prix vary selon vos besoins.
+      .clear &nbsp;
+      .clear &nbsp;
+
+  #busi1{:name => "busi", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#66b95f;"} Gestions
+      %ul{:class => "column first"}
+        = image_tag 'management.jpg'
+      .clear &nbsp;
+      .clear &nbsp;
+        
+.clear &nbsp;
+= javascript_include_tag 'products'
+
+

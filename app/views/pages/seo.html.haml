@@ -1,0 +1,332 @@
+- content_for :head do
+  :css
+    #header_inner {-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;box-shadow:-5px 10px 10px #999;}
+
+- content_for :js do
+  :javascript
+    window.onload=function()
+    {
+    seo=getCookie('seo');
+    if (seo!=null && seo!="")
+      {
+      showseo('seo', seo, '30');
+      jQuery('#seo1').attr('class','guess');
+      jQuery('#seo2').attr('class','guess');
+      jQuery('#seo3').attr('class','guess');
+      jQuery('#'+seo).addClass('current_tab');
+      }
+    else
+      { 
+     showseo('seo', 'seo1', '30');
+     jQuery('#seo1').attr('class','guess');
+     jQuery('#seo2').attr('class','guess');
+     jQuery('#seo3').attr('class','guess');
+     jQuery('#'+seo).addClass('current_tab');
+      }
+      //seo.style.display = 'block';
+    }
+
+- content_for :hd_inner do 
+  = render :partial => 'shared/banner' 
+            
+- if current_page?(seo_path)            
+  #seo3.guess{:name => "seo", :style => "display:none;"}
+              
+    .clear &nbsp;              
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#700201;"} Premium
+      .clear &nbsp;
+     
+      %ul{:class => "column first"}
+        = image_tag 'seo1.jpg', :alt => 'seo', :style => "margin-left:40px;"
+        .clear &nbsp;
+        .clear &nbsp;
+        = link_to "submission", "", :class => "btn-more"
+        .clear &nbsp;
+        .clear &nbsp;
+    
+      %ul.column   
+        %p This plan is designed for websites with heavy dynamic content, built for interactive platforms such as social networks, shopping carts or other.
+        %br 
+        %p We will ensure your content to be more visible on search engines and optimize parameters for the same purpose. This will allow you to reach many people as possible
+        %br
+        %p We will also link you to existing social networks profiles or we will create those for you, to create advertising and infatuation for your site. We will also automate some content to be publish on those social tools.
+        %br
+        %p Feel free to look at other plans that are offered to you to find the plan that suits you.
+        .clear &nbsp;
+        .clear &nbsp;
+
+      %ul{:class => "column last", :style => "overflow:visible;"}
+        %h3{:style => "font-weight:bold;font-size:22px;color:maroon;width:200px;float:left;"} For a low price of
+        %h3{:style => "font-weight:bold;font-size:34px;color:#39c;margin-top:-10px;float:right;"} 5000$
+        %br
+        %br
+        %p We will use and configure essential statistic tools, build or optimize your navigation maps.
+        %br
+        %p Keep in mind that a recurring work is very important to keep your platform not only interesting but also attractive and accessible to internet users.
+        %br
+        %p The standard plan offers you an affordable referencing configuration that will be beneficial to your website.
+        %br
+        %p If you do not have a domain name, we will advise you on this one as well as other critical choices in order to maximize your results.
+        .clear &nbsp;
+        .clear &nbsp;
+        
+    .clear &nbsp;  
+  #seo2.guess{:name => "seo", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+             
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#5098ed;"} Standard
+      .clear &nbsp;
+      
+      %ul{:class => "column first"}
+        = image_tag 'seo1.jpg', :alt => 'seo', :style => "margin-left:40px;"
+        .clear &nbsp;
+        .clear &nbsp;
+        = link_to "submission", "", :class => "btn-more"
+        .clear &nbsp;
+        .clear &nbsp;
+      
+      %ul.column   
+        %p This plan is designed for websites with light dynamic content, built for informative while being interactive such as blogs, forums or other.
+        %br 
+        %p We will ensure your content to be more visible on search engines and optimize some parameter for the same purpose. This will allow you to reach many people as possible
+        %br
+        %p We will also link you to existing social networks profiles or we will create those for you, to create advertising and infatuation for your site.
+        %br
+        %p Feel free to look at other plans that are offered to you to find the plan that suits you.
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+    
+      %ul{:class => "column last", :style => "overflow:visible;"}
+        %h3{:style => "font-weight:bold;font-size:22px;color:maroon;width:200px;float:left;"} For a low price of
+        %h3{:style => "font-weight:bold;font-size:34px;color:#39c;margin-top:-10px;float:right;"} 750$
+        %br
+        %br
+        %p We will use and configure essential statistics tools.
+        %br
+        %p Keep in mind that a recurring work is very important to keep your platform not only interesting but also attractive and accessible to internet users.
+        %br
+        %p The standard plan offers you an affordable referencing configuration that will be beneficial to your website.
+        %br
+        %p If you do not have a domain name, we will advise you on this one as well as other critical choices in order to maximize your results.
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        
+    .clear &nbsp;
+
+  #seo1.guess{:name => "seo", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+            
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#66b95f;"} Basic
+      .clear &nbsp;
+  
+      %ul{:class => "column first"}
+        = image_tag 'seo1.jpg', :alt => 'seo', :style => "margin-left:40px;"
+        .clear &nbsp;
+        .clear &nbsp;
+        = link_to "submission", "", :class => "btn-more"
+        .clear &nbsp;
+        .clear &nbsp;
+    
+      %ul.column
+        %p This plan is designed for static websites, built for informative purposes such as advertising platforms, or other personal pages.
+        %br
+        %p We will ensure your content to be more visible on search engines. This will allow you to reach many peoples as possible.
+        %br
+        %p We will also link you to existing social networks profiles or we will create those for you, to create advertising and infatuation for your site.
+        %br
+        %p Feel free to look at other plans that are offered to you better results.
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+   
+      %ul{:class => "column last", :style => "overflow:visible;"}
+        %h3{:style => "font-weight:bold;font-size:22px;color:maroon;width:200px;float:left;"} For a low price of
+        %h3{:style => "font-weight:bold;font-size:34px;color:#39c;margin-top:-10px;float:right;"} 250$
+        %br
+        %br
+        %p We will use and configure essential tools. Keep in mind that a recurring work is very important to keep your platform not only interesting but also attractive and accessible to internet users.
+        %br
+        %p The basic plan offers you an affordable referencing configuration that will be beneficial to your website.
+        %br
+        %p If you do not have a domain name, we will advise you on it in order to maximize your results.
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp; 
+
+    .clear &nbsp;
+
+- else
+
+  #seo3.guess{:name => "seo", :style => "display:none;"}
+
+    .clear &nbsp;              
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#700201;"} Premium
+      .clear &nbsp;
+
+      %ul{:class => "column first"}
+        = image_tag 'seo1.jpg', :alt => 'seo', :style => "margin-left:40px;"
+        .clear &nbsp;
+        .clear &nbsp;
+        = link_to "soumission", "", :class => "btn-more"
+        .clear &nbsp;
+        .clear &nbsp;
+
+      %ul.column   
+        %p Ce plan est conçu pour les sites internet un contenue dynamique lourd, bâtie à des fins intéractif tels que des réseaux sociaux, boutique d'achats ou autres.
+        %br 
+        %p Nous ferons en sorte que votre contenue soit plus visible sur les moteurs de recherches et optimiseront des paramètres dans le meme but. Ce qui vous permettera de rejoindre un maximum de personnes.
+        %br
+        %p Nous vous relierons aussi à profile de réseaux sociaux existant ou que nous crérons pour vous, pour créez de la publicité et de l'engoument par à part à votre site. 
+        %br
+        %p N'hésitez pas à regarder les autres plans qui vous sont offert pour trouver le plan qui vous conviens
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+
+
+      %ul{:class => "column last", :style => "overflow:visible;"}
+        %h3{:style => "font-weight:bold;font-size:22px;color:maroon;width:200px;float:left;"} Pour seulement
+        %h3{:style => "font-weight:bold;font-size:34px;color:#39c;margin-top:-10px;float:right;"} 750$
+        %br
+        %br
+        %p Nous utiliserons et vous configurerons des outils essentiels de statisques. 
+        %br
+        %p Garder en tête qu'un travail récurant est très important pour garder votre platforme non seulement intéressante mais aussi attrayante et accessible pour les internautes.
+        %br
+        %p Le plan standard vous offres une configuration de référencement très abordable qui seront être bénéfique pour votre site internet.
+        %br
+        %p Si vous n'avez pas de nom de domaine, nous vous conseillerons sur celui-ci ainsi que sur d'autres choix cruciaux à faire dans le but de maximiser vos résultats.
+        .clear &nbsp;
+        .clear &nbsp;
+          
+      .clear &nbsp;
+
+  #seo2.guess{:name => "seo", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#5098ed;"} Standard
+      .clear &nbsp;
+
+      %ul{:class => "column first"}
+        = image_tag 'seo1.jpg', :alt => 'seo', :style => "margin-left:40px;" 
+        .clear &nbsp;
+        .clear &nbsp;
+        = link_to "soumission", "", :class => "btn-more"
+        .clear &nbsp;
+        .clear &nbsp;
+
+      %ul.column   
+        %p Ce plan est conçu pour les sites internet ayant un contenue dynamique léger, bâtie à des fins informatif tout en étant intéractif tels que des blogues, forums de discutions ou autres.
+        %br 
+        %p Nous ferons en sorte que votre contenue soit plus visible sur les moteurs de recherches et optimiseront certain paramètre dans le meme but. Ce qui vous permettera de rejoindre un maximum de personnes.
+        %br
+        %p Nous vous relierons aussi à profile de réseaux sociaux existant ou que nous crérons pour vous, pour créez de la publicité et de l'engoument par à part à votre site. Nous automatiserons aussi la publication de certain contenue sur les réseau sociaux.
+        %br
+        %p N'hésitez pas à regarder les autres plans qui vous sont offert pour trouver le plan qui vous conviens
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+
+
+      %ul{:class => "column last", :style => "overflow:visible;"}
+        %h3{:style => "font-weight:bold;font-size:22px;color:maroon;width:200px;float:left;"} Pour seulement
+        %h3{:style => "font-weight:bold;font-size:34px;color:#39c;margin-top:-10px;float:right;"} 750$
+        %br
+        %br
+        %p Nous utiliserons et vous configurerons des outils essentiels de statisques. 
+        %br
+        %p Garder en tête qu'un travail récurant est très important pour garder votre platforme non seulement intéressante mais aussi attrayante et accessible pour les internautes.
+        %br
+        %p Le plan standard vous offres une configuration de référencement très abordable qui seront être bénéfique pour votre site internet.
+        %br
+        %p Si vous n'avez pas de nom de domaine, nous vous conseillerons sur celui-ci ainsi que sur d'autres choix cruciaux à faire dans le but de maximiser vos résultats.
+        .clear &nbsp;
+        .clear &nbsp;
+
+    .clear &nbsp;
+
+  #seo1.guess{:name => "seo", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.subtitle{:style => "width:500px;margin:0 auto;text-align:center;padding:5px 0 10px 0;color:#66b95f;"} Basic
+      .clear &nbsp;
+
+      %ul{:class => "column first"}
+        = image_tag 'seo1.jpg', :alt => 'seo', :style => "margin-left:40px;" 
+        .clear &nbsp;
+        .clear &nbsp;
+        = link_to "soumission", "", :class => "btn-more"
+        .clear &nbsp;
+        .clear &nbsp;
+
+      %ul.column
+        %p Ce plan est conçu pour les sites internet statique, bâtie à des fins informatif tels que des platformes publicitaire, pages personnel ou autres.
+        %br
+        %p Nous ferons en sorte que votre contenue soit plus visible sur les moteurs de recherches. Ce qui vous permettera de rejoindre un maximum de personnes.
+        %br
+        %p Nous vous relierons aussi à des profiles de réseaux sociaux existant ou que nous crérons pour vous, pour créez de la publicité et de l'engoument par à part à votre site. 
+        %br
+        %p N'hésitez pas à regarder les autres plans qui vous sont offert pour de meilleurs résultat.
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+        .clear &nbsp;
+
+      %ul{:class => "column last", :style => "overflow:visible;"}
+        %h3{:style => "font-weight:bold;font-size:22px;color:maroon;width:200px;float:left;"} Pour seulement
+        %h3{:style => "font-weight:bold;font-size:34px;color:#39c;margin-top:-10px;float:right;"} 250$
+        %br
+        %br
+        %p Nous utiliserons et vous configurerons des outils essentiels. Garder en tête qu'un travail récurant est très important pour garder votre platforme non seulement intéressante mais aussi attrayante et accessible pour les internautes.
+        %br
+        %p Le plan basic vous offres une configuration de référencement très abordable qui seront être bénéfique pour votre site internet.
+        %br
+        %p Si vous n'avez pas de nom de domaine, nous vous conseillerons sur celui-ci dans le but de maximiser vos résultats.
+        .clear &nbsp;
+        .clear &nbsp; 
+
+    .clear &nbsp;    
+
+.tab
+  %a#mySeo1{:style => "color:#66b95f;", :href => "javascript:showseo('seo','seo1', '30');"} Basic
+  %a#mySeo2{:style => "color:#5098ed;", :href => "javascript:showseo('seo','seo2', '30');"} Standard
+  %a#mySeo3{:style => "color:#700201;", :href => "javascript:showseo('seo','seo3', '30');"} Premium

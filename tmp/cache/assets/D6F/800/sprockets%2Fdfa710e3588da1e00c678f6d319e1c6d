@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329242337.934007:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%65b91ca633c752bc7d359c73b8b9e2d1I"logical_path;
+FI"focus.png;
+TI"pathname;
+FI"&$root/app/assets/images/focus.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-14T12:58:55-05:00;
+FI"length;
+FI"	6713;
+FI"digest;
+F"%fcfb4ae1547c04905a2a2f4451fa561fI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

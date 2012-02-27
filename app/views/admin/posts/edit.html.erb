@@ -1,0 +1,251 @@
+<div id="quickpost" class="mover" style="display:block;">
+<div id="post1" name="post">
+<% form_for @post, :url => "/admin/posts/#{@post.id}" do |f| %>
+  <%= f.hidden_field :user_id, :value => @post.user_id %>
+  <%= f.hidden_field :model, :value => 'textos' %> 
+
+  <ul id="post-types">
+    <li id="type-post"><a href="javascript:showonlyone('post1')"><%= image_tag 'text32act.jpg', :mouseover => 'text32.jpg' %></a></li>
+    <li id="type-image"><a href="javascript:showonlyone('post2')"><%= image_tag 'image32.jpg', :mouseover => 'image32act.jpg' %></a></li>
+    <li id="type-link"><a href="javascript:showonlyone('post3')"><%= image_tag 'link32.jpg', :mouseover => 'link32act.jpg' %></a></li>
+    <li id="type-video"><a href="javascript:showonlyone('post4')"><%= image_tag 'video32.jpg', :mouseover => 'video32act.jpg' %></a></li>
+  </ul>
+
+  <div id="post-fields">
+    <p id="post-caption" class="title">Add a post</p>
+    
+    <fieldset>
+      <%= f.text_field :title %>
+    </fieldset>
+    <fieldset>
+      <%= f.text_area :body, :rows => 5, :cols => 50, :class => 'tinymce', :id => "texto" %>      
+    </fieldset>
+    
+  </div>
+
+  <fieldset>
+   <%= f.label :tag_list, 'Tags' %><br/>
+   <%= f.text_field :tag_list %>
+ </fieldset>
+
+
+    <fieldset>
+   <%= f.label :tag_type, 'State' %><br/>
+    <span style="color:maroon">Select the post state!</span>
+    <%= f.select :tag_type , Post::TAG.sort, :class => 'left'%>
+ </fieldset>
+    
+
+  <p><%= f.submit 'Update' %></p>
+<% end %>
+</div>
+<div id="post2" style="display:none;" name="post">
+<% form_for @post, :url => update_blog_url(@post.id) do |f| %>
+  <%= f.hidden_field :model, :value => 'images' %> 
+
+  <ul id="post-types">
+    <li id="type-post"><a href="javascript:showonlyone('post1')"><%= image_tag 'text32.jpg', :mouseover => 'text32act.jpg' %></a></li>
+    <li id="type-image"><a href="javascript:showonlyone('post2')"><%= image_tag 'image32act.jpg', :mouseover => 'image32.jpg' %></a></li>
+    <li id="type-link"><a href="javascript:showonlyone('post3')"><%= image_tag 'link32.jpg', :mouseover => 'link32act.jpg' %></a></li>
+    <li id="type-video"><a href="javascript:showonlyone('post4')"><%= image_tag 'video32.jpg', :mouseover => 'video32act.jpg' %></a></li>
+  </ul>
+
+  <div id="post-fields">
+    <p id="post-caption" class="title">Add a image link</p>
+   
+     <fieldset>
+      <%= f.text_field :photo %>
+    </fieldset>
+
+ 
+    <fieldset>
+      <%= f.text_field :title %>
+    </fieldset>
+
+    <fieldset>
+      <%= f.text_area :body, :rows => 5, :cols => 50, :class => 'tinymce', :id => "image" %>
+    </fieldset>
+    
+  </div>
+
+    <fieldset>
+   <%= f.label :tag_list, 'Tags' %><br/>
+   <%= f.text_field :tag_list %>
+ </fieldset>
+
+    <fieldset>
+   <%= f.label :tag_type, 'State' %><br/>
+    <span style="color:maroon">Select the post state!</span>
+    <%= f.select :tag_type , Post::TAG.sort, :class => 'left'%>
+ </fieldset>
+
+
+  <p><%= f.submit 'Update' %></p>
+<% end %>
+</div>
+<div id="post3" style="display:none;" name="post">
+<% form_for @post, :url => update_blog_url(@post.id) do |f| %>
+  <%= f.hidden_field :model, :value => 'links' %> 
+
+  <ul id="post-types">
+    <li id="type-post"><a href="javascript:showonlyone('post1')"><%= image_tag 'text32.jpg', :mouseover => 'text32act.jpg' %></a></li>
+    <li id="type-image"><a href="javascript:showonlyone('post2')"><%= image_tag 'image32.jpg', :mouseover => 'image32act.jpg' %></a></li>
+    <li id="type-link"><a href="javascript:showonlyone('post3')"><%= image_tag 'link32act.jpg', :mouseover => 'link32.jpg' %></a></li>
+    <li id="type-video"><a href="javascript:showonlyone('post4')"><%= image_tag 'video32.jpg', :mouseover => 'video32act.jpg' %></a></li>
+  </ul>
+
+  <div id="post-fields">
+    <p id="post-caption" class="title">Add a link</p>
+    <fieldset>
+      <%= f.text_field :url %>
+    </fieldset>
+    <fieldset>
+      <%= f.text_field :title %>
+    </fieldset>
+    <fieldset>
+      <%= f.text_area :body, :rows => 5, :cols => 50, :class => 'tinymce', :id => "link" %>
+    </fieldset>
+  </div>
+
+   <fieldset>
+   <%= f.label :tag_list, 'Tags' %><br/>
+   <%= f.text_field :tag_list %>
+ </fieldset>
+
+    <fieldset>
+   <%= f.label :tag_type, 'State' %><br/>
+    <span style="color:maroon">Select the post state!</span>
+    <%= f.select :tag_type , Post::TAG.sort, :class => 'left'%>
+ </fieldset>
+
+
+
+  <p><%= f.submit 'Update' %></p>
+<% end %>
+</div>
+<div id="post4" style="display:none;" name="post">
+<% form_for @post, :url => update_blog_url(@post.id) do |f| %>
+  <%= f.hidden_field :model, :value => 'videos' %> 
+
+  <ul id="post-types">
+    <li id="type-post"><a href="javascript:showonlyone('post1')"><%= image_tag 'text32.jpg', :mouseover => 'text32act.jpg' %></a></li>
+    <li id="type-image"><a href="javascript:showonlyone('post2')"><%= image_tag 'image32.jpg', :mouseover => 'image32act.jpg' %></a></li>
+    <li id="type-link"><a href="javascript:showonlyone('post3')"><%= image_tag 'link32.jpg', :mouseover => 'link32act.jpg' %></a></li>
+    <li id="type-video"><a href="javascript:showonlyone('post4')"><%= image_tag 'video32act.jpg', :mouseover => 'video32.jpg' %></a></li>
+  </ul>
+
+  <div id="post-fields">
+    <p id="post-caption" class="title">Add a video</p>
+    
+    <fieldset>
+      <%= f.text_field :title %>
+    </fieldset>
+    <fieldset>
+      <%= f.text_area :body, :rows => 5, :cols => 50, :class => 'tinymce', :id => "video" %>
+    </fieldset>
+  </div>
+
+   <fieldset>
+   <%= f.label :tag_list, 'Tags' %><br/>
+   <%= f.text_field :tag_list %>
+ </fieldset>
+
+   <%= f.label :tag_type, 'State' %><br/>
+    <span style="color:maroon">Select the post state!</span>
+    <%= f.select :tag_type , Post::TAG.sort, :class => 'left'%>
+ 
+
+<p><%= f.submit 'Update' %></p>
+<% end %>
+</div>
+</div>
+<%= stylesheet_link_tag 'blog' %>
+<%= javascript_include_tag 'blog', 'tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
+<% content_for :js do %>
+<% javascript_tag do %>
+
+	$().ready(function() {
+
+		$('textarea.tinymce').tinymce({
+
+			// Location of TinyMCE script
+
+			script_url : '/javascripts/tinymce/jscripts/tiny_mce/tiny_mce.js',
+
+
+
+			// General options
+
+			mode : "exact",
+			theme : "advanced",
+			skin : "o2k7",
+			skin_variant : "black",
+
+			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+
+
+
+			// Theme options
+
+			theme_advanced_buttons1 : "save,newdocument,|,styleselect,|,formatselect,|,fontselect,|,fontsizeselect",
+
+			theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,|,bold,italic,underline,strikethrough,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,fullscreen",
+
+			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,ltr,rtl",
+
+			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,|,charmap,emotions,iespell,media,advhr",
+			theme_advanced_buttons5 : "cut,copy,paste,pastetext,pasteword,|,insertdate,inserttime,preview,|,forecolor,backcolor,|,print,|,link,unlink,anchor,image,cleanup,help,code",
+
+			theme_advanced_toolbar_location : "top",
+
+			theme_advanced_toolbar_align : "center",
+
+			theme_advanced_statusbar_location : "bottom",
+
+			theme_advanced_resizing : true,
+
+
+			// Example content CSS (should be your site CSS)
+
+			content_css : "css/content.css",
+
+
+
+			// Drop lists for link/image/media/template dialogs
+
+			template_external_list_url : "lists/template_list.js",
+
+			external_link_list_url : "lists/link_list.js",
+
+			external_image_list_url : "lists/image_list.js",
+
+			media_external_list_url : "lists/media_list.js",
+
+
+
+			// Replace values for the template plugin
+
+			template_replace_values : {
+
+				username : "<%= current_user.login %>",
+
+				staffid : "<%= current_user.id %>"
+
+			}
+
+		});
+
+	});
+
+<% end %>
+<% end %>
+
+<script type="text/javascript">
+
+if (document.location.protocol == 'file:') {
+
+	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+
+}
+
+</script>

@@ -1,0 +1,97 @@
+<% content_for :head do %>
+  <style>
+    #header_inner {-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;}
+  </style>
+<% end %>
+
+<% content_for :hd_inner do %>
+<ul class="thumb">
+        <%= render @users %>
+</ul>
+<% end %>
+
+<div id="map_wrapper" style="font-size:12px;">
+
+<% if current_page?('/aboutus') %>
+
+<div id="title" class="group">
+  <div class="clear">&nbsp;</div>
+    <h2 class="h2_title">About us</h2>
+     
+     <ul class="column first">
+       <br />
+      <p>The 4nkh development team consist in proficient people who enjoy working in their respective fields. 
+      </p>
+      <br />     
+      <p>Everyone cough and cares about the success of the business and customer satisfaction. Their autonomies, their senses of initiative and abilities to work as a team. Our members are meeting the challenges presented to them with enthusiasm and successfully achieve results that are the pride of our company.
+      </p>
+     </ul>
+    
+    <ul class="column" style="border-left:2px solid #EEE;border-right:2px solid #EEE;">
+      <br />
+      <p>Mathieu Bougie, founder of 4nkh development, is excited by the visual design and elaboration of applications. This is a seasoned programmer who has extensive experience in a wide variety of language. It begins in 2002 in application design, video game and website. 
+       </p>
+       <br /> 
+        <p>The use of development tools open type is very important to these eyes and these 4nkh why these privileged development.
+       </p>
+      <br />
+    </ul>
+    
+    <ul class="column last">
+      <br />
+      <p>Discover our consultants, programmers, graphic artists, translators, technicians and representatives. They will guide you and help you carry out your projects. 
+      </p>
+        <br />
+        <p>Feel free to click on their pictures to visit their respective profiles. We're always happy to serve you and make a maximum effort to make your experience with us you'm most enjoyable and beneficial.
+      </p>
+    </ul>
+    <div class="clear">&nbsp;</div>
+    <div class="clear">&nbsp;</div>
+</div>
+   
+<% else %>
+
+
+<div id="title" class="group">
+     <div class="clear">&nbsp;</div>
+     <h2 class="h2_title">Notre equipe</h2>
+  
+     <ul class="column first">
+       <br />
+       <p>L'équipe de 4nkh développement est constiué de gens compétant, qui aiment travailler dans leurs domaines respectifs. 
+        </p>
+        <br /> 
+         
+         <p>Ils ont toussent et chacun à coeur le succès de l'entreprise et la satisfaction de notre clientèle. Par leur autonomie, leurs sens de l'initiative et leur habilité a travailler en equipe. Nos membres relèvent les défis qui leur sont presente avec enthousiasme et réussissent a atteindre des resultats qui font la fierte de notre entreprise.
+         </p>
+           </ul>
+
+    <ul class="column" style="border-left:2px solid #EEE;border-right:2px solid #EEE;">
+      <br />
+      <p>Mathieu Bougie, fondateur de 4nkh développement, est passionne par la conception visuel et l'elaboration d'applications. C'est un programmeur chevronné qui possède beaucoup d'expérience dans une grande variété de language. Il debute en 2002 dans la conception d'application, de jeux vidéo et de site internet. 
+       </p>
+       <br /> 
+        <p>L'utilisation d'outils de developpement de type ouvert est tres importante a ces yeux et ces pourquoi notre entreprise privilegie ceux-ci. 
+       </p>
+      <br />
+    </ul>
+
+    <ul class="column last">
+      <br />
+      <p>Venez découvrir nos consultants, programmeurs, artistes graphique, traducteurs, techniciens et représentant. Ils seront vous guider et vous aider à mener à bien vos projets. 
+      </p>
+      <br />  
+      <p>N'hésitez pas a cliquer sur leur photos pour visiter leur profile respectif. Nous nous ferons une joie de vous servir et de mettre un maximum d'effort pour que votre experience avec nous vous sois des plus agréable et bénéfique.
+          </p>
+    </ul>
+    <div class="clear">&nbsp;</div>
+    <div class="clear">&nbsp;</div>
+</div>
+<% end %>
+
+
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+
+</div>
+

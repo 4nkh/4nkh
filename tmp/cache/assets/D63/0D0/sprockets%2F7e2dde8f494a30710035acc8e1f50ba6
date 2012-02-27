@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329984673.424978:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%f86af330fe085857e7e4f934cbc0384eI"logical_path;
+FI"logo/vmware.png;
+TI"pathname;
+FI",$root/app/assets/images/logo/vmware.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-23T03:11:09-05:00;
+FI"length;
+FI"
+35059;
+FI"digest;
+F"%d4768bf0301e1e00a97d3cbacc4d7cf3I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "CSC films") %></title>
+    <meta name="keywords" content="<%= h(yield(:keywords) || "") %>"/>
+    <meta name="description" content="<%= h(yield(:description) || "") %>"/>
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    
+    <link rel="icon" type="image/gif" href="images/favicon.gif" />
+    <%= stylesheet_link_tag 'application', 'blog', 'nivo-slider' %>    
+    <!--[if IE 8]><%= stylesheet_link_tag 'artist_ie8' %><![endif]-->
+    <!--[if IE 7]><%= stylesheet_link_tag 'artist_ie7' %><![endif]-->
+    <!--[if IE 6]><%= stylesheet_link_tag 'artist_ie6' %><![endif]-->
+    <%= yield(:head) %>               
+  </head>
+  <body>
+  <div id="wrapper">
+  	<div class="clear">&nbsp;</div>
+      	<div class="clear">&nbsp;</div>
+        
+    <div id="header" >  
+    <%= render :partial => 'shared/topbar' %>  
+       <div id="header_inner">
+         <%= render :partial => 'shared/banner' %>
+       </div>  
+         <div id="nav">
+         <%= render :partial => 'shared/nav' %>
+         <%= link_to image_tag('logo.gif'), '/', :class => 'logo' %>
+         </div>           
+    </div>
+    <div class="clear">&nbsp;</div>
+    <div id="wrapper_inner">
+
+    <div id="content">            
+    <div id="<%= @content_for_sidebar ? 'left-content' : 'content_inner' %>">
+          <%= yield %>
+    </div>
+          <% if @content_for_sidebar %>
+    <div id="right-content">
+          <%= yield :sidebar %>
+    </div>
+        
+          <% end %> 
+    </div>
+<div class="clear">&nbsp;</div>   
+    <div id="footer">    
+        <div id="footer_inner">
+          <%= render :partial => "shared/footer" %>
+          <span id="copyright">copyright © 2012 4nkh development</span>
+        </div>
+    </div>      
+   </div>
+   </div>     
+
+     <%= javascript_include_tag 'application', 'nivo', 'nav'-%>
+     <%= yield :js %>
+  </body>
+</html>
+
+

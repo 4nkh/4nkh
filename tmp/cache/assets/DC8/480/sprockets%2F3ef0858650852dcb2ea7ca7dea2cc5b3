@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329149754.056544:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%1fe1168f0c2928dbf39fc8352b4d33d3I"logical_path;
+FI"rss.png;
+TI"pathname;
+FI"$$root/app/assets/images/rss.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-12T16:19:02-05:00;
+FI"length;
+FI"	5557;
+FI"digest;
+F"%3bf35103dd0e7820b98acfebdf202691I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

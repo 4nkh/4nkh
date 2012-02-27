@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <meta charset="UTF-8" />
+                <title>Réalisations - Liste des réalisations - 4nkh development</title>
+                <meta name="description" content="4nkh development se démarque par la variété de ses réalisations : solutions web, app mobile, app iphone, android, seo, publicité, design graphique, programmation web, internet, intranet et plus." />
+                
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <meta name="format-detection" content="telephone=no" />
+                
+                <!--[if lt IE 9]>
+                <link rel="stylesheet" media="screen" href="/css/screen.css" />
+                <![endif]-->
+
+                
+                <script type="text/javascript">
+                        var useCSSTransitions = true;
+                </script>
+                <!--[if lt IE 10]>
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                <script type="text/javascript">
+                        useCSSTransitions = false;
+                </script>
+                <![endif]-->
+                <%= stylesheet_link_tag    "application" %>
+                <%= javascript_include_tag "application" %>
+                <%= csrf_meta_tags %>
+                <!--<script type="text/javascript" src="/js/core.js"></script>-->
+                <!--[if lt IE 9]>
+                <script type="text/javascript">
+                        createHTML5Tags();
+                </script>
+                <![endif]-->
+                
+                
+                <!--<link rel="stylesheet" media="screen and (min-device-width: 768px)" href="../css/clients-list.css" />-->
+                <!--[if lt IE 9]>
+                <!--<link rel="stylesheet" media="screen" href="../css/clients-list.css" />-->
+                <![endif]-->
+
+                <%= yield(:head) %>
+                <script type="text/javascript">
+                        //<![CDATA[
+                        function pageLoad() {
+                                // Creates rollover images for clients logos
+                                var aImages = document.getElementById("clientsList").getElementsByTagName("img");
+                                var imagesList = new Array();
+                                
+                                for ( var i = 0; i < document.getElementById("clientsList").getElementsByTagName("img").length; i++ ) {
+                                        imagesList.push(document.getElementById("clientsList").getElementsByTagName("img")[i]);
+                                }
+                                
+                                for ( var i = 0; i < imagesList.length; i++ ) {
+                                        var clone = imagesList[i].cloneNode(true);
+                                        clone.className = "hover";
+                                        imagesList[i].parentNode.appendChild(clone);
+                                }
+                                
+                                createTransitionDelay(document.getElementById("clientsList"));
+                                
+                                addEvt(document.getElementById("clientsButton"), "click", clientsButtonClick);
+                        }
+                        
+                        addEvt(window, "load", pageLoad);
+                        
+                        
+                        function clientsButtonClick(evt) {
+                                var clientsButton = document.getElementById("clientsButton");
+                                var clientsElement = document.getElementById("clients");
+                                
+                                // Hide the element
+                                if ( (/shown\s/).test(clientsElement.className) ) {
+                                        clientsButton.className = clientsButton.className.replace(/doHide\s/g, "");
+                                        clientsElement.className = clientsElement.className.replace(/shown\s/gi, "");
+                                        clientsElement.style.height = "0";
+                                }
+                                
+                                // Shows the element
+                                else {
+                                        if (!(/doHide!\s/).test(clientsButton.className))
+                                                clientsButton.className = "doHide " + clientsButton.className;
+                                        clientsElement.className = "shown " + clientsElement.className;
+                                        clientsElement.style.height = String(clientsElement.getElementsByTagName("div")[0].offsetHeight) + "px";
+                                        
+                                        setTimeout(function() { scrollToElement(document.getElementById("clientsButton")); }, 200);
+                                }
+                        }
+                        //]]>
+                </script>
+
+<body class="fr creations">
+               <div id="header_wrapper"></div>
+                  <div id="topbar">
+                    <%= yield(:top_bar) %>
+               <%= render :partial => 'shared/topbar' %>   
+                  </div> 
+                 <div id="header" >
+                   <h1>4nkh website creation hosting management</h1>
+                     <%- flash.each do |name, msg| -%>
+                       <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                     <%- end -%>       
+                    <div id="header_inner">
+                      <%= yield(:hd_inner) %>  
+                    </div> 
+                      <div id="nav">
+                        <% if current_page?('/fr/posts/all/Visible') || current_page?('/fr/contact') || current_page?('/fr/services') || current_page?('/fr/apropos') || current_page?('/fr/folios') || current_page?('/fr/realisations') || current_page?('/fr/outils')%>
+                          <%= render :partial => 'shared/navfr' %>
+                        <% else %>
+              	          <%= render :partial => 'shared/nav' %>
+                        <% end %>
+                      </div>           
+                 </div>
+               <div class="clear">&nbsp;</div>
+               <%= render :partial => '/shared/tab' %>
+                     <div id="page">
+
+                             <section>
+                             	<%= yield %>
+     			                  </section>
+  
+               <% if current_page?('/posts/all/Visible') || current_page?('/all/videos/Visible') || current_page?('/post/all/Visible') || current_page?('/all/images/Visible') || current_page?('/all/links/Visible') || current_page?('/all/textos/Visible') || current_page?('/fr/posts/all/Visible')%>
+               <% else %>
+               <div class="clear">&nbsp;</div>
+               <div class="clear">&nbsp;</div>
+               <% end %>
+                   </div>
+                   <div id="footer">    
+                       <div id="footer_inner">
+                         <%= link_to image_tag('facebookicon1.png', :mouseover => 'facebookicon.png'), 'http://www.facebook.com/pages/4nkh/155264964487409?created', :class => 'facebook', :popup => true, :alt => 'facebook', :title => '4nkh facebook' %>
+               <%= link_to image_tag('twittericon1.png', :mouseover => 'twittericon.png'), 'http://twitter.com/4nk', :class => 'twitter', :popup => true, :alt => 'twitter', :title => '4nkh twitter' %>
+               <%= link_to image_tag('rss1.png', :mouseover => 'rss.png'), feed_path, :class => 'rss', :popup => true, :alt => 'rss', :title => '4nkh rss' %>
+                         <%= yield :footer %>
+                         <%= render :partial => "shared/footer" %>
+                         <span id="copyright">copyright © 2012 4nkh development</span>
+                       </div>
+                   </div>      
+
+                    <script type="text/javascript">
+                       Shadowbox.init({  overlayColor: "#000",  overlayOpacity: "0.5",  handleOversize: "drag",  displayNav: true,  handleUnsupported:  "remove" });     //window.onload = function() {  Shadowbox.setup({  width:   600,  height: "640px"  }); };
+                     </script>
+
+                    <%= yield :js %>
+
+               <script type="text/javascript">
+
+                 var _gaq = _gaq || [];
+                 _gaq.push(['_setAccount', 'UA-15219570-2']);
+                 _gaq.push(['_trackPageview']);
+
+                 (function() {
+                   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                 })();
+
+               </script>
+</body>
+</html>

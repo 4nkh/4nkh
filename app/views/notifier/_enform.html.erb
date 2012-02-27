@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'application' %>
+<%= javascript_include_tag 'application' %>
+<style>
+  body {background: #CCC;}
+  h2 {text-align:center;}
+  .notifier {padding-left:100px; width:300px;float:left;}
+  input[type="text"] {width:300px;}
+</style>
+<div class="clear">&nbsp;</div>
+<% if current_page?("/fr/notifier/mailform") %>
+<h2>Formulaire de courriel</h2>
+<div class="clear">&nbsp;</div>
+<div class="notifier">
+<% if flash[:notice] %><div class="green flash"><b>Félicitation:</b> <span>L'ennvoie de votre message c'est bien déroulé</span></div><br/><% end -%>
+<% if flash[:warning] %><div class="red flash"><b>Désolé:</b><span>Une erreur c'est produite!</span></div><br/><% end -%>
+
+
+
+<%= form_for :email, :url => send_mail_path do |f| %>
+    <%= f.label 'Votre nom' %><br />
+    <%= f.text_field :name, :size => 35 %><br />
+    <%= f.label 'Votre couriel' %><br />
+    <%= f.text_field :address, :size => 35 %><br />
+    <%= f.label 'Le sujet' %><br />
+    <%= f.text_field :subject, :size => 35 %><br />
+    <%= f.label 'Votre message' %><br />
+    <%= f.text_area :body, :rows => 9, :cols => 35 %><br />
+    <div class="clear">&nbsp;</div>
+    <%= submit_tag "Envoyez"%>
+<% end %>
+<div class="clear">&nbsp;</div>
+</div>
+
+<% else %>
+<h2>Mail form</h2>
+<div class="notifier">
+  <div class="clear">&nbsp;</div>
+<% if flash[:notice] %><div class="green flash"><b>Success:</b> <%= flash[:notice] %></div><br/><% end -%>
+<% if flash[:warning] %><div class="red flash"><b>Error:</b> <%= flash[:warning] %></div><br/><% end -%>
+
+<%= form_for :email, :url => send_mail_path do |f| %>
+    <%= f.label 'Name' %><br />
+    <%= f.text_field :name, :size => 35 %><br />
+    <%= f.label 'Email' %><br />
+    <%= f.text_field :address, :size => 35 %><br />
+    <%= f.label 'Subject' %><br />
+    <%= f.text_field :subject, :size => 35 %><br />
+    <%= f.label 'Message' %><br />
+    <%= f.text_area :body, :rows => 9, :cols => 35 %><br />
+    <div class="clear">&nbsp;</div>
+    <%= submit_tag "Send Email "%>
+<% end %>
+<% end %>
+<div class="clear">&nbsp;</div>
+

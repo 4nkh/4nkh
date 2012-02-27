@@ -1,0 +1,35 @@
+<%= stylesheet_link_tag 'blog' %>
+<% content_for :sidebar do %>
+<%= render :partial => 'shared/sidebar' %>
+<% end %>
+<% content_for :hd_inner do %>
+
+<h2 class="type_search"><%= @post.user.login %></h2>
+<div class="photo1">
+    <%= link_to (image_tag @post.user.photo.url(:original), :size => '175x175', :title => @post.user.login), show_user_url(@post.user.id) %>
+  </div>
+
+<div class="share">
+  <%= render :partial => 'shared/share' %>
+    </div>
+
+<%= image_tag 'redlight1.png', :class => 'redlight' %>
+
+<%= render :partial => 'searchs/hd_inner' %>
+
+<!--<%= image_tag 'carbone.jpg', :style => 'height:104px;width:72px;position:absolute;top:-21px;left:0px;' %>-->
+<%= link_to image_tag('all.png', :mouseover => 'all3.png'), "/directory/posts" , :style => 'height:32px;width:32px;position:absolute;top:0px;left:20px;' %>
+<%= link_to image_tag('video32.png', :mouseover => 'video32act1.png'), adv_model_videos_url , :style => 'height:32px;width:32px;position:absolute;top:37px;left:20px;' %>
+<%= link_to image_tag('image32.png', :mouseover => 'image32act1.png'), adv_model_videos_url , :style => 'height:32px;width:32px;position:absolute;top:74px;left:20px;' %>
+<%= link_to image_tag('link32.png', :mouseover => 'link32act1.png'), adv_model_videos_url , :style => 'height:32px;width:32px;position:absolute;top:109px;left:20px;' %>
+<%= link_to image_tag('text32.png', :mouseover => 'text32act1.png'), adv_model_videos_url , :style => 'height:32px;width:32px;position:absolute;top:143px;left:20px;' %>
+
+<% end %>
+
+<div class="clear">&nbsp;</div>
+
+    <%= render @post %>
+
+
+<div class="clear">&nbsp;</div>
+

@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329675735.1451268:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%50e1df6d2ce21a5a3bb9f478f7c455daI"logical_path;
+FI"tool_icn1.png;
+TI"pathname;
+FI"*$root/app/assets/images/tool_icn1.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-19T13:21:28-05:00;
+FI"length;
+FI"
+12017;
+FI"digest;
+F"%ee71d0ac19764ab8e03b0a8e4f4d1c59I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

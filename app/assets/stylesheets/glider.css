@@ -1,0 +1,79 @@
+#my-glider{position:relative;box-shadow:-5px 8px 5px 0 #999;-moz-box-shadow:-5px 8px 5px 0 #999;-webkit-box-shadow:-5px 8px 5px #999;}
+#my-gliderr{position:relative;box-shadow:-5px 8px 5px 0 #999;-moz-box-shadow:-5px 8px 5px 0 #999;-webkit-box-shadow:-5px 8px 5px #999;}
+div.scroller { 
+	/* modify width and height of scrolling section if necessary	*/
+position:relative;margin-bottom:1.5em;margin-top:20px;width: 553px; height: 155px;overflow: hidden;border: 1px solid #ccc;}
+	
+div#section1 
+{background:#ffffff;color:#ffffff;}
+	
+div#section2 
+{background:#ffffff;color:#ffffff;}
+
+div#section3 
+{background:#ffffff;color:#ffffff;}
+
+div#section4 
+{background:#ffffff;color:#ffffff;}
+
+div#section5 
+{background:#ffffff;color:#ffffff;}
+
+div#section6 
+{background:#ffffff;color:#ffffff;}
+
+div#section7 
+{background:#ffffff;color:#ffffff;}
+
+div#section8 
+{background:#ffffff;color:#ffffff;}
+
+div.scroller 
+div.section 
+{
+/* 
+modify width and height of each section as needed (should match the size of the scroller window)
+	*/
+width:635px;height:155px;overflow:hidden;float:left;padding-top:1.5em;}
+	
+div.scroller
+ div.content 
+{width: 10000px;}
+
+div.section a {margin-left:12px;
+}
+div.section img {margin-left:12px;width:150px;height:120px;
+}
+div.arrowleft{	position:absolute;
+        
+	left:5px;
+	top:65px;	
+	width:16px;
+	height:16px;
+}
+
+div.arrowright{
+        
+	position:absolute;
+	left:534px;
+	top:65px;	
+	width:16px;
+	height:16px;
+}
+div.arrowleftt{	position:absolute;
+        
+	left:5px;
+	top:65px;	
+	width:16px;
+	height:16px;
+}
+
+div.arrowrightt{
+        
+	position:absolute;
+	left:534px;
+	top:65px;	
+	width:16px;
+	height:16px;
+}
+

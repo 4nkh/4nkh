@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329281980.970911:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%cb1d924922f4ea57db8c03ff635dd9afI"logical_path;
+FI"logo/hema-qc.png;
+TI"pathname;
+FI"-$root/app/assets/images/logo/hema-qc.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2011-12-10T10:31:53-05:00;
+FI"length;
+FI"	6185;
+FI"digest;
+F"%19e321f52374b5a1b873152be8a3615bI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

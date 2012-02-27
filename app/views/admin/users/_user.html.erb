@@ -1,0 +1,13 @@
+<tr class="tableau">
+
+<td style="width:200px; overflow:hidden;">
+      <%= link_to user.id, user_url(user.id) %>
+</td>
+
+<td style="width:230px;"><%= link_to user.login, user_url(user.id) %></td>
+<td>&nbsp;</td>
+
+<td style="padding-left:20px;text-align:center;" class="center"><%= link_to "edit", edit_admin_user_url(user.id) %></td>
+    <td style="text-align:center;" class="center"><%= button_to "Destroy", { :action => 'destroy', :id => user.id }, :confirm => "Are you sure?" %></td></br>
+
+</tr>

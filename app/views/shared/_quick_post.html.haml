@@ -1,0 +1,110 @@
+#quickpost.mover{:style => "display:block;"}
+  = form_for @post, :url => create_post_url do |f|
+    = f.error_messages
+    = f.hidden_field :model, :value => 'textos'
+    #post1{:style => "display:block;", :name => "post"}
+      %ul#post-types
+        %li#type-post
+          %a{:href => "javascript:showonlyone('post1')"}
+            = image_tag 'text32act.png', :mouseover => 'text32.png'
+        %li#type-image
+          %a{:href => "javascript:showonlyone('post2')"}
+            = image_tag 'image32.png', :mouseover => 'image32act.png'
+        %li#type-link
+          %a{:href => "javascript:showonlyone('post3')"}
+            = image_tag 'link32.png', :mouseover => 'link32act.png'
+        %li#type-video
+          %a{:href => "javascript:showonlyone('post4')"}
+            = image_tag 'video32.png', :mouseover => 'video32act.png'
+
+      #post-fields
+        %p#post-caption.title Add a post
+
+    #post2{:style => "display:none;", :name => "post"}
+      %ul#post-types
+        %li#type-post
+          %a{:href => "javascript:showonlyone('post1')"}
+            = image_tag 'text32.png', :mouseover => 'text32act.png'
+        %li#type-image
+          %a{:href => "javascript:showonlyone('post2')"}
+            = image_tag 'image32act.png', :mouseover => 'image32.png'
+        %li#type-link
+          %a{:href => "javascript:showonlyone('post3')"}
+            = image_tag 'link32.png', :mouseover => 'link32act.png'
+        %li#type-video
+          %a{:href => "javascript:showonlyone('post4')"}
+            = image_tag 'video32.png', :mouseover => 'video32act.png'
+
+      #post-fields
+        %p#post-caption.title Add a image link
+        %fieldset
+          = f.text_field :photo, :placeholder => 'add your link', :maxlength => 255
+
+    #post3{:style => "display:none;", :name => "post"}
+      %ul#post-types
+        %li#type-post
+          %a{:href => "javascript:showonlyone('post1')"}
+            = image_tag 'text32.png', :mouseover => 'text32act.png'
+        %li#type-image
+          %a{:href => "javascript:showonlyone('post2')"}
+            = image_tag 'image32.png', :mouseover => 'image32act.png'
+        %li#type-link
+          %a{:href => "javascript:showonlyone('post3')"}
+            = image_tag 'link32act.png', :mouseover => 'link32.png'
+        %li#type-video
+          %a{:href => "javascript:showonlyone('post4')"}
+            = image_tag 'video32.png', :mouseover => 'video32act.png'
+
+      #post-fields
+        %p#post-caption.title Add a link
+
+    #post4{:style => "display:none;", :name => "post"}
+      %ul#post-types
+        %li#type-post
+          %a{:href => "javascript:showonlyone('post1')"}
+            = image_tag 'text32.png', :mouseover => 'text32act.png'
+        %li#type-image
+          %a{:href => "javascript:showonlyone('post2')"}
+            = image_tag 'image32.png', :mouseover => 'image32act.png'
+        %li#type-link
+          %a{:href => "javascript:showonlyone('post3')"}
+            = image_tag 'link32.png', :mouseover => 'link32act.png'
+        %li#type-video
+          %a{:href => "javascript:showonlyone('post4')"}
+            = image_tag 'video32act.png', :mouseover => 'video32.png'
+
+      #post-fields
+        %p#post-caption.title Add a video
+
+    %fieldset#url_blog_field{:style => "display:none;"}
+      = f.text_field :url, :placeholder => "Add your link", :class => "post_url_new", :maxlength => 255
+    %fieldset
+      = f.text_field :title, :placeholder => "Title here", :maxlength => 100
+    %fieldset
+      = f.text_area :body, :rows => 5, :cols => 50, :class => 'tinymce', :id => 'texto'
+
+    %fieldset
+      %h4{:style => "font-size:16px;"} Tags #{raw("<span>span [use (,) comma between]</span>")} 
+      = f.text_field :tag_list, :maxlength => 30
+
+    %fieldset
+      %h4{:style => "font-size:16px;"} Privacy
+      = f.select :tag_type , Post::TAG.sort, :class => 'left'
+
+      
+      //- unless session[:access_token].nil?
+      //  %fieldset
+      //    %input#user_terms_of_service{:type => "checkbox", :value => "1", :name => "twitter"}
+      //    %span{:style => "font:size:12px;"} Post to twitter
+   
+      //- unless current_facebook_user.nil?
+      //  %fieldset
+      //    %input#user_terms_of_service{:type => "checkbox", :value => "1", :name => "fb"}
+      //    %span{:style => "font:size:12px;"} Post to facebook
+
+      //- unless @user.tumblr_email.blank? || @user.tumblr_password.blank?
+      //  %fieldset
+      //    %input#user_terms_of_service{:type => "checkbox", :value => "1", :name => "tumblr"}
+      //    %span{:style => "font:size:12px;"} Post to tumblr
+
+    %p#submit_block

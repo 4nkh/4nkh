@@ -1,0 +1,198 @@
+<% if current_page?(adv_model_videos_url) || current_page?(search_video_url) %>
+
+<div id="search_bar">
+            <% form_tag('/search/posts/videos') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+
+          </div>
+<h2 class="type_search">VIDEOS</h2>
+<h2 class="type_search1">CATEGORIES SEARCH</h2>
+
+  <div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page? adv_model_videos_url %><span>All</span>
+                <% else %><%= link_to "All", adv_model_videos_url %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, directory_video_url(letter)) do |name|
+           raw("<span>#{name}</span>")
+      end %>
+
+           </h3>
+              <% end %>
+  </div>
+<% else %>
+<% if current_page?(adv_model_images_url) || current_page?(search_image_url) %>
+
+<div id="search_bar">
+            <% form_tag('/search/posts/images') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+
+          </div>
+
+<h2 class="type_search">IMAGES</h2>
+<h2 class="type_search1">CATEGORIES SEARCH</h2>
+
+  <div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page? adv_model_images_url %><span>All</span>
+                <% else %><%= link_to "All", adv_model_images_url %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, directory_image_url(letter)) do |name|
+           raw("<span>#{name}</span>")
+      end %>
+
+          </h3>
+              <% end %>
+  </div>
+<% else %>
+<% if current_page?(adv_model_links_url) || current_page?(search_link_url) %>
+
+<div id="search_bar">
+           <% form_tag('/search/posts/links') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+          </div>
+<h2 class="type_search">LINKS</h2>
+<h2 class="type_search1">CATEGORIES SEARCH</h2>
+
+  <div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page? adv_model_links_url %><span>All</span>
+                <% else %><%= link_to "All", adv_model_links_url %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, directory_link_url(letter)) do |name|
+          raw("<span>#{name}</span>")
+      end %>
+
+           </h3>
+              <% end %>
+
+
+         </div>
+<% else %>
+<% if current_page?(adv_model_textos_url) || current_page?(search_text_url) %>
+
+ <div id="search_bar">
+            <% form_tag('/search/posts/texts') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+          </div>
+<h2 class="type_search">TEXTS</h2>
+<h2 class="type_search1">CATEGORIES SEARCH</h2>
+
+<div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page? adv_model_textos_url %><span>All</span>
+                <% else %><%= link_to "All", adv_model_textos_url %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, directory_texto_url(letter)) do |name|
+           raw("<span>#{name}</span>")
+      end %>
+
+           </h3>
+              <% end %>
+  </div>
+<% else %>
+
+<% if current_page?(directory_posts_all_url) || current_page?(search_url) %>
+
+<div id="search_bar">
+           <% form_tag('/search/posts') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+
+          </div>
+<h2 class="type_search">ALL</h2>
+<h2 class="type_search1">CATEGORIES SEARCH</h2>
+
+<div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page? directory_posts_all_url %><span>All</span>
+                <% else %><%= link_to "All", directory_posts_all_url  %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, directory_posts_letter_url(letter)) do |name|
+           raw("<span>#{name}</span>")
+      end %>
+
+</h3>
+              <% end %>
+
+         </div>
+<% else %>
+
+<% if current_page?('/tag_cloud') %>
+
+<div id="search_bar">
+           <% form_tag('/search/posts') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+
+          </div>
+
+
+<div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page?('/tag_cloud') %><span>All</span>
+                <% else %><%= link_to "All", '/tag_cloud'  %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, { :letter => letter }) do |name|
+           raw("<span>#{name}</span>")
+      end %>
+
+</h3>
+              <% end %>
+
+         </div>
+<% else %>
+
+  <div id="search_bar">
+           <% form_tag('/search/posts') do %>
+             <p>
+                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
+             </p>
+           <% end %>
+
+          </div>
+
+<div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><% if current_page? directory_posts_all_url %><span>All</span>
+                <% else %><%= link_to "All", directory_posts_all_url  %><% end %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index">
+<%= link_to_unless( params[:letter] && letter == params[:letter] , letter, directory_posts_letter_url(letter)) do |name|
+           raw("<span>#{name}</span>")
+      end %>
+
+</h3>
+              <% end %>
+
+         </div>
+
+
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>
+<% end %>

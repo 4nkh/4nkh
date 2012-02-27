@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329241487.1416142:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%4a45d3c4333337caa23a961d1d8c7b89I"logical_path;
+FI"hype1.jpg;
+TI"pathname;
+FI"&$root/app/assets/images/hype1.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-14T12:44:23-05:00;
+FI"length;
+FI"106376;
+FI"digest;
+F"%0476346475adfd67eaf4eb2de44fd68bI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

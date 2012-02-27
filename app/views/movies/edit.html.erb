@@ -1,0 +1,29 @@
+
+<div class="celebrity_search">
+  <div class="loginform divide clearfix">
+    <h3>Edit Movie</h3>
+    <p class="tagline">Add or modify your movie description</p>
+  
+  <%= form_for @movie do |f| %>
+    <%= f.error_messages %>
+<div class="clear">&nbsp;</div>      
+  <div>
+  <%= f.label :name, 'Title' %><br/>
+   <%= f.text_field :name %>
+  </div>
+
+  <div>
+  <%= f.label :description, 'Description' %><br/>
+  <span>In less then 500 caracters!!!</span><br/>
+   <%= f.text_area :description, :cols => 30, :rows => 5 %>
+  </div> 
+
+ <%= f.submit 'Submit' %>
+ 
+<% end %>
+
+<h4 style="color:maroon;font-size:14px;">WARNING!!! this button delete the entire movie</h4>
+<%= button_to "Destroy movie", { :controller => 'movies', :action => 'destroy' }, :confirm => "Are you sure?" %>
+</div>
+</div>
+

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329279370.162956:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%bdc7f25f37ebcc83592b5275cc9c1d80I"logical_path;
+FI"bubble.jpg;
+TI"pathname;
+FI"'$root/app/assets/images/bubble.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-12T16:19:02-05:00;
+FI"length;
+FI"742;
+FI"digest;
+F"%e17efe8a76b3497ffcdea6a784c6c9d4I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

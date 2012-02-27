@@ -1,0 +1,76 @@
+- content_for :hd_inner do
+  = image_tag 'mobile_phone_tablet.png', :alt => 'mobile', :title => 'mobile'
+
+:css
+  #header_inner img {margin:-65px 0 0 102px;}
+  
+.clear &nbsp; 
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+.clear &nbsp;
+
+- if current_page?(mobile_path)
+  #title.group
+    .clear &nbsp; 
+    %h2.h2_title Mobile & Applications
+    .clear &nbsp;
+    %ul{:class => "column first"}
+      %p We build from scratch a wide variety of applications, complatibles on most of the main platforms like smartphones and tablet. Indeed the growing demand for mobile applications or tablet wins businesses that can no longer afford to neglect what these tools are now part of our daily activities.
+      %br
+      %p Give us a mandate to move you in that environment with either native applications or internet.
+      .clear &nbsp;  
+      .clear &nbsp;
+    %ul.column{:style => "border-left:2px solid #EEE;border-right:2px solid #EEE;"}
+      %p Give us a mandate to move you in that environment with either native applications or internet
+      .clear &nbsp;
+      .clear &nbsp;
+      = link_to "soumission", "", :class => "btn-more"
+      .clear &nbsp;
+      .clear &nbsp;
+    %ul{:class => "column last"}
+      %p sadasdasdasdsadsa das da dsa das dasd
+    
+    .clear &nbsp;  
+    .clear &nbsp;
+
+  .clear &nbsp;
+
+- else
+  
+  #title.group
+    .clear &nbsp; 
+    %h2.h2_title Mobile & Applications
+    .clear &nbsp;
+    %ul{:class => "column first"}
+      %p Nous fabriquons de toute pièce une grande variété d'applications, complatibles sur la plus part des platformes principale de type téléphone intelligent et tablette. En effet la demande grandissante d'applications mobile ou tablette gagne les entreprises qui ne peuvent plus ce permettre de négliger ces outils qui font maintenant partie de notre quotidiens.
+      %br
+      %p Donnez nous le mandat de vous positionnez dans ce milieu que ce soit avec des applications native ou internet.
+      .clear &nbsp;  
+      .clear &nbsp;
+      
+    %ul.column{:style => "border-left:2px solid #EEE;border-right:2px solid #EEE;"}
+      %p En effet nous nous spécialisons dans le developement de logiciel ou jeux sur les appareils Android (Google) et Iphone/Ipad (Apple) mais nous pouvons également travailler sur Blackberry (RIM) et Windows phone7 (Microsoft).
+      %br
+      %p Rencontrez nos experts, demandez des conseils et vous verrez que vos objectifs sont accessible à un coût concurenciel.
+      .clear &nbsp;
+      .clear &nbsp;
+      = link_to "soumission", "", :class => "btn-more"
+      .clear &nbsp;
+      .clear &nbsp;
+    %ul{:class => "column last"}
+      %p sadasdasdasdsadsa das da dsa das dasd
+    
+    .clear &nbsp;  
+    .clear &nbsp;
+
+  .clear &nbsp;
+        

@@ -1,0 +1,56 @@
+<% content_for :crumb do %>
+  <% if  current_page?("/") %>
+    <span>Bienvenue<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/en/main") %>
+    <span>Welcome<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+
+  
+  <% if current_page?("/blog/3") %>
+    <a href="/">Acceuil<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Activitées<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if current_page?("/en/blog/3") %>
+    <a href="/en/main">Home<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Activities<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/catalogues") %>
+    <a href="/">Acceuil<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Catalogues<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/en/magazines") %>
+    <a href="/en/main">Home<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Magazines<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/nosservices") %>
+    <a href="/">Acceuil<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Services<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/en/services") %>
+    <a href="/en/main">Home<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Services<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/nousjouindre") %>
+    <a href="/">Acceuil<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Nous jouindre<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+  
+  <% if  current_page?("/en/contactus") %>
+    <a href="/en/main">Home<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Contact us<%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+
+  <% if  current_page?(dashboard_url) %>
+    <a href="/">Acceuil<%= image_tag 'arrow.gif', :class => 'arrow' %></a>
+    <span>Bienvenue sur ton blog <%= @user.login -%><%= image_tag 'arrow.gif', :class => 'arrow' %></span>
+  <% end %>
+
+<% end %>    

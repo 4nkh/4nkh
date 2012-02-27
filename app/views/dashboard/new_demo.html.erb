@@ -1,0 +1,11 @@
+<%= form_for current_user, :url => create_demo_url, :html => { :multipart => true } do |f| %>
+
+
+<h3>Choose a movie for your Profile, LESS then 30 megabites!</h3>
+<div class="clear">&nbsp;</div>
+  <fieldset>
+    <%= f.file_field :demo %>
+  </fieldset>
+  <%= f.submit 'Add' %>
+<% end %>
+

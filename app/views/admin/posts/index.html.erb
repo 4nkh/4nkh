@@ -1,0 +1,56 @@
+<div class="celebrity_search">
+<h2 style="padding-bottom:0px;margin-bottom:0;">Posts console</h2>   
+  <div id="search_bar">
+            <% form_for :research, :url => "/research/posts" do |f| %>      
+              <%= f.text_field :q, :value => "search here", :class=> 'left search' %>
+                <%= f.submit 'submit',:class => 'search_button' %>
+            <% end %>
+            
+          </div>
+     <%= link_to 'Movies console', "/admin/movies", :style => "float:right;padding-right:10px;" %>
+  
+     <%= link_to 'Users console', "/admin/users", :style => "float:right;padding-right:10px;" %>
+  <div class="tableau_wrapper" style="float:left;">
+     <%= will_paginate @posts %>
+  </div>   
+    <div class="clear">&nbsp;</div> 
+        <div class="top_tab" >
+         <div class="resultat_alpha" style="padding-left:2px;">
+           <h3 class="index"><%= link_to "All", { :letter => "" } %></h3>
+              <% @alphabet.each do |letter| %>
+                 <h3 class="index"><%= link_to letter, { :letter => letter } %></h3>
+              <% end %>
+         </div>
+</div>
+ 
+    <table bordercellpadding="0" cellspacing="0" class="field clearfix">
+ 
+      <div class="stripe">
+        <div class="crn_blue">
+        </div>
+          <div class="crn_blue1">
+          </div>
+
+             
+                <p style="margin:0;float:left;padding:6px 120px 0 15px;font-variant:small-caps;">State</p>
+                
+                <p style="margin:0;float:left;padding:6px 30px 0 20px;font-variant:small-caps;">Posts titles</p>
+                
+                <p style="margin:0;float:left;padding:6px 30px 0 40px;font-variant:small-caps;">Categories</p>
+
+                <p style="margin:0;float:right;padding:6px 50px 0 30px;font-variant:small-caps;">Tools</p>
+                   
+                   
+      </div>
+
+       <tbody>     
+         <%= render :partial => 'post', :collection => @posts %> 
+       </tbody>
+    </table>
+
+       <div style="margin:0;padding:6px 10px 0 10px;">
+          <%= will_paginate @posts %>
+            
+            
+  </div>
+</div>

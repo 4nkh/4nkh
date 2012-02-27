@@ -1,0 +1,17 @@
+<div id="serviceslist" class="services" style="display:none;" >
+  
+     <div id="seo" style="width:150px;"><%= link_to "referencement", "javascript:void(0);" %></div>
+     <div id="hosting" style="width:150px;"><%= link_to "hebergement", "javascript:void(0);" %></div>
+     <div id="website" style="width:150px;"><%= link_to "mobile", mobile_fr_path %></div>
+      <!--<div id="website" style="width:150px;"><%#= link_to "site web", "javascript:void(0);" %></div>
+      <div id="portfolio" style="width:150px;"><%#= link_to "portefolios", "javascript:void(0);" %></div>-->
+     <div id="business" style="width:150px;"><%= link_to "plan d'affaire", "javascript:void(0);" %></div>
+          
+     <%= render 'shared/seofr' %>
+     <%= render 'shared/hostingfr' %>
+     <%#= render 'shared/websitefr' %>
+     <%= render 'shared/portfoliofr' %>
+     <%= render 'shared/businessfr' %>
+   
+</div>
+

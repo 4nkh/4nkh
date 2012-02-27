@@ -1,0 +1,20 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.8887732:@value{	I"length:EFi‚I"digest;
+F"%f5d38c01bbf99b89ecc2d8c8ec391b05I"source;
+FI"‚tinyMCE.addI18n('en.template_dlg',{
+title:"Templates",
+label:"Template",
+desc_label:"Description",
+desc:"Insert predefined template content",
+select:"Select a template",
+preview:"Preview",
+warning:"Warning: Updating a template with a different one may cause data loss.",
+mdate_format:"%Y-%m-%d %H:%M:%S",
+cdate_format:"%Y-%m-%d %H:%M:%S",
+months_long:"January,February,March,April,May,June,July,August,September,October,November,December",
+months_short:"Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+day_long:"Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday",
+day_short:"Sun,Mon,Tue,Wed,Thu,Fri,Sat,Sun"
+});
+;
+FI"_version;
+F"%c981f2b9ce066c75c2a064bd7a224e7e

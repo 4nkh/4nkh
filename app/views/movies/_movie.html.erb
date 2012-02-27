@@ -1,0 +1,62 @@
+<% if current_page?('/positions/movies') %>
+<li id="movie_<%= movie.id %>" style="width:500px;position:relative;padding-top:7px;padding-bottom:7px;border-top:1px dotted #bbb;"><%= link_to image_tag(movie.picture.url, :size => '75x75'), movie_url(movie.id), :title => movie.name %>
+<span style="position:absolute;height:25px;width:300px;top:19px;left:130px;"><%= truncate(movie.name,20,"...") %></span>
+<span style="font-size:25px;"><%= movie.position %></span>
+<span style=" cursor: move;float:right;" class="handle"><%= image_tag 'sortable.gif', :style => 'padding:5px 0 0 5px;' %></span>
+</li>
+<% else %>
+<% if current_page? movie_url(@movie.id) %>
+<div class="items">
+<ul class="thumb1">
+   <% @movies.each do |movie| %>
+     <% if movie.position == (1) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (2) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (3) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (4) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (5) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (6) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+   <% end %>
+</ul>
+</div>
+
+<div class="items">
+<ul class="thumb1">
+   <% @movies.each do |movie| %>
+     <% if movie.position == (7) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (8) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (9) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (10) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (11) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+     <% if movie.position == (12) %>
+      <li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+     <% end %>
+   <% end %>
+</ul>
+</div>
+
+<% else %>
+<li><%= link_to image_tag(movie.picture.url, :size => '150x150'), movie_url(movie.id), :title => movie.name %></li>
+<% end %>
+<% end %>

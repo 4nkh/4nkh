@@ -1,0 +1,92 @@
+- content_for :head do
+  :css
+    p {font-size:16px;}
+
+- content_for :hd_inner do
+  = render :partial => 'shared/banner'
+  
+.clear &nbsp;
+.map
+  = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+  //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+  %br
+  %small
+    %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+
+- if  current_page?("/contactus") 
+
+  - content_for :flash do 
+    = render :partial => 'shared/header' 
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %h3 By phone
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %p (438) 393-3933
+    .clear &nbsp;
+    %p (450) 491-3909
+    .clear &nbsp;
+    %p 412 8e avenue
+    .clear &nbsp;
+    %p Deux-montagnes Qc.
+    .clear &nbsp;
+    %p J7R 3K8
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp; 
+ 
+    %h3 By e-mail
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=500;" 
+
+- else
+
+  - content_for :flash do
+    = render :partial => 'shared/fr'
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+
+   
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %h3 Par téléphone
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %p (514) 984-0004
+  .clear &nbsp;
+  %p (450) 491-3909
+  .clear &nbsp;
+  %p 412 8e avenue
+  .clear &nbsp;
+  %p Deux-montagnes Qc.
+  .clear &nbsp;
+  %p J7R 3K8
+
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp; 
+
+  %h3 Par courriel
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+ 
+  = link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=500;" 
+  
+.clear &nbsp;
+.clear &nbsp;
+
+
+  

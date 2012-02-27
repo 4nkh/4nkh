@@ -1,0 +1,123 @@
+<%= javascript_include_tag 'application' %>
+<%= stylesheet_link_tag 'application' %>
+
+    <h2>Add content</h2>
+    <p class="tagline">Add or modify the information about your account</p>
+<div class="clear">&nbsp;</div>
+  <%= form_for @user, :url => user_edit_path(@user.id) do |f| %>
+    <%= f.error_messages %>
+<h3 style="color:green;">Francais</h3>
+     <fieldset>
+    <%= f.label :par1, 'paragraphe 1 (500 caracteres max)' %><br/>
+    <%= f.text_area :par1, :class => 'tinymce' %>
+     </fieldset>
+
+
+     <fieldset>
+    <%= f.label :par2, 'paragraphe 2 (500 caracteres max)' %><br/>
+    <%= f.text_area :par2, :class => 'tinymce' %>
+     </fieldset>
+
+<h3 style="color:green;">English</h3>
+    <fieldset>
+    <%= f.label :par3, 'column 1 (500 characters max)' %><br/>
+    <%= f.text_area :par3, :class => 'tinymce' %>
+     </fieldset>
+
+
+     <fieldset>
+    <%= f.label :par4, 'column 2 (500 characters max)' %><br/>
+    <%= f.text_area :par4, :class => 'tinymce' %>
+     </fieldset>
+
+<div class="clear">&nbsp;</div>
+<%= f.submit 'Update' %>
+
+<% end %>
+  
+<% javascript_tag do %>
+
+	$().ready(function() {
+
+		$('textarea.tinymce').tinymce({
+
+			// Location of TinyMCE script
+
+			script_url : '/assets/tinymce/jscripts/tiny_mce/tiny_mce.js',
+
+
+
+			// General options
+
+			mode : "exact",
+			theme : "advanced",
+			skin : "o2k7",
+			skin_variant : "black",
+
+			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+
+
+
+			// Theme options
+
+			theme_advanced_buttons1 : "save,newdocument,|,styleselect,|,formatselect,|,fontselect,|,fontsizeselect",
+
+			theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,|,bold,italic,underline,strikethrough,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,fullscreen",
+
+			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,ltr,rtl",
+
+			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,|,charmap,emotions,iespell,media,advhr",
+			theme_advanced_buttons5 : "cut,copy,paste,pastetext,pasteword,|,insertdate,inserttime,preview,|,forecolor,backcolor,|,print,|,link,unlink,anchor,image,cleanup,help,code",
+
+			theme_advanced_toolbar_location : "top",
+
+			theme_advanced_toolbar_align : "center",
+
+			theme_advanced_statusbar_location : "bottom",
+
+			theme_advanced_resizing : true,
+
+
+			// Example content CSS (should be your site CSS)
+
+			content_css : "css/content.css",
+
+
+
+			// Drop lists for link/image/media/template dialogs
+
+			template_external_list_url : "lists/template_list.js",
+
+			external_link_list_url : "lists/link_list.js",
+
+			external_image_list_url : "lists/image_list.js",
+
+			media_external_list_url : "lists/media_list.js",
+
+
+
+			// Replace values for the template plugin
+
+			template_replace_values : {
+
+				username : "<%= current_user.login %>",
+
+				staffid : "<%= current_user.id %>"
+
+			}
+
+		});
+
+	});
+
+<% end %>
+
+<script type="text/javascript">
+
+if (document.location.protocol == 'file:') {
+
+	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+
+}
+
+</script>

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329768889.811305:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%04f6136be48221da1b6b04fe51d65d58I"logical_path;
+FI"sortable.gif;
+TI"pathname;
+FI")$root/app/assets/images/sortable.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-02-12T16:19:02-05:00;
+FI"length;
+FI"582;
+FI"digest;
+F"%2fbe1896712c567ac765e31c37339c24I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329674359.81458:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%9c1aa37441b2039651faf014bdf7388bI"logical_path;
+FI"mobile_icn1.png;
+TI"pathname;
+FI",$root/app/assets/images/mobile_icn1.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-19T12:59:18-05:00;
+FI"length;
+FI"
+14343;
+FI"digest;
+F"%38c326a4d831b0917d3ee005b7dfa1f0I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

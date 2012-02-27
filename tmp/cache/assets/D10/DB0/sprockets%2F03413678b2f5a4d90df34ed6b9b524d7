@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.972713:@value{	I"length:EFiBI"digest;
+F"%b6f69f8b1b5766686658c2a49fc86fa6I"source;
+FI"BtinyMCE.addI18n('en.simple',{
+bold_desc:"Bold (Ctrl+B)",
+italic_desc:"Italic (Ctrl+I)",
+underline_desc:"Underline (Ctrl+U)",
+striketrough_desc:"Strikethrough",
+bullist_desc:"Unordered list",
+numlist_desc:"Ordered list",
+undo_desc:"Undo (Ctrl+Z)",
+redo_desc:"Redo (Ctrl+Y)",
+cleanup_desc:"Cleanup messy code"
+});
+;
+FI"_version;
+F"%36a5a48a9c6928240acc95aee38be1e4

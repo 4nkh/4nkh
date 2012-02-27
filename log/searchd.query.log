@@ -1,0 +1,44 @@
+[Mon Feb 13 11:11:37.615 2012] 0.000 sec [bool/2/rel 0 (0,10)] [post_core] @tag_type *Visible*
+[Mon Feb 13 11:11:41.729 2012] 0.000 sec [bool/2/rel 0 (0,10)] [post_core] @tag_type *Visible*
+[Mon Feb 13 11:15:31.510 2012] 0.000 sec [bool/2/rel 0 (0,10)] [post_core] @tag_type *Visible*
+[Mon Feb 13 11:23:53.302 2012] 0.000 sec [bool/2/rel 0 (0,10)] [post_core] @tag_type *Visible*
+[Mon Feb 13 11:24:16.421 2012] 0.000 sec [bool/2/rel 0 (0,10)] [post_core] @tag_type *Visible*
+[Tue Feb 14 23:44:16.584 2012] 0.016 sec [bool/2/rel 1 (0,10)] [post_core] @tag_type *Visible*
+[Tue Feb 14 23:45:24.655 2012] 0.000 sec [bool/2/rel 1 (0,10)] [post_core] @tag_type *Visible*
+[Tue Feb 14 23:49:04.047 2012] 0.000 sec [bool/2/rel 1 (0,10)] [post_core] @tag_type *Visible*
+[Tue Feb 14 23:50:08.237 2012] 0.042 sec [bool/2/rel 1 (0,10)] [post_core] @tag_type *Visible*
+[Wed Feb 15 01:03:19.371 2012] 0.025 sec [bool/2/rel 1 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 13:19:05.477 2012] 0.000 sec [bool/2/rel 2 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 13:39:11.383 2012] 0.000 sec [bool/2/rel 2 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 14:42:46.889 2012] 0.000 sec [bool/2/rel 2 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 14:43:41.212 2012] 0.000 sec [bool/2/rel 2 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 14:44:16.417 2012] 0.000 sec [bool/2/rel 4 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 21:26:27.918 2012] 0.015 sec [bool/2/rel 4 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 21:27:20.531 2012] 0.000 sec [bool/2/rel 4 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 21:29:27.727 2012] 0.000 sec [bool/2/rel 4 (0,10)] [post_core] @tag_type *Visible*
+[Fri Feb 17 21:43:22.614 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Sat Feb 18 12:19:56.309 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Sat Feb 18 15:01:32.921 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Sun Feb 19 11:57:24.070 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Sun Feb 19 22:27:17.817 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Mon Feb 20 11:01:43.602 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Mon Feb 20 11:59:47.407 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Wed Feb 22 23:01:46.000 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:24:30.656 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:25:19.996 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:29:03.185 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:29:28.879 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:34:07.880 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:38:15.015 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:38:37.012 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:39:09.053 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:39:37.513 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:40:16.589 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:41:17.592 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:42:04.285 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:42:28.986 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:42:44.838 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 00:47:37.848 2012] 0.000 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 16:34:47.788 2012] 0.004 sec [scan/3/rel 4 (0,10)] [post_core]
+[Thu Feb 23 16:45:06.383 2012] 0.010 sec [scan/3/rel 4 (0,10)] [post_core]
+[Sat Feb 25 16:24:40.041 2012] 0.033 sec [scan/3/rel 4 (0,10)] [post_core]

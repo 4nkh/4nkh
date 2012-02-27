@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329281980.823263:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%2b4e2dd6288dfb82b6273874c6937265I"logical_path;
+FI"logo/stm.png;
+TI"pathname;
+FI")$root/app/assets/images/logo/stm.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2011-12-10T10:30:33-05:00;
+FI"length;
+FI"	5259;
+FI"digest;
+F"%2427c41dd716576afa7d0cc2d80ba5cbI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

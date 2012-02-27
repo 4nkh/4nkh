@@ -1,0 +1,167 @@
+<% if current_page? posts_tagged_with_url(post.tags.name) %>
+<div class="post_full">
+
+<%= image_tag 'bubble.jpg', :class => 'tag' -%>
+
+   <% unless post.url.blank? || post.url == 'http://'%>
+       <% if post.model == "videos" %>
+         <%= raw("<iframe src=\"#{sanitize(post.url)}\" style='z-index:1;margin:20px;' width='400' height='300' wmode='transparent' ></iframe>") %>
+       <% else %>
+         <h3>
+           <%= link_to truncate(h(post.url),:lenght => "40",:omission => "..."),  h(post.url), :popup => 'true', :rel => 'nofollow' %>
+         </h3>
+       <% end %>
+    <% end %>   
+     <h3><%= raw("<span>#{h post.title}</span>") unless post.title.blank? %></h3>
+       <% if post.photo.blank? || post.photo == 'http://' %>
+       <% else %>
+        <div class="post_photo">
+         <%= link_to(image_tag(post.photo, :size => '55x55', :style => "border:1px solid #ddd;padding:2px;"), post.photo, :popup => true, :rel => 'nofollow') %></div>
+       <% end %>
+      <div class="clear">&nbsp;</div>
+   <div class="blog_body"><%= raw(auto_link(simple_format(sanitize(post.excerpts.body)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
+       </div>
+
+ <div class="clear">&nbsp;</div>
+
+    <div class="user_box_bg">
+      <div class="user_icon">
+         <% if current_user.id == (1) || current_user.id == (2) %>
+             <%= link_to(image_tag('comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}", :method => :delete) %>
+             <%= link_to "Edit post", edit_blog_url(post.id) %>
+           <% end %>
+            <div class="icn_<%= post.model %>"></div>
+         <div class="blog_icon"><span>posted&nbsp;</span><span style="font-weight:bold;"><%= time_ago_in_words(post.created_at) %></span><span>&nbsp;ago</span></div>
+
+    </div>
+  </div>
+<div class="blog_tag">
+         <%= render :partial => 'posts/tag', :collection =>  post.tags %>
+      </div>
+  <%= image_tag 'gr_post_top.jpg', :class => 'gr_post_top' %>
+ <%= link_to(image_tag(post.user.photo.url(:thumb), :size => '75x75', :style => "border:1px solid #ddd;padding:2px;"), show_user_url(post.user_id), :class => 'user_post') %>
+   </div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+
+<% else %>
+
+<% if current_page?('/search/posts') %>
+
+<div class="post_full">
+
+<%= image_tag 'bubble.jpg', :class => 'tag' -%>
+
+     <h3 class="title"><%= link_to raw("<span>#{h post.excerpts.title}</span>"), post_url(post.id), :title => 'Show detail', :alt => 'Show detail' unless post.title.blank? %></h3>
+        <% unless post.url.blank? || post.url == 'http://'%>
+             <% if post.model == "videos" %>
+               <%= raw("<iframe src=\"#{sanitize(post.url)}\" style='z-index:1;margin:20px;' width='400' height='300' wmode='transparent' ></iframe>") %>
+             <% else %>
+               <h3>
+                 <%= link_to truncate(h(post.url),:lenght => "40",:omission => "..."),  h(post.url), :popup => 'true', :rel => 'nofollow' %>
+               </h3>
+             <% end %>
+          <% end %>
+       <% if post.photo.blank? || post.photo == 'http://' %>
+       <% else %>
+        <div class="post_photo">
+         <%= link_to(image_tag(post.photo, :size => '55x55', :style => "border:1px solid #ddd;padding:2px;"), post.photo, :popup => true, :rel => 'nofollow') %></div>
+     <% end %>
+      <div class="clear">&nbsp;</div>
+   <div class="blog_body"><%= raw(auto_link(simple_format(sanitize(post.excerpts.body)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
+   </div>
+ <div class="clear">&nbsp;</div>
+
+    <div class="user_box_bg">
+      <div class="user_icon">
+           <% if current_page? dashboard_url %>
+              <%= link_to(image_tag('comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}") %>
+             <%= link_to "Edit post", edit_blog_url(post.id) %>
+           <% else %>
+           <% if current_user.blank? %>
+           <% else %>
+           <% if current_user.id == (1) || current_user.id == (2) %>
+             <%= link_to(image_tag('comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}", :method => :delete) %>
+             <%= link_to "Edit post", edit_blog_url(post.id) %>
+           <% end %>
+           <% end %>
+           <% end %>
+            <div class="icn_<%= post.model %>"></div>
+                <div class="blog_icon"><span>posted&nbsp;</span><span style="font-weight:bold;"><%= time_ago_in_words(post.created_at) %></span><span>&nbsp;ago</span></div>
+</div>
+  </div>
+<div class="blog_tag">
+         <%= render :partial => 'posts/tag', :collection =>  post.tags %>
+      </div>
+  <%= image_tag 'gr_post_top.jpg', :class => 'gr_post_top' %>
+       <%= link_to(image_tag(post.user.photo.url(:thumb), :size => '75x75', :style => "border:1px solid #ddd;padding:2px;"), show_user_url(post.user_id), :class => 'user_post') %>
+   </div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+
+<% else %>
+
+<% if current_page?(post_url(post.id)) %>
+<div class="post_full" style="margin:0 auto;">
+<% else %>
+<div class="post_full">
+<% end %>
+
+<%= image_tag 'bubble.jpg', :class => 'tag' -%>
+    
+       <h3 class="title"><%= link_to raw("<span>#{post.title}</span>"), post_url(post.id), :title => 'Show detail', :alt => 'Show detail' unless post.title.blank? %></h3>
+        <% unless post.url.blank? || post.url == 'http://'%>
+             <% if post.model == "videos" %>
+               <%= raw("<iframe src=\"#{sanitize(post.url)}\" style='z-index:1;margin:20px;' width='400' height='300' wmode='transparent' ></iframe>") %>
+             <% else %>
+               <h3>
+                 <%= link_to truncate(h(post.url),:lenght => "40",:omission => "..."),  h(post.url), :popup => 'true', :rel => 'nofollow' %>
+               </h3>
+             <% end %>
+          <% end %>
+       <% if post.photo.blank? || post.photo == 'http://' %>
+       <% else %>
+        <div class="post_photo">
+         <%= link_to(image_tag(post.photo, :size => '55x55', :style => "border:1px solid #ddd;padding:2px;"), post.photo, :popup => true, :rel => 'nofollow') %></div>
+     <% end %>
+      <div class="clear">&nbsp;</div>
+   <div class="blog_body"><%= raw(auto_link(simple_format(sanitize(post.body)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
+   <%#auto_link(simple_format(post.body), :href_options => { :target => "_new"},:rel => "nofollow") %>
+   </div>
+ <div class="clear">&nbsp;</div>
+
+    <div class="user_box_bg">
+      <div class="user_icon">
+           <% if current_page? dashboard_url %>
+              <%= link_to(image_tag('comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}", :method => :delete) %>
+             <%= link_to "Edit post", edit_blog_url(post.id) %>
+           <% else %>
+           <% if current_user.blank? %>
+           <% else %>
+           <% if current_user.id == (1) || current_user.id == (2) %>
+             <%= link_to(image_tag('comdel.png', :mouseover => 'comdel1.png'), "/posts/destroy/#{post.id}", :method => :delete) %>
+             <%= link_to "Edit post", edit_blog_url(post.id) %>
+           <% end %>
+           <% end %>
+           <% end %>
+            <div class="icn_<%= post.model %>"></div>
+        <div class="blog_icon"><span>posted&nbsp;</span><span style="font-weight:bold;"><%= time_ago_in_words(post.created_at) %></span><span>&nbsp;ago</span></div>
+</div>
+  </div>
+<div class="blog_tag">
+         <%= render :partial => 'posts/tag', :collection =>  post.tags %>
+      </div>
+<% if current_page?(post_url(post.id)) %>
+<% else %>
+  <%= image_tag 'gr_post_top.jpg', :class => 'gr_post_top' %>
+       <%= link_to(image_tag(post.user.photo.url(:thumb), :size => '75x75', :style => "border:1px solid #ddd;padding:2px;"), show_user_url(post.user_id), :class => 'user_post') %>
+<% end %>
+   </div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+
+<% end %>
+<% end %>

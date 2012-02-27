@@ -1,0 +1,39 @@
+/* Black */
+
+.o2k7SkinBlack .mceToolbar .mceToolbarStart span, .o2k7SkinBlack .mceToolbar .mceToolbarEnd span, .o2k7SkinBlack .mceButton, .o2k7SkinBlack .mceSplitButton, .o2k7SkinBlack .mceSeparator, .o2k7SkinBlack .mceSplitButton a.mceOpen, .o2k7SkinBlack .mceListBox a.mceOpen {background-image:url(img/button_bg_black.png);-border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;}
+
+.o2k7SkinBlack table{background:#535353; color:#FFF;-border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+.o2k7SkinBlack .mceMenuItemTitle a, .o2k7SkinBlack .mceMenuItemTitle span.mceText, .o2k7SkinBlack .mceStatusbar div, .o2k7SkinBlack .mceStatusbar span, .o2k7SkinBlack .mceStatusbar a {background:#535353; color:#FFF}
+
+.o2k7SkinBlack table.mceListBoxEnabled .mceText, o2k7SkinBlack .mceListBox .mceText {background:#FFF; border:0px solid #CBCFD4; border-bottom-color:#989FA9; border-right:0;}
+
+.o2k7SkinBlack table.mceListBoxEnabled:hover .mceText, .o2k7SkinBlack .mceListBoxHover .mceText, .o2k7SkinBlack .mceListBoxSelected .mceText {/*background:#FFF; border:1px solid #FFBD69; border-right:0;*/}
+
+.o2k7SkinBlack .mceExternalToolbar, .o2k7SkinBlack .mceListBox .mceText, .o2k7SkinBlack div.mceMenu, .o2k7SkinBlack table.mceLayout, .o2k7SkinBlack .mceMenuItemTitle a, .o2k7SkinBlack table.mceLayout tr.mceFirst td, .o2k7SkinBlack table.mceLayout, .o2k7SkinBlack .mceMenuItemTitle a, .o2k7SkinBlack table.mceLayout tr.mceLast td, .o2k7SkinBlack .mceIframeContainer {border-color: /*#535353*/transparent !important;}
+
+.o2k7SkinBlack table.mceSplitButtonEnabled:hover a.mceAction, .o2k7SkinBlack .mceSplitButtonHover a.mceAction, .o2k7SkinBlack .mceSplitButtonSelected {background-image:url(img/button_bg_black.png)}
+
+.o2k7SkinBlack .mceMenu .mceMenuItemEnabled a:hover, .o2k7SkinBlack .mceMenu .mceMenuItemActive {background-color:#FFE7A1;}
+
+
+#movie_description_ifr,#user_par1_ifr,#user_par2_ifr,#user_par3_ifr,#user_par4_ifr,#acceuil_par1_ifr,#acceuil_par2_ifr,#acceuil_par3_ifr,#acceuil_par4_ifr,#acceuil_par5_ifr,#acceuil_par6_ifr,#team_par1_ifr,#team_par2_ifr,#team_par3_ifr,#team_par4_ifr,#team_par5_ifr,#team_par6_ifr,#realisation_par1_ifr,#realisation_par2_ifr,#realisation_par3_ifr,#realisation_par4_ifr,#realisation_par5_ifr,#realisation_par6_ifr, #link_ifr, #image_ifr, #video_ifr, #texto_ifr
+ {margin-left:5px; width:427px !important;width:400px;
+  padding:5px;
+  border:none;
+  font-size: 1.4em;
+  background: #FFF;
+  -border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-right: 1px solid #BBB;
+  border-bottom: 1px solid #BBB;}
+
+/* Black */
+/*
+.o2k7SkinBlack .mceToolbar .mceToolbarStart span, .o2k7SkinBlack .mceToolbar .mceToolbarEnd span, .o2k7SkinBlack .mceButton, .o2k7SkinBlack .mceSplitButton, .o2k7SkinBlack .mceSeparator, .o2k7SkinBlack .mceSplitButton a.mceOpen, .o2k7SkinBlack .mceListBox a.mceOpen {background-image:url(img/button_bg_black.png)}
+.o2k7SkinBlack table, .o2k7SkinBlack .mceMenuItemTitle a, .o2k7SkinBlack .mceMenuItemTitle span.mceText, .o2k7SkinBlack .mceStatusbar div, .o2k7SkinBlack .mceStatusbar span, .o2k7SkinBlack .mceStatusbar a {background:#535353; color:#FFF}
+.o2k7SkinBlack table.mceListBoxEnabled .mceText, o2k7SkinBlack .mceListBox .mceText {background:#FFF; border:1px solid #CBCFD4; border-bottom-color:#989FA9; border-right:0}
+.o2k7SkinBlack table.mceListBoxEnabled:hover .mceText, .o2k7SkinBlack .mceListBoxHover .mceText, .o2k7SkinBlack .mceListBoxSelected .mceText {background:#FFF; border:1px solid #FFBD69; border-right:0}
+.o2k7SkinBlack .mceExternalToolbar, .o2k7SkinBlack .mceListBox .mceText, .o2k7SkinBlack div.mceMenu, .o2k7SkinBlack table.mceLayout, .o2k7SkinBlack .mceMenuItemTitle a, .o2k7SkinBlack table.mceLayout tr.mceFirst td, .o2k7SkinBlack table.mceLayout, .o2k7SkinBlack .mceMenuItemTitle a, .o2k7SkinBlack table.mceLayout tr.mceLast td, .o2k7SkinBlack .mceIframeContainer {border-color: #535353;}
+.o2k7SkinBlack table.mceSplitButtonEnabled:hover a.mceAction, .o2k7SkinBlack .mceSplitButtonHover a.mceAction, .o2k7SkinBlack .mceSplitButtonSelected {background-image:url(img/button_bg_black.png)}
+.o2k7SkinBlack .mceMenu .mceMenuItemEnabled a:hover, .o2k7SkinBlack .mceMenu .mceMenuItemActive {background-color:#FFE7A1}

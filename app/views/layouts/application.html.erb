@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "#{SETTINGS['site_name']}") %></title>
+    <meta name="keywords" content="<%= h(yield(:keywords) || "website, creation, seo, hosting, rails, ruby, internet, hype, montreal, laval, longueil, blainville, site, graphic, design, billing, share, blog, wordpress, management, intranet, database, indexation, web") %>"/>
+    <meta name="description" content="<%= h(yield(:description) || "4nkh.com will help you too get the application you need. We can provide hosting, seo, website, intranet, management, mail services, billing system, designs, cell phone compatibility and much more. Come take a look on our products.") %>"/>
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="7 days" />    
+
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>-->
+    
+    <link rel="icon" type="image/gif" href="/images/favicon.gif" />
+    <%= stylesheet_link_tag 'application', 'nivo-slider' %>    
+    <!--[if IE 8]><%= stylesheet_link_tag 'artist_ie8' %><![endif]-->
+    <!--[if IE 7]><%= stylesheet_link_tag 'artist_ie7' %><![endif]-->
+    <!--[if IE 6]><%= stylesheet_link_tag 'artist_ie6' %><![endif]-->
+    <%= yield(:head) %>             
+  </head>
+  <body>  
+    <div id="header_wrapper"></div>
+       <div id="topbar">
+         <%= yield(:top_bar) %>
+    <%= render :partial => 'shared/topbar' %>   
+       </div> 
+      <div id="header" >
+        <h1>4nkh website creation hosting management</h1>
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>       
+         <div id="header_inner">
+           <%= yield(:hd_inner) %>  
+         </div> 
+           <div id="nav">
+            <% if current_page?('/fr/posts/all/Visible') || current_page?('/fr/contact') || current_page?('/fr/services') || current_page?('/fr/apropos') || current_page?('/fr/folios') || current_page?('/fr/realisations') || current_page?('/fr/outils')%>
+              <%= render :partial => 'shared/navfr' %>
+            <% else %>
+  	          <%= render :partial => 'shared/nav' %>
+            <% end %>
+           </div>           
+      </div>
+    <div class="clear">&nbsp;</div>
+
+<%= render :partial => '/shared/tab' %>
+    <div id="content">            
+    <div id="<%= @content_for_sidebar ? 'left-content' : 'content_inner' %>">
+          <%= yield %>
+    </div>
+          <% if @content_for_sidebar %>
+    <div id="right-content">
+          <%= yield :sidebar %>
+    </div>
+        
+          <% end %> 
+<% if current_page?('/posts/all/Visible') || current_page?('/all/videos/Visible') || current_page?('/post/all/Visible') || current_page?('/all/images/Visible') || current_page?('/all/links/Visible') || current_page?('/all/textos/Visible') || current_page?('/fr/posts/all/Visible')%>
+<% else %>
+<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+<% end %>
+    </div>
+    <div id="footer">    
+        <div id="footer_inner">
+          <%= link_to image_tag('facebookicon1.png', :mouseover => 'facebookicon.png'), 'http://www.facebook.com/pages/4nkh/155264964487409?created', :class => 'facebook', :popup => true, :alt => 'facebook', :title => '4nkh facebook' %>
+<%= link_to image_tag('twittericon1.png', :mouseover => 'twittericon.png'), 'http://twitter.com/4nk', :class => 'twitter', :popup => true, :alt => 'twitter', :title => '4nkh twitter' %>
+<%= link_to image_tag('rss1.png', :mouseover => 'rss.png'), feed_path, :class => 'rss', :popup => true, :alt => 'rss', :title => '4nkh rss' %>
+          <%= yield :footer %>
+          <%= render :partial => "shared/footer" %>
+          <span id="copyright">copyright © 2012 4nkh development</span>
+        </div>
+    </div>      
+     
+
+     <%= javascript_include_tag 'application' -%>
+     
+     <script type="text/javascript">
+       Shadowbox.init({  overlayColor: "#000",  overlayOpacity: "0.5",  handleOversize: "drag",  displayNav: true,  handleUnsupported:  "remove" });    // window.onload = function() {  Shadowbox.setup({  width:   600,  height: "640px"  }); };
+     </script>
+     
+     <%= yield :js %>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15219570-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>
+
+

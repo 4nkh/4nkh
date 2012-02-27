@@ -1,0 +1,24 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.647531:@value{	I"length:EFiaI"digest;
+F"%10fb10ccea159b02330210a1a032ebd9I"source;
+FI"atinyMCEPopup.requireLangPack();
+
+var ExampleDialog = {
+	init : function() {
+		var f = document.forms[0];
+
+		// Get the selected contents as text and place it in the input
+		f.someval.value = tinyMCEPopup.editor.selection.getContent({format : 'text'});
+		f.somearg.value = tinyMCEPopup.getWindowArg('some_custom_arg');
+	},
+
+	insert : function() {
+		// Insert the contents from the input into the document
+		tinyMCEPopup.editor.execCommand('mceInsertContent', false, document.forms[0].someval.value);
+		tinyMCEPopup.close();
+	}
+};
+
+tinyMCEPopup.onInit.add(ExampleDialog.init, ExampleDialog);
+;
+FI"_version;
+F"%53e96bbdc56f631c25f3c86d971d5bc4

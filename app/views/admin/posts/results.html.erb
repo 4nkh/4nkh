@@ -1,0 +1,46 @@
+<div class="celebrity_search">
+  
+  <div id="search_bar">
+            <% form_for :research, :url => "/research/posts" do |f| %>
+              <%= f.text_field :q, :value => "search here", :class=> 'left search' %>
+                <%= f.submit 'submit',:class => 'search_button' %>
+            <% end %>
+   
+          </div>
+  
+     <%= link_to 'Movies console', "/admin/movies", :style => "float:right;padding-right:10px;" %>
+     <%= link_to 'Users console', "/admin/users", :style => "float:right;padding-right:10px;" %>
+  <div class="tableau_wrapper">
+  
+  </div>   
+     <h2 style="padding-bottom:0px;margin-bottom:0;">Posts console</h2> 
+     
+        <div style="background:#eee;border-color:#ddd #ddd #eee #ddd;border-style:solid;border-width:1px;margin: 0 auto;padding:5px 0 5px 0;width:580px">
+         </div>
+
+ 
+    <table bordercellpadding="0" cellspacing="0" class="field clearfix">
+
+<div class="stripe">
+        <div class="crn_blue">
+        </div>
+          <div class="crn_blue1">
+          </div>
+
+             <p style="margin:0;float:left;padding:6px 120px 0 15px;font-variant:small-caps;">State</p>
+                
+                <p style="margin:0;float:left;padding:6px 30px 0 20px;font-variant:small-caps;">Posts titles</p>
+                
+                <p style="margin:0;float:left;padding:6px 30px 0 40px;font-variant:small-caps;">Categories</p>
+
+                <p style="margin:0;float:right;padding:6px 50px 0 30px;font-variant:small-caps;">Tools</p>
+
+      </div>
+
+       <tbody>
+         <%= render :partial => 'post', :collection => @posts %>
+       </tbody>
+    </table>
+
+</div>
+

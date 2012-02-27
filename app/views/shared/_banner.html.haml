@@ -1,0 +1,44 @@
+- if current_page?(seo_path)
+  #slider
+    = image_tag 'seo.jpg', :alt => 'web design'
+    = image_tag 'goal.jpg', :alt => 'management' 
+    = image_tag 'test2.jpg', :alt => 'business solution'
+
+- elsif current_page?(seo_fr_path) 
+  #slider
+    = image_tag 'seo.jpg', :alt => 'web design'
+    = image_tag 'goal.jpg', :alt => 'management'
+    = image_tag 'test2.jpg', :alt => 'business solution'
+
+- else
+  #slider
+    = image_tag 'hype1.jpg', :alt => 'web design'  
+    = image_tag 'gxr.jpg', :alt => 'management' 
+    = image_tag 'test2.jpg', :alt => 'business solution'
+
+  - if current_page?(root_path)
+    #topslider
+      #slider1
+        = image_tag 'linky.gif', :size => '1004x257' 
+        = image_tag 'forhype.png', :alt => 'hype' 
+        = image_tag 'linky.gif', :size => '1004x257' 
+        = image_tag 'linky.gif', :size => '1004x257' 
+        = image_tag 'focus.png' 
+        = image_tag 'linky.gif', :size => '1004x257' 
+        = image_tag 'linky.gif', :size => '1004x257' 
+        = image_tag 'focus.png' 
+        = image_tag 'linky.gif', :size => '1004x257' 
+
+  - else 
+    - if current_page?(accueil_path)
+      #topslider
+        #slider1
+          = image_tag 'linky.gif', :size => '1004x257'
+          = image_tag 'forhype.png', :alt => 'focus' 
+          = image_tag 'linky.gif', :size => '1004x257' 
+          = image_tag 'linky.gif', :size => '1004x257' 
+          = image_tag 'focus1.png' 
+          = image_tag 'linky.gif', :size => '1004x257' 
+          = image_tag 'linky.gif', :size => '1004x257' 
+          = image_tag 'focus.png' 
+          = image_tag 'linky.gif', :size => '1004x257' 

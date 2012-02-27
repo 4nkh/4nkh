@@ -1,0 +1,25 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.641587:@value{	I"length:EFi•I"digest;
+F"%1c2df09b57506d3a4fdecbbe178c4b87I"source;
+FI"•tinyMCE.addI18n('en.emotions_dlg',{
+title:"Insert emotion",
+desc:"Emotions",
+cool:"Cool",
+cry:"Cry",
+embarassed:"Embarassed",
+foot_in_mouth:"Foot in mouth",
+frown:"Frown",
+innocent:"Innocent",
+kiss:"Kiss",
+laughing:"Laughing",
+money_mouth:"Money mouth",
+sealed:"Sealed",
+smile:"Smile",
+surprised:"Surprised",
+tongue_out:"Tongue out",
+undecided:"Undecided",
+wink:"Wink",
+yell:"Yell"
+});
+;
+FI"_version;
+F"%791bdac8fc46ae7b743f4e5d56d3ca48

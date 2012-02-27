@@ -7,7 +7,7 @@ development:
   adapter: mysql2 #sqlite3
   database: ankh #db/development.sqlite3
   username: root
-  password: lapinpoulenamour79
+  #password: lapinpoulenamour79
   encoding: utf8
   pool: 5
   timeout: 5000

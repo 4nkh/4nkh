@@ -19,15 +19,20 @@ class Notifier < ActionMailer::Base
 #end
 
   def contact_email(email_params)
+    #subject       email_params[:subject]
+    #from          email_params[:name] + " <" + email_params[:address] + ">"
+    #recipients    "mathieub@4nkh.com"
+    #sent_on       Time.now
+    #body          email_params[:body]
     # You only need to customize @recipients.
     @recipients = "admin@4nkh.com"
     @from = email_params[:name] + " <" + email_params[:address] + ">"
     @subject = email_params[:subject]
     @sent_on = Time.now
-    @body["email_body"] = email_params[:body]
-    @body["email_name"] = email_params[:name]
-    @body["email_subject"] = email_params[:subject]
-    @body["email_address"] = email_params[:address]
+    @body = email_params[:body]
+    @name = email_params[:name]
+    @subject = email_params[:subject]
+    @mail = email_params[:address]
     content_type "text/html"
   end
 end

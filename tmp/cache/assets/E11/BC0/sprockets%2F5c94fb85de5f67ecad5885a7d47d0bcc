@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.2623072:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%2b8ca23979c554d3d37a00170e9965fcI"logical_path;
+F"Qtinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.pngI"pathname;
+FI"n$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	3736;
+FI"digest;
+F"%601dc25ff7ec62de3ebfacc9ef9658cfI"_version;
+F"%1c9609bc58b1e77c196de29021583379

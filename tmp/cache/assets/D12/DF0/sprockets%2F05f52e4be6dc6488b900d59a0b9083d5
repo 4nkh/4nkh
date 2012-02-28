@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.293453:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%768aa7f812e2a129a42a3655a1c0ebf8I"logical_path;
+F"logo/socialship.pngI"pathname;
+FI"0$root/app/assets/images/logo/socialship.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"147262;
+FI"digest;
+F"%56681c08d9657ef557f8baa87d6f94ccI"_version;
+F"%1c9609bc58b1e77c196de29021583379

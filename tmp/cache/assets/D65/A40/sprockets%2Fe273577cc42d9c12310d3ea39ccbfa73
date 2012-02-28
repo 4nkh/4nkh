@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.229983:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%7bf03aa04d6ac17333e66fd93034bbdcI"logical_path;
+F"8tinymce/jscripts/tiny_mce/themes/advanced/image.htmI"pathname;
+FI"U$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/image.htm;
+FI"content_type;
+FI"text/html;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	4391;
+FI"digest;
+F"%3cff737f7019a127bd48b8e6507b74bdI"_version;
+F"%1c9609bc58b1e77c196de29021583379

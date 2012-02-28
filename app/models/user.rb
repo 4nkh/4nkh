@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
 
   has_attached_file :photo, 
                     :styles => {:thumb => "75x75#",:original => "200x200#" },
-                    :url => '/user/:id/:style.:extension',
-                    :default_url => '/images/no-avatar.jpg'
+                    :url => "/user/:id/:style.:extension",
+                    :default_url => '/assets/no-avatar.jpg'
     
   validates_presence_of :photo
   

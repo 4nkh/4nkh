@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.124663:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%c7e2b2151b0e9bea87c3dcf8eca997b5I"logical_path;
+F"Btinymce/jscripts/tiny_mce/plugins/pagebreak/img/pagebreak.gifI"pathname;
+FI"_$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/pagebreak/img/pagebreak.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"325;
+FI"digest;
+F"%89c7cbd350e8fd050e546842ed5f70d0I"_version;
+F"%1c9609bc58b1e77c196de29021583379

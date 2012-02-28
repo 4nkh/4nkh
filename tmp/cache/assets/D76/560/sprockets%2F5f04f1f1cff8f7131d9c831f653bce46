@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468218.796941:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%9f4caf1caae476bfc6a955c14b6ac48dI"logical_path;
+F"ecommerce1.pngI"pathname;
+FI"+$root/app/assets/images/ecommerce1.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+20200;
+FI"digest;
+F"%43f8a2357263ddef13ad2dd63ded45e3I"_version;
+F"%1c9609bc58b1e77c196de29021583379

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468218.8010721:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%5f77773eb19ccf84c85f9c6d27697196I"logical_path;
+F"equalizer1.jpgI"pathname;
+FI"+$root/app/assets/images/equalizer1.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+34558;
+FI"digest;
+F"%bbd695837fcc63c7df42b2836dad50b0I"_version;
+F"%1c9609bc58b1e77c196de29021583379

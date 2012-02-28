@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468218.805745:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%a51279ea16e0c928c58bb9eb56b92d65I"logical_path;
+F"expressInstall.swfI"pathname;
+FI"/$root/app/assets/images/expressInstall.swf;
+FI"content_type;
+FI""application/x-shockwave-flash;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"727;
+FI"digest;
+F"%f368c2db904e1261b5e3befb4adc8467I"_version;
+F"%1c9609bc58b1e77c196de29021583379

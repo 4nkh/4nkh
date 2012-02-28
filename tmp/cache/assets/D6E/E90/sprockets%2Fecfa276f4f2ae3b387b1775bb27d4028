@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.687149:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%6fcc970f04e40591463213d9e486d0d2I"logical_path;
+F"$png/jpeg/as_de_nasabeta0034.jpgI"pathname;
+FI"<$root/app/assets/images/png/jpeg/as_de_nasabeta0034.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"
+50186;
+FI"digest;
+F"%9730344a49b7349dec48abec3ff6756cI"_version;
+F"%1c9609bc58b1e77c196de29021583379

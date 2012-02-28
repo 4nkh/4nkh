@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.373178:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%61f55c6bd4e551b6176240c52b0996b1I"logical_path;
+F"megaphone1.jpgI"pathname;
+FI"+$root/app/assets/images/megaphone1.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	8884;
+FI"digest;
+F"%3e300a1866da90d1d7448937c2b08bfcI"_version;
+F"%1c9609bc58b1e77c196de29021583379

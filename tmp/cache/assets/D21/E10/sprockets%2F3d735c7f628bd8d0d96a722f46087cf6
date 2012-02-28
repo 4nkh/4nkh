@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.302031:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%82cc472bca03ed58d952e89372c1437fI"logical_path;
+F"logo/socialship.psdI"pathname;
+FI"0$root/app/assets/images/logo/socialship.psd;
+FI"content_type;
+FI"image/vnd.adobe.photoshop;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"1988132;
+FI"digest;
+F"%4040b99bcfb53ba805da419ca5ee6829I"_version;
+F"%1c9609bc58b1e77c196de29021583379

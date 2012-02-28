@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.007668:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%158a320582d513b28f0092c88af59b17I"logical_path;
+F"Dtinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-smile.gifI"pathname;
+FI"a$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-smile.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"345;
+FI"digest;
+F"%2d1ef6760379c2e9e97964202a855513I"_version;
+F"%1c9609bc58b1e77c196de29021583379

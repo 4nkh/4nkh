@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.118774:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%7d1561c9723e6cedbd0c15e9216205afI"logical_path;
+F"logo/credit.jpgI"pathname;
+FI",$root/app/assets/images/logo/credit.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+68102;
+FI"digest;
+F"%19e8d59f703ce62c551ed1d84d015137I"_version;
+F"%1c9609bc58b1e77c196de29021583379

@@ -31,7 +31,7 @@
   </span>
 <% else %>
 
-<%= button_to "Destroy picture", { :controller=>'dashboard', :action=>'destroy_photo' }, :confirm => "Are you sure?" %>
+<%= button_to "Destroy picture", { :controller=>'dashboard', :action=>'destroy_photo' }, :method => :delete, :confirm => "Are you sure?" %>
 <% end %>
 <% if current_user.demo_file_name.blank? %>
 

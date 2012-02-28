@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468218.8463302:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%8b51d890f5d1e59a0daab51108ce9ca4I"logical_path;
+F"forhype.pngI"pathname;
+FI"($root/app/assets/images/forhype.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"	8226;
+FI"digest;
+F"%96df24f9c177a50e71415e4693f54920I"_version;
+F"%1c9609bc58b1e77c196de29021583379

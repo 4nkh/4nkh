@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.2243998:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%238ee575990544670197a2e89ec4cc85I"logical_path;
+F":tinymce/jscripts/tiny_mce/themes/advanced/charmap.htmI"pathname;
+FI"W$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/charmap.htm;
+FI"content_type;
+FI"text/html;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	2345;
+FI"digest;
+F"%eb139205d6e3bc1e6075fe6c0e9d9379I"_version;
+F"%1c9609bc58b1e77c196de29021583379

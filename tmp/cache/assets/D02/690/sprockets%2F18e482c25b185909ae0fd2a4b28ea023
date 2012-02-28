@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.4988742:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%498157ba3bea5695860a421f857fd773I"logical_path;
+F"(png/jpeg/as_de_capc4naveral0033.jpgI"pathname;
+FI"@$root/app/assets/images/png/jpeg/as_de_capc4naveral0033.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"242881;
+FI"digest;
+F"%4326ba22763bf5fcf07bbad186572031I"_version;
+F"%1c9609bc58b1e77c196de29021583379

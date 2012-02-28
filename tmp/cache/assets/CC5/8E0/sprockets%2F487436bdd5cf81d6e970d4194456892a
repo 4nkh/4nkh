@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468243.9499571:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%02f72e153dc0e8bba457eb9de1af8394I"logical_path;
+F"5tinymce/jscripts/tiny_mce/plugins/advhr/rule.htmI"pathname;
+FI"R$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/advhr/rule.htm;
+FI"content_type;
+FI"text/html;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	2636;
+FI"digest;
+F"%79f5259aba02497bc8199effd9176334I"_version;
+F"%1c9609bc58b1e77c196de29021583379

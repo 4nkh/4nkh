@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.115144:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%194854c2b49b01e6a62e78681af2f476I"logical_path;
+F"logo/coffee.pngI"pathname;
+FI",$root/app/assets/images/logo/coffee.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+29683;
+FI"digest;
+F"%7cdf8c4e2d78228ce6bd478d8f8b115aI"_version;
+F"%1c9609bc58b1e77c196de29021583379

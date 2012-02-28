@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.1020951:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%b719face78ca5e3b3cd7b85478bace78I"logical_path;
-F"?tinymce/jscripts/tiny_mce/plugins/media/img/flv_player.swfI"pathname;
-FI"\$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/media/img/flv_player.swf;
-FI"content_type;
-FI""application/x-shockwave-flash;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"
-11668;
-FI"digest;
-F"%f3a115ef0674cbd1864aa318e59711d6I"_version;
-F"%1c9609bc58b1e77c196de29021583379

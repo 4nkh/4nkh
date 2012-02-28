@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.009336:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%b1056ca834dacff63beb3bc3b2236772I"logical_path;
-F"link32.jpgI"pathname;
-FI"'$root/app/assets/images/link32.jpg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"	1426;
-FI"digest;
-F"%ea134c49182b41a190e7a5d109e9b589I"_version;
-F"%1c9609bc58b1e77c196de29021583379

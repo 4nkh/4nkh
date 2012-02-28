@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.445834:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%74e016b44734003bbc38a3082a8b8bfcI"logical_path;
-F"no-avatar.jpgI"pathname;
-FI"*$root/app/assets/images/no-avatar.jpg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"	4214;
-FI"digest;
-F"%56c6ece2383b235efc2bb0fc87a4b2d2I"_version;
-F"%1c9609bc58b1e77c196de29021583379

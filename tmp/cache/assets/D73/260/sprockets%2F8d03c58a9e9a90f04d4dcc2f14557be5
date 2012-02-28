@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468218.74135:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%dc94d712c4adb76d4aa70d5976a43ff0I"logical_path;
-F"diff_icon.jpegI"pathname;
-FI"+$root/app/assets/images/diff_icon.jpeg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"	7994;
-FI"digest;
-F"%2b62c5d275f33ec42a504e92bb3d5382I"_version;
-F"%1c9609bc58b1e77c196de29021583379

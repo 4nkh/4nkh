@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.795229:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%d19f6bb18880b9331c3cb9420ee9628bI"logical_path;
-F"sidebar_shade.pngI"pathname;
-FI".$root/app/assets/images/sidebar_shade.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"699;
-FI"digest;
-F"%8689b47b1d6cbacc74f5071eca57fa94I"_version;
-F"%1c9609bc58b1e77c196de29021583379

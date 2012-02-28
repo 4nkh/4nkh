@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.776362:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%cae7c6281bd7d98b15427ca5fa68befeI"logical_path;
-F"seo_icn1.pngI"pathname;
-FI")$root/app/assets/images/seo_icn1.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"
-13291;
-FI"digest;
-F"%be289684163a4837bc15cc7d99982e3cI"_version;
-F"%1c9609bc58b1e77c196de29021583379

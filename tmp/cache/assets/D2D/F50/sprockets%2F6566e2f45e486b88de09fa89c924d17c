@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.1605382:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%30ccf345a66f818f85614d7223116e84I"logical_path;
-F"<tinymce/jscripts/tiny_mce/plugins/table/merge_cells.htmI"pathname;
-FI"Y$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/table/merge_cells.htm;
-FI"content_type;
-FI"text/html;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"	1355;
-FI"digest;
-F"%b8c2e97b189fce612ce116c5968e6bb5I"_version;
-F"%1c9609bc58b1e77c196de29021583379

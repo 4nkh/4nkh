@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468244.053911:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%2b420b4ce54a55aa43bc286309b6d3a2I"logical_path;
-F"Ttinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/button.gifI"pathname;
-FI"q$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/button.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"280;
-FI"digest;
-F"%1e35fb068ddd20c0f69ad6c0a8eb244cI"_version;
-F"%1c9609bc58b1e77c196de29021583379

@@ -1,15 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468250.5394812:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%1f55049d6c8e9a2808e919364c4c7d16I"logical_path;
-F"facebox/closelabel.pngI"pathname;
-F"v/Users/mathieub/.rvm/gems/ruby-1.9.3-p0@4nkh/gems/facebox-rails-0.1.1/vendor/assets/images/facebox/closelabel.pngI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-20T22:59:56-05:00;
-FI"length;
-FI"168;
-FI"digest;
-F"%d3fcc37135b684a579abdf03e0f6719eI"_version;
-F"%1c9609bc58b1e77c196de29021583379

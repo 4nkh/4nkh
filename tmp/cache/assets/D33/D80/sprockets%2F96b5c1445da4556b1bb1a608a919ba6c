@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330468219.169742:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%cfe81a8d31904212b0af015ccc3e1615I"logical_path;
-F"'logo/les-rotisseries-st-hubert.pngI"pathname;
-FI"?$root/app/assets/images/logo/les-rotisseries-st-hubert.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"
-13476;
-FI"digest;
-F"%32f0c2bf513e18aa789f1c98e8551060I"_version;
-F"%1c9609bc58b1e77c196de29021583379

@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329980102.384196:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%3ce569816cd2065ffcc78ab31db26cbfI"logical_path;
-FI"logo/phonegap.png;
-TI"pathname;
-FI".$root/app/assets/images/logo/phonegap.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-23T01:54:59-05:00;
-FI"length;
-FI"
-35209;
-FI"digest;
-F"%3d5290a92a5e4f207f25bbedd761a0f4I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

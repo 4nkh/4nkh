@@ -1,40 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.7844028:@value{	I"length:EFirI"digest;
-F"%f36d4ed43ea7fbe1b9b92ca8dfbee07aI"source;
-FI"r/**
- * editor_plugin_src.js
- *
- * Copyright 2009, Moxiecode Systems AB
- * Released under LGPL License.
- *
- * License: http://tinymce.moxiecode.com/license
- * Contributing: http://tinymce.moxiecode.com/contributing
- */
-
-
-(function() {
-	tinymce.create('tinymce.plugins.Print', {
-		init : function(ed, url) {
-			ed.addCommand('mcePrint', function() {
-				ed.getWin().print();
-			});
-
-			ed.addButton('print', {title : 'print.print_desc', cmd : 'mcePrint'});
-		},
-
-		getInfo : function() {
-			return {
-				longname : 'Print',
-				author : 'Moxiecode Systems AB',
-				authorurl : 'http://tinymce.moxiecode.com',
-				infourl : 'http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/print',
-				version : tinymce.majorVersion + "." + tinymce.minorVersion
-			};
-		}
-	});
-
-	// Register plugin
-	tinymce.PluginManager.add('print', tinymce.plugins.Print);
-})();
-;
-FI"_version;
-F"%d8d1bfbfa519a763b53c5ad200715bda

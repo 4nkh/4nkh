@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330030271.248509:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%acecc9dbe1583ea7ff04c1a12bdff340I"logical_path;
-FI"mobile_phone_tablet.png;
-TI"pathname;
-FI"4$root/app/assets/images/mobile_phone_tablet.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-23T15:48:26-05:00;
-FI"length;
-FI"357445;
-FI"digest;
-F"%f870c37c695a0a6b1ce4d6751c21a369I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

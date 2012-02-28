@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329281980.747843:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%731a7058e9b397cef79a3df7ab280e8dI"logical_path;
-FI"logo/acq.png;
-TI"pathname;
-FI")$root/app/assets/images/logo/acq.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2011-12-10T10:26:28-05:00;
-FI"length;
-FI"	9806;
-FI"digest;
-F"%79a6a513cd8ce742e31ea13accd7e791I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

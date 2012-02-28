@@ -1,10 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.775692:@value{	I"length:EFiÂI"digest;
-F"%931276d8c0fe7a0cce07237cadf4a32aI"source;
-FI"ÂtinyMCE.addI18n('en.paste_dlg',{
-text_title:"Use CTRL+V on your keyboard to paste the text into the window.",
-text_linebreaks:"Keep linebreaks",
-word_title:"Use CTRL+V on your keyboard to paste the text into the window."
-});
-;
-FI"_version;
-F"%158b63ffb20fc276454f26ab49af1f58

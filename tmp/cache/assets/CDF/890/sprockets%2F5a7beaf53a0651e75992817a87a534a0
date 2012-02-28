@@ -1,34 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.907727:@value{	I"length:EFiI"digest;
-F"%1ba70564f3c2db572ff8affbd7c87be8I"source;
-FI"/**
- * cite.js
- *
- * Copyright 2009, Moxiecode Systems AB
- * Released under LGPL License.
- *
- * License: http://tinymce.moxiecode.com/license
- * Contributing: http://tinymce.moxiecode.com/contributing
- */
-
-
-function init() {
-	SXE.initElementDialog('cite');
-	if (SXE.currentAction == "update") {
-		SXE.showRemoveButton();
-	}
-}
-
-function insertCite() {
-	SXE.insertElement('cite');
-	tinyMCEPopup.close();
-}
-
-function removeCite() {
-	SXE.removeElement('cite');
-	tinyMCEPopup.close();
-}
-
-tinyMCEPopup.onInit.add(init);
-;
-FI"_version;
-F"%c3104d7070fac6b4fbfd4847cc4a4ea7

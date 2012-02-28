@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329281980.8770308:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%49b80d1a1a6dddf6d3efcd6520c34452I"logical_path;
-FI"logo/pmt-roy.png;
-TI"pathname;
-FI"-$root/app/assets/images/logo/pmt-roy.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2011-12-10T10:30:06-05:00;
-FI"length;
-FI"	6622;
-FI"digest;
-F"%07669f64bd0d097c7298c8d53ef78892I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329281980.686811:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%d157c24e10344a421f1cc59830c5f38bI"logical_path;
-FI"logo/icaxon.png;
-TI"pathname;
-FI",$root/app/assets/images/logo/icaxon.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2011-12-15T23:45:28-05:00;
-FI"length;
-FI"
-19935;
-FI"digest;
-F"%f0c02c9c11e92ca03ecfed0e5bebc1e0I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

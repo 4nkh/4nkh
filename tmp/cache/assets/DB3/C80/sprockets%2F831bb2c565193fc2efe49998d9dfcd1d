@@ -1,10 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.5359302:@value{	I"length:EFi`I"digest;
-F"%466f250c9a3435e85ce615446eee3f32I"source;
-FI"`tinyMCE.addI18n('en.advhr_dlg',{
-width:"Width",
-size:"Height",
-noshade:"No shadow"
-});
-;
-FI"_version;
-F"%710eeba69ddff1dd88c1254b56101d04

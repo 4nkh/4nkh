@@ -1,8 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.64976:@value{	I"length:EFiTI"digest;
-F"%747d0c83e86d21e40e4971d9f7da260cI"source;
-FI"TtinyMCE.addI18n('en.example',{
-	desc : 'This is just a template button'
-});
-;
-FI"_version;
-F"%a4517e2aebccf95567485a6ba41fce6c

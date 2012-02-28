@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329707035.57892:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%3710ca6b4bebe668342f04c0613eea58I"logical_path;
-FI"commerce.png;
-TI"pathname;
-FI")$root/app/assets/images/commerce.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-19T22:02:28-05:00;
-FI"length;
-FI"
-16868;
-FI"digest;
-F"%5393876be0df56471e15c765d05e5738I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

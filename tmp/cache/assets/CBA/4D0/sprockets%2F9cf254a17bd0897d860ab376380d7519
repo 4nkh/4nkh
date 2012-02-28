@@ -1,27 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106221.6404521:@value{	I"length:EFiI"digest;
-F"%4d7b8207fea1625bcb5e4835380099c3I"source;
-FI"tinyMCEPopup.requireLangPack();
-
-var EmotionsDialog = {
-	init : function(ed) {
-		tinyMCEPopup.resizeToInnerSize();
-	},
-
-	insert : function(file, title) {
-		var ed = tinyMCEPopup.editor, dom = ed.dom;
-
-		tinyMCEPopup.execCommand('mceInsertContent', false, dom.createHTML('img', {
-			src : tinyMCEPopup.getWindowArg('plugin_url') + '/img/' + file,
-			alt : ed.getLang(title),
-			title : ed.getLang(title),
-			border : 0
-		}));
-
-		tinyMCEPopup.close();
-	}
-};
-
-tinyMCEPopup.onInit.add(EmotionsDialog.init, EmotionsDialog);
-;
-FI"_version;
-F"%1a32dc9d57f801416c46a9e39f962b3f

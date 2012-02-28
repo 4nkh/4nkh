@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329281980.798055:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%61f3b5c11048fd29daf0991fa8791dd9I"logical_path;
-FI"logo/muzica.png;
-TI"pathname;
-FI",$root/app/assets/images/logo/muzica.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2011-12-23T13:28:32-05:00;
-FI"length;
-FI"
-72357;
-FI"digest;
-F"%bb60940ac4a370f5d635e9b9e4658058I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

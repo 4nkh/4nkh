@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1329106222.9511921:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%778436f2f04b120e998c36bc4ac63772I"logical_path;
-FI"facebookicon1.png;
-TI"pathname;
-FI".$root/app/assets/images/facebookicon1.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-12T16:19:02-05:00;
-FI"length;
-FI"	4004;
-FI"digest;
-F"%14b2a1cb85dbe04f94e7a4a07347623aI"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

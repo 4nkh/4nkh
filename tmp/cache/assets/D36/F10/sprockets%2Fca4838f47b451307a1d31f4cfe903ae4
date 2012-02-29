@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.074053:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%3f5ae4951f26c63c2f9cbad64f255b37I"logical_path;
+F"logo/bkom.jpgI"pathname;
+FI"*$root/app/assets/images/logo/bkom.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+10808;
+FI"digest;
+F"%e91f567b76c83b16cb00138737379fa3I"_version;
+F"%1c9609bc58b1e77c196de29021583379

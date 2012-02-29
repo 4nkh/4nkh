@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.862475:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%51c969c4563c0789176ebe1afc3521eaI"logical_path;
+F"linky.gifI"pathname;
+FI"&$root/app/assets/images/linky.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"113;
+FI"digest;
+F"%3066b6fbeb4d686b1db654171e41a36eI"_version;
+F"%1c9609bc58b1e77c196de29021583379

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.52219:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%1e47136c5ee23d862b8e2f6b83668a5fI"logical_path;
+F"smoke.jpgI"pathname;
+FI"&$root/app/assets/images/smoke.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"
+24890;
+FI"digest;
+F"%85b3d2ae0f73dbab4b727d8c433aea79I"_version;
+F"%1c9609bc58b1e77c196de29021583379

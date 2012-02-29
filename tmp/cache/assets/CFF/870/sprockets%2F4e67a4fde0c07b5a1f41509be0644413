@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.758661:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%1565ebc7f40cf55100762d00343a1f93I"logical_path;
+F"h600.pngI"pathname;
+FI"%$root/app/assets/images/h600.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"366;
+FI"digest;
+F"%e2c16ae70e9ea4d85c794009db302ca5I"_version;
+F"%1c9609bc58b1e77c196de29021583379

@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.761805:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%fe4bee401d87543b853b6d8068e2f28aI"logical_path;
+F"logo/voxco.pngI"pathname;
+FI"+$root/app/assets/images/logo/voxco.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	5772;
+FI"digest;
+F"%20415c96a8a51fd6a6b29b0c27835a1dI"_version;
+F"%1c9609bc58b1e77c196de29021583379

@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.833674:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%28d24c83c2481a332693b0fe002b9a97I"logical_path;
+F"lightbox-btn-close.gifI"pathname;
+FI"3$root/app/assets/images/lightbox-btn-close.gif;
+FI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"700;
+FI"digest;
+F"%789eea082d6dc75357f8a91aa3f26c3dI"_version;
+F"%1c9609bc58b1e77c196de29021583379

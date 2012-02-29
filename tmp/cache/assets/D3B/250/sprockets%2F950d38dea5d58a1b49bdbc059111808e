@@ -1,0 +1,15 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486208.137959:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%be8dcc1847ca0ce5cce6b7acfe240808I"logical_path;
+F"facebox/loading.gifI"pathname;
+F"s/Users/mathieub/.rvm/gems/ruby-1.9.3-p0@4nkh/gems/facebox-rails-0.1.1/vendor/assets/images/facebox/loading.gifI"content_type;
+FI"image/gif;
+FI"
+mtime;
+FI"2012-02-20T22:59:56-05:00;
+FI"length;
+FI"	2767;
+FI"digest;
+F"%c77a8b7bfb4230ce5ee044c1a6392c99I"_version;
+F"%1c9609bc58b1e77c196de29021583379

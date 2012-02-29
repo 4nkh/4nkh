@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.395755:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%a9175b8a369b7de945c84fa540820a22I"logical_path;
+F"logo/notdork.psdI"pathname;
+FI"-$root/app/assets/images/logo/notdork.psd;
+FI"content_type;
+FI"image/vnd.adobe.photoshop;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"3177800;
+FI"digest;
+F"%e79af80543b3c2d670e7d13e9c985c24I"_version;
+F"%1c9609bc58b1e77c196de29021583379

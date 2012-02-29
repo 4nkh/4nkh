@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.6875288:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%b1e51c3ca6d70dced9198ca25c214dd8I"logical_path;
+F"form-gr.pngI"pathname;
+FI"($root/app/assets/images/form-gr.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"	2798;
+FI"digest;
+F"%ee5d11af531dd5dafda1b88ba5b911edI"_version;
+F"%1c9609bc58b1e77c196de29021583379

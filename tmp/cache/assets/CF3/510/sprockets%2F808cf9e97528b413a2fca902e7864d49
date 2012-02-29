@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.807137:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%2d9475ebeb02b40548fc264e8189e9c9I"logical_path;
+F"mail1.pngI"pathname;
+FI"&$root/app/assets/images/mail1.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	4726;
+FI"digest;
+F"%8db82b2b7ee8af6bed650bda5575c909I"_version;
+F"%1c9609bc58b1e77c196de29021583379

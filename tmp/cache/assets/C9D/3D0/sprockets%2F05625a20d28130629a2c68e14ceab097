@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.3352041:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%24d26a0ae39285f8931442b11d5522e5I"logical_path;
+F"logo/mongo.pngI"pathname;
+FI"+$root/app/assets/images/logo/mongo.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+21042;
+FI"digest;
+F"%9cff8698c8d3e48550a700c3cf642d7cI"_version;
+F"%1c9609bc58b1e77c196de29021583379

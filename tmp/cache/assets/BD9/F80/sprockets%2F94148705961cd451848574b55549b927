@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.443937:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%bc1ad733c05215c4b51f801c8d04fa4eI"logical_path;
+F"3dlens.jpgI"pathname;
+FI"'$root/app/assets/images/3dlens.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+56600;
+FI"digest;
+F"%aaadf4e30537a2d0d9a56647b29fd344I"_version;
+F"%1c9609bc58b1e77c196de29021583379

@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.142612:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%8761ffb68324d1dba6c982d5ed98e204I"logical_path;
+F"logo/github.pngI"pathname;
+FI",$root/app/assets/images/logo/github.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"
+26875;
+FI"digest;
+F"%7d3c48add8822b1d4d627f3d6bfb55a2I"_version;
+F"%1c9609bc58b1e77c196de29021583379

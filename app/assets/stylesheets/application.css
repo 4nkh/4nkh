@@ -12,5 +12,6 @@ require_self
 *= require print
 *= require shadowbox
 *= require nivo-slider
+*= require blog.css
 require_tree .
 */

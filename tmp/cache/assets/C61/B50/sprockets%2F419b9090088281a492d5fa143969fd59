@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.5464141:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%fbb83b1acef7bab7aa067e530d0df1a7I"logical_path;
+F"tag.psdI"pathname;
+FI"$$root/app/assets/images/tag.psd;
+FI"content_type;
+FI"image/vnd.adobe.photoshop;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"138060;
+FI"digest;
+F"%b19a32e37baeddf09b89b7bf215785e5I"_version;
+F"%1c9609bc58b1e77c196de29021583379

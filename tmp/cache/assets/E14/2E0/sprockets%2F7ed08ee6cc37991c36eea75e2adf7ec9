@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.704225:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%5e251e3d3dff610e1bce7f61a6a08944I"logical_path;
+F"gr_post.jpgI"pathname;
+FI"($root/app/assets/images/gr_post.jpg;
+FI"content_type;
+FI"image/jpeg;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"327;
+FI"digest;
+F"%549698861a647bbed1b249687efe50d0I"_version;
+F"%1c9609bc58b1e77c196de29021583379

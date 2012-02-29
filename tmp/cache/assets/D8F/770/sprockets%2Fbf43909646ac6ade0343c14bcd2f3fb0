@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.582914:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%60d75e7a4083cfe6fd64723776132107I"logical_path;
+F"text32act1.pngI"pathname;
+FI"+$root/app/assets/images/text32act1.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"	3181;
+FI"digest;
+F"%7569d53bd841baf180c27967645047cbI"_version;
+F"%1c9609bc58b1e77c196de29021583379

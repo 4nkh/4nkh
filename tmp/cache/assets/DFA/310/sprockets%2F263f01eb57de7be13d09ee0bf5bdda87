@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.6354969:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%0eb81db7dc9158db4de0c08d750ac076I"logical_path;
+F"ecommerce.psdI"pathname;
+FI"*$root/app/assets/images/ecommerce.psd;
+FI"content_type;
+FI"image/vnd.adobe.photoshop;
+FI"
+mtime;
+FI"2012-02-27T11:30:53-05:00;
+FI"length;
+FI"276877;
+FI"digest;
+F"%b9c5cde24b87c2bc9fd5c330f20e0b91I"_version;
+F"%1c9609bc58b1e77c196de29021583379

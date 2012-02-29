@@ -1,0 +1,16 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.119056:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%422bf641c2d3696c437da19b477faf51I"logical_path;
+F"playhead.pngI"pathname;
+FI")$root/app/assets/images/playhead.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-02-27T11:30:54-05:00;
+FI"length;
+FI"472;
+FI"digest;
+F"%dba9e4f696699b748edee28c86f87195I"_version;
+F"%1c9609bc58b1e77c196de29021583379

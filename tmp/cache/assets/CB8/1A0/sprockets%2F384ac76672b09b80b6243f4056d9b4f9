@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.949954:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.8099048:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%2ebf23ee8dfc90bce1712905a32c1424I"logical_path;
+F"%a1ca9bd62e24257321e0a14ffc206128I"logical_path;
 F";tinymce/jscripts/tiny_mce/plugins/advimage/js/image.jsI"pathname;
 FI"X$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/advimage/js/image.js;
 FI"content_type;

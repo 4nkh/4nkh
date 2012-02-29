@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.0002801:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.521178:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%e3ab6e5d1d42a7ab5d13d147910a93a8I"logical_path;
+F"%7cd52aca36c22860cff31cf2d22d3b67I"logical_path;
 F"logo/backbone.pngI"pathname;
 FI".$root/app/assets/images/logo/backbone.png;
 FI"content_type;

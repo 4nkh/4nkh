@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.304168:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.5793312:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c28245a8923e2f9b37180dfd6f636ff6I"logical_path;
+F"%f37af8713f8b34314de75de8b3dce308I"logical_path;
 F"logo/metro.pngI"pathname;
 FI"+$root/app/assets/images/logo/metro.png;
 FI"content_type;

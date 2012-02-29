@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.3834739:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.6293619:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4578bdd95c42f5971d18e3dd98922e35I"logical_path;
+F"%c261ab851ef045f974be8b922d54f7e7I"logical_path;
 F"logo/notdork.pngI"pathname;
 FI"-$root/app/assets/images/logo/notdork.png;
 FI"content_type;

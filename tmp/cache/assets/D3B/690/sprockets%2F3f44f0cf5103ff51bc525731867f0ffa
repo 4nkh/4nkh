@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.761805:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.819697:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%fe4bee401d87543b853b6d8068e2f28aI"logical_path;
+F"%a4242a9b6ddb0e87b052dbc0b7cb7f5dI"logical_path;
 F"logo/voxco.pngI"pathname;
 FI"+$root/app/assets/images/logo/voxco.png;
 FI"content_type;

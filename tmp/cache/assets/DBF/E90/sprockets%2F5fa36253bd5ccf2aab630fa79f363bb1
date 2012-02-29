@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.5549371:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7282481:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%16adde750717378cd489e85fd3db23f8I"logical_path;
+F"%15cd7d7c6d500dee41b3f144cd1408beI"logical_path;
 F"logo/ruby.pngI"pathname;
 FI"*$root/app/assets/images/logo/ruby.png;
 FI"content_type;

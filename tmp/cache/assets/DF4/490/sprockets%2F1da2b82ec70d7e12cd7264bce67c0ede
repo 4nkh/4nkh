@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.137943:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.542592:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%cce01a0b57987a48992bc675950d7b76I"logical_path;
+F"%2f3f629ac0ee699a3e2449e030fdfa00I"logical_path;
 F"logo/fruits-et-passion.jpgI"pathname;
 FI"7$root/app/assets/images/logo/fruits-et-passion.jpg;
 FI"content_type;

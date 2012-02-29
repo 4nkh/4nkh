@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.864615:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.437031:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%bb1698f5ad6694d1552f8582bb5e9c8aI"logical_path;
+F"%fd17adc6cab855dc79553a6325ba0008I"logical_path;
 F"loading.gifI"pathname;
 FI"($root/app/assets/images/loading.gif;
 FI"content_type;

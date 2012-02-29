@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.4917052:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.711703:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d044dc4e060900405c37df220ebb99a9I"logical_path;
+F"%ec6014550521db9b3dc6a2983708da7fI"logical_path;
 F"logo/postgresql.pngI"pathname;
 FI"0$root/app/assets/images/logo/postgresql.png;
 FI"content_type;

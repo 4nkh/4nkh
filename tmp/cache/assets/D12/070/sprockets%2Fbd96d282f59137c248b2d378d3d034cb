@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.528671:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.271803:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%1ea3d613fe7ac41c7192970c246232beI"logical_path;
+F"%5d7fb5fd4fd09491d169ab58307e0f87I"logical_path;
 F"splash_logo.gifI"pathname;
 FI",$root/app/assets/images/splash_logo.gif;
 FI"content_type;

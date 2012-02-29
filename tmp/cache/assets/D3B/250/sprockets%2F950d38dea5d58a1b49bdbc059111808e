@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486208.137959:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330488000.704279:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%be8dcc1847ca0ce5cce6b7acfe240808I"logical_path;
+F"%65498beeff1d17f157d9eb9b54e71fb6I"logical_path;
 F"facebox/loading.gifI"pathname;
 F"s/Users/mathieub/.rvm/gems/ruby-1.9.3-p0@4nkh/gems/facebox-rails-0.1.1/vendor/assets/images/facebox/loading.gifI"content_type;
 FI"image/gif;

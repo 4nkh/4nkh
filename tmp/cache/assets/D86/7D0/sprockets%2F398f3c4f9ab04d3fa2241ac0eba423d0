@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.8476858:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.413928:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%32d78817617dfc13bfeb845b81f954e4I"logical_path;
+F"%62bc3e244522acf7904402b630ae18fdI"logical_path;
 F"link32act.jpgI"pathname;
 FI"*$root/app/assets/images/link32act.jpg;
 FI"content_type;

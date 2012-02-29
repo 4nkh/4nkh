@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.55824:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.082768:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%11728db492ae8816be09446ab3e231f9I"logical_path;
+F"%48b0fe1330a5a93569ef213fbcb380e2I"logical_path;
 F"comdel.pngI"pathname;
 FI"'$root/app/assets/images/comdel.png;
 FI"content_type;

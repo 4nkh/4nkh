@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.560626:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7348359:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%9ef01762a30adcbf4be9de477bb4b2d2I"logical_path;
+F"%d4cb3b4146cebb8a2c9438854e1d7c0bI"logical_path;
 F"logo/sanfacon.jpgI"pathname;
 FI".$root/app/assets/images/logo/sanfacon.jpg;
 FI"content_type;

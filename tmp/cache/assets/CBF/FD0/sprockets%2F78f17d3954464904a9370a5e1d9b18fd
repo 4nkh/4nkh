@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.839512:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.4041212:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%3b7b1d8ed485052d362626140a1f6d2fI"logical_path;
+F"%d2fc7f725390a843d656d8fcbae4c4aaI"logical_path;
 F"lightbox-btn-prev.gifI"pathname;
 FI"2$root/app/assets/images/lightbox-btn-prev.gif;
 FI"content_type;

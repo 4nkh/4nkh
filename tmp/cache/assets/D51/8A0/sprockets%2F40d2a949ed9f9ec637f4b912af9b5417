@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.6401951:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.766907:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%0f3fa6212ca3cb3d0a4c71d9ba025ad5I"logical_path;
+F"%4669fc727569959bbf103fc942364c17I"logical_path;
 F"logo/souris-mini.jpgI"pathname;
 FI"1$root/app/assets/images/logo/souris-mini.jpg;
 FI"content_type;

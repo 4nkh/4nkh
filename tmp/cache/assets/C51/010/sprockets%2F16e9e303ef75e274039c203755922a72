@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.7454998:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.788906:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%5768c683e554bfd7d949c3e66b720247I"logical_path;
+F"%45fe9e2b12ce47d4aff377be48093df8I"logical_path;
 F"logo/varnish.pngI"pathname;
 FI"-$root/app/assets/images/logo/varnish.png;
 FI"content_type;

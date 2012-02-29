@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.66831:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7788842:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%120a1ecf50a2563c4d1723589a9a7828I"logical_path;
+F"%185692442c642bd43790b5dfe63221d0I"logical_path;
 F"logo/tfo.jpgI"pathname;
 FI")$root/app/assets/images/logo/tfo.jpg;
 FI"content_type;

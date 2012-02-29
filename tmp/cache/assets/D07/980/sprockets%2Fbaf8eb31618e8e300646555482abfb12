@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.836916:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.400374:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b66c78c1559d230a3ff9fdcf61a4247dI"logical_path;
+F"%fe4705d7b9342fdc3e7c646554297b66I"logical_path;
 F"lightbox-btn-next.gifI"pathname;
 FI"2$root/app/assets/images/lightbox-btn-next.gif;
 FI"content_type;

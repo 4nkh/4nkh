@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.5772579:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.098081:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%03c10bc9bc3516077485944ba083c212I"logical_path;
+F"%d0a07d093afb896e3e8cadd5a9accd5eI"logical_path;
 F"curl1.pngI"pathname;
 FI"&$root/app/assets/images/curl1.png;
 FI"content_type;

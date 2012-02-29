@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486201.846179:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.232627:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d5ac06fc7fdcaf04606a2e203c7a684dI"logical_path;
+F"%9036b36388a4576007ec949223151cd4I"logical_path;
 F"Itinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/img/button_bg.pngI"pathname;
 FI"f$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/img/button_bg.png;
 FI"content_type;

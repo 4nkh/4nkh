@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.709165:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.782044:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%cd3ba14c469f2ebc73b66f977118ff22I"logical_path;
+F"%69653c1553d599b4443cd3e9ef50c6f5I"logical_path;
 F"logo/twitcook.pngI"pathname;
 FI".$root/app/assets/images/logo/twitcook.png;
 FI"content_type;

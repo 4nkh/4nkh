@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.509141:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.724283:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%971512827470e9662ee4c75563fcd025I"logical_path;
+F"%e7c0195629833a791d23fec8b57eb120I"logical_path;
 F"logo/rhomobile.pngI"pathname;
 FI"/$root/app/assets/images/logo/rhomobile.png;
 FI"content_type;

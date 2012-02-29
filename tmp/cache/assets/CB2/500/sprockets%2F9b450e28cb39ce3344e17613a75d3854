@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.49721:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.714643:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%6c92f48229dcb977b82f100bd02d9b0aI"logical_path;
+F"%a2d36dd3721984001eb386b132d1c07dI"logical_path;
 F"logo/rabais-assurance.pngI"pathname;
 FI"6$root/app/assets/images/logo/rabais-assurance.png;
 FI"content_type;

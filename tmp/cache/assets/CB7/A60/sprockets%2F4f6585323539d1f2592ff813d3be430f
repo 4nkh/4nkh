@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.419913:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.166902:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%831f343c60a28e9127bdd50d843ffdfdI"logical_path;
+F"%8dcc6d7c2ed500fc1c9ff8208cfc3bd5I"logical_path;
 F"$png/jpeg/as_de_nasabeta0036.jpgI"pathname;
 FI"<$root/app/assets/images/png/jpeg/as_de_nasabeta0036.jpg;
 FI"content_type;

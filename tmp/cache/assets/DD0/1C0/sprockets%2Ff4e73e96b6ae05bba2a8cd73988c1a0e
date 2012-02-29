@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.581034:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.1009018:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%9f487d42ca077178c5df23f86f811184I"logical_path;
+F"%4cf84996d6ad8d4eb6d18a0680d199c4I"logical_path;
 F"del.gifI"pathname;
 FI"$$root/app/assets/images/del.gif;
 FI"content_type;

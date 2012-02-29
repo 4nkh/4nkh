@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.2480588:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.568278:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%1c3cbdd19770b4fcc16b4bbf6f60d865I"logical_path;
+F"%24cba404d4d8f64d459d8695db2f164eI"logical_path;
 F"logo/ino.jpgI"pathname;
 FI")$root/app/assets/images/logo/ino.jpg;
 FI"content_type;

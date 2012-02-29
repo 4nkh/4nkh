@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.293837:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.573622:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%289209a7dcd2b8bd8441961edc557075I"logical_path;
+F"%a013645f88ca41363f7db234a2381787I"logical_path;
 F"logo/lelarge.pngI"pathname;
 FI"-$root/app/assets/images/logo/lelarge.png;
 FI"content_type;

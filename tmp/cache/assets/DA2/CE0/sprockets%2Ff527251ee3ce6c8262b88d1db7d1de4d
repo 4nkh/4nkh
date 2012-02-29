@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.220167:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.56533:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%fdfec32e73ad6b07fc1c4c217668a19dI"logical_path;
+F"%2326c3c88756b046b1481ebe9b7d1187I"logical_path;
 F"logo/icaxon.psdI"pathname;
 FI",$root/app/assets/images/logo/icaxon.psd;
 FI"content_type;

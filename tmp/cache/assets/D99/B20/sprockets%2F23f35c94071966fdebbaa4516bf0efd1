@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.682935:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.250458:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%11d664e6ed8f2ea468c96bc82b811f74I"logical_path;
+F"%f5332a8cfeae9bdf23c9d982fece2e3cI"logical_path;
 F"forhype.pngI"pathname;
 FI"($root/app/assets/images/forhype.png;
 FI"content_type;

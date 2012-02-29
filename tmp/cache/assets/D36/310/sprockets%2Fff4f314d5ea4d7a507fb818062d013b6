@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.108723:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.921354:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%5e7a79e004cb0f469b4cceb66aa6965dI"logical_path;
+F"%543c27cd224897855f4cae04ed847d4fI"logical_path;
 F"page-background.jpgI"pathname;
 FI"0$root/app/assets/images/page-background.jpg;
 FI"content_type;

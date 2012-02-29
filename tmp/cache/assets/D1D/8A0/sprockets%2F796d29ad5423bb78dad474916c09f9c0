@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.590431:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.350029:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d0c95cf26390e49e8f5e3a91f7b5beadI"logical_path;
+F"%d18a8abcba798e6c5cddaad4e804597aI"logical_path;
 F"title_shade.pngI"pathname;
 FI",$root/app/assets/images/title_shade.png;
 FI"content_type;

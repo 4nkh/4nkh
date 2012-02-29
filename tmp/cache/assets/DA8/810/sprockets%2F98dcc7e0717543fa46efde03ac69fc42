@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486201.640865:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.00377:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%990e77734d778a8f17f6e90ac31bd059I"logical_path;
+F"%4e4d6bcfaa89ff52012eb44614933f3fI"logical_path;
 F">tinymce/jscripts/tiny_mce/plugins/media/img/shockwave.gifI"pathname;
 FI"[$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/media/img/shockwave.gif;
 FI"content_type;

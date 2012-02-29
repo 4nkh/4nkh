@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.87273:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.884934:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b39e0061e7e9e28429bf79bac0d88be4I"logical_path;
+F"%e69d8626f7ff0b0fbfe3e6dff86987c0I"logical_path;
 F"mobile_icon1.pngI"pathname;
 FI"-$root/app/assets/images/mobile_icon1.png;
 FI"content_type;

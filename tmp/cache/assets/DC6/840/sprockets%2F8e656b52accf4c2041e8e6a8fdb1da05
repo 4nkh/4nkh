@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.104382:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.539545:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%39b2ead466903de76b92073c1ed0a021I"logical_path;
+F"%e6572e907557d0e3328ee60f8ae2735eI"logical_path;
 F"logo/elexpertise.jpgI"pathname;
 FI"1$root/app/assets/images/logo/elexpertise.jpg;
 FI"content_type;

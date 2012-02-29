@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486201.388814:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487993.7884831:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%12deb26092f6f74adfc4c38deb17f5e5I"logical_path;
+F"%88425f4f306c186b300b26b4a428654dI"logical_path;
 F"tinymce/changelog.txtI"pathname;
 FI"7$root/app/assets/javascripts/tinymce/changelog.txt;
 FI"content_type;

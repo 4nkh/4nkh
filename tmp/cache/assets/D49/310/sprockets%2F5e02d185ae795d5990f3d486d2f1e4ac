@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.0778399:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.5310888:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%e92c62b9f38b35e50524163f5d9f3393I"logical_path;
+F"%81b6acf249e8b3fe8beeb132f40d31caI"logical_path;
 F"logo/bombardier.jpgI"pathname;
 FI"0$root/app/assets/images/logo/bombardier.jpg;
 FI"content_type;

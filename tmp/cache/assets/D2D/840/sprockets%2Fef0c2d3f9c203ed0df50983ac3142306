@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.428305:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.173782:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a8b07e4be4b3c165ef04f687ce7ec773I"logical_path;
+F"%3b10ee9b932dc805175ac53824691059I"logical_path;
 F"ppcc.jpgI"pathname;
 FI"%$root/app/assets/images/ppcc.jpg;
 FI"content_type;

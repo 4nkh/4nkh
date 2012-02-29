@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486201.620118:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487993.969048:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%8c5916031207af4e2c8c6b351b1477fbI"logical_path;
+F"%08a1b5331c0d24b94ee1bc3e796f8ea0I"logical_path;
 F"Vtinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gifI"pathname;
 FI"s$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif;
 FI"content_type;

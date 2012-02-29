@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486201.4113731:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487993.8028328:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%0466b9eb2d62dca7d3904280b7e2b7baI"logical_path;
+F"%3d29e654a4bfc35b49317468d7e187beI"logical_path;
 F"*tinymce/jscripts/tiny_mce/license.txtI"pathname;
 FI"G$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/license.txt;
 FI"content_type;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.997042:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.516311:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%e20b12b14486d03a1b7c1d529925c55fI"logical_path;
+F"%797e52354b857feea1f044a4e55b6ef2I"logical_path;
 F"logo/axa.pngI"pathname;
 FI")$root/app/assets/images/logo/axa.png;
 FI"content_type;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486175.447265:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487966.983588:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%0faa4e355aabe6f1b41a7dce184808a9I"logical_path;
+F"%fa5e58449f26937cbdbfe1840f7a7474I"logical_path;
 F"add.gifI"pathname;
 FI"$$root/app/assets/images/add.gif;
 FI"content_type;

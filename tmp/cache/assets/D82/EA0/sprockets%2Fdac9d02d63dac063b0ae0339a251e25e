@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486176.4017038:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7064269:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%f2ffef1a4a58a6be3127f35800dd63eaI"logical_path;
+F"%0d9c5a205f32200efd0cabf2b91af0d4I"logical_path;
 F"logo/phonegap.pngI"pathname;
 FI".$root/app/assets/images/logo/phonegap.png;
 FI"content_type;

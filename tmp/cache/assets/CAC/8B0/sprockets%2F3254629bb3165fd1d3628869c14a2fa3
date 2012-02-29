@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330486177.5129669:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.24385:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b1f5a79d727d28a2fb5ddee35a6ff155I"logical_path;
+F"%0fb88e40aa7f5d52bc456e927a31ebcaI"logical_path;
 F"sidebar_bg.jpgI"pathname;
 FI"+$root/app/assets/images/sidebar_bg.jpg;
 FI"content_type;

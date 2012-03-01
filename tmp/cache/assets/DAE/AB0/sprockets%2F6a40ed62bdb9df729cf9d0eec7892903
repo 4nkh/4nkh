@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.160137:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.4373388:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%981062e431506bb0eb77323f2840699cI"logical_path;
+F"%20edab93af82138e29e572975e27f3f8I"logical_path;
 F"Btinymce/jscripts/tiny_mce/themes/advanced/img/colorpicker.jpgI"pathname;
 FI"_$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/img/colorpicker.jpg;
 FI"content_type;

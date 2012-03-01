@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.0097768:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.3573928:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b6a311664d3129eddb0878da52e9d3ddI"logical_path;
+F"%bfd9c8775609aed5db13c90183dfd5f1I"logical_path;
 F"Atinymce/jscripts/tiny_mce/plugins/media/img/windowsmedia.gifI"pathname;
 FI"^$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/media/img/windowsmedia.gif;
 FI"content_type;

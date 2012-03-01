@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.5985348:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.341162:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%eb5c869012bc5923b32f182d83139b8bI"logical_path;
+F"%9c995e707a8b62b189f5a48bda7ab460I"logical_path;
 F"logo/nodejs.pngI"pathname;
 FI",$root/app/assets/images/logo/nodejs.png;
 FI"content_type;

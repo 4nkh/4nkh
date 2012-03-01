@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.151927:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.9478579:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%f152319471b08806a75b93eabc24bcf9I"logical_path;
+F"%2446e06f61c9ca465456d77de72428f4I"logical_path;
 F"ecommerce1.pngI"pathname;
 FI"+$root/app/assets/images/ecommerce1.png;
 FI"content_type;

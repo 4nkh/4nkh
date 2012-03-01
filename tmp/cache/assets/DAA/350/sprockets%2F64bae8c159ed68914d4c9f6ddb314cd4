@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.984499:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.651057:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c72d64d0ee4535012f3d88bcf534e808I"logical_path;
+F"%4b6e287bea937f267267d5dfff162229I"logical_path;
 F"(png/jpeg/as_de_capc4naveral0036.jpgI"pathname;
 FI"@$root/app/assets/images/png/jpeg/as_de_capc4naveral0036.jpg;
 FI"content_type;

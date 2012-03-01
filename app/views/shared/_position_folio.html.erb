@@ -3,6 +3,7 @@
 
            <% folio.each do |folio| %>
              <%= render :partial => '/folios/folio', :object => folio %>
+             <%= link_to 'edit', edit_folio_path(folio.id) %>
            <% end %>
 
         </ul>

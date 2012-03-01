@@ -10,7 +10,7 @@ class Folio < ActiveRecord::Base
   validates_presence_of :picture
   
                     
-  validates_presence_of :name, :url
+  validates_presence_of :name
   validates_uniqueness_of :name
   
            

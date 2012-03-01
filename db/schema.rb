@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101218205005) do
+ActiveRecord::Schema.define(:version => 20101218205006) do
 
   create_table "folios", :force => true do |t|
     t.integer  "user_id"
@@ -55,6 +55,27 @@ ActiveRecord::Schema.define(:version => 20101218205005) do
     t.string   "title"
     t.text     "body"
     t.string   "model"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "recorded_url"
+  end
+
+  create_table "supports", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "description"
+    t.boolean  "api",         :default => false
+    t.boolean  "seo",         :default => false
+    t.boolean  "website",     :default => false
+    t.boolean  "mobile",      :default => false
+    t.boolean  "games",       :default => false
+    t.boolean  "hosting",     :default => false
+    t.boolean  "design",      :default => false
+    t.boolean  "consulting",  :default => false
+    t.boolean  "job",         :default => false
+    t.boolean  "other",       :default => false
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

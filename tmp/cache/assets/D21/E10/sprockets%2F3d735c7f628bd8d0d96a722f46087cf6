@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7555258:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.4414358:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%50c052a85b7ba8b31378715528326798I"logical_path;
+F"%98d001b56dc0c1f74ec7db05482b0c96I"logical_path;
 F"logo/socialship.psdI"pathname;
 FI"0$root/app/assets/images/logo/socialship.psd;
 FI"content_type;

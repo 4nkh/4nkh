@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.244873:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.006047:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a902c30b9c69ce070fc613ef2aaf01a8I"logical_path;
+F"%d833c144f8a247cdfd61d9064b63b5f8I"logical_path;
 F"flyer.pngI"pathname;
 FI"&$root/app/assets/images/flyer.png;
 FI"content_type;

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.064548:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.384895:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%95e894d593580a232437ab55dc49bcecI"logical_path;
+F"%8856d42156e883d18ae2c7db63e69581I"logical_path;
 F"Atinymce/jscripts/tiny_mce/plugins/spellchecker/img/wline.gifI"pathname;
 FI"^$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/spellchecker/img/wline.gif;
 FI"content_type;

@@ -31,90 +31,195 @@
   %a#myHeader3{:style => "color:#ead917;", :href => "javascript:showhosting('onglets', 'onglets3', '30');"} Premium  
   %a#myHeader4{:style => "color:#700201;", :href => "javascript:showhosting('onglets', 'onglets4', '30');"} Supreme
 
-#onglets4{:name => "onglets", :style => "display:none;"}
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+- if current_page?(hosting_path)
+  #onglets4{:name => "onglets", :style => "display:none;"}
     .clear &nbsp;
-    %h2.h2_title{:style => "color:#700201;"} Supreme
-    .clear &nbsp;    
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#700201;"} Supreme
+      .clear &nbsp;    
                   
-    %ul{:class => "column first"}
-      %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The #{raw('<span style="color:#700201;font-weight:bold;">SUPREME</span>')} plan give you the opportunity to put your website #{raw('<span style="font-weight:bold;color:orange;">ONLINE</span>')} for only #{raw('<span style="color:#FFF;font-weight:bold;">$39.95/MONTHS +TX</span>')}. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.   
+      %ul{:class => "column first"}
+        %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The #{raw('<span style="color:#700201;font-weight:bold;">SUPREME</span>')} plan give you the opportunity to put your website #{raw('<span style="font-weight:bold;color:orange;">ONLINE</span>')} for only #{raw('<span style="color:#FFF;font-weight:bold;">$39.95/MONTHS +TX</span>')}. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.   
 
-    %ul.column
-      %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
+      %ul.column
+        %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
     
-    %ul{:class => "column last"}
-      %p We're using #{raw('<span style="font-weight:bold;color:#304387;">UBUNTU</span>')} or other linux, debian OS on VPS, cause they are stable and secure. #{raw('<span style="font-weight:bold;color:purple;">PASSENGER</span>')} and #{raw('<span style="font-weight:bold;color:yellow;">NGINX</span>')} are added to complete the configuration. Backups and screenshots are taken to recover your data if something wrong apen. Sphinx and others applications can be added to provide interactive and rich interface. The #{raw('<span style="font-weight:bold;color:#700201;">SUPREME</span>')} plan foresee to shared the VPS between you and a maximum of 6 others sites. The burstable RAM will ensure a good anwsering. Please contact us for additional information.
+      %ul{:class => "column last"}
+        %p Nous offrons l'hébergement sur tout les site internets que nous créons. C'est une façon facile et économique pour vous d'obtenir le service adéquat pour le produit confectionné. Puisque nous sommes les mieux placé pour vous conseiller sur les besoins matériel, nous vous suggéront fortement de discuter de vos besoins avec nous pour choisir le plan qui vous conviendra. 
+        %br
+        %p Comme nous offrons toujours un service personalisé à notre clientèle, nous vous invitions à cummniquer avec nous pour obtenir de plus ample informations. Les prix suggérés sont sujet à être changer en tout temps.
+        .clear &nbsp;
+        .clear &nbsp;
     .clear &nbsp;
-    .clear &nbsp;
-  .clear &nbsp;
 
-#onglets3{:name => "onglets", :style => "display:none;"}
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+  #onglets3{:name => "onglets", :style => "display:none;"}
     .clear &nbsp;
-    %h2.h2_title{:style => "color:#ead917;"} Premium
     .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#ead917;"} Premium
+      .clear &nbsp;
               
-    %ul{:class => "column first"}
-      %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#ead917;font-weight:bold;">PREMIUM</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:#ff9000;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$20.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.
+      %ul{:class => "column first"}
+        %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#ead917;font-weight:bold;">PREMIUM</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:#ff9000;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$20.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.
 
-    %ul.column
-      %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
+      %ul.column
+        %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
 
-    %ul{:class => "column last"}
-      %p We're using #{raw('<span style="font-weight:bold;color:#304387;">UBUNTU</span>')} or other linux, debian OS on VPS, cause they are stable and secure. <span style="font-weight:bold;color:purple;">PASSENGER</span> and #{raw('<span style="font-weight:bold;color:yellow;">NGINX</span>')} are added to complete the configuration. Backups and screenshots are taken to recover your data if something wrong apen. Sphinx and others applications can be added to provide interactive and rich interface. The #{raw('<span style="font-weight:bold;color:#700201;">SUPREME</span>')} plan foresee to shared the VPS between you and a maximum of 6 others sites. The burstable RAM will ensure a good anwsering. Please contact us for additional information.
+      %ul{:class => "column last"}
+        %p Nous offrons l'hébergement sur tout les site internets que nous créons. C'est une façon facile et économique pour vous d'obtenir le service adéquat pour le produit confectionné. Puisque nous sommes les mieux placé pour vous conseiller sur les besoins matériel, nous vous suggéront fortement de discuter de vos besoins avec nous pour choisir le plan qui vous conviendra. 
+        %br
+        %p Comme nous offrons toujours un service personalisé à notre clientèle, nous vous invitions à cummniquer avec nous pour obtenir de plus ample informations. Les prix suggérés sont sujet à être changer en tout temps.
+        .clear &nbsp;
+        .clear &nbsp;
     .clear &nbsp;
-    .clear &nbsp;
-  .clear &nbsp;
 
-#onglets2{:name => "onglets", :style => "display:none;"}
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+  #onglets2{:name => "onglets", :style => "display:none;"}
     .clear &nbsp;
-    %h2.h2_title{:style => "color:#5098ed;"} Standard
     .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#5098ed;"} Standard
+      .clear &nbsp;
     
-    %ul{:class => "column first"}
-      %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#5098ed;font-weight:bold;">STANDARD</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:orange;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$12.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.
- 
-    %ul.column
-      %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
-
-    %ul{:class => "column last"}
-      %p We're using #{raw('<span style="font-weight:bold;color:#304387;">UBUNTU</span>')} or other linux, debian OS on VPS, cause they are stable and secure. <span style="font-weight:bold;color:purple;">PASSENGER</span> and #{raw('<span style="font-weight:bold;color:yellow;">NGINX</span>')} are added to complete the configuration. Backups and screenshots are taken to recover your data if something wrong apen. Sphinx and others applications can be added to provide interactive and rich interface. The #{raw('<span style="font-weight:bold;color:#700201;">SUPREME</span>')} plan foresee to shared the VPS between you and a maximum of 6 others sites. The burstable RAM will ensure a good anwsering. Please contact us for additional information.
+      %ul{:class => "column first"}
+        %p Ce produit est idéale pour vous si vous désirez héberger votre contenue et que vous avez un site internet static ou légèrement dynamique.
+        %br
+        %p Vous bénéficierez de modalité de paiement flexible et compétitive. De plus si vous avez de l'intérêt pour des service d'administration et de maintenance de votre serveur, il sera toujours possible de vous obtenir ce qui conviendra à vos besoins.
+      %ul.column
+        %p The standard plan is to offer an intermediate storage space, perfect for an average amount of file or applications using content delivery networks (CDN). The processor and memory are available in limited quantity and speed but enough for applications of medium size.
+      %ul{:class => "column last"}
+        %p We offer accommodation all over the internets site we create. This is an easy and economical for you to get the right service for the made. Since we are best placed to advise you on equipment needs, we strongly suggest you to discuss about your needs with us to choose the plan that suits you.
+        %br
+        %p As always we offer a personalized service to our customers, we invite you to cummniquer with us for further information. The suggested prices are subject to change at any time.
+        .clear &nbsp;
+        .clear &nbsp;
     .clear &nbsp;
-    .clear &nbsp;
-  .clear &nbsp;
   
-#onglets1{:name => "onglets", :style => "display:none;"}
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  .clear &nbsp;
-  #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+  #onglets1{:name => "onglets", :style => "display:none;"}
     .clear &nbsp;
-    %h2.h2_title{:style => "color:#66b95f;"} Basic
     .clear &nbsp;
-    %ul{:class => "column first"}
-      %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#66b95f;font-weight:bold;">BASIC</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:orange;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$7.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small needs. It's ideal to publish consultation pages or publicity pages. We also provide low cost templates for peoples who needs those kind of websites. 
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#66b95f;"} Basic
+      .clear &nbsp;
+      %ul{:class => "column first"}
+        %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#66b95f;font-weight:bold;">BASIC</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:orange;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$7.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small needs. It's ideal to publish consultation pages or publicity pages. We also provide low cost templates for peoples who needs those kind of websites. 
 
-    %ul.column
-      %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
-     
-    %ul{:class => "column last"}
-      %p We're using #{raw('<span style="font-weight:bold;color:#304387;">UBUNTU</span>')} or other linux, debian OS on VPS, cause they are stable and secure. <span style="font-weight:bold;color:purple;">PASSENGER</span> and #{raw('<span style="font-weight:bold;color:yellow;">NGINX</span>')} are added to complete the configuration. Backups and screenshots are taken to recover your data if something wrong apen. Sphinx and others applications can be added to provide interactive and rich interface. The #{raw('<span style="font-weight:bold;color:#700201;">SUPREME</span>')} plan foresee to shared the VPS between you and a maximum of 6 others sites. The burstable RAM will ensure a good anwsering. Please contact us for additional information.
+      %ul.column
+        %p The standard plan is to offer an intermediate storage space, perfect for an average amount of file or applications using content delivery networks (CDN). The processor and memory are available in quantity and speed restrainte but sufficient for applications of medium size.
+      %ul{:class => "column last"}
+        %p We offer accommodation all over the internets site we create. This is an easy and economical for you to get the right service for the made. Since we are best placed to advise you on equipment needs, we strongly suggéront discuss your needs with us to choose the plan that suits you.
+        %br
+        %p As always we offer a personalized service to our customers, we invite you to cummniquer with us for further information. The suggested prices are subject to change at any time.
+        .clear &nbsp;
+        .clear &nbsp;
     .clear &nbsp;
-    .clear &nbsp;
-  .clear &nbsp;
 
+- else
+
+  #onglets4{:name => "onglets", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#700201;"} Supreme
+      .clear &nbsp;    
+                
+      %ul{:class => "column first"}
+        %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The #{raw('<span style="color:#700201;font-weight:bold;">SUPREME</span>')} plan give you the opportunity to put your website #{raw('<span style="font-weight:bold;color:orange;">ONLINE</span>')} for only #{raw('<span style="color:#FFF;font-weight:bold;">$39.95/MONTHS +TX</span>')}. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.   
+
+      %ul.column
+        %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
+  
+      %ul{:class => "column last"}
+        %p Nous offrons l'hébergement sur tout les site internets que nous créons. C'est une façon facile et économique pour vous d'obtenir le service adéquat pour le produit confectionné. Puisque nous sommes les mieux placé pour vous conseiller sur les besoins matériel, nous vous suggéront fortement de discuter de vos besoins avec nous pour choisir le plan qui vous conviendra. 
+        %br
+        %p Comme nous offrons toujours un service personalisé à notre clientèle, nous vous invitions à cummniquer avec nous pour obtenir de plus ample informations. Les prix suggérés sont sujet à être changer en tout temps.
+        .clear &nbsp;
+        .clear &nbsp;
+    .clear &nbsp;
+
+  #onglets3{:name => "onglets", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#ead917;"} Premium
+      .clear &nbsp;
+            
+      %ul{:class => "column first"}
+        %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#ead917;font-weight:bold;">PREMIUM</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:#ff9000;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$20.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small database needs and who use relatively low memory usage. It's ideal to publish consultation pages and publicity pages with clients registration or uploading pictures or datas. We also provide abordable templates for peoples who needs those kind of websites.
+
+      %ul.column
+        %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
+
+      %ul{:class => "column last"}
+        %p Nous offrons l'hébergement sur tout les site internets que nous créons. C'est une façon facile et économique pour vous d'obtenir le service adéquat pour le produit confectionné. Puisque nous sommes les mieux placé pour vous conseiller sur les besoins matériel, nous vous suggéront fortement de discuter de vos besoins avec nous pour choisir le plan qui vous conviendra. 
+        %br
+        %p Comme nous offrons toujours un service personalisé à notre clientèle, nous vous invitions à cummniquer avec nous pour obtenir de plus ample informations. Les prix suggérés sont sujet à être changer en tout temps.
+        .clear &nbsp;
+        .clear &nbsp;
+    .clear &nbsp;
+
+  #onglets2{:name => "onglets", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#5098ed;"} Standard
+      .clear &nbsp;
+  
+      %ul{:class => "column first"}
+        %p Ce produit est idéale pour vous si vous désirez héberger votre contenue et que vous avez un site internet static ou légèrement dynamique.
+        %br
+        %p Vous bénéficierez de modalité de paiement flexible et compétitive. De plus si vous avez de l'intérêt pour des service d'administration et de maintenance de votre serveur, il sera toujours possible de vous obtenir ce qui conviendra à vos besoins.
+      %ul.column
+        %p Le plan standard consiste à vous offrir un espace de stockage intermediaire, idéale pour une quantité de fichier moyenne ou pour les applications utilisant des réseaux de distribution de contenus (CDN). Le processeur ainsi que la mémoire sont disponible en quantité et vitesse restreinte mais suffisante pour des applications de grandeur moyenne. 
+      %ul{:class => "column last"}
+        %p Nous offrons l'hébergement sur tout les site internets que nous créons. C'est une façon facile et économique pour vous d'obtenir le service adéquat pour le produit confectionné. Puisque nous sommes les mieux placé pour vous conseiller sur les besoins matériel, nous vous suggéront fortement de discuter de vos besoins avec nous pour choisir le plan qui vous conviendra. 
+        %br
+        %p Comme nous offrons toujours un service personalisé à notre clientèle, nous vous invitions à cummniquer avec nous pour obtenir de plus ample informations. Les prix suggérés sont sujet à être changer en tout temps.
+        .clear &nbsp;
+        .clear &nbsp;
+    .clear &nbsp;
+
+  #onglets1{:name => "onglets", :style => "display:none;"}
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    #title.group{:style => "border-radius-topleft:0px;-moz-border-radius-topleft:0px;-webkit-border-top-left-radius:0px;"}
+      .clear &nbsp;
+      %h2.h2_title{:style => "color:#66b95f;"} Basic
+      .clear &nbsp;
+      %ul{:class => "column first"}
+        %p We offer hosting on all the website we create. It's easiest and cheaper for you to use our plans because we know exactly what your VPS need and how to manage it. The <span style="color:#66b95f;font-weight:bold;">BASIC</span> plan give you the opportunity to put your website <span style="font-weight:bold;color:orange;">ONLINE</span> for only <span style="color:#FFF;font-weight:bold;">$7.95/MONTHS +TX</span>. We will manage the CPANEL for you. This deal was build to satisfy business who have small needs. It's ideal to publish consultation pages or publicity pages. We also provide low cost templates for peoples who needs those kind of websites. 
+
+      %ul.column
+        %p Your website and database are be store in a (#{raw('<span style="color:pink;font-weight:bold;">VIRTUAL PERSONAL SERVER</span>')}). We rent the services of 2 compagny specialize in hosting.Your content have good chance to be located in the middle of the continent such as Chicago or Toronto if we use our principal hosting provider. Most of the time you will be hosted from Florida, if we work with the second hosting provider. Both will use #{ link_to 'POSTGRESQL', 'http://www.postgresql.org', :style => 'font-weight:bold;color:#39c;', :popup => true, :rel => 'nofollow' } by default because we like this OPEN SOURCE database but on your demand we can put #{raw('<span style="color:black;font-weight:bold;">MYSQL</span>')}. Price can always be change at any time or with special demand like that.
+   
+      %ul{:class => "column last"}
+        %p Nous offrons l'hébergement sur tout les site internets que nous créons. C'est une façon facile et économique pour vous d'obtenir le service adéquat pour le produit confectionné. Puisque nous sommes les mieux placé pour vous conseiller sur les besoins matériel, nous vous suggéront fortement de discuter de vos besoins avec nous pour choisir le plan qui vous conviendra. 
+        %br
+        %p Comme nous offrons toujours un service personalisé à notre clientèle, nous vous invitions à cummniquer avec nous pour obtenir de plus ample informations. Les prix suggérés sont sujet à être changer en tout temps.
+        .clear &nbsp;
+        .clear &nbsp;
+    .clear &nbsp;
+  

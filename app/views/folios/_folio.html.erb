@@ -1,10 +1,10 @@
 <% if current_page?('/positions/folios') %>
 <li id="folio_<%= folio.id %>" style="width:500px;position:relative;padding-top:7px;padding-bottom:7px;border-top:1px dotted #bbb;"><%= link_to image_tag(folio.picture.url(:thumb), :size => '75x75'), folio.url, :title => folio.name, :popup => true %>
-<span style="position:absolute;height:25px;width:300px;top:19px;left:130px;"><%= truncate(folio.name,20,"...") %></span>
+<span style="position:absolute;height:25px;width:300px;top:19px;left:130px;"><%= truncate(folio.name, :lenght => 20, :omission => "...") %></span>
 <span style="font-size:25px;"><%= folio.position %></span>
-<%= facebox_link_to "Edit post", :url => edit_folio_url(folio.id), :style => 'font-size:14px;color:#39c;padding-left:5px;' %>
+<%= link_to "Edit post", edit_folio_url(folio.id), :style => 'font-size:14px;color:#39c;padding-left:5px;' %>
 <span style=" cursor: move;float:right;" class="handle"><%= image_tag 'sortable.gif', :style => 'padding:5px 0 0 5px;' %></span>
 </li>
 <% else %>
-<li><%= link_to image_tag(folio.picture.url(:thumb)), folio.picture.url(:original), :title => folio.name %></li>
+<li><%= link_to image_tag(folio.picture.url(:thumb)), folio.picture.url(:original), :title => folio.name, :rel => "shadowbox;gallery=thumb;" %></li>
 <% end %>

@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.588365:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.330084:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%5328fd268411eecb99e9363a8b0f5d31I"logical_path;
+F"%25dcd7f9ad3959ea470108c5b51a49fdI"logical_path;
 F"logo/muzica.pngI"pathname;
 FI",$root/app/assets/images/logo/muzica.png;
 FI"content_type;

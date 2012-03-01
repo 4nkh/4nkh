@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7756212:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.450567:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%24b072dfd011fab25bea737c8aaf7fecI"logical_path;
+F"%8f897174c43ff93f37dae994cb5a58d1I"logical_path;
 F"logo/stm.pngI"pathname;
 FI")$root/app/assets/images/logo/stm.png;
 FI"content_type;

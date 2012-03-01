@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487993.84086:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.260077:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d22d94f816ce0ae4fe5d4de91eb99c86I"logical_path;
+F"%3f161142b9f7a931bb8e4f46ee92f0e3I"logical_path;
 F"Ltinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-foot-in-mouth.gifI"pathname;
 FI"i$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-foot-in-mouth.gif;
 FI"content_type;

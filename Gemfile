@@ -16,7 +16,6 @@ gem 'authlogic'
 gem 'acts-as-taggable-on', :git => 'git@github.com:4nkh/acts-as-taggable-on.git', :branch => 'master' #'~> 2.2.2', :require => false
 #gem 'acts-as-taggable-on', :git => "git://github.com/kuldarkrabbi/acts-as-taggable-on.git"
 gem 'twitter_oauth'
-gem 'rspec'
 gem 'haml'
 gem 'rmagick', :require => 'RMagick'
 gem 'dynamic_form'
@@ -54,8 +53,14 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'rspec'
+gem "rspec-rails", ">= 2.8.1", :group => [:development, :test]
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+  gem "machinist"
+  gem "factory_girl_rails", ">= 1.6.0"
+  gem "cucumber-rails", ">= 1.2.1"
+  gem "capybara", ">= 1.1.2"
+  gem "database_cleaner", ">= 0.7.1"
+  gem "launchy", ">= 2.0.5"
 end

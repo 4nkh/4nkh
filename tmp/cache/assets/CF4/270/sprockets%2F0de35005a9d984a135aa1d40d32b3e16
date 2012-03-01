@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.7539861:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591901.25667:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%c5769b73d7d5f6987d15b4c430e18a24I"logical_path;
+F"%88d0594021cf0a00286c54715f35840dI"logical_path;
 F"shadowbox.jsI"pathname;
 FI".$root/app/assets/javascripts/shadowbox.js;
 FI"content_type;

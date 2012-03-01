@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.328104:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.067997:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%e4e428463a4acafc5f2e5be95658cdb3I"logical_path;
+F"%2a8fdc6df4d3676c68dcd421fd5b0e0aI"logical_path;
 F"hori_large.pngI"pathname;
 FI"+$root/app/assets/images/hori_large.png;
 FI"content_type;

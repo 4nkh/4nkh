@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7318661:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.4195452:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4cb7928203da835b6cbfe381602dac74I"logical_path;
+F"%e00d613137b48acfbaa9ef68e601a277I"logical_path;
 F"logo/sagemcom.pngI"pathname;
 FI".$root/app/assets/images/logo/sagemcom.png;
 FI"content_type;

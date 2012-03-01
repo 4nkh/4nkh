@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.5915918:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.333611:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%8e8f85f77826637856b1c91b2de894c3I"logical_path;
+F"%425ac33320d856087d0a36dfb89f8a5eI"logical_path;
 F"logo/nginx.pngI"pathname;
 FI"+$root/app/assets/images/logo/nginx.png;
 FI"content_type;

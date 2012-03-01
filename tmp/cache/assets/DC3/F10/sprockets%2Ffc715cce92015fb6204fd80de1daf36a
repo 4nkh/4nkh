@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.158158:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.954192:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4b16f348a84c0d00aa539b570085bfacI"logical_path;
+F"%10ba22526c794e42514dbc4212f0e693I"logical_path;
 F"expressInstall.swfI"pathname;
 FI"/$root/app/assets/images/expressInstall.swf;
 FI"content_type;

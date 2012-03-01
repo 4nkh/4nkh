@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.468627:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.20323:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b22dca453aa8f86fb0b4a3e9901eec93I"logical_path;
+F"%91a993b87911d227cdcacff495112a73I"logical_path;
 F"logo.jpgI"pathname;
 FI"%$root/app/assets/images/logo.jpg;
 FI"content_type;

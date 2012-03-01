@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.4772348:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.2137752:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d33f3a6fd3d5c694547445ce6ce8726bI"logical_path;
+F"%47ff97e534375773bc5e5468597c4696I"logical_path;
 F"logo/artfox.pngI"pathname;
 FI",$root/app/assets/images/logo/artfox.png;
 FI"content_type;

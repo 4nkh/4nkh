@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.810551:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.469111:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%2ec9b1efbe799d5f15991ec58eadbfd3I"logical_path;
+F"%a3220a043046f6e92777f59b3df52b80I"logical_path;
 F"logo/vmwaresc_freeze.jpgI"pathname;
 FI"5$root/app/assets/images/logo/vmwaresc_freeze.jpg;
 FI"content_type;

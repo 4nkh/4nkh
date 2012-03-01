@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.7379892:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.428664:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%654ca5a8ebf07525ae6bafbe3effc9a4I"logical_path;
+F"%4a79c1d799a1bfb3b7fdcf6e60203c65I"logical_path;
 F"logo/sass.pngI"pathname;
 FI"*$root/app/assets/images/logo/sass.png;
 FI"content_type;

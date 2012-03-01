@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.125159:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.41588:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%d26133dd6576054c267f6b0b76691ea2I"logical_path;
+F"%24bb62154ae27c6b42c38a30f4eb065bI"logical_path;
 F":tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/cite.htmI"pathname;
 FI"W$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/xhtmlxtras/cite.htm;
 FI"content_type;

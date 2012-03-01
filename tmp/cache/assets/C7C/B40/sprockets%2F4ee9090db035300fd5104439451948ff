@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.570946:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.310696:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%fdf7839cd470fa724bed6205f81f5efbI"logical_path;
+F"%b837bb08271b1b332e06ad720c1246c2I"logical_path;
 F"logo/karotz.jpgI"pathname;
 FI",$root/app/assets/images/logo/karotz.jpg;
 FI"content_type;

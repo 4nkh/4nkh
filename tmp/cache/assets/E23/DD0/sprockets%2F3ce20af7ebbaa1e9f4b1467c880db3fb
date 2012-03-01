@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.4194932:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591901.031275:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%21fc5eb7fdf176376bae2daa19df56eeI"logical_path;
+F"%2f2b0bf04302001fb585a7413b469c98I"logical_path;
 F"twit1.gifI"pathname;
 FI"&$root/app/assets/images/twit1.gif;
 FI"content_type;

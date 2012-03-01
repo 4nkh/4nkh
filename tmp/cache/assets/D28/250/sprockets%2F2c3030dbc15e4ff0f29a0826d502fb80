@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.276567:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.896807:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%fd8c8f659100dbaccbc908303d02ffd9I"logical_path;
+F"%804cfb9b301a82f04c06ee6fa751e452I"logical_path;
 F"storage_icn1.pngI"pathname;
 FI"-$root/app/assets/images/storage_icn1.png;
 FI"content_type;

@@ -61,7 +61,7 @@ Ankh::Application.routes.draw do
 
 #MOVIES
   get    '/movies/:id/edit'             =>               'movies#edit',                                :as => :edit_movie
-  get    '/positions/movies'            =>               'movies#position',                            :as => :position
+  get    '/positions/movies'            =>               'movies#position',                            :as => :position_movie
   get    '/movies/:id/picture/new'      =>               'movies#new_picture',                         :as => :new_movie_picture
   post   '/movies/:id/picture/create'   =>               'movies#create_picture',                      :as => :picture
   delete '/movies/:id/picture/destroy'  =>               'movies#destroy_picture',                     :as => :remove_picture
@@ -71,13 +71,15 @@ Ankh::Application.routes.draw do
   get    '/fr/ervices'                  =>               'movies#index',                               :as => :servicesfr
 
 #FOLIOS
-  get    '/fr/folios'                   =>               'folios#index',                               :as => :frfolio
-  get    '/folios/:id/edit'             =>               'folios#edit',                                :as => :edit_folio
-  get    '/positions/folios'            =>               'folios#position',                            :as => :position_folio
-  get    '/folios/:id/picture/new'      =>               'folios#new_picture',                         :as => :new_position_folio
-  post   '/folios/:id/picture/create'   =>               'folios#create_picture',                      :as => :create_folio
-  delete '/folios/:id/picture/destroy'  =>               'folios#destroy_picture',                     :as => :remove_folio_picture
-  delete '/folios/destroy/:id'          =>               'folios#destroy',                             :as => :destroy_folio
+  get    '/games'                       =>               'folios#index',                               :as => :folios
+  get    '/fr/jeux'                     =>               'folios#index',                               :as => :frfolios
+  get    '/games/:id/edit'              =>               'folios#edit',                                :as => :edit_folio
+  get    '/positions/games'             =>               'folios#position',                            :as => :position_folio
+  get    '/games/:id/picture/new'       =>               'folios#new_picture',                         :as => :new_position_folio
+  post   '/games/create'                =>               'folios#create',                              :as => :create_folio
+  post   '/games/picture/create'        =>               'folios#create_picture',                      :as => :create_folio_picture
+  delete '/games/:id/picture/destroy'   =>               'folios#destroy_picture',                     :as => :remove_folio_picture
+  delete '/games/destroy/:id'           =>               'folios#destroy',                             :as => :destroy_folio
 
  #keep below because of the destroy priority!
   resources :movies, :collection => {:prioritize_tasks => :post}
@@ -99,14 +101,13 @@ Ankh::Application.routes.draw do
 #USER_SESSIONS
   get    '/login'                       =>               'user_sessions#new',                              :as => :login  
   
-#NOTIFIER
-  get    '/fr/notifier/mailform'        =>               'notifier#mailform',                             :as => :mailformfr
-  get    '/notifier/mailform'           =>               'notifier#mailform',                             :as => :mailform
-  get    '/contactus'                   =>               'notifier#show',                                 :as => :notifier
-  get    '/fr/contact'                  =>               'notifier#show',                                 :as => :notifierfr
-  get    '/contactus'                   =>               'notifier#show',                                 :as => :notifier
-  get    '/notifier/my_mailer'          =>               'notifier#my_mailer',                            :as => :my_mailer
-  post   '/send_mail'                   =>               'notifier#send_mail',                            :as => :send_mail
+#SUPPORT
+  get    '/fr/notifier/mailform'        =>               'supports#mailform',                              :as => :mailformfr
+  get    '/notifier/mailform'           =>               'supports#mailform',                              :as => :mailform
+  get    '/contactus'                   =>               'supports#show',                                  :as => :notifier
+  get    '/fr/contact'                  =>               'supports#show',                                  :as => :notifierfr
+  get    '/notifier/my_mailer'          =>               'supports#my_mailer',                             :as => :my_mailer
+  post   '/send_mail'                   =>               'supports#send_mail',                             :as => :send_mail
 
   
   

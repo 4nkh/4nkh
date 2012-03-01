@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.785989:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.460225:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%54a69a8819bbecca502b0a8d2fb97e04I"logical_path;
+F"%2f01ddacdd2d6a65e9822afdb9fd9f68I"logical_path;
 F"logo/unicorn.pngI"pathname;
 FI"-$root/app/assets/images/logo/unicorn.png;
 FI"content_type;

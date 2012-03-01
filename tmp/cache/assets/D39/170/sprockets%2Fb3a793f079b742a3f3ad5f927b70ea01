@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.234654:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.996619:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%de5884278c46d8b9f6b23cc1114c5232I"logical_path;
+F"%5104175a3902ad8b34715b6b8fc3beedI"logical_path;
 F"favicon.gifI"pathname;
 FI"($root/app/assets/images/favicon.gif;
 FI"content_type;

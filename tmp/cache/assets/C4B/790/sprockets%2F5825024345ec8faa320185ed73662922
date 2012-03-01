@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.471241:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.206377:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%63c9ee529bbd123021c61ce68b2c936dI"logical_path;
+F"%f4df889c3d16b218f20783dac4d250ceI"logical_path;
 F"logo/acq.pngI"pathname;
 FI")$root/app/assets/images/logo/acq.png;
 FI"content_type;

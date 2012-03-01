@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.2698271:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.0320158:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%81d413060b0b5d66519acae3e0bf3192I"logical_path;
+F"%03ae3203ddda83abc1ac2e4873c6efb5I"logical_path;
 F"graphite.pngI"pathname;
 FI")$root/app/assets/images/graphite.png;
 FI"content_type;

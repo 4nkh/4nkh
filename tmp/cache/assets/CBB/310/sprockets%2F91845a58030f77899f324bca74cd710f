@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330488000.67761:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591930.599853:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%eab7434afe99fd3bdebc6726a745d439I"logical_path;
+F"%8ecf868f41a407dafb49dfe9325ecfd8I"logical_path;
 F"earth.swfI"pathname;
 FI"#$root/app/assets/swf/earth.swf;
 FI"content_type;

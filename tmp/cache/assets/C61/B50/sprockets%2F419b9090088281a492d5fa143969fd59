@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.2896059:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.912123:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%634da30188e98fa67de3c4e71d27eef5I"logical_path;
+F"%d3ef2f0834aa0228634832af4385a31bI"logical_path;
 F"tag.psdI"pathname;
 FI"$$root/app/assets/images/tag.psd;
 FI"content_type;

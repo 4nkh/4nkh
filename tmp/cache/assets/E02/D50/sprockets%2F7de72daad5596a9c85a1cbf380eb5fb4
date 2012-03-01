@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.2391639:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.9996538:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%0cf3dff5ae46e17e1122f674c7f5d492I"logical_path;
+F"%e12098942da7659149209309ba2dc127I"logical_path;
 F"fb.gifI"pathname;
 FI"#$root/app/assets/images/fb.gif;
 FI"content_type;

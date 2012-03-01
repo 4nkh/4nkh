@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.437661:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591901.051467:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b3421960f4f0aed071b23fd3e60ac561I"logical_path;
+F"%f7ba673da9e94716777242dec172ee5bI"logical_path;
 F"video32act.jpgI"pathname;
 FI"+$root/app/assets/images/video32act.jpg;
 FI"content_type;

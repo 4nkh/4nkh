@@ -1,18 +1,18 @@
 - if current_page?(dashboard_url)
   %ul{:style => "float:left;"}        
-    %li= link_to 'Edit profile', "/account/edit", :rel => "shadowbox;width=400;height=700;", :alt => "Edit Profile", :title => "Edit Profile"
+    %li= link_to 'Edit profile', "/account/edit", :rel => "shadowbox;width=400;height=700;", :alt => "Edit Profile", :title => ""
     %li= link_to 'Add content', '/paragraphe/edit' 
     - if current_user.id == (1) 
-      %li= link_to "Upload movies", new_movie_url 
-      %li= link_to "Add employees", signup_url 
-      %li= link_to 'Add folio', new_folio_url 
-      %li= link_to 'Folio position', '/positions/folios'
+      %li= link_to "Upload movies", new_movie_path 
+      %li= link_to "Add employees", signup_path 
+      %li= link_to 'Add folio', new_folio_path 
+      %li= link_to 'Folio position', position_folio_path
       
     - elsif current_user.id == (2)
-      %li= link_to "Upload movies", new_movie_url 
-      %li= link_to 'Add employees', signup_url 
-      %li= link_to 'Add folio', new_folio_url
-      %li= link_to 'Folio position', '/positions/folios'
+      %li= link_to "Upload movies", new_movie_path 
+      %li= link_to 'Add employees', signup_path 
+      %li= link_to 'Add folio', new_folio_path
+      %li= link_to 'Folio position', position_folio_path
 
 - elsif current_page?(visible_path) || current_page?(visiblefr_path)
   - unless current_user.nil?  
@@ -26,18 +26,18 @@
   - unless current_user.nil?
     %ul{:style => "float:left;"}
       - if current_user.id == (1)
-        %li= link_to 'Set positions', "/positions/movies" 
+        %li= link_to 'Set positions', position_movie_path
       - elsif current_user.id == (2)
-        %li= link_to 'Set positions', "/positions/movies"
+        %li= link_to 'Set positions', position_movie_path
 
 
 - elsif current_page?(aboutus_path) || current_page?(aboutusfr_path)
   - unless current_user.nil?
     %ul{:style => "float:left;"}
       - if current_user.id == (1) 
-        %li= link_to 'Set positions', "/positions/users"
+        %li= link_to 'Set positions', position_path
       - elsif current_user.id == (2) 
-        %li= link_to 'Set positions', "/positions/users"
+        %li= link_to 'Set positions', position_path
 
 - elsif current_page?(posts_path)
   - unless current_user.nil?
@@ -51,20 +51,20 @@
   %li
     - if current_user.blank?
       //= facebox_link_to 'Join', :url => signup_url 
-      = link_to 'Join', signup_path, :rel => "shadowbox;width=350;height=400;", :alt => "Join", :title => "Join"
+      = link_to 'Join', signup_path, :rel => "shadowbox;width=350;height=400;", :alt => "Join", :title => ""
     - else
       = link_to(current_user.login,dashboard_url)
   %li
     - if current_user.blank? 
       //= facebox_link_to 'Login', :url => login_url
-      = link_to 'Login', login_path, :rel => "shadowbox;width=350;height=200;", :alt => "Login", :title => "Login"
+      = link_to 'Login', login_path, :rel => "shadowbox;width=350;height=200;", :alt => "Login", :title => ""
     - else 
       = link_to('Logout', destroy_session_url, :confirm => 'Are you sure you want to logout?', :method => :delete) 
 
 .clear &nbsp;
 #footer_link
   = link_to image_tag('tools_icn.png', :mouseover => "tools_icon1.png"), tools_fr_path, :alt => "tool", :title => "tool"
-  = link_to image_tag('storage_icn.png', :mouseover => "storage_icon1.png"), hosting_fr_path, :alt => "tool", :title => "tool"
+  = link_to image_tag('storage_icn.png', :mouseover => "storage_icon1.png"), hosting_fr_path, :alt => "hébergement", :title => "hébergement"
   = link_to image_tag('mobile_icn.png', :mouseover => "mobile_icon1.png"), mobile_fr_path, :alt => "mobile", :title => "mobile" 
   = link_to image_tag('seo_icn.png', :mouseover => "seo_icon1.png"), seo_fr_path, :alt => "seo", :title => "seo" 
   = link_to image_tag('commerce.png', :mouseover => "ecommerce1.png"), business_fr_path, :alt => "e-commerce", :title => "e-commerce"

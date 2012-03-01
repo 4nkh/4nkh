@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.073917:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.883015:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%ee34ade737325f67865282e757d3a6efI"logical_path;
+F"%1ad9afc4eaf043d5c6de7f9984fb996fI"logical_path;
 F"closelabel.gifI"pathname;
 FI"+$root/app/assets/images/closelabel.gif;
 FI"content_type;

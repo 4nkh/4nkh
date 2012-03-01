@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.8936691:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.552511:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%268b3fe4e28f8bd1c91d26224225af98I"logical_path;
+F"%fd3ecf31cbf56b8e13f57f487470ac57I"logical_path;
 F"modad.jpgI"pathname;
 FI"&$root/app/assets/images/modad.jpg;
 FI"content_type;

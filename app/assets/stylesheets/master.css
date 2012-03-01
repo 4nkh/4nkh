@@ -186,7 +186,7 @@ ul.thumb {
 	width: 1004px;
 }
 ul.thumb li {
-        
+  /*box-shadow:-3px 8px 10px 2px #999;-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;*/
 	margin: 0; padding: 6px;
 	float: left;
 	position: relative;  /* Set the absolute positioning base coordinate */

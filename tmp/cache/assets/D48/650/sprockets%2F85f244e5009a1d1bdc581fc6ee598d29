@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.721014:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.38253:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%024d96a68d7e7e5668ad0af77ff18e7bI"logical_path;
+F"%1926e58f218c05b47543b24fb4dc5552I"logical_path;
 F"logo/redis.pngI"pathname;
 FI"+$root/app/assets/images/logo/redis.png;
 FI"content_type;

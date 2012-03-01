@@ -1,0 +1,145 @@
+= stylesheet_link_tag 'application'
+= javascript_include_tag 'application' 
+:css
+  body {background: #CCC /*url(/assets/bg_main.png) top left repeat;*/}
+  h2 {text-align:center;}
+  .notifier {padding-left:80px; width:340px;float:left;}
+  input[type="text"] {width:300px;}
+  .column_left {float:left; width:100px;}
+  .column_left input[type="checkbox"] {float:right;padding-right:20px;}
+  .column_right {float:right; width:100px;}
+  .column_right input[type="checkbox"] {float:right;}
+  #errorExplanation {margin-left:-50px !important;}
+  form {padding:20px;background:#EEE;width:300px;box-shadow:-3px 8px 10px 2px #999;-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;}
+  
+.clear &nbsp;
+
+- if current_page?("/fr/notifier/mailform")
+  %h2 Formulaire de courriel
+  .notifier
+    .clear &nbsp;
+    - if flash[:notice]
+      %div{:class => "green flash"}
+        %b Félicitation:
+        %span L'ennvoie de votre message c'est bien déroulé
+      %br
+  
+    - if flash[:warning]
+      %div{:class => "red flash"}
+        %b Désolé:
+        %span Une erreur c'est produite!
+      %br
+
+    = form_for @support, :url => send_mail_path do |f| 
+      = f.error_messages
+      = f.text_field :name, :size => 35, :placeholder => "Votre Nom" 
+      %br 
+      %br 
+      = f.text_field :email, :size => 35, :placeholder => "Votre Couriel"
+      %br 
+      %br 
+      = f.text_field :subject, :size => 35, :placeholder => "Le Sujet" 
+      %br 
+      %br 
+      = f.text_area :description, :rows => 9, :cols => 35, :placeholder => "Votre Message"
+      %br 
+      %br
+      .column_left
+        = f.label "Site web"
+        = f.check_box :website
+        .clear &nbsp;
+        = f.label "Mobile"
+        = f.check_box :mobile
+        .clear &nbsp;
+        = f.label "Jeux"
+        = f.check_box :games
+        .clear &nbsp;
+        = f.label "Api"
+        = f.check_box :api
+        .clear &nbsp;
+        = f.label "Design"
+        = f.check_box :design
+      .column_right
+        = f.label "Seo"
+        = f.check_box :seo
+        .clear &nbsp;
+        = f.label "Hébergement"
+        = f.check_box :hosting
+        .clear &nbsp;
+        = f.label "Consultation"
+        = f.check_box :consulting
+        .clear &nbsp;
+        = f.label "Emploie"
+        = f.check_box :job
+        .clear &nbsp;
+        = f.label "Autre"
+        = f.check_box :other
+      .clear &nbsp;
+      = submit_tag "Envoyez"
+    .clear &nbsp;
+
+- else 
+
+  %h2 Mail form
+  .notifier
+    .clear &nbsp;
+    - if flash[:notice]
+      %div{:class => "green flash"}
+        %b Félicitation:
+        %span L'ennvoie de votre message c'est bien déroulé
+      %br
+  
+    - if flash[:warning]
+      %div{:class => "red flash"}
+        %b Désolé:
+        %span Une erreur c'est produite!
+      %br
+
+    = form_for @support, :url => send_mail_path do |f|
+      = f.error_messages
+      = f.text_field :name, :size => 35, :placeholder => "Name" 
+      %br 
+      %br 
+      = f.text_field :email, :size => 35, :placeholder => "Email" 
+      %br 
+      %br 
+      = f.text_field :subject, :size => 35, :placeholder => "Subject" 
+      %br 
+      %br 
+      = f.text_area :description, :rows => 9, :cols => 35, :placeholder => "Message" 
+      %br 
+      %br
+      .column_left
+        = f.label "Website"
+        = f.check_box :website
+        .clear &nbsp;
+        = f.label "Mobile"
+        = f.check_box :mobile
+        .clear &nbsp;
+        = f.label "Games"
+        = f.check_box :games
+        .clear &nbsp;
+        = f.label "Api"
+        = f.check_box :api
+        .clear &nbsp;
+        = f.label "Design"
+        = f.check_box :design
+      .column_right
+        = f.label "Seo"
+        = f.check_box :seo
+        .clear &nbsp;
+        = f.label "Hosting"
+        = f.check_box :hosting
+        .clear &nbsp;
+        = f.label "Consultation"
+        = f.check_box :consulting
+        .clear &nbsp;
+        = f.label "Job"
+        = f.check_box :job
+        .clear &nbsp;
+        = f.label "Other"
+        = f.check_box :other
+      .clear &nbsp;
+      = submit_tag "Send Mail"
+    .clear &nbsp;
+

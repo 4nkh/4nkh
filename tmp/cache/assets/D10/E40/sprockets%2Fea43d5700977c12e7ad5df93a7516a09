@@ -1,16 +1,16 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487994.291338:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.513844:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%33b99b3010c45765184efae41424cba5I"logical_path;
+F"%2c6332afcb224ec22b2a42b8690ac9f7I"logical_path;
 F"master.cssI"pathname;
 FI",$root/app/assets/stylesheets/master.css;
 FI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2012-02-27T11:30:54-05:00;
+FI"2012-02-29T00:06:11-05:00;
 FI"	body;
-FI"—Gbody {position:relative;color: #666;background:#222 url(/assets/bg_main.png) repeat center top; font: normal 62.5% "Helvetica Neue", Helvetica, Arial, sans-serif;overflow-x:hidden;}
+FI"Hbody {position:relative;color: #666;background:#222 url(/assets/bg_main.png) repeat center top; font: normal 62.5% "Helvetica Neue", Helvetica, Arial, sans-serif;overflow-x:hidden;}
 
 a img {border: none;}
 a {color: #0000FF;}
@@ -198,7 +198,7 @@ ul.thumb {
 	width: 1004px;
 }
 ul.thumb li {
-        
+  /*box-shadow:-3px 8px 10px 2px #999;-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;*/
 	margin: 0; padding: 6px;
 	float: left;
 	position: relative;  /* Set the absolute positioning base coordinate */
@@ -313,7 +313,7 @@ F[{I"	path;
 FI",$root/app/assets/stylesheets/master.css;
 FI"
 mtime;
-FIu:	Timep€  `{:@_zoneI"EST;
+FIu:	Time¥€  °:@_zoneI"EST;
 T:offsetiþ°¹I"hexdigest;
-F"%99455365fe968e804239696563b2969dI"_version;
+F"%c498773ea31923d27e51a72b5a09cd65I"_version;
 F"%1c9609bc58b1e77c196de29021583379

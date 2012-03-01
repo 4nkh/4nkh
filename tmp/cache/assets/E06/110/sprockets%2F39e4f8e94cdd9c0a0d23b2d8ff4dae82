@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.36166:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.084518:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%c82b21ab135e79728c6e5bdade936043I"logical_path;
+F"%03bfb404deb5268461c6e30a0bffb5eeI"logical_path;
 F"hulu.pngI"pathname;
 FI"%$root/app/assets/images/hulu.png;
 FI"content_type;

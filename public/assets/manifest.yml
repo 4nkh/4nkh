@@ -22,6 +22,7 @@ br.png: br-45c02aca81e033f0180a46f6622ffb89.png
 bubble.jpg: bubble-5d825b0515f5507cd430a922f73a4db5.jpg
 carbone.jpg: carbone-e8b1fe99268cd9e33af49ab9c42f3422.jpg
 closelabel.gif: closelabel-409b74cffbd8e7e0b1f7c354cfba40c8.gif
+closelbl.gif: closelbl-c90dbf0242bceef8f0f409b99a8c727d.gif
 cloud.jpg: cloud-b00019a9a78dde3a257ca30400e17eee.jpg
 code.jpg: code-e11fd1fc21efcb5eeacb116abf4da94a.jpg
 comdel.png: comdel-4d48657a98a4e1e450a5e7cb7800cb62.png
@@ -170,6 +171,8 @@ ms.gif: ms-cad35832254259e2ed0f88e6d0b6cf78.gif
 ms1.gif: ms1-a3fb11fa418d9a66a4b68b7d8ea7e636.gif
 muzica5.png: muzica5-ea528309d30081a3cc822b33282915be.png
 nav.jpg: nav-e6cdd4cae3935a8d9cb6ae3f09439f0c.jpg
+next.gif: next-688279f57ecfa7e38a753108df4f2b93.gif
+next_arrow.png: next_arrow-e73822bedcf37a797bc575409b247fe3.png
 no-avatar.jpg: no-avatar-56c6ece2383b235efc2bb0fc87a4b2d2.jpg
 notdorks_logo.png: notdorks_logo-fca428215bfef7d948e9881111aa6a46.png
 page-background.jpg: page-background-e2474f0f191e54d8c6fe3c563819ab1b.jpg
@@ -224,6 +227,8 @@ png/jpeg/as_de_nasabeta0035.jpg: png/jpeg/as_de_nasabeta0035-a293f8b20d3340e114b
 png/jpeg/as_de_nasabeta0036.jpg: png/jpeg/as_de_nasabeta0036-614b66d29cc619f6eab13d21712ef4fa.jpg
 png/jpeg/as_de_nasabeta0049.jpg: png/jpeg/as_de_nasabeta0049-9d1553fa8ff13a70d1bbf0447c5d4980.jpg
 ppcc.jpg: ppcc-04f72e1cf2c6cf28f6c66eca2bfcca37.jpg
+previous.gif: previous-50e5d0581ef35920c56737de83d6c646.gif
+previous_arrow.png: previous_arrow-7aadfbb0649d98f1a9f84db7fd4cfea6.png
 redlight.png: redlight-0e121c25615a1eb1f1b5f2b86703366b.png
 redlight1.png: redlight1-2c16fed81639d3c472fe43d6daea5403.png
 rss.png: rss-788aa6b1a60bf129045030fb40b42707.png
@@ -371,7 +376,7 @@ tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png: t
 tinymce/jscripts/tiny_mce/themes/advanced/source_editor.htm: tinymce/jscripts/tiny_mce/themes/advanced/source_editor-ec8d34e42328ce370caf3277b304b8c0.htm
 tinymce/jscripts/tiny_mce/themes/simple/img/icons.gif: tinymce/jscripts/tiny_mce/themes/simple/img/icons-53f4a74f7aac9ebf26ae87ad435e5777.gif
 tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/img/button_bg.png: tinymce/jscripts/tiny_mce/themes/simple/skins/o2k7/img/button_bg-32d43e726bc23d9b0c0dde41894b4704.png
-application.css: application-8f88ce04c4c5bd327a2a87385f17136b.css
+application.css: application-71d6183bc878d4f3b5b98073b7c2578d.css
 earth.swf: earth-2c10cc0717e4761f9f0a620bcf13b9fe.swf
 facebox/closelabel.png: facebox/closelabel-d3fcc37135b684a579abdf03e0f6719e.png
 facebox/loading.gif: facebox/loading-c77a8b7bfb4230ce5ee044c1a6392c99.gif

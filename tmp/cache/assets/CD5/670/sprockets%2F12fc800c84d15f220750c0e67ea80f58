@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487967.708884:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.36808:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%4f715a77d7f7f15d1e8449d160e169f8I"logical_path;
+F"%e95aa7bb7ca53f3c158a79af87af71eeI"logical_path;
 F"logo/pmt-roy.pngI"pathname;
 FI"-$root/app/assets/images/logo/pmt-roy.png;
 FI"content_type;

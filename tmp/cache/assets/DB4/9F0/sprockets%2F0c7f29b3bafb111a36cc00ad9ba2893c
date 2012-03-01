@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330487968.633239:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591901.226691:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%83752e153b87e954dd93e29b1a8c7292I"logical_path;
+F"%2aaeb3ac017458fe8e3cd5a7a410ea16I"logical_path;
 F"core.jsI"pathname;
 FI")$root/app/assets/javascripts/core.js;
 FI"content_type;

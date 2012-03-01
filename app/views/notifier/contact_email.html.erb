@@ -1,13 +1,54 @@
 <h3>Bonjour Mathieu!</h3>
 
-<p>Tu as reçu un message de <%= @name %> à propos de <%= @subject %></p>
+  <% if @support.api %>
+    <p>API</p>
+    <br/>
+  <% end %>
+  <% if @support.seo %>
+    <p>SEO</p>
+    <br/>
+  <% end %>
+  <% if @support.design %>
+    <p>DESIGN</p>
+    <br/>
+  <% end %>
+  <% if @support.website %>
+    <p>WEBSITE</p>
+    <br/>
+  <% end %>
+  <% if @support.games %>
+    <p>GAMES</p>
+    <br/>
+  <% end %>
+  <% if @support.mobile %>
+    <p>MOBILE</p>
+    <br/>
+  <% end %>
+  <% if @support.hosting %>
+    <p>HOSTING</p>
+    <br/>
+  <% end %>
+  <% if @support.consulting %>
+    <p>CONSULTING</p>
+    <br/>
+  <% end %>
+  <% if @support.job %>
+    <p>JOB</p>
+    <br/>
+  <% end %>
+  <% if @support.other %>
+    <p>OTHER</p>
+    <br/>
+  <% end %>
+
+<p>Tu as reçu un message de <b><%= @support.name %></b> à propos de <b><%= @support.subject %></b></p>
 
 <br/>
 Voici le contenue:
 <br/>
 
-<p><%= @body %></p>
+<p><%= @support.description %></p>
 
-L'addresse de réponse est <%= @address %><br/>
+L'addresse de réponse est <%= @support.email %><br/>
 Au revoir,<br/>
 4nkh.com<br/>

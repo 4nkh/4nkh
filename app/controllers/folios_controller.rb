@@ -2,7 +2,7 @@ class FoliosController < ApplicationController
   before_filter :require_user, :except => [:index,:show]
   before_filter :get_folio, :only => [:destroy, :destroy_picture]
   def index
-    @folio = Folio.find(:all).paginate(:page => params[:page], :per_page => 14)
+    @folio = Folio.find(:all).paginate(:page => params[:page], :per_page => 18)
     respond_to do |format|
       format.html   # renders index.html.erb
       format.iphone# renders index.iphone.erb

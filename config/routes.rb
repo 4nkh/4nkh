@@ -33,13 +33,15 @@ Ankh::Application.routes.draw do
   get  '/blog/images'                   =>               'searchs#images',                             :as => :adv_model_images
   get  '/blog/videos'                   =>               'searchs#videos',                             :as => :adv_model_videos
   get  '/tag_cloud'                     =>               'searchs#tag_cloud',                          :as => :tag_cloud
-  get  '/search/posts'                  =>               'searchs#research',                           :as => :search
-  get  '/search/posts/texts'            =>               'searchs#research_text',                      :as => :search_text
-  get  '/search/posts/links'            =>               'searchs#research_link',                      :as => :search_link
-  get  '/search/posts/images'           =>               'searchs#research_image',                     :as => :search_image
-  get  '/search/posts/videos'           =>               'searchs#research_video',                     :as => :search_video
-  get  '/search/posts/images'           =>               'searchs#research_image',                     :as => :search_image
+
+  post  '/search/posts'                 =>               'searchs#research',                           :as => :search
+  post  '/search/posts/texts'           =>               'searchs#research_text',                      :as => :search_text
+  post  '/search/posts/links'           =>               'searchs#research_link',                      :as => :search_link
+  post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
+  post  '/search/posts/videos'          =>               'searchs#research_video',                     :as => :search_video
+  post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
   get  '/directory/posts'               =>               'searchs#index',                              :as => :directory_posts_all
+
   get  '/directory/posts/:letter'       =>               'searchs#letter',                             :as => :directory_posts_letter
   get  '/posts/tagged/:search'          =>               'searchs#search',                             :as => :posts_tagged_with
 
@@ -97,7 +99,7 @@ Ankh::Application.routes.draw do
   get    '/fr/users/:id'                =>               'users#parafr',                                   :as => :parafr
   get    '/account/edit'                =>               'users#edit',                                     :as => :user_edit
   put    '/account/update/:id'          =>               'users#update',                                   :as => :user_update
-  
+  post   '/users/create'                =>               'users#create',                                   :as => :user_create
 #USER_SESSIONS
   get    '/login'                       =>               'user_sessions#new',                              :as => :login  
   

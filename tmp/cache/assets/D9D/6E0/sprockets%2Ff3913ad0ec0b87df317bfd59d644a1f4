@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.797687:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%2469c6f6b1fbb9d58e658a31002809b5I"logical_path;
-F"redlight.pngI"pathname;
-FI")$root/app/assets/images/redlight.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"
-28287;
-FI"digest;
-F"%0e121c25615a1eb1f1b5f2b86703366bI"_version;
-F"%1c9609bc58b1e77c196de29021583379

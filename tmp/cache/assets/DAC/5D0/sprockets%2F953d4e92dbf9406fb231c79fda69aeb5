@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.34772:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%99c8ed5e20ef9b76f33287e5fe32685dI"logical_path;
-F">tinymce/jscripts/tiny_mce/plugins/media/img/quicktime.gifI"pathname;
-FI"[$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/media/img/quicktime.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"303;
-FI"digest;
-F"%cc1842a3b89665b47eaa3ffa1dc2ca07I"_version;
-F"%1c9609bc58b1e77c196de29021583379

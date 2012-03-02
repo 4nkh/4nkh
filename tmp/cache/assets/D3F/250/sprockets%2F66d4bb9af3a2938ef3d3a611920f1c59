@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591901.4774468:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330664130.732805:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%522d704ee0e4a1c17e8b44c8deaed206I"logical_path;
+F"%d53a42aa20e0e868b8cfeafc172a8241I"logical_path;
 F"Atinymce/jscripts/tiny_mce/plugins/paste/editor_plugin_src.jsI"pathname;
 FI"^$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/paste/editor_plugin_src.js;
 FI"content_type;
@@ -973,5 +973,5 @@ FI"
 mtime;
 FIu:	Timep€  `{:@_zoneI"EST;
 T:offsetiþ°¹I"hexdigest;
-F"%6da44f9532b11f7649483819ab7a3990I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%cccad4d429c855d5f0d70b86037f1100I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

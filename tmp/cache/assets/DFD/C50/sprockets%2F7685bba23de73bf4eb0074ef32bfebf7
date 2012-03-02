@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.458418:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705054.700139:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%089f928f7bee58105c59945280ffde24I"logical_path;
-F"<tinymce/jscripts/tiny_mce/themes/advanced/img/icons.gifI"pathname;
+F"%e6a4cdc8ba5e26c61f497190d721acdcI"logical_path;
+FI"<tinymce/jscripts/tiny_mce/themes/advanced/img/icons.gif;
+TI"pathname;
 FI"Y$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/img/icons.gif;
 FI"content_type;
 FI"image/gif;
@@ -13,5 +14,5 @@ FI"length;
 FI"
 11794;
 FI"digest;
-F"%d17919794174cc787c769a3e9f092cd2I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%f90134e6ac909cea049beb8a9d440ad2I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

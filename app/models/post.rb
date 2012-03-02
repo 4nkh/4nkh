@@ -17,12 +17,12 @@ TAG = %w{Visible Restricted}
   scope :between, lambda { |starts,ends| { :conditions => ['created_at >= ? AND created_at <= ?',starts,ends] } }
 
   define_index do    
-    indexes :title, :body, :url, :model, :tag_type
+    indexes :title, :body, :url, :model
     has :tag_type
-        set_property :enable_star => 1
-        set_property :min_infix_len => 3
+      set_property :enable_star => 1
+      set_property :min_infix_len => 3
                 
-        has :user_id, :created_at,:updated_at       
+      has :user_id, :created_at,:updated_at       
   end
 
   sphinx_scope(:by_state) { |sta| 

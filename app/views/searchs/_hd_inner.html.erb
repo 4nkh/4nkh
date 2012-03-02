@@ -1,9 +1,9 @@
 <% if current_page?(adv_model_videos_url) || current_page?(search_video_url) %>
 
 <div id="search_bar">
-            <% form_tag('/search/posts/videos') do %>
+            <%= form_tag('/search/posts/videos') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>
@@ -28,9 +28,9 @@
 <% if current_page?(adv_model_images_url) || current_page?(search_image_url) %>
 
 <div id="search_bar">
-            <% form_tag('/search/posts/images') do %>
+            <%= form_tag('/search/posts/images') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>
@@ -56,9 +56,9 @@
 <% if current_page?(adv_model_links_url) || current_page?(search_link_url) %>
 
 <div id="search_bar">
-           <% form_tag('/search/posts/links') do %>
+           <%= form_tag('/search/posts/links') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>
@@ -84,9 +84,9 @@
 <% if current_page?(adv_model_textos_url) || current_page?(search_text_url) %>
 
  <div id="search_bar">
-            <% form_tag('/search/posts/texts') do %>
+            <%= form_tag('/search/posts/texts') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>
@@ -111,9 +111,9 @@
 <% if current_page?(directory_posts_all_url) || current_page?(search_url) %>
 
 <div id="search_bar">
-           <% form_tag('/search/posts') do %>
+           <%= form_tag('/search/posts') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>
@@ -140,9 +140,9 @@
 <% if current_page?('/tag_cloud') %>
 
 <div id="search_bar">
-           <% form_tag('/search/posts') do %>
+           <%= form_tag('/search/posts') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>
@@ -166,9 +166,9 @@
 <% else %>
 
   <div id="search_bar">
-           <% form_tag('/search/posts') do %>
+           <%= form_tag('/search/posts') do %>
              <p>
-                <%= text_field_tag :research, params[:research], :value => "search here", :size => '30', :class => 'left search' %>
+                <%= text_field_tag :research, params[:research], :placeholder => "search here", :size => '30', :class => 'left search' %>
                 <%= submit_tag "Search", :name => nil, :class => 'search_button' %>
              </p>
            <% end %>

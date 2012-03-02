@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.767615:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%828470c9674e670284987bb9d133c195I"logical_path;
-F"#png/jpeg/as_de_nasabet0003.jpgI"pathname;
-FI";$root/app/assets/images/png/jpeg/as_de_nasabet0003.jpg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"
-69305;
-FI"digest;
-F"%b65b511b9e6a02828f4ee655a4a457adI"_version;
-F"%1c9609bc58b1e77c196de29021583379

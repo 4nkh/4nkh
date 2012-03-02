@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591901.02587:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705025.620589:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%5915a348bea5c5ff8d305d08d3d1d04eI"logical_path;
-F"twit.gifI"pathname;
+F"%07621fb13dd59fcef4aea5d2371883abI"logical_path;
+FI"twit.gif;
+TI"pathname;
 FI"%$root/app/assets/images/twit.gif;
 FI"content_type;
 FI"image/gif;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:54-05:00;
 FI"length;
 FI"	1223;
 FI"digest;
-F"%05762074205a0de819165db4834ba74bI"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%b9a5cb96ad9a1942bfb43a3c2d539176I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

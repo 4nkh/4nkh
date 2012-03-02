@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.283916:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%6facf364b6b7396d5fafa90df48ab4c9I"logical_path;
-F"logo/haml.pngI"pathname;
-FI"*$root/app/assets/images/logo/haml.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"
-34514;
-FI"digest;
-F"%201d3bc2c5f2cf65eed7b1f8818fe515I"_version;
-F"%1c9609bc58b1e77c196de29021583379

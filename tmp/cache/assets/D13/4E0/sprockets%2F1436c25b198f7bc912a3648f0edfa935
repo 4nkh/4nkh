@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.390819:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%907db004c01d630e56c9f6c4215ea07fI"logical_path;
-F"5tinymce/jscripts/tiny_mce/plugins/table/cell.htmI"pathname;
-FI"R$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/table/cell.htm;
-FI"content_type;
-FI"text/html;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"	6820;
-FI"digest;
-F"%47323eaa3f1cdc0ed15e326e79f5a8c4I"_version;
-F"%1c9609bc58b1e77c196de29021583379

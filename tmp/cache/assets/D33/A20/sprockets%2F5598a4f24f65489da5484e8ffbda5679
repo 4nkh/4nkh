@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.323422:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%2148c2a5a547fbcb5dfd21cd0a8c2c46I"logical_path;
-F"logo/mondou.jpgI"pathname;
-FI",$root/app/assets/images/logo/mondou.jpg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"
-14819;
-FI"digest;
-F"%6d23396f2a3a0414d516e771e3415b3bI"_version;
-F"%1c9609bc58b1e77c196de29021583379

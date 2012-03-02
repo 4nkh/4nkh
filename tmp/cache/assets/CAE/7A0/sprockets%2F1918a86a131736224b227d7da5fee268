@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.042596:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330706405.344466:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%5e9a17ed49891a469905d549d25a528cI"logical_path;
-F"gxr.jpgI"pathname;
+F"%d99fc9bce1fb738e6f351b0918ab6cbeI"logical_path;
+FI"gxr.jpg;
+TI"pathname;
 FI"$$root/app/assets/images/gxr.jpg;
 FI"content_type;
 FI"image/jpeg;
@@ -13,5 +14,5 @@ FI"length;
 FI"
 38144;
 FI"digest;
-F"%e250803ca793a9a827ed2a36093cab8bI"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%c77b632a2d3f275546d0bc45173b7432I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

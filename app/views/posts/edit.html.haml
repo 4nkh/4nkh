@@ -85,7 +85,7 @@
           %p#post-caption.title Add a video
 
       %fieldset#url_blog_field{:style => "display:none;"}
-        = f.text_field :url, :value => if !@post.recorded_url.blank? ? "" : @post.recorded_url, :placeholder => "Add your link", :class => "post_url_new", :maxlength => 255
+        = f.text_field :url, :placeholder => "Add your link", :class => "post_url_new", :maxlength => 255
       %fieldset
         = f.text_field :title, :placeholder => "Title here", :maxlength => 100
       %fieldset

@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.593354:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%6a1a5b2e48e5cb1fec383df79f001b2eI"logical_path;
-F"play_pause.gifI"pathname;
-FI"+$root/app/assets/images/play_pause.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"340;
-FI"digest;
-F"%9129301c426f7214d4473aa2ae46d77eI"_version;
-F"%1c9609bc58b1e77c196de29021583379

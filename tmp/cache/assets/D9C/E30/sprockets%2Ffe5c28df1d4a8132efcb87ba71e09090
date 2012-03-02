@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.149163:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330708618.970274:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%93564ae5fa3358c6763a0725094fba3eI"logical_path;
-F"image32act1.pngI"pathname;
+F"%5c5520890c583ef941f9366f8be26688I"logical_path;
+FI"image32act1.png;
+TI"pathname;
 FI",$root/app/assets/images/image32act1.png;
 FI"content_type;
 FI"image/png;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:53-05:00;
 FI"length;
 FI"	3701;
 FI"digest;
-F"%19063b76bc7215aa63fefef1cd0831e8I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%700020974a7acf3ea25e7730f80e9447I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

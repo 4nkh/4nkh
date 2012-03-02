@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.290907:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%e50a1d21dd1945ee9cae67c3a3409925I"logical_path;
-F"Htinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-undecided.gifI"pathname;
-FI"e$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/emotions/img/smiley-undecided.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"337;
-FI"digest;
-F"%eb01c301226c12e2ac80cf5dddfe6e17I"_version;
-F"%1c9609bc58b1e77c196de29021583379

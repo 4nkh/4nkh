@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.831467:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330664131.142635:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%b4d1ca8911024c6348af3694a898b835I"logical_path;
-F"bg_main.pngI"pathname;
+F"%35ca5281945bce6294468955e2c90d41I"logical_path;
+FI"bg_main.png;
+TI"pathname;
 FI"($root/app/assets/images/bg_main.png;
 FI"content_type;
 FI"image/png;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:53-05:00;
 FI"length;
 FI"	3640;
 FI"digest;
-F"%d603fe15b535e878a20fc286227b7fb0I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%000c141b76c635fdfc085520d49770bbI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

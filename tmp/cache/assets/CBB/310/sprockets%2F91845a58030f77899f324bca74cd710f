@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591930.599853:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330664131.090174:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%8ecf868f41a407dafb49dfe9325ecfd8I"logical_path;
-F"earth.swfI"pathname;
+F"%97850d1d3d8428f435b6769600704ce0I"logical_path;
+FI"earth.swf;
+TI"pathname;
 FI"#$root/app/assets/swf/earth.swf;
 FI"content_type;
 FI""application/x-shockwave-flash;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:54-05:00;
 FI"length;
 FI"368095;
 FI"digest;
-F"%2c10cc0717e4761f9f0a620bcf13b9feI"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%f9105155f61a07d72c25a82053facb3aI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

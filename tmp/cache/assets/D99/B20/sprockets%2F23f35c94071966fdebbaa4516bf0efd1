@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.011534:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330706405.4008372:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%3e3380d0a55ad2443f386bea45538c25I"logical_path;
-F"forhype.pngI"pathname;
+F"%6d66ce53e5c6762f34ae6d44e38b3c98I"logical_path;
+FI"forhype.png;
+TI"pathname;
 FI"($root/app/assets/images/forhype.png;
 FI"content_type;
 FI"image/png;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:53-05:00;
 FI"length;
 FI"	8226;
 FI"digest;
-F"%96df24f9c177a50e71415e4693f54920I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%4f96d9f1b1c971897e8b348faeb12212I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.9919648:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%6f4603f5f4ce7604bb1c699f0cacd37aI"logical_path;
-F"toggle_right.gifI"pathname;
-FI"-$root/app/assets/images/toggle_right.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"111;
-FI"digest;
-F"%ac4c6f5f3c60168c4a8709d752cfdc54I"_version;
-F"%1c9609bc58b1e77c196de29021583379

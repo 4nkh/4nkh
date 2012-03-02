@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.372349:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%88a135d8e2566f2aba59c107af6932e4I"logical_path;
-F":tinymce/jscripts/tiny_mce/plugins/paste/pasteword.htmI"pathname;
-FI"W$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/plugins/paste/pasteword.htm;
-FI"content_type;
-FI"text/html;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"783;
-FI"digest;
-F"%fff71803735bd341e12a767e916895a6I"_version;
-F"%1c9609bc58b1e77c196de29021583379

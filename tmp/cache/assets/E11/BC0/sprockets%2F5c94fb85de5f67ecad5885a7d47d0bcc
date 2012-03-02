@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.483443:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705054.684434:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%a989c2f5a183e7a27d1216b06039d6e5I"logical_path;
-F"Qtinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.pngI"pathname;
+F"%8d45541a77f3ddb36e17fa74ddb51ca3I"logical_path;
+FI"Qtinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png;
+TI"pathname;
 FI"n$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png;
 FI"content_type;
 FI"image/png;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:54-05:00;
 FI"length;
 FI"	3736;
 FI"digest;
-F"%601dc25ff7ec62de3ebfacc9ef9658cfI"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%c466f4deb33308cbb45efb8b69182966I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

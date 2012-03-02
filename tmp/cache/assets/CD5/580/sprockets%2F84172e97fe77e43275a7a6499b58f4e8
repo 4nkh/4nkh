@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.905324:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330664131.1373818:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%ce767ea70753038d628d29a364904758I"logical_path;
-F"commerce.pngI"pathname;
+F"%1a49423e96249db437dd0c68c374e9c4I"logical_path;
+FI"commerce.png;
+TI"pathname;
 FI")$root/app/assets/images/commerce.png;
 FI"content_type;
 FI"image/png;
@@ -13,5 +14,5 @@ FI"length;
 FI"
 16868;
 FI"digest;
-F"%2e318e51080dca87832e6dd670fadd77I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%5393876be0df56471e15c765d05e5738I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

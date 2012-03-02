@@ -5,7 +5,7 @@
   .clear &nbsp;
   - unless post.url.blank? || post.url == 'http://'
     - if post.model == "videos" 
-      = raw("<iframe src=\"#{sanitize(post.url)}\" style='z-index:1;margin:20px;' width='400' height='300' wmode='transparent' ></iframe>")
+      = raw("<iframe src=\"#{sanitize(post.recorded_url)}\" style='z-index:1;margin:20px;' width='400' height='300' wmode='transparent' ></iframe>")
     - else
       %h2= link_to truncate(h(post.url),:lenght => "40",:omission => "..."),  h(post.url), :popup => 'true', :rel => 'nofollow'
       .clear &nbsp;

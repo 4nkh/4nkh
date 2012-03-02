@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.879733:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705054.0951018:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%7bca1693cb841a268f2766b2c06ebdcbI"logical_path;
-F"carbone.jpgI"pathname;
+F"%6a6c86136aacf9922c536b54062a4c37I"logical_path;
+FI"carbone.jpg;
+TI"pathname;
 FI"($root/app/assets/images/carbone.jpg;
 FI"content_type;
 FI"image/jpeg;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:53-05:00;
 FI"length;
 FI"	3136;
 FI"digest;
-F"%e8b1fe99268cd9e33af49ab9c42f3422I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%7129b13b8bbfee929691821c8c6a4a3eI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

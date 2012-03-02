@@ -1,16 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591924.432011:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%60ae587f6ad7a8cd330031a00f91ad42I"logical_path;
-F"?tinymce/jscripts/tiny_mce/themes/advanced/color_picker.htmI"pathname;
-FI"\$root/app/assets/javascripts/tinymce/jscripts/tiny_mce/themes/advanced/color_picker.htm;
-FI"content_type;
-FI"text/html;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"	2868;
-FI"digest;
-F"%0e88fb8629a54c148082748dc6543f6fI"_version;
-F"%1c9609bc58b1e77c196de29021583379

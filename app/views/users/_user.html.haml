@@ -3,7 +3,7 @@
     = link_to image_tag(user.photo.url, :size => '75x75'), show_user_url(user.id), :title => user.login 
     %span{:style => "position:absolute;height:25px;width:300px;top:19px;left:130px;"} #{ truncate(user.login,:length => 20,:omission => "...") }
     %span{:style => "font-size:25px;"} #{ user.position }
-    %span.handle{:style => "cursor: move;float:right;"} #{ image_tag 'sortable.gif', :style => 'padding:5px 0 0 5px;' }
+    %span.handler{:style => "cursor: move;float:right;"} #{ image_tag 'sortable.gif', :style => 'padding:5px 0 0 5px;' }
 
 - else 
   - unless user.id == (1)

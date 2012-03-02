@@ -1,8 +1,9 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.016663:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705025.615852:@value{I"
 class:EFI"StaticAsset;
 FI"id;
-F"%fd7b03500deb39e90c79854c3e999dceI"logical_path;
-F"gg.gifI"pathname;
+F"%55d1fd99e427786fb72e857e67cab12fI"logical_path;
+FI"gg.gif;
+TI"pathname;
 FI"#$root/app/assets/images/gg.gif;
 FI"content_type;
 FI"image/gif;
@@ -12,5 +13,5 @@ FI"2012-02-27T11:30:53-05:00;
 FI"length;
 FI"	1172;
 FI"digest;
-F"%081d0549cb1718183afb4a24895c2be6I"_version;
-F"%1c9609bc58b1e77c196de29021583379
+F"%0441bf23ca1d64fd525cc964b8c75cecI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

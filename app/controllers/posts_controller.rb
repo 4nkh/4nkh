@@ -59,10 +59,9 @@ class PostsController < ApplicationController
   
   def create
     post_type = params[:post][:model].tableize
-    puts "#{post_type}"
     @post = current_user.send(post_type).build(params[:post])
     @post.model = post_type
-    @post.url = @post.fetch_oembed_data(params[:post][:url]) if post_type == "videos"
+    @post.recorded_url = @post.fetch_oembed_data(params[:post][:url]) if post_type == "videos"
     if @post.save
       redirect_to dashboard_url
       flash[:notice] = "Your post was successfully created"
@@ -79,6 +78,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find_by_id(params[:id])
+    params[:post][:recorded_url] = @post.fetch_oembed_data(params[:post][:url]) if params[:post][:model].tableize == "videos"
     if @post.update_attributes(params[:post])
       flash[:notice] = "The post was successfully updated"
       redirect_to dashboard_url

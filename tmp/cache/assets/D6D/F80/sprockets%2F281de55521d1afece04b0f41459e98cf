@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591900.035357:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%4f6adad2d7b84d9a060988962f3e0169I"logical_path;
-F"grenierseletage1.jpgI"pathname;
-FI"1$root/app/assets/images/grenierseletage1.jpg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"
-37985;
-FI"digest;
-F"%0dcf2e9700f245735d3d1b8132864f4cI"_version;
-F"%1c9609bc58b1e77c196de29021583379

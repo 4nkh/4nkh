@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330591899.783923:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%8357e4e9651243d00856f85cd1abb48aI"logical_path;
-F"all.jpgI"pathname;
-FI"$$root/app/assets/images/all.jpg;
-FI"content_type;
-FI"image/jpeg;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"
-17103;
-FI"digest;
-F"%005f345910fe526b11645dd54bfac78dI"_version;
-F"%1c9609bc58b1e77c196de29021583379

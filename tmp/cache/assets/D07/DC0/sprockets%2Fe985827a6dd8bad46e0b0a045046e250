@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705904.3760571:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%78344c9a41a368ce5006f6a6e4d51656I"logical_path;
-FI"curl1.png;
-TI"pathname;
-FI"&$root/app/assets/images/curl1.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"	4207;
-FI"digest;
-F"%dcb081e4a0bd402b1b372566a3c73bc9I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

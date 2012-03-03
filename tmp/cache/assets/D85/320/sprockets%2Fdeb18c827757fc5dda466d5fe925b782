@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330705025.604985:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%a019a9fe9cdcc4afa42cb802fa3570d1I"logical_path;
-FI"bebo.gif;
-TI"pathname;
-FI"%$root/app/assets/images/bebo.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-02-27T11:30:53-05:00;
-FI"length;
-FI"	1298;
-FI"digest;
-F"%0850ad0666e1d775711aeb0d1d38328dI"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

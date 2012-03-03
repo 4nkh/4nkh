@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1330664131.1715698:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%089a4ef0d1226ed1c209e94f46ac3298I"logical_path;
-FI"sidebar_bg.png;
-TI"pathname;
-FI"+$root/app/assets/images/sidebar_bg.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-02-27T11:30:54-05:00;
-FI"length;
-FI"
-58929;
-FI"digest;
-F"%805f015a2efc59be38a99318f4a1cb27I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5

@@ -1,24 +1,50 @@
-# require 'spec_helper'
-# describe PagesController do
-# 
-#   #before (:each) do
-#   #  @user = Factory(:user)
-#   #  sign_in @user
-#   #end
-# 
-#   describe "GET 'show'" do
-#     
-#     it "should be successful" do
-#       #get :show, :id => @user.id
-#       get :show, :page => 'realisation'
-#       response.should be_success
-#     end
-#     
-#     it "should find the right user" do
-#       get :show, :id => @user.id
-#       assigns(:user).should == @user
-#     end
-#     
-#   end
-# 
-# end
+require 'spec_helper'
+describe PagesController do
+
+  describe "GET 'show'" do
+    
+    it "should be successful" do
+      get :show, :page => 'seo'
+      response.should be_success
+    end
+    
+    it "should be successful" do
+      get :show, :page => 'business'
+      response.should be_success
+    end
+    
+    it "should be successful" do
+      get :show, :page => 'hosting'
+      response.should be_success
+    end
+    
+  end
+  
+  describe "GET 'realisation'" do
+    
+    it "should be successful" do
+      get :realisation
+      response.should be_success
+    end
+    
+  end 
+  
+  describe "GET 'mobile'" do
+
+    it "should be successful" do
+      get :mobile
+      response.should be_success
+    end
+
+  end
+
+  describe "GET 'tools'" do
+
+    it "should be successful" do
+      get :tools
+      response.should be_success
+    end
+
+  end
+
+end

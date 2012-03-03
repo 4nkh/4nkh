@@ -40,8 +40,8 @@ function showhosting(name, value, days) {
 													var expires = "; expires="+date.toGMTString();
 										  	}
 										  	else var expires = "";
-											  document.cookie = name+"="+value+expires+"; path=/hosting";
-										    document.cookie = name+"="+value+expires+"; path=/fr/hosting";
+											  document.cookie = name+"="+value+expires+"; path=/hosting/";
+										    document.cookie = name+"="+value+expires+"; path=/fr/hosting/";
                                   
                   }
                   else {
@@ -182,7 +182,7 @@ function fillfrCookie(name,value, days, path) {
         }
         else var expires = "";
         document.cookie = name+"="+value+expires+"; path=/business/";
-        document.cookie = name+"="+value+expires+"; path=/frbusiness/";
+        document.cookie = name+"="+value+expires+"; path=/fr/business/";
         window.location="/fr/business/plan";
         }
 

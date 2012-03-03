@@ -11,16 +11,16 @@ class UserSessionsController < ApplicationController
   def create
     @user_session = UserSession.new(params[:user_session])
     respond_to do |format|
-    if @user_session.save 
-      flash[:notice] = "You have logged in successfully."
-      format.js {render :text => "parent.location.href = \"#{dashboard_path}\";"}  
-      #render :js => html_safe!("Shadowbox:close();")
-      #redirect_to dashboard_url
-    else
-      flash[:error] = "You made a mistake, try again"
-      format.js {render :text => "window.location=\"#{request.referer ? request.referer : '/'}\";"}
-      #render :js => "window.location=\"#{request.referer ? request.referer : '/'}\";"
-      #redirect_to :back
+      if @user_session.save 
+        flash[:notice] = "You have logged in successfully."
+        format.js {render :text => "parent.location.href = \"#{dashboard_path}\";"}  
+        #render :js => html_safe!("Shadowbox:close();")
+        #redirect_to dashboard_url
+      else
+        flash[:error] = "You made a mistake, try again"
+        format.js {render :text => "window.location=\"#{request.referer ? request.referer : '/'}\";"}
+        #render :js => "window.location=\"#{request.referer ? request.referer : '/'}\";"
+        #redirect_to :back
       end
     end
   end

@@ -1,4 +1,6 @@
-
+#title {background-color:#DDD;filter: progid:DXImageTransform.Microsoft.Shadow(color='#999999', Direction= 225, Strength=8);}
+#slider {filter: progid:DXImageTransform.Microsoft.Shadow(color='#999999', Direction= 225, Strength=8);}
+.sheet {filter: progid:DXImageTransform.Microsoft.Shadow(color='#999999', Direction= 225, Strength=8);}
 /*NAV*/
 #nav .navi div{display:inline;padding:22px 22px 22px 22px;}
 #nav .navi #serviceslist {z-index:500;font-size:14px;color:#222;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;}

@@ -33,6 +33,7 @@ Ankh::Application.routes.draw do
   get  '/blog/images'                   =>               'searchs#images',                             :as => :adv_model_images
   get  '/blog/videos'                   =>               'searchs#videos',                             :as => :adv_model_videos
   get  '/tag_cloud'                     =>               'searchs#tag_cloud',                          :as => :tag_cloud
+  get  '/posts/results/date/:date'      =>               'searchs#post_date',                          :as => :post_date
 
   post  '/search/posts'                 =>               'searchs#research',                           :as => :search
   post  '/search/posts/texts'           =>               'searchs#research_text',                      :as => :search_text
@@ -40,7 +41,7 @@ Ankh::Application.routes.draw do
   post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
   post  '/search/posts/videos'          =>               'searchs#research_video',                     :as => :search_video
   post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
-  get  '/directory/posts'               =>               'searchs#index',                              :as => :directory_posts_all
+  get   '/directory/posts'              =>               'searchs#index',                              :as => :directory_posts_all
 
   get  '/directory/posts/:letter'       =>               'searchs#letter',                             :as => :directory_posts_letter
   get  '/posts/tagged/:search'          =>               'searchs#search',                             :as => :posts_tagged_with
@@ -111,7 +112,8 @@ Ankh::Application.routes.draw do
   get    '/notifier/my_mailer'          =>               'supports#my_mailer',                             :as => :my_mailer
   post   '/send_mail'                   =>               'supports#send_mail',                             :as => :send_mail
 
-  
+#CALENDAR
+  get   '/calendars/:id/:year/:month'   =>               'calendar#calendar',                              :as => :post_calendars 
   
 
 #  map.with_options(:controller => :pages, :action => :show) do |page|    

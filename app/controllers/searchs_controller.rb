@@ -2,6 +2,7 @@ class SearchsController < ApplicationController
   layout 'search'
   before_filter :get_alphabet, :except => []
   before_filter :get_tag, :except => [:tag_cloud]
+  before_filter :get_calendar
   def index
     @posts = Post.all.paginate :page => params[:page], :per_page => Post::PER_PAGE
   end
@@ -96,6 +97,11 @@ class SearchsController < ApplicationController
     render 'searchs/tag_cloud'
   end
 
+  def post_date
+    @posts = Post.between((params[:date].to_time.utc + 4.hours), (params[:date].to_time.utc + 20.hours)).paginate :page => params[:page], :per_page => Post::PER_PAGE
+    @calendar_page_result = true
+    render 'searchs/index'
+  end
 private 
   def get_tag
     @tags = Post.tag_counts_on(:tags).paginate(:page => params[:page], :per_page => 30)
@@ -103,5 +109,10 @@ private
   def get_alphabet
     @alphabet = ('A'..'Z').to_a + ('0'..'9').to_a
   end
-
+  def get_calendar
+    @month = Date.today.month.to_i
+    @year = Date.today.year.to_i
+    @shown_month = Date.civil(@year, @month)
+    @event_strips = Event.event_strips_for_month(@shown_month)
+  end
 end

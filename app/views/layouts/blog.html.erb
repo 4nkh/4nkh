@@ -6,13 +6,15 @@
     <meta name="keywords" content="<%= h(yield(:keywords) || "") %>"/>
     <meta name="description" content="<%= h(yield(:description) || "") %>"/>
     
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
-
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="/assets/event_calendar.js" type="text/javascript"></script>
     
     <link rel="icon" type="image/gif" href="images/favicon.gif" />
     <%= stylesheet_link_tag 'application' %>  
     <link rel="stylesheet" href="/assets/blog.css" />  
+    <link rel="stylesheet" href="/assets/event_calendar.css" />
+    <!--[if IE 9]><link rel="stylesheet" href="/assets/artist_ie9.css" /><![endif]-->
     <!--[if IE 8]><link rel="stylesheet" href="/assets/artist_ie8.css" /><![endif]-->
     <!--[if IE 7]><link rel="stylesheet" href="/assets/artist_ie7.css" /><![endif]-->
     <!--[if IE 6]><link rel="stylesheet" href="/assets/artist_ie6.css" /><![endif]-->

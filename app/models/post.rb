@@ -2,12 +2,15 @@ class Post < ActiveRecord::Base
   PER_PAGE = 10
 
   belongs_to :user, :counter_cache => true
+  has_many :events
+  
   acts_as_taggable_on :tags
   attr_readonly :posts_count, :as => :taggable
   
   scope :limit, lambda {|l|{:limit => l}}
   default_scope :order => 'created_at DESC'
 
+  accepts_nested_attributes_for :events
 TAG = %w{Visible Restricted}
   scope :by_user, lambda {|u|{ :conditions => ['user_id = ?',u.id]}}
   scope :by_tag, lambda{ |tag| { :conditions => [ 'lower(tag_type) = ?',tag] } }  
@@ -17,7 +20,7 @@ TAG = %w{Visible Restricted}
   scope :between, lambda { |starts,ends| { :conditions => ['created_at >= ? AND created_at <= ?',starts,ends] } }
 
   define_index do    
-    indexes :title, :body, :url, :model
+    indexes :title, :body, :url, :model, :tag_type
     has :tag_type
       set_property :enable_star => 1
       set_property :min_infix_len => 3
@@ -50,6 +53,11 @@ TAG = %w{Visible Restricted}
   def self.letter letter
     Post.find:all, :order => 'title ASC',
     :conditions => [ "upper(title) like ?", letter+'%' ]
+  end
+  
+  def uniqueness_of_event(user, post)
+    @event = Event.by_user(user).events_for_date_range(Date.today.to_time.utc, Date.today.to_time.utc + 24.hours)
+    @new_event = Event.create(:user_id => user, :post_id => post, :name => "X", :start_at => Time.now, :end_at => Time.now) if @event[0].nil?
   end
   
   def fetch_oembed_data(text)

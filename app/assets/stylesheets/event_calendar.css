@@ -1,10 +1,16 @@
-#post_calendar {margin:0 auto;width:90%;height:200px;position:relative;}
+#post_calendar {margin:0 auto;width:90%;height:200px;position:relative;padding-top:3px;}
+.ec-previous-month {padding:10px 0 5px 0;color:#0c604d;}
+.ec-next-month {padding:13px 0 5px 0;color:#0c604d;}
+.ec-previous-month a{color:#0c604d !important;}
+.ec-next-month a{color:#0c604d !important;}
+.ec-previous-month a:hover {color:#39c !important;}
+.ec-next-month a:hover {color:#39c !important;}
 tr {z-index:90;height:20px !important;}
 thead th {background-color: transparent;height:14px !important;z-index:90;}
 .date_head {z-index:90;}
 .ec-calendar {  font-family: verdana, arial, helvetica, sans-serif;  font-size: 11px;  line-height: 12px;  margin: 0;  padding: 0;  z-index:90;}
 .ec-calendar-header {  padding: 4px 0 0 0;  width: 100%;  table-layout: fixed;  margin:0 !important;  background-color: transparent !important;}
-.ec-month-name {  font-size: 16px;  font-weight: bold;}
+.ec-month-name {text-transform: uppercase;text-align:center;padding-top:5px;font-size:16px;font-weight:bold;font-variant:small-caps;color:#0c604d;text-shadow: 1px 1px 1px #000;}
 .ec-body {  position: relative;  white-space: nowrap;}
 .ec-day-names {  position: absolute;  top: 0;  left: 0;  width: 100%;  table-layout: fixed;  padding: 2px 0;}
 .ec-day-name {  font-weight: normal;}
@@ -30,3 +36,19 @@ a.ec-day-link {  color: #444;}
 .ec-left-arrow {  margin-left: -7px;  margin-right: auto;  border-right: 4px solid white;}
 .ec-right-arrow {  margin-left: auto;  margin-right: 3px;  border-left: 4px solid white;}
 .ec-bullet {  position: absolute;  top: 7px;  width: 4px;  height: 4px;  margin-left: -7px;  margin-right: auto;  -webkit-border-radius: 2px;  -khtml-border-radius: 2px;  -moz-border-radius: 2px;}
+
+
+.colorize_calendar {position:absolute;top:35px;left:40px;width:187px;height:300px;}
+.colorize_calendar p{margin:0; padding:0;}
+.ec-month-name {color:#000000}
+.ec-day-names {background:#545354;color:#c0bad9;}
+.ec-day-header {color:#6b4210;border-top: 1px solid #545354;  border-left: 1px solid #545354;  border-bottom: 1px dotted #545354;  background-color: #000000;}
+.ec-other-month-header {background:#022222;color:#bf76bf;}
+.ec-event-cell {background:transparent;border-left: 1px solid #545354;}
+.ec-event {background:transparent;}
+.ec-event a {color:#ff0000;}
+..ec-event-bg a {color:#ff0000;}
+.ec-rows {border-right: 1px solid #545354;}
+/*.ec-row-table {border-color:#545354;}*/
+.ec-calendar {border-bottom: 1px solid #545354;}
+.ec-day-bg {border-left: 1px solid #545354;}

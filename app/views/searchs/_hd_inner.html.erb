@@ -164,7 +164,9 @@
 
          </div>
 <% else %>
-
+  <% if @calendar_page_result %>
+    <h2 class="type_search">EVENT</h2>
+  <% end %>
   <div id="search_bar">
            <%= form_tag('/search/posts') do %>
              <p>

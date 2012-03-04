@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101218205006) do
+ActiveRecord::Schema.define(:version => 20101218205007) do
+
+  create_table "events", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.boolean  "all_day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "folios", :force => true do |t|
     t.integer  "user_id"

@@ -63,6 +63,7 @@ class PostsController < ApplicationController
     @post.model = post_type
     @post.recorded_url = @post.fetch_oembed_data(params[:post][:url]) if post_type == "videos"
     if @post.save
+      @post.uniqueness_of_event(@post.user_id, @post.id)
       redirect_to dashboard_url
       flash[:notice] = "Your post was successfully created"
     else

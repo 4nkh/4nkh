@@ -139,8 +139,8 @@
 
 .blog_tag {padding:0 5px 0 5px;width:275px;height:25px;overflow:hidden;position:absolute;bottom:5px;right:5px;}
 
-.post_full{position:relative;width:500px;padding:5px;overflow:visible;background: #ddd url(/images/gr_post.jpg) repeat-y top left;margin-bottom:15px;}
-.gr_post_top {width:510px;height:5px;top:0;left:-8px;position:absolute;}
+.post_full{position:relative;width:480px;padding:5px;margin-left:40px;overflow:visible;background: #ddd url(/images/gr_post.jpg) repeat-y top left;margin-bottom:15px;}
+.gr_post_top {width:490px;height:5px;top:0;left:-8px;position:absolute;}
 .post_full h3{/*background:#FFF;*/font-size:16px;color:#000;margin:0;padding-bottom:10px;padding-left:5px;padding-top:3px;}
 .post_full img{float:left;padding-left:8px;}
 .post_full p{/*background:#FFF;*/padding-left:5px;}

@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   has_many :images, :dependent => :destroy
   has_many :videos, :dependent => :destroy
   has_many :textos, :dependent => :destroy
+  has_many :events
+
+  accepts_nested_attributes_for :events
 
   has_attached_file :photo, 
                     :styles => {:thumb => "75x75#",:original => "200x200#" },

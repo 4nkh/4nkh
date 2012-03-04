@@ -4,7 +4,7 @@
     <h2>Add content</h2>
     <p class="tagline">Add or modify the information about your account</p>
 <div class="clear">&nbsp;</div>
-  <%= form_for @user, :url => user_edit_path(@user.id) do |f| %>
+  <%= form_for @user, :url => user_update_path(@user.id) do |f| %>
     <%= f.error_messages %>
 <h3 style="color:green;">Francais</h3>
      <fieldset>

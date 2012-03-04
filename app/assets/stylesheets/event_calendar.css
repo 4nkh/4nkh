@@ -47,7 +47,7 @@ a.ec-day-link {  color: #444;}
 .ec-event-cell {background:transparent;border-left: 1px solid #545354;}
 .ec-event {background:transparent;}
 .ec-event a {color:#ff0000;}
-..ec-event-bg a {color:#ff0000;}
+.ec-event-bg a {color:#ff0000;}
 .ec-rows {border-right: 1px solid #545354;}
 /*.ec-row-table {border-color:#545354;}*/
 .ec-calendar {border-bottom: 1px solid #545354;}

@@ -11,18 +11,15 @@ class UsersController < ApplicationController
   
   def show
     @users = User.find(params[:id])
-    if params.has_key?(:id)
-      @user = User.find_by_id(params[:id])
-    end
     @posts = @user.posts.by_tag('visible').paginate(:per_page => 5, :page => (params[:users_page] || 1), :order => 'created_at DESC')
   end
 
   def parafr
     @users = User.find(params[:id])
-    if params.has_key?(:id)
-      @user = User.find_by_id(params[:id])
-    end
-    @posts = Post.by_tag('visible').paginate_by_user_id @user.id, :per_page => 5, :page => (params[:users_page] || 1), :order => 'created_at DESC'
+    # if params.has_key?(:id)
+    #       @user = User.find_by_id(params[:id])
+    #     end
+    @posts = @user.posts.by_tag('visible').paginate(:per_page => 5, :page => (params[:users_page] || 1), :order => 'created_at DESC')
     render :layout => 'fr'
   end
 

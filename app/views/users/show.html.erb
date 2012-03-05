@@ -3,6 +3,8 @@
     body {background: #222;}
     #footer {border: none; height:100px !important;}
     #footer_inner {border-color: #333;}
+    #dialog {background:transparent;}
+    .column1 {font-size:16px !important;}
   </style>
 <% end %>
 <% content_for :top_bar do %>
@@ -40,14 +42,11 @@
 <div  class="group">
      
     <ul class="column1 first">
-<p><%= @user.par3 %>
-</p>
+      <%= raw(auto_link(simple_format(sanitize(@user.par3)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
     </ul>
     
     <ul class="column1 last">
-      <p>
-        <%= @user.par4 %>
-      </p>
+      <%= raw(auto_link(simple_format(sanitize(@user.par4)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
     </ul>
     
 </div>

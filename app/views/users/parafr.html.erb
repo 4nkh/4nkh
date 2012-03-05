@@ -4,6 +4,7 @@
     #footer {border: none; height:100px !important;}
     #footer_inner {border-color: #333;}
     #dialog {background:transparent;}
+    .column1 {font-size:16px !important;}
   </style>
 <% end %>
 
@@ -43,14 +44,11 @@
 <div id="dialog" class="group">
 
     <ul class="column1 first">
-<p><%= @user.par1 %>
-</p>
+      <%= raw(auto_link(simple_format(sanitize(@user.par1)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
     </ul>
 
     <ul class="column1 last">
-      <p>
-        <%= @user.par2 %>
-      </p>
+        <%= raw(auto_link(simple_format(sanitize(@user.par2)), :href_options => { :target => "_new"},:rel => "nofollow")) %>
     </ul>
 
 </div>

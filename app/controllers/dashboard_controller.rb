@@ -16,7 +16,7 @@ class DashboardController < ApplicationController
 
   def paragraphe
     @user = current_user
-    render :layout => false
+    #render :layout => false
   end
 
   def create_photo

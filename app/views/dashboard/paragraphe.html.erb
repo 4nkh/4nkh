@@ -1,5 +1,3 @@
-<%= javascript_include_tag 'application' %>
-<%= stylesheet_link_tag 'application' %>
 
     <h2>Add content</h2>
     <p class="tagline">Add or modify the information about your account</p>
@@ -34,7 +32,9 @@
 <%= f.submit 'Update' %>
 
 <% end %>
-  
+
+<% content_for :js do %>
+  <%#= javascript_include_tag '/javascripts/tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
 <% javascript_tag do %>
 
 	$().ready(function() {
@@ -50,6 +50,7 @@
 			// General options
 
 			mode : "exact",
+			elements : "elm1",
 			theme : "advanced",
 			skin : "o2k7",
 			skin_variant : "black",
@@ -80,7 +81,7 @@
 
 			// Example content CSS (should be your site CSS)
 
-			content_css : "css/content.css",
+			//content_css : "css/content.css",
 
 
 
@@ -108,16 +109,14 @@
 
 		});
 
-	});
-
+	   jQuery('<input>').attr('type', 'hidden').attr('name','authenticity_token').val('<%= form_authenticity_token %>').prependTo('#submit_block');
+     jQuery('form#new_post').attr('method', 'POST');
+     jQuery('<input>').attr('type', 'submit').attr('name','commit').val('Submit Post').attr('id', "post_submit").appendTo('#submit_block');
+});
 <% end %>
-
+<% end %>
 <script type="text/javascript">
-
 if (document.location.protocol == 'file:') {
-
 	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
-
 }
-
 </script>

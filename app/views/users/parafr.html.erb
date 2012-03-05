@@ -1,3 +1,12 @@
+<% content_for :head do %>
+  <style>
+    body {background: #222;}
+    #footer {border: none; height:100px !important;}
+    #footer_inner {border-color: #333;}
+    #dialog {background:transparent;}
+  </style>
+<% end %>
+
 <% content_for :top_bar do %>
 <div class="language group">
         <%= link_to 'en', show_user_url(@user.id), :class => 'right', :style => 'padding-left:4px;' %>
@@ -20,9 +29,9 @@
           <h3><%= @user.tag_type.humanize %></h3>
         <% end %>
         <h3><%= @user.location %> </h3>
-        <h3><%= @user.phone %> </h3>
+        <!--<h3><%= @user.phone %> </h3>
         <h3><%= mail_to @user.email %></h3>
-        <h3><%= @user.dob %> </h3>
+        <h3><%= @user.dob %> </h3>-->
 </div>
   <div class="share">
     <%= render :partial => 'shared/share' %>

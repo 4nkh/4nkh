@@ -34,10 +34,10 @@ class User < ActiveRecord::Base
 TAG = %w{Consultant Developer Designer Translator Technician Accounting Integrator Dba}  
 ADMIN = %w{Ceo Developer}
 
-  validates_length_of :par1, :within => 0..500, :allow_blank => true, :message => "your text's either too short or too long"
-  validates_length_of :par2, :within => 0..500, :allow_blank => true, :message => "your text's either too short or too long"
-  validates_length_of :par3, :within => 0..500, :allow_blank => true, :message => "your text's either too short or too long"
-  validates_length_of :par4, :within => 0..500, :allow_blank => true, :message => "your text's either too short or too long"
+  validates_length_of :par1, :within => 0..800, :allow_blank => true, :message => "your text's either too short or too long"
+  validates_length_of :par2, :within => 0..800, :allow_blank => true, :message => "your text's either too short or too long"
+  validates_length_of :par3, :within => 0..800, :allow_blank => true, :message => "your text's either too short or too long"
+  validates_length_of :par4, :within => 0..800, :allow_blank => true, :message => "your text's either too short or too long"
 
   default_scope :order => 'position ASC'
   scope :by_position, lambda { |p| { :conditions => [ "position = ?", p.id ] }}

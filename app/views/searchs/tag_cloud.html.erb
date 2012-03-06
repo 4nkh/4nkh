@@ -3,12 +3,13 @@
 <% end %>
 <% content_for :head do %>
   <style>
-     #header_inner{background: url(/images/cloud.jpg) repeat-x bottom left;}
+     #header_inner{background: url(/assets/cloud.jpg) repeat-x 0px 6px;}
    </style>
 <% end %>
 
 <% content_for :hd_inner do %>
-
+<%= image_tag 'redlight1.png', :class => 'redlight', :style => "z-index:1;" %>
+<h2 class="type_search" style="z-index:1;">TAG CLOUD</h2>
 <%= render :partial => 'searchs/hd_inner' %>
 
 <%= image_tag 'carbone.jpg', :style => 'height:104px;width:72px;position:absolute;top:-21px;left:0px;' %>

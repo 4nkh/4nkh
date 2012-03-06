@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def parafr
-    @users = User.find(params[:id])
+    @user = User.find(params[:id])
     # if params.has_key?(:id)
     #       @user = User.find_by_id(params[:id])
     #     end

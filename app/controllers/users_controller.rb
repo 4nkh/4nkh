@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :require_user, :except => [:index,:show,:parafr, :new]
-  before_filter :get_user, :only => [:show,:parafr,:edit,:update,:vc]
+  before_filter :get_user, :only => [:parafr,:edit,:update,:vc]
   before_filter :get_tag, :only => [:new,:show,:parafr]
   #caches_page :show 
   
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @users = User.find(params[:id])
+    @user = User.find(params[:id])
     @posts = @user.posts.by_tag('visible').paginate(:per_page => 5, :page => (params[:users_page] || 1), :order => 'created_at DESC')
   end
 

@@ -52,6 +52,10 @@ Ankh::Application.routes.draw do
   
  # map.resources :users, :collection => {:prioritize_tasks => :post}
 
+#CONTENT
+  get    '/content/edit/:id'            =>               'contents#edit',                             :as => :edit_content
+  put    '/content/update/:id'          =>               'contents#update',                           :as => :update_content
+
 #DASHBOARD
   get    '/dashboard'                   =>               'dashboard#show',                            :as => :dashboard
   get    '/photo/new'                   =>               'dashboard#new_photo',                       :as => :new_photo

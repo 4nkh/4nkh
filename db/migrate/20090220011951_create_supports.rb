@@ -1,4 +1,4 @@
-class CreateSupports < ActiveRecord::Migration
+class CreateSupports < ActiveRecord::Migration[7.1]
   def self.up
     create_table :supports do |t|
       t.string :name

@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
-  before_filter :require_user, :except => [:index,:show]
-  before_filter :get_movie, :only => [:destroy,:destroy_picture]
+  before_action :require_user, :except => [:index,:show]
+  before_action :get_movie, :only => [:destroy,:destroy_picture]
   
   def index
     @movie = Movie.find(:all).paginate(:page => params[:page], :per_page => 14)

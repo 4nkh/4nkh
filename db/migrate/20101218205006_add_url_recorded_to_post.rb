@@ -1,4 +1,4 @@
-class AddUrlRecordedToPost < ActiveRecord::Migration
+class AddUrlRecordedToPost < ActiveRecord::Migration[7.1]
   def self.up
     add_column :posts, :recorded_url, :string
   end

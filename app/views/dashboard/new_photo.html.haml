@@ -1,0 +1,101 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+= csrf_meta_tag
+= javascript_include_tag 'application'
+= stylesheet_link_tag 'application'
+
+:css
+  /*body {background: #EEE;}
+  h3 {text-align:center;font-weight:bold;font-size:18px;}
+  .form_wrapper{width:200px;margin:0 auto;}
+  label {font-size:12px;}
+  input[type="text"] {width:200px;}
+  input[type="password"] {width:200px;}*/
+  
+  body {background: #CCC /*url(/assets/bg_main.png) top left repeat;*/}
+  h2 {text-align:center;}
+  .notifier {padding-left:80px; width:340px;float:left;}
+  input[type="text"] {width:300px;}
+  .column_left {float:left; width:100px;}
+  .column_left input[type="checkbox"] {float:right;padding-right:20px;}
+  .column_right {float:right; width:100px;}
+  .column_right input[type="checkbox"] {float:right;}
+  #errorExplanation {margin-left:-50px !important;}
+  form {padding:20px;background:#EEE;width:300px;box-shadow:-3px 8px 10px 2px #999;-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;}
+.clear &nbsp;
+%h2 New Picture
+.clear &nbsp;
+
+.notifier
+  = form_for current_user, :url => create_photo_url,:method => :post, :remote => true, authenticity_token: true do |f|
+    = f.error_messages
+
+    %h3 Choose at least a square Picture, NEAR 200 X 200
+    .clear &nbsp;
+    %fieldset
+      = f.file_field :photo, id: 'photo_file', name: "uploadFile"
+    .clear &nbsp;
+    = f.submit 'Add'
+
+:javascript
+  const form = document.getElementById("edit_user_#{current_user.id}");
+
+  form.addEventListener("submit", submitForm);
+
+  function submitForm(e) {
+    e.preventDefault();
+    //const name = document.getElementById("name");
+    let files = e.target.uploadFile.files[0]
+    let csrf = e.target.authenticity_token.value;
+    //const files = document.getElementById("photo_file").value;//.src;
+    //console.log(files)
+    const form_data = new FormData();
+    const path = window.location.pathname;
+	
+    var id = path.split('/');
+    id = id[1];
+	
+    if (files == window.location.href){
+    alert('Please select a file and crop it first')
+    return
+    } else {
+      let user_data = {user: {photo: files}}
+	  
+      form_data.append("name", "avatar");
+      for (let dataKey in user_data) {
+        if(dataKey === 'user') {
+        //  append nested object
+          for (let photoKey in user_data[dataKey]) {
+            form_data.append(`user[${photoKey}]`, user_data[dataKey][photoKey]);
+          }
+        }
+        //else {
+        //form_data.append(dataKey, user[dataKey]);
+        //}
+      }
+      //form_data.append("photo", files)
+      form_data.append("authenticity_token", csrf)
+	
+      fetch("http://localhost:3000/photo/create", {
+        method: 'POST',
+        dataType: 'script',
+        body: form_data,
+        headers: { "X-CSRFToken": getCookie("csrftoken") },
+        //headers: {
+        //  "Content-Type": "multipart/form-data"
+        //}
+      }).then(res => res.json()).then(res => {
+        //var message = document.getElementById('message')
+        console.log('res: ', res)
+        if(res.response == "success"){
+          eval(res.data);
+        } else {
+          var cont = document.getElementById('container')
+          cont.innerHTML = "<div id='flash_error'>" + res.data + "</div>"
+          //message.innerHTML = "<span class='error_mess'>Try to upload an avatar again</span>";
+        }
+        console.log('res: ', res)
+      }).catch((err) => ("Error occured", err));
+    }	
+  }
+	

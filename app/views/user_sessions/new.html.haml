@@ -6,13 +6,13 @@
 
 :css
   body {background: #EEE;}
-  h3 {text-align:center;font-weight:bold;font-size:18px;}
+  h2 {text-align:center;}
   .form_wrapper{width:200px;margin:0 auto;}
   label {font-size:12px;}
   input[type="text"] {width:200px;}
   input[type="password"] {width:200px;}
 .clear &nbsp;
-%h3 Login
+%h2 Login
 .clear &nbsp;  
 = form_for @user_session, :url => create_session_url, :method => :post, :remote => true do |f|
   = f.error_messages 

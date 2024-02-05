@@ -1,4 +1,4 @@
-class AddPositionToMovies < ActiveRecord::Migration
+class AddPositionToMovies < ActiveRecord::Migration[7.1]
   def self.up
     add_column :movies, :position, :integer
   end

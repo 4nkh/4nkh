@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  include ThinkingSphinx::Scopes
+  
   PER_PAGE = 10
 
   belongs_to :user, :counter_cache => true
@@ -7,34 +9,45 @@ class Post < ActiveRecord::Base
   acts_as_taggable_on :tags
   attr_readonly :posts_count, :as => :taggable
   
-  scope :limit, lambda {|l|{:limit => l}}
-  default_scope :order => 'created_at DESC'
+  scope :full, lambda { |f| {:full => f }}
+  default_scope { order( 'created_at DESC' ) }
 
   accepts_nested_attributes_for :events
-TAG = %w{Visible Restricted}
-  scope :by_user, lambda {|u|{ :conditions => ['user_id = ?',u.id]}}
-  scope :by_tag, lambda{ |tag| { :conditions => [ 'lower(tag_type) = ?',tag] } }  
-  scope :by_model, lambda{ |mod| { :conditions => [ 'lower(model) = ?',mod] } }
-  scope :mod_posts, :conditions => { :model => 'posts' }
+  
+  self.per_page = 10
+  
+  TAG = %w{Visible Restricted}
+  scope :by_user, lambda { |u|{ :conditions => ['user_id = ?',u.id]}}
+  scope :by_tag, lambda { |tag| { :conditions => [ 'lower(tag_type) = ?',tag] } }  
+  scope :by_model, lambda { |mod| { :conditions => [ 'lower(model) = ?',mod] } }
+  scope :mod_posts, -> { where( :model => 'posts' ) }
   scope :starts_with, lambda { |letter| { :conditions => [ "upper(title) like ?",letter+"%"]} }
   scope :between, lambda { |starts,ends| { :conditions => ['created_at >= ? AND created_at <= ?',starts,ends] } }
+  
+  ThinkingSphinx::Index.define :post,  :with => :active_record do
+    indexes title, :enable_star => 1
+    indexes body, :min_infix_len => 3
+    indexes url
+    indexes model
 
-  define_index do    
-    indexes :title, :body, :url, :model, :tag_type
-    has :tag_type
-      set_property :enable_star => 1
-      set_property :min_infix_len => 3
-                
-      has :user_id, :created_at,:updated_at       
+    has tag_type, user_id, created_at, updated_at
   end
+  #define_index do    
+  #  indexes :title, :body, :url, :model, :tag_type
+  #  has :tag_type
+  #    set_property :enable_star => 1
+  #    set_property :min_infix_len => 3
+  #              
+  #    has :user_id, :created_at,:updated_at       
+  #end
 
   sphinx_scope(:by_state) { |sta| 
-{ :conditions => { :tag_type => sta }}
-}  
+    { :conditions => { :tag_type => sta } }
+  }  
 
- sphinx_scope(:by_kind) { |kin| 
-{ :conditions => { :model => kin }}
-} 
+  sphinx_scope(:by_kind) { |kin| 
+    { :conditions => { :model => kin } }
+  } 
 
   def can_edit?(user)
     return false if user.nil?
@@ -56,7 +69,7 @@ TAG = %w{Visible Restricted}
   end
   
   def uniqueness_of_event(user, post)
-    @event = Event.by_user(user).events_for_date_range(Date.today.to_time.utc, Date.today.to_time.utc + 24.hours)
+    @event = Event.by_user(user).events_for_date_range(start_at: Date.today.to_time.utc, stop_at: Date.today.to_time.utc + 24.hours)
     @new_event = Event.create(:user_id => user, :post_id => post, :name => "X", :start_at => Time.now, :end_at => Time.now) if @event[0].nil?
   end
   

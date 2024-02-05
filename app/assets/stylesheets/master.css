@@ -72,14 +72,14 @@ span.at300bs {width:18px;height:18px;background: transparent url(/assets/add.gif
 .user_info {width:450px; height:200px; background: url(/assets/carbone.jpg) no-repeat top left;position:absolute;left:230px;top:-21px;}
 #header_inner .user_info h2{color:#fff;font-size:24px;}
 /* BOUTON */
- div.btn1-more {  text-align:center;margin-top:21px;margin-right:20px; width:130px;height:28px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#c3d9ff url(/images/btn-gr.png) repeat-x 0 50%;border-bottom: 2px; border-left:2px; border-style:solid; border-color:#a4b6d5; }
+ div.btn1-more {  text-align:center;margin-top:21px;margin-right:20px; width:130px;height:28px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#c3d9ff url(/assets/btn-gr.png) repeat-x 0 50%;border-bottom: 2px; border-left:2px; border-style:solid; border-color:#a4b6d5; }
  div.btn1-more a{color:#fff;font-size:150%;}
- div.btn1-more a:hover {background: url(/images/btn-gr.png) repeat-x 0 -110%;color:#EEE;text-shadow:1px 1px 2px #555; }
- div.btn2{padding:5px 14px;color:#fff;font-size:150%;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#3792b3 url(/images/btn-gr.png) repeat-x 0 50%;}
- div.btn2-more a{margin-left:245px;padding:5px 14px;color:#fff;font-size:150%;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#3792b3 url(/images/btn-gr.png) repeat-x 0 50%; }
- div.btn{padding:5px 14px;color:#fff;font-size:150%;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#3792b3 url(/images/btn-gr.png) repeat-x 0 50%;border:1px solid #0695D0;}
+ div.btn1-more a:hover {background: url(/assets/btn-gr.png) repeat-x 0 -110%;color:#EEE;text-shadow:1px 1px 2px #555; }
+ div.btn2{padding:5px 14px;color:#fff;font-size:150%;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#3792b3 url(/assets/btn-gr.png) repeat-x 0 50%;}
+ div.btn2-more a{margin-left:245px;padding:5px 14px;color:#fff;font-size:150%;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#3792b3 url(/assets/btn-gr.png) repeat-x 0 50%; }
+ div.btn{padding:5px 14px;color:#fff;font-size:150%;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;background:#3792b3 url(/assets/btn-gr.png) repeat-x 0 50%;border:1px solid #0695D0;}
  
- a.btn-more:hover {background:#007799 url(/images/btn-gr.png) repeat-x 0 -110%;color:#000;text-shadow:0px 1px 0px #bbb;font-weight:bold;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; border:1px solid #295b6d;}
+ a.btn-more:hover {background:#007799 url(/assets/btn-gr.png) repeat-x 0 -110%;color:#000;text-shadow:0px 1px 0px #bbb;font-weight:bold;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; border:1px solid #295b6d;}
  a.btn-more{padding:5px 30px 7px 30px;color:#fff;font-size:20px;font-variant:small-caps;font-weight:bold;text-shadow:0px 1px 0px #000;background:#3792b3; border:1px solid #4d99b4;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;margin-left:75px;}
 
 
@@ -108,6 +108,7 @@ span.at300bs {width:18px;height:18px;background: transparent url(/assets/add.gif
 #nav .navi #businesslist div {width:150px;}
 
 #world {position:absolute;top:49px;right:0;width:253px;height:173px;z-index:0;}
+#earth {position:absolute;top:35px;left:50px;z-index:10;}
 /*wrapper*/
 ul.list li{width:128px;}
 

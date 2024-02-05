@@ -52,7 +52,7 @@ div.controls a.play, div.controls a.pause {
 	text-indent:-999em;
 	cursor:pointer;
 	overflow:hidden;
-	background:url(/images/play_pause.gif) center top no-repeat;
+	background:url(/assets/play_pause.gif) center top no-repeat;
 	margin-top: -10px;	
 }
 
@@ -66,7 +66,7 @@ div.controls div.track {
 	top:-6px;	
 	height:18px;
 	left:20px;
-	background:url(/images/track.gif) no-repeat;
+	background:url(/assets/track.gif) no-repeat;
 	text-align:left;
 	cursor:pointer;
 	width:722px;	
@@ -76,7 +76,7 @@ div.controls div.track {
 div.controls div.playhead { 
 	position:absolute;	
 	height:12px;
-	background:url(/images/playhead.png) no-repeat;
+	background:url(/assets/playhead.png) no-repeat;
 	cursor:pointer;
 	top:0px; 
 	width:12px;

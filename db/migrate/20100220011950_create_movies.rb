@@ -1,4 +1,4 @@
-class CreateMovies < ActiveRecord::Migration
+class CreateMovies < ActiveRecord::Migration[7.1]
   def self.up
     create_table :movies do |t|
       t.references :user

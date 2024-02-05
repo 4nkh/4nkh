@@ -1,4 +1,15 @@
-Ankh::Application.routes.draw do
+Rails.application.routes.draw do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  #get "up" => "rails/health#show", as: :rails_health_check
+
+  # Defines the root path route ("/")
+  #root "posts#index"
+    #root "posts#index"
+    
+#Ankh::Application.routes.draw do
 
   get    '/login'                       =>               'user_sessions#new',                         :as => :login
   post   '/create_session'              =>               'user_sessions#create',                      :as => :create_session
@@ -13,14 +24,14 @@ Ankh::Application.routes.draw do
   post   '/create/post'                 =>               'posts#create',                               :as => :create_post
   get    '/blogger'                     =>               'posts#blogger',                              :as => :blog
   get    '/posts/:id/blogpost'          =>               'posts#edit',                                 :as => :edit_blog
-  put    '/posts/:id/blogupd'           =>               'posts#update',                               :as => :update_blog
+  patch  '/posts/:id/blogupd'           =>               'posts#update',                               :as => :update_blog
   get    '/posts/all/Visible'           =>               'posts#state',                                :as => :visible
   get    '/posts/all/Restricted'        =>               'posts#restricted',                           :as => :restricted
   get    '/fr/posts/all/Visible'        =>               'posts#visiblefr',                            :as => :visiblefr
   get    '/all/textos/Visible'          =>               'posts#textos',                               :as => :model_textos
   get    '/all/links/Visible'           =>               'posts#links',                                :as => :model_links
   get    '/all/images/Visible'          =>               'posts#images',                               :as => :model_images
-  get    '/all/videos/Visible'          =>               'posts#videos',                               :as => :model_videos
+  get    '/all/videos/mobileVisible'    =>               'posts#videos',                               :as => :model_videos
   delete '/posts/destroy/:post_id'      =>               'posts#destroy',                              :as => :post_destroy
  
 #SEARCHS
@@ -40,7 +51,7 @@ Ankh::Application.routes.draw do
   post  '/search/posts/links'           =>               'searchs#research_link',                      :as => :search_link
   post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
   post  '/search/posts/videos'          =>               'searchs#research_video',                     :as => :search_video
-  post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
+  #post  '/search/posts/images'          =>               'searchs#research_image',                     :as => :search_image
   get   '/directory/posts'              =>               'searchs#index',                              :as => :directory_posts_all
 
   get  '/directory/posts/:letter'       =>               'searchs#letter',                             :as => :directory_posts_letter
@@ -54,15 +65,16 @@ Ankh::Application.routes.draw do
 
 #CONTENT
   get    '/content/edit/:id'            =>               'contents#edit',                             :as => :edit_content
-  put    '/content/update/:id'          =>               'contents#update',                           :as => :update_content
+  patch  '/content/update/:id'          =>               'contents#update',                           :as => :update_content
 
 #DASHBOARD
   get    '/dashboard'                   =>               'dashboard#show',                            :as => :dashboard
+  #post   '/photo/get_new'               =>               'dashboard#get_new_photo',                   :as => :get_new_photo
   get    '/photo/new'                   =>               'dashboard#new_photo',                       :as => :new_photo
-  put    '/photo/create'                =>               'dashboard#create_photo',                    :as => :create_photo
+  post   '/photo/create'                =>               'dashboard#create_photo',                    :as => :create_photo
   delete '/photo/destroy'               =>               'dashboard#destroy_photo',                   :as => :destroy_photo
   get    '/demo/new'                    =>               'dashboard#new_demo',                        :as => :new_demo
-  put    '/demo/create'                 =>               'dashboard#create_demo',                     :as => :create_demo
+  patch  '/demo/create'                 =>               'dashboard#create_demo',                     :as => :create_demo
   delete '/demo/destroy'                =>               'dashboard#destroy_demo',                    :as => :destroy_demo
   get    '/paragraphe/edit'             =>               'dashboard#paragraphe',                      :as => :paragraphe
 
@@ -80,6 +92,7 @@ Ankh::Application.routes.draw do
 #FOLIOS
   get    '/games'                       =>               'folios#index',                               :as => :folios
   get    '/fr/jeux'                     =>               'folios#index',                               :as => :frfolios
+  get    'games/new'                    =>               'folios#new',                                 :as => :new_folio         
   get    '/games/:id/edit'              =>               'folios#edit',                                :as => :edit_folio
   get    '/positions/games'             =>               'folios#position',                            :as => :position_folio
   get    '/games/:id/picture/new'       =>               'folios#new_picture',                         :as => :new_position_folio
@@ -93,6 +106,7 @@ Ankh::Application.routes.draw do
   resources :folios, :collection => {:prioritize_tasks => :post}
   resources :search, :collection => {:search => :get}
   
+  resources :users
 
 # map.connect '/movies/:id/:style.:format', :controller => :movies, :action => :download
 #USERS
@@ -103,10 +117,10 @@ Ankh::Application.routes.draw do
   get    '/signup'                      =>               'users#new',                                      :as => :signup
   get    '/fr/users/:id'                =>               'users#parafr',                                   :as => :parafr
   get    '/account/edit'                =>               'users#edit',                                     :as => :user_edit
-  put    '/account/update/:id'          =>               'users#update',                                   :as => :user_update
+  patch  '/account/update/:id'          =>               'users#update',                                   :as => :user_update
   post   '/users/create'                =>               'users#create',                                   :as => :user_create
 #USER_SESSIONS
-  get    '/login'                       =>               'user_sessions#new',                              :as => :login  
+  get    '/login'                       =>               'user_sessions#new'#,                              :as => :login  
   
 #SUPPORT
   get    '/fr/notifier/mailform'        =>               'supports#mailform',                              :as => :mailformfr
@@ -147,6 +161,8 @@ Ankh::Application.routes.draw do
   get    '/environment/capcanaveral'    =>               'pages#show',         :page => 'capcanaveral',    :as => :cap
   get    '/fr/environment/capcanaveral' =>               'pages#show',         :page => 'capcanaveral',    :as => :capfr
   get    '/feeds'                       =>               'pages#feed',                                     :as => :feed, :defaults => { :format => 'atom' }
+  get    '/html5test'                   =>               'pages#html5test',    :page => 'html5test'   
+  get    '/crop_test'                   =>               'pages#crop_test',    :page => 'creop_test',      :sa => :crop_test
 
   root :to => 'pages#index'
     

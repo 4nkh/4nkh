@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :require_user, :except => [:index,:show,:parafr, :new]
-  before_filter :get_user, :only => [:parafr,:edit,:update,:vc]
-  before_filter :get_tag, :only => [:new,:show,:parafr]
+  #before_action :require_user, :except => [:index,:show,:parafr, :new, :create]
+  before_action :get_user, only: [:parafr,:edit,:update,:vc]
+  before_action :get_tag, :only => [:new,:show,:parafr]
   #caches_page :show 
   
   def index
@@ -33,14 +33,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
+    #@user = User.new(params[:user])
+    @user = User.new(user_params)
     if @user.save  
       flash[:notice] = "Account was successfully created, you are now logged in."
       redirect_to dashboard_url
     else
       flash[:notice] = "Failed to create account"
-      render :js
-      redirect_to dashboard_url
+      #render :js
+      redirect_to root_url#dashboard_url
     end
  end
 
@@ -74,6 +75,10 @@ class UsersController < ApplicationController
   end
 
 private
+  def user_params
+    params.require(:user).permit(:login, :password, :password_confirmation)
+  end
+
   def get_user
      @user = current_user
   end

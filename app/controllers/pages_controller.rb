@@ -3,6 +3,10 @@ class PagesController < ApplicationController
   def index
   end
   
+  def crop_test
+    
+  end
+  
   def realisation
     render :layout => "realisation"
   end  
@@ -24,6 +28,12 @@ class PagesController < ApplicationController
     #rescue
     #  render_404
     #end
+  end
+  
+  def html5test
+    if current_user.nil?
+      redirect_to root_url
+    end
   end
    
 end

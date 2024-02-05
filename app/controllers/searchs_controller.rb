@@ -1,8 +1,9 @@
 class SearchsController < ApplicationController
   layout 'search'
-  before_filter :get_alphabet, :except => []
-  before_filter :get_tag, :except => [:tag_cloud]
-  before_filter :get_calendar
+  before_action :get_alphabet, :except => []
+  before_action :get_tag, :except => [:tag_cloud]
+  #before_action :get_calendar
+  
   def index
     @posts = Post.all.paginate :page => params[:page], :per_page => Post::PER_PAGE
   end

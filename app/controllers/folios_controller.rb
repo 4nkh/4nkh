@@ -1,17 +1,21 @@
 class FoliosController < ApplicationController
-  before_filter :require_user, :except => [:index,:show]
-  before_filter :get_folio, :only => [:destroy, :destroy_picture]
+  before_action :require_user, :except => [:index,:show]
+  before_action :get_folio, :only => [:destroy, :destroy_picture]
+  
   def index
-    @folio = Folio.find(:all).paginate(:page => params[:page], :per_page => 18)
+    @folio1 = Folio.find_by(id: 1)
+    puts @folio1.description
+    @folio = Folio.all.paginate(:page => params[:page], :per_page => 18) #find(:all).paginate(:page => params[:page], :per_page => 18)
     respond_to do |format|
       format.html   # renders index.html.erb
-      format.iphone# renders index.iphone.erb
+      #format.iphone # renders index.iphone.erb
+      format.pdf { render pdf: generate_pdf(@client) }
     end
   end
 
   def show
     @folio = Folio.find(params[:id])
-    @folios = Folio.find(:all)
+    @folios = Folio.all
     respond_to do |format|
       format.html
       format.iphone { render :layout => 'admin' }
@@ -28,32 +32,31 @@ class FoliosController < ApplicationController
   
   def new
     @folio = Folio.new
-    render :layout => false
+    #render :layout => "realisation"#false
   end
   
   def update
      @folio = Folio.find(params[:id])
 
-    if @folio.update_attributes(params[:folio])      
-      flash[:notice] = "Layout was successfully updated."
+    if @folio.update(params_folio)      
+      flash[:notice] = "Games was successfully updated."
       #expire_page :action => :show
-      redirect_to "/folios"
+      redirect_to folios_url
     else
-     flash[:notice] = "You made a mistake.*CARFEFUL* (max lenght & required field)" 
-     redirect_to :back
+     flash[:error] = "You made a mistake.*CARFEFUL* (max lenght & required field)" 
+     redirect_to edit_folio_url(@folio.id)
     end
   end
   
   def create
-    
-    @folio = current_user.folios.build(params[:folio])
-    
+    @folio = Folio.new(params_folio)
+    @folio.user_id = current_user.id
      if @folio.save
-       redirect_to "/folios"
-       flash[:notice] = "Layout successfully created"
+       redirect_to folios_url
+       flash[:notice] = "Games successfully created"
      else
-       redirect_to dashboard_url
-       flash[:notice] = "We accept FLV format of 70mb or less"
+       flash[:error] = "Something is missing"
+       redirect_to new_folio_url
      end    
   end
   
@@ -70,7 +73,7 @@ class FoliosController < ApplicationController
 
   def edit
     @folio = Folio.find(params[:id])
-    render :layout => false
+    #render :layout => false
   end
 
   def create_picture
@@ -107,5 +110,9 @@ class FoliosController < ApplicationController
 private
     def get_folio
       @folio = Folio.find_by_id(params[:id])
+    end
+    
+    def params_folio
+      params.require(:folio).permit(:name, :url, :description, :picture)
     end
 end

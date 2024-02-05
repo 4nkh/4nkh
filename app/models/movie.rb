@@ -26,18 +26,24 @@ class Movie < ActiveRecord::Base
   
   validates_length_of :description , :within => 0..500, :allow_blank => true, :message => 'Your description length cant exeed 500 characters.'
            
-  default_scope :order => 'position ASC'
+  default_scope { order('position ASC') }
   scope :starts_with, lambda { |letter| { :conditions => [ "title like ?",letter + "*"]} }
   scope :by_position, lambda { |p| { :conditions => [ "position = ?", p.id ] }}
 
+  ThinkingSphinx::Index.define :movie,  :with => :active_record do
+    indexes name, :enable_star => 1
+    indexes description, :min_infix_len => 3
 
-  define_index do    
-    indexes :name, :description
-        set_property :enable_star => 1
-        set_property :min_infix_len => 3
-                
-        has :user_id, :created_at,:updated_at       
+    has user_id, created_at, updated_at
   end
+  
+  #define_index do    
+  #  indexes :name, :description
+  #      set_property :enable_star => 1
+  #      set_property :min_infix_len => 3
+  #              
+  #      has :user_id, :created_at,:updated_at       
+  #end
 
   def video?
     [ 'application/flv','application/x-flv','video/flv','video/x-flv','application/x-flash-video', 'application/mov' ].include?(flv.content_type)

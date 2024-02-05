@@ -1,5 +1,5 @@
 class ContentsController < ApplicationController
-  before_filter :require_user
+  before_action :require_user
 
   def update
     @content = Content.find(params[:id])

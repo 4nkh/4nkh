@@ -1,11 +1,11 @@
 div.hulu {
-background:url(/imageshulu.png) repeat-x scroll 0 -4px #000000;
+background:url(/assets/imageshulu.png) repeat-x scroll 0 -4px #000000;
 height:40px;
 position:relative;
 width:500px;
 }
 div.hulu a.play, div.hulu a.pause {
-background:url(/images/hulu.png) no-repeat scroll 10px -61px transparent;
+background:url(/assets/hulu.png) no-repeat scroll 10px -61px transparent;
 border-right:1px solid #000000;
 cursor:pointer;
 display:block;
@@ -69,7 +69,7 @@ color:#666666;
 font-weight:normal;
 }
 div.hulu a.mute, div.hulu a.unmute {
-background:url(/images/hulu.png) no-repeat scroll 5px -323px transparent;
+background:url(/assets/hulu.png) no-repeat scroll 5px -323px transparent;
 cursor:pointer;
 height:40px;
 left:460px;

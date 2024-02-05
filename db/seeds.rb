@@ -1,3 +1,13 @@
+# This file should ensure the existence of records required to run the application in every environment (production,
+# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Example:
+#
+#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
+#     MovieGenre.find_or_create_by!(name: genre_name)
+#   end
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -7,7 +17,9 @@
 #   Major.create(:name => 'Daley', :city => cities.first)announce = Forum.create(:name => "Announcement", :description => "Announcements, news and other related bits.")
 #require 'faker'
 
-# admin = User.create(:login => "admin",:email => "admin@4nkh.com",:password => "odie1st", :password_confirmation => "odie1st", :is_admin => true)
+admin = User.create(:login => "admin",:email => "admin@4nkh.com",:password => "odie1st", :password_confirmation => "odie1st", :is_admin => true)
+
+
 # admin = User.create(:login => "MBougie",:email => "mathieub@4nkh.com",:password => "odie1st", :password_confirmation => "odie1st", :is_admin => true)
 # user = User.create(:login => "DFabien",:email => "denis@artfox.com",:password => "123denis123", :password_confirmation => "123denis123", :is_admin => false)
 # user = User.create(:login => "EMillette",:email => "eric_millette@mamixa.com",:password => "123eric123", :password_confirmation => "123eric123", :is_admin => false)

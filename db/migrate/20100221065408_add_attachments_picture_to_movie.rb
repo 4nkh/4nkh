@@ -1,4 +1,4 @@
-class AddAttachmentsPictureToMovie < ActiveRecord::Migration
+class AddAttachmentsPictureToMovie < ActiveRecord::Migration[7.1]
   def self.up
     add_column :movies, :picture_file_name, :string
     add_column :movies, :picture_content_type, :string

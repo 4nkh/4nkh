@@ -3,17 +3,17 @@
   
 </style>
 
-<% if current_user.nil? %>
+<% #if current_user.nil? %>
 <h3>You wan't to join our team?</h3>
 <div class="clear">&nbsp;</div>
 <span>E-mail us at :   <%= mail_to '4nkh developement', 'admin@4nkh.com', :style => "color:#39c;font-size:14px;" %></span>
-<% else %>
+<% #else %>
 <div class="celebrity_search" style="margin: 0 auto;">
 <div class="loginform">
   <h3>Create an account</h3>
   <div class="clear">&nbsp;</div>
   <fieldset>
-    <% form_for @user do |f| %>
+    <%= form_with model: @user do |f| %>
       <%= f.error_messages %>
     <p>
        <%= f.label :login, "Login (between 1 to 20 characters)" %>
@@ -41,4 +41,4 @@
   </fieldset>
 </div>
 </div>
-<% end %>
+<% #end %>

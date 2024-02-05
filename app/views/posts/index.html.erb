@@ -63,7 +63,7 @@
 
  <div id="blog_wrapper">     
        <div class="posts">
-<% if current_page?('/posts/all/Restricted') %>
+<% if current_page?(restricted_url) %>
     <% if current_user.blank? %>
        <h3 style="font-size:25px;color:maroon;padding: 75px 0 75px 0;">RESTRICTED AREA</h3>
     <% else %>
@@ -108,18 +108,18 @@
       <% end %>
     <% end %>
 <% else %>
-<% if current_page? "/posts/all/Visible" %>
+<% if current_page? visible_url #"/posts/all/Visible" %>
                  <%#= render @posts %>
                  <%= render :partial => 'sheet', :collection => @posts, :as => :post %>
          <div class="paginate"><%= will_paginate @posts %></div>
 <% else %>
-<% if current_page? "/fr/posts/all/Visible" %>
+<% if current_page? visiblefr_url #"/fr/posts/all/Visible" %>
                  <%#= render @posts %>
                  <%= render :partial => 'sheet', :collection => @posts, :as => :post %>
          <div class="paginate"><%= will_paginate @posts %></div>
 <% else %>
 <%= render @posts %>
-         <div class="paginate"><%= will_paginate @posts, :param_name => 'tags_page' %></div>
+         <div class="paginate"><%= will_paginate @posts, param_name: 'tags_page' %></div>
 <% end %>
 <% end %>
 <% end %>
@@ -135,32 +135,32 @@
 
 <% if current_page?("/posts/all/Visible") || current_page?("/fr/posts/all/Visible") %>
   <%= image_tag 'flyer.png', :style => 'height:238px;width:112px;position:absolute;top:-19px;left:37px;' %>
-  <%= link_to image_tag('video32.png', :mouseover => 'video32act.png'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
-  <%= link_to image_tag('image32.png', :mouseover => 'image32act.png'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
-  <%= link_to image_tag('link32.png', :mouseover => 'link32act.png'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
-  <%= link_to image_tag('text32.png', :mouseover => 'text32act.png'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
+  <%= link_to image_tag('video32.png', :onmouseover => 'this.src="/assets/video32act.png"', :onmouseout => 'this.src="/assets/video32.png"'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
+  <%= link_to image_tag('image32.png', :onmouseover => 'this.src="/assets/image32act.png"', :onmouseout => 'this.src="/assets/image32.png"'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
+  <%= link_to image_tag('link32.png', :onmouseover => 'this.src="/assets/link32act.png"', :onmouseout => 'this.src="/assets/link32.png"'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
+  <%= link_to image_tag('text32.png', :onmouseover => 'this.src="/assets/text32act.png"', :onmouseout => 'this.src="/assets/text32.png"'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
 <% elsif current_page?("/all/videos/Visible") %>
   <%= image_tag 'flyer.png', :style => 'height:238px;width:112px;position:absolute;top:-19px;left:37px;' %>
-  <%= link_to image_tag('video32act.png', :mouseover => 'video32act.png'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
-  <%= link_to image_tag('image32.png', :mouseover => 'image32act.png'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
-  <%= link_to image_tag('link32.png', :mouseover => 'link32act.png'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
-  <%= link_to image_tag('text32.png', :mouseover => 'text32act.png'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
+  <%= link_to image_tag('video32act.png', :onmouseover => 'this.src="/assets/video32act.png"'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
+  <%= link_to image_tag('image32.png', :onmouseover => 'this.src="/assets/image32act.png"', :onmouseout => 'this.src="/assets/image32.png"'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
+  <%= link_to image_tag('link32.png', :onmouseover => 'this.src="/assets/link32act.png"', :onmouseout => 'this.src="/assets/link32.png"'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
+  <%= link_to image_tag('text32.png', :onmouseover => 'this.src="/assets/text32act.png"', :onmouseout => 'this.src="/assets/text32.png"'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
 <% elsif current_page?("/all/images/Visible") %>
   <%= image_tag 'flyer.png', :style => 'height:238px;width:112px;position:absolute;top:-19px;left:37px;' %>
-  <%= link_to image_tag('video32.png', :mouseover => 'video32act.png'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
-  <%= link_to image_tag('image32act.png', :mouseover => 'image32act.png'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
-  <%= link_to image_tag('link32.png', :mouseover => 'link32act.png'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
-  <%= link_to image_tag('text32.png', :mouseover => 'text32act.png'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
+  <%= link_to image_tag('video32.png', :onmouseover => 'this.src="/assets/video32act.png"', :onmouseout => 'this.src="/assets/video32.png"'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
+  <%= link_to image_tag('image32act.png', :onmouseover => 'this.src=/assets/image32act.png"'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
+  <%= link_to image_tag('link32.png', :onmouseover => 'this.src="/assets/link32act.png"', :onmouseout => 'this.src="/assets/link32.png"'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
+  <%= link_to image_tag('text32.png', :onmouseover => 'this.src="/assets/text32act.png"', :onmouseout => 'this.src="/assets/text32.png"'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
 <% elsif current_page?("/all/links/Visible") %>
   <%= image_tag 'flyer.png', :style => 'height:238px;width:112px;position:absolute;top:-19px;left:37px;' %>
-  <%= link_to image_tag('video32.png', :mouseover => 'video32act.png'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
-  <%= link_to image_tag('image32.png', :mouseover => 'image32act.png'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
-  <%= link_to image_tag('link32act.png', :mouseover => 'link32act.png'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
-  <%= link_to image_tag('text32.png', :mouseover => 'text32act.png'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
+  <%= link_to image_tag('video32.png', :onmouseover => 'this.src="/assets/video32act.png"', :onmouseout => 'this.src="/assets/video32.png"'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
+  <%= link_to image_tag('image32.png', :onmouseover => 'this.src="/assets/image32act.png"', :onmouseout => 'this.src="/assets/image32.png"'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
+  <%= link_to image_tag('link32act.png', :onmouseover => 'this.src="/assets/link32act.png"'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
+  <%= link_to image_tag('text32.png', :onmouseover => 'this.src="/assets/text32act.png"', :onmouseout => 'this.src="/assets/text32.png"'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
 <% elsif current_page?("/all/textos/Visible") %>
   <%= image_tag 'flyer.png', :style => 'height:238px;width:112px;position:absolute;top:-19px;left:37px;' %>
-  <%= link_to image_tag('video32.png', :mouseover => 'video32act.png'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
-  <%= link_to image_tag('image32.png', :mouseover => 'image32act.png'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
-  <%= link_to image_tag('link32.png', :mouseover => 'link32act.png'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
-  <%= link_to image_tag('text32act.png', :mouseover => 'text32act.png'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
+ <%= link_to image_tag('video32.png', :onmouseover => 'this.src="/assets/video32act.png"', :onmouseout => 'this.src="/assets/video32.png"'), '/all/videos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:20px;left:85px;' %>
+ <%= link_to image_tag('image32.png', :onmouseover => 'this.src="/assets/image32act.png"', :onmouseout => 'this.src="/assets/image32.png"'), '/all/images/Visible' , :style => 'height:32px;width:32px;position:absolute;top:57px;left:85px;' %>
+ <%= link_to image_tag('link32.png', :onmouseover => 'this.src="/assets/link32act.png"', :onmouseout => 'this.src="/assets/link32.png"'), '/all/links/Visible' , :style => 'height:32px;width:32px;position:absolute;top:94px;left:85px;' %>
+  <%= link_to image_tag('text32act.png', :onmouseover => 'this.src="/assets/text32act.png"'), '/all/textos/Visible' , :style => 'height:32px;width:32px;position:absolute;top:129px;left:85px;' %>
 <% end %>

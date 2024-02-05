@@ -4,14 +4,14 @@
 .sheet {filter: progid:DXImageTransform.Microsoft.Shadow(color='#999999', Direction= 225, Strength=8);}
 /*NAV*/
 #nav .navi div{display:inline;padding:22px 22px 22px 22px;}
-#nav .navi #serviceslist {font-size:14px;color:#222;position:absolute;left:130px;top:20px;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;}
+#nav .navi #serviceslist {font-size:14px;color:#222;position:absolute;left:130px;top:20px;background: rgb(85,85,85) url(/assets/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;}
 
 
-#nav .navi #seolist {color:#222;position:absolute;left:117px;top:12px;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
-#nav .navi #hostinglist {color:#222;position:absolute;left:120px;top:28px;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
-#nav .navi #websitelist {color:#222;position:absolute;left:123px;top:44px;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
-#nav .navi #portfoliolist {color:#222;position:absolute;left:130px;top:60px;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
-#nav .navi #businesslist {color:#222;position:absolute;left:123px;top:76px;background: rgb(85,85,85) url(/images/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
+#nav .navi #seolist {color:#222;position:absolute;left:117px;top:12px;background: rgb(85,85,85) url(/assets/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
+#nav .navi #hostinglist {color:#222;position:absolute;left:120px;top:28px;background: rgb(85,85,85) url(/assets/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
+#nav .navi #websitelist {color:#222;position:absolute;left:123px;top:44px;background: rgb(85,85,85) url(/assets/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
+#nav .navi #portfoliolist {color:#222;position:absolute;left:130px;top:60px;background: rgb(85,85,85) url(/assets/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
+#nav .navi #businesslist {color:#222;position:absolute;left:123px;top:76px;background: rgb(85,85,85) url(/assets/sidebar_bg.jpg) repeat-y top left;padding:5px;border:1px solid #bbb;width:130px;z-index:2000;}
 
 /*FORM*/
 label.dark_ch{display:none;}

@@ -1,4 +1,4 @@
-class AddAttachmentsPictureToFolio < ActiveRecord::Migration
+class AddAttachmentsPictureToFolio < ActiveRecord::Migration[7.1]
   def self.up
     add_column :folios, :picture_file_name, :string
     add_column :folios, :picture_content_type, :string

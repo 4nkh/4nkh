@@ -18,7 +18,7 @@
 
 /* style for the player's wrapper element */
 #player_wrap {
-	background: url(/images/h600.png) 0 0 repeat-x;
+	background: url(/assets/h600.png) 0 0 repeat-x;
         margin:0 auto;
 	width:745px;
 	border:2px solid #BBB;

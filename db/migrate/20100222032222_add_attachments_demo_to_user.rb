@@ -1,4 +1,4 @@
-class AddAttachmentsDemoToUser < ActiveRecord::Migration
+class AddAttachmentsDemoToUser < ActiveRecord::Migration[7.1]
   def self.up
     add_column :users, :demo_file_name, :string
     add_column :users, :demo_content_type, :string

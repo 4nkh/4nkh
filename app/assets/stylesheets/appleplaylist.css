@@ -31,7 +31,7 @@ a.next {position:absolute;
         height:30px;}
 
 a.browse {
-	background:url(/images/hori_large.png) no-repeat;
+	background:url(/assets/hori_large.png) no-repeat;
 	display:block;
 	width:30px;
 	height:30px;
@@ -76,7 +76,7 @@ a.disabled {
 
 /* wrapper element for playlist items */
 #clips {
-	background:#EEE url(/images/h150.png) repeat-x scroll;
+	background:#EEE url(/assets/h150.png) repeat-x scroll;
 	height:120px;
 	margin:0 auto;
 	padding:15px 34px;

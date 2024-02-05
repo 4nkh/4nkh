@@ -1,4 +1,4 @@
-class AddCountFieldsToTag < ActiveRecord::Migration
+class AddCountFieldsToTag < ActiveRecord::Migration[7.1]
   def self.up
     [:tags].each do |tbl|
       add_column tbl, :posts_count, :integer, :default => 0 

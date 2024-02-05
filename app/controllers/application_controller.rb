@@ -1,8 +1,9 @@
+
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
-  include FaceboxRender
+  #include FaceboxRender
   include Magick
   helper :all 
   protect_from_forgery 
@@ -10,12 +11,11 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :current_user_session, :current_movie, :current_user_session, :iphone_user_agent?
   #filter_parameter_logging :password,:password_confirmation
   
-  before_filter :adjust_format_for_iphone
+  before_action :adjust_format_for_iphone
 
-  before_filter :set_locale 
+  before_action :set_locale 
   def set_locale # if params[:locale] is nil then I18n.default_locale will be used  
-  I18n.locale = params[:locale] 
-  
+    I18n.locale = params[:locale] 
   end
   
   def extract_locale_from_tld
@@ -43,14 +43,32 @@ class ApplicationController < ActionController::Base
   end
   
   def current_user
-    return @current_user if defined?(@current_user)
-    @current_user = current_user_session && current_user_session.record
+    return unless session[:user_id]
+    #@current_user ||= User.find(session[:user_id])
+    #puts session[:session_id]
+    @current_user ||= session[:user_id] && User.find_by(id: session[:user_id])
   end
+  
+  #def current_user_session
+  #  return @current_user_session if defined?(@current_user_session)
+  #  @current_user_session = session[:user_id]
+  #end
+  
+  #def logged_in?
+  #    !!session[:user_id]
+  #    redirect_to login_url
+  #end  
+  
+  #def current_user
+  #  puts current_user_session#.find(session[:user_id])
+  #  return @current_user if defined?(@current_user)
+  #  @current_user = current_user_session && current_user_session.record
+  #end
 
-  def current_user_session
-    return @current_user_session if defined?(@current_user_session)
-    @current_user_session = UserSession.find
-  end
+  #def current_user_session
+  #  return @current_user_session if defined?(@current_user_session)
+  #  @current_user_session = UserSession.find
+  #end
    
   def require_user
     unless current_user
@@ -83,6 +101,3 @@ class ApplicationController < ActionController::Base
    end
 
 end
-
-
-  

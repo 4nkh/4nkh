@@ -63,8 +63,8 @@
 
 .clear &nbsp;
 #footer_link
-  = link_to image_tag('tools_icn.png', :mouseover => "tools_icon1.png"), tools_path, :alt => "tool", :title => "tool"
-  = link_to image_tag('storage_icn.png', :mouseover => "storage_icon1.png"), hosting_path, :alt => "hosting", :title => "hosting"
-  = link_to image_tag('mobile_icn.png', :mouseover => "mobile_icon1.png"), mobile_path, :alt => "mobile", :title => "mobile" 
-  = link_to image_tag('seo_icn.png', :mouseover => "seo_icon1.png"), seo_path, :alt => "seo", :title => "seo" 
-  = link_to image_tag('commerce.png', :mouseover => "ecommerce1.png"), business_path, :alt => "e-commerce", :title => "e-commerce"
+  = link_to image_tag('tools_icn.png', onmouseover: 'this.src="/assets/tools_icon1.png"', onmouseout: 'this.src="/assets/tools_icn.png"'), tools_path, :alt => "tool", :title => "tool"
+  = link_to image_tag('storage_icn.png', :onmouseover => 'this.src="/assets/storage_icon1.png"', :onmouseout => 'this.src="/assets/storage_icn.png"'), hosting_path, :alt => "hosting", :title => "hosting"
+  = link_to image_tag('mobile_icn.png', :onmouseover => 'this.src="/assets/mobile_icon1.png"', :onmouseout => 'this.src="/assets/mobile_icn.png"'), mobile_path, :alt => "mobile", :title => "mobile" 
+  = link_to image_tag('seo_icn.png', :onmouseover => 'this.src="/assets/seo_icon1.png"', :onmouseout => 'this.src="/assets/seo_icn.png"'), seo_path, :alt => "seo", :title => "seo" 
+  = link_to image_tag('commerce.png', :onmouseover => 'this.src="/assets/ecommerce1.png"', :onmouseout => 'this.src="/assets/commerce.png"'), business_path, :alt => "e-commerce", :title => "e-commerce"

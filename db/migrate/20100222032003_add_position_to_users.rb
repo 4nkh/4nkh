@@ -1,4 +1,4 @@
-class AddPositionToUsers < ActiveRecord::Migration
+class AddPositionToUsers < ActiveRecord::Migration[7.1]
   def self.up
     add_column :users, :position, :integer
   end

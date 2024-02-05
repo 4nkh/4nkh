@@ -1,4 +1,4 @@
-class AddAttachmentsPhotoToUser < ActiveRecord::Migration
+class AddAttachmentsPhotoToUser < ActiveRecord::Migration[7.1]
   def self.up
     add_column :users, :photo_file_name, :string
     add_column :users, :photo_content_type, :string

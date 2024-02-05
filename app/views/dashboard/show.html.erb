@@ -27,7 +27,7 @@
 
   <span class="upload picture">
     <%#= facebox_link_to("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture", :url => new_photo_url) %>
-    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture"), new_photo_url) %>
+    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture"), new_photo_url, :rel => "shadowbox;width=500;height=300;") %>
   </span>
 <% else %>
 
@@ -36,14 +36,19 @@
 <% if current_user.demo_file_name.blank? %>
 
 <span class="upload" style="position:absolute;left:10px;top:50px;"><%#= facebox_link_to("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie", :url => new_demo_url) %>
-    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie"), new_demo_url) %>  
+    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie"), new_demo_url, :rel => "shadowbox;width=500;height=400;") %>  
   </span>
 
 <% else %>
 
-<span style="position:absolute;left:10px;top:50px;"><%= button_to "Destroy movie", { :controller=>'dashboard', :action=>'destroy_demo' }, :confirm => "Are you sure?" %></span>
+<span style="position:absolute;left:10px;top:50px;"><%= button_to "Destroy movie", { :controller=>'dashboard', :action=>'destroy_demo' }, method: :delete, :confirm => "Are you sure?" %></span>
 <% end %>
-
+<span class="upload" style="position:absolute;left:10px;top:80px;">
+	<%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add games"), new_folio_url) %>
+</span>
+<span class="upload" style="position:absolute;left:10px;top:110px;">
+<%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Edit games"), position_folio_url) %>
+</span>
   
      <div id="blog_wrapper">
        <div class="pusher" id="slideToggle">
@@ -65,7 +70,7 @@
        </div>
       
 <% content_for :js do %>
-  <%#= javascript_include_tag '/javascripts/tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
+  <%= javascript_include_tag '/assets/tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
 <% javascript_tag do %>
 
 	$().ready(function() {

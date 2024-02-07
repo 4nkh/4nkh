@@ -24,6 +24,17 @@ development:
   encoding: utf8
   pool: 5
   timeout: 5000
+  
+production: 
+  adapter: postgresql
+  host: 127.0.0.1
+  port: 5432
+  database: 4nkh
+  password: lapinpoulenamour79 
+  username: mathieub
+  encoding: utf8
+  pool: 5
+  timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -32,6 +43,6 @@ test:
   <<: *default
   database: storage/test.sqlite3
 
-production:
-  <<: *default
-  database: storage/production.sqlite3
+#production:
+#  <<: *default
+#  database: storage/production.sqlite3

@@ -17,7 +17,7 @@
 #   Major.create(:name => 'Daley', :city => cities.first)announce = Forum.create(:name => "Announcement", :description => "Announcements, news and other related bits.")
 #require 'faker'
 
-admin = User.create(:login => "admin",:email => "admin@4nkh.com",:password => "odie1st", :password_confirmation => "odie1st", :is_admin => true)
+admin = User.create(:login => "admin",:email => "admin@4nkh.ca",:password => "odie1st1267", :password_confirmation => "odie1st1267", :is_admin => true)
 
 
 # admin = User.create(:login => "MBougie",:email => "mathieub@4nkh.com",:password => "odie1st", :password_confirmation => "odie1st", :is_admin => true)

@@ -26,7 +26,7 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 port ENV.fetch("PORT") { 3000 }
 
 # Logging
-stdout_redirect "tmp/log/puma.stdout.log", "tmp/log/puma.stderr.log", true
+#stdout_redirect "tmp/log/puma.stdout.log", "tmp/log/puma.stderr.log", true
 
 # Specifies the `environment` that Puma will run in.
 environment ENV.fetch("RAILS_ENV") { "development" }

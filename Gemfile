@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-ruby "3.2.2"
-#ruby "3.3.0"
+#ruby "3.2.2"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
@@ -112,6 +112,8 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 #gem 'capistrano'
+gem 'foreman'
+=begin
 group :development do
     gem 'capistrano',         require: false
     gem 'capistrano-rvm',     require: false
@@ -119,6 +121,7 @@ group :development do
     gem 'capistrano-bundler', require: false
     gem 'capistrano3-puma',   require: false
 end
+=end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'

@@ -1,3 +1,4 @@
+=begin
 # This configuration file will be evaluated by Puma. The top-level methods that
 # are invoked here are part of Puma's configuration DSL. For more information
 # about methods provided by the DSL, see https://puma.io/puma/Puma/DSL.html.
@@ -25,9 +26,6 @@ worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 port ENV.fetch("PORT") { 3000 }
 
-# Logging
-#stdout_redirect "tmp/log/puma.stdout.log", "tmp/log/puma.stderr.log", true
-
 # Specifies the `environment` that Puma will run in.
 environment ENV.fetch("RAILS_ENV") { "development" }
 
@@ -36,7 +34,8 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
-=begin
+=end
+#=begin
 # Change to match your CPU core count
 workers 1 #2
 
@@ -44,11 +43,18 @@ workers 1 #2
 threads 1, 6
 
 app_dir = File.expand_path("../..", __FILE__)
-shared_dir = "#{app_dir}/shared"
+shared_dir = "#{app_dir}/tmp"
 
 # Default to production
 rails_env = ENV['RAILS_ENV'] || "production"
 environment rails_env
+
+# Specifies the `worker_timeout` threshold that Puma will use to wait before
+# terminating a worker in development environments.
+worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+
+# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+port ENV.fetch("PORT") { 9292 }
 
 # Set up socket location
 bind "unix://#{shared_dir}/sockets/puma.sock"
@@ -57,7 +63,9 @@ bind "unix://#{shared_dir}/sockets/puma.sock"
 stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
 
 # Set master PID and state locations
-pidfile "#{shared_dir}/pids/puma.pid"
+#pidfile "#{shared_dir}/pids/puma.pid"
+pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+
 state_path "#{shared_dir}/pids/puma.state"
 activate_control_app
 
@@ -66,4 +74,7 @@ on_worker_boot do
   ActiveRecord::Base.connection.disconnect! rescue ActiveRecord::ConnectionNotEstablished
   ActiveRecord::Base.establish_connection(YAML.load_file("#{app_dir}/config/database.yml")[rails_env])
 end
-=end
+
+# Allow puma to be restarted by `bin/rails restart` command.
+plugin :tmp_restart
+#=end

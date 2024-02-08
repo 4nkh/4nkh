@@ -44,6 +44,6 @@ module Ankh
     config.assets.version = '1.0'
     
     #config.eager_load = false
-    Rails.autoloaders.main.ignore(Rails.root.join('lib/*'))
+    #Rails.autoloaders.main.ignore(Rails.root.join('lib/*'))
   end
 end

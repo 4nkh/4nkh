@@ -16,13 +16,16 @@ threads min_threads_count, max_threads_count
 if ENV["RAILS_ENV"] == "production"
   require "concurrent-ruby"
   worker_count = Integer(ENV.fetch("WEB_CONCURRENCY") { Concurrent.physical_processor_count })
-  workers worker_count if worker_count > 1
+  #workers worker_count if worker_count > 1
 
   app_dir = File.expand_path("../..", __FILE__)
   shared_dir = "#{app_dir}/tmp"
 
+  environment ENV.fetch("RAILS_ENV") { "production" }
+
   port ENV.fetch("PORT") { 9292 }
   bind "unix://#{shared_dir}/sockets/puma.sock"
+  
   
   stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
   
@@ -32,11 +35,12 @@ if ENV["RAILS_ENV"] == "production"
 else
   port ENV.fetch("PORT") { 3000 }
   environment ENV.fetch("RAILS_ENV") { "development" }
+  worker_timeout 3600
 end
 
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
 # terminating a worker in development environments.
-worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
+#worker_timeout 3600 if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #port ENV.fetch("PORT") { 3000 }

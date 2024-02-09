@@ -79,4 +79,4 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = false #true
 end
 
-Rails.application.config.hosts << /.*\.4nkh\.ca/
+Rails.application.config.hosts << "4nkh.ca"

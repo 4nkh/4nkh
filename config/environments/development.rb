@@ -81,3 +81,4 @@ end
 
 Rails.application.config.hosts << "www.4nkh.ca"#[ "4nkh.ca", "www.4nkh.ca" ]
 Rails.application.config.hosts << "4nkh.ca"
+Rails.application.config.hosts << "198.71.57.57"

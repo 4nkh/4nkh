@@ -95,7 +95,7 @@ Rails.application.configure do
 
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
-     #"4nkh.ca",     # Allow requests from example.com
+     "4nkh.ca",     # Allow requests from example.com
      /.*\.4nkh\.ca/, # Allow requests from subdomains like `www.example.com`
      "198.71.57.57",
      "localhost",

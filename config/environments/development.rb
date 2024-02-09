@@ -79,7 +79,7 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = false #true
   
   config.hosts = [
-     #"4nkh.ca",     # Allow requests from example.com
+     "4nkh.ca",     # Allow requests from example.com
      /.*\.4nkh\.ca/, # Allow requests from subdomains like `www.example.com`
      "198.71.57.57",
      "localhost",

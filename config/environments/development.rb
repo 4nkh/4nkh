@@ -76,12 +76,7 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   
-  config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-     /.*\.4nkh\.ca/ # Allow requests from subdomains like `www.example.com`
-  ]
-  
   config.action_controller.raise_on_missing_callback_actions = false #true
 end
 
-#Rails.application.config.hosts << "4nkh.ca"
+Rails.application.config.hosts << /.*\.4nkh\.ca/

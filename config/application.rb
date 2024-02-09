@@ -36,6 +36,9 @@ module Ankh
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    
+    #config.assets.unknown_asset_fallback = false
+    
     #config.assets.precompile += %w( files )
     config.generators do |g|
       g.template_engine :haml

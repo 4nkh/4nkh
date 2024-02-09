@@ -36,3 +36,5 @@ npm-debug.log
 *.swo
 *.swp
 *.swn
+
+/config/credentials/production.key

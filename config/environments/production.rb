@@ -96,4 +96,5 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end
 
-Rails.application.config.hosts << /.*\.4nkh\.ca/
+Rails.application.config.hosts << "www.4nkh.ca"#[ "4nkh.ca", "www.4nkh.ca" ]
+Rails.application.config.hosts << "4nkh.ca"

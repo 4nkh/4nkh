@@ -9,26 +9,31 @@ Rails.application.configure do
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
-  # Rake tasks automatically ignore this option for performance.
+  # Rake tasks automatically ignore this option for 
   config.eager_load = false #true
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
+  
+  
+  
+  
+  
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
 
-   config.require_master_key = true
+  config.require_master_key = true
 
   # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
-   config.public_file_server.enabled = ENV.fetch("RAILS_SERVE_STATIC_FILES") { true }
+  config.public_file_server.enabled = ENV.fetch("RAILS_SERVE_STATIC_FILES") { true }
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
@@ -53,14 +58,10 @@ Rails.application.configure do
   config.force_ssl = false #true
 
   # Log to STDOUT by default
-  #config.logger = ActiveSupport::Logger.new(STDOUT)
-  #  .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
-  #  .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
-  config.logger = ActiveSupport::BroadcastLogger.new(
-    ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new($stdout,              formatter: Logger::Formatter.new)),
-    ActiveSupport::TaggedLogging.new(ActiveSupport::Logger.new("log/production.log", formatter: Logger::Formatter.new))
-  )
-  
+  config.logger = ActiveSupport::Logger.new(STDOUT)
+    .tap  { |logger| logger.formatter = ::Logger::Formatter.new }
+    .then { |logger| ActiveSupport::TaggedLogging.new(logger) }
+
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
@@ -87,27 +88,26 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Don't log any deprecations.
-  config.active_support.report_deprecations = :notify #false
+  config.active_support.report_deprecations = false
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
   # Enable DNS rebinding protection and other `Host` header attacks.
-  #config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-  #   /.*\.4nkh\.ca/ # Allow requests from subdomains like `www.example.com`
-  #]
+  config.hosts = [
+     #"4nkh.ca",     # Allow requests from example.com
+     /.*\.4nkh\.ca/, # Allow requests from subdomains like `www.example.com`
+     "198.71.57.57",
+     "localhost",
+     "127.0.0.1"
+  ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
   
   
-  
-  
-  
-  
   #config.require_master_key = true
   #config.force_ssl = true
-  config.cache_classes = true
+  ####config.cache_classes = true
   #config.eager_load = true
   #config.consider_all_requests_local = false
   #config.action_controller.perform_caching = true
@@ -120,7 +120,7 @@ Rails.application.configure do
   #config.action_mailer.perform_caching = false
   #config.i18n.fallbacks = true
   #config.active_support.deprecation = :notify
-  config.log_formatter = ::Logger::Formatter.new
+  ####config.log_formatter = ::Logger::Formatter.new
   #config.active_record.dump_schema_after_migration = false
 =begin
   config.action_mailer.default_url_options = { host: '4nkh.ca' }
@@ -137,6 +137,7 @@ Rails.application.configure do
 =end
 end
 
-Rails.application.config.hosts << "www.4nkh.ca"#[ "4nkh.ca", "www.4nkh.ca" ]
-Rails.application.config.hosts << "4nkh.ca"
-Rails.application.config.hosts << "198.71.57.57"
+#Rails.application.config.hosts << "www.4nkh.ca"#[ "4nkh.ca", "www.4nkh.ca" ]
+#Rails.application.config.hosts << "4nkh.ca"
+#Rails.application.config.hosts << "198.71.57.57"
+#Rails.application.config.hosts << "127.0.0.1"

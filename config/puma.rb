@@ -23,8 +23,8 @@ if ENV["RAILS_ENV"] == "production"
 
   environment ENV.fetch("RAILS_ENV") { "production" }
 
-  port ENV.fetch("PORT") { 9292 }
-  bind "unix://#{shared_dir}/sockets/puma.sock"
+  port ENV.fetch("PORT") { 9292 } #, 'localhost'
+  #bind "unix://#{shared_dir}/sockets/puma.sock"
   
   
   stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true

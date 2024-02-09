@@ -1,4 +1,4 @@
-=begin
+#=begin
 # This configuration file will be evaluated by Puma. The top-level methods that
 # are invoked here are part of Puma's configuration DSL. For more information
 # about methods provided by the DSL, see https://puma.io/puma/Puma/DSL.html.
@@ -34,8 +34,8 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
-=end
-#=begin
+#=end
+=begin
 # Change to match your CPU core count
 workers 1 #2
 
@@ -80,4 +80,4 @@ end
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
-#=end
+=end

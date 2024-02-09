@@ -17,6 +17,17 @@ if ENV["RAILS_ENV"] == "production"
   require "concurrent-ruby"
   worker_count = Integer(ENV.fetch("WEB_CONCURRENCY") { Concurrent.physical_processor_count })
   workers worker_count if worker_count > 1
+
+  app_dir = File.expand_path("../..", __FILE__)
+  shared_dir = "#{app_dir}/tmp"
+
+  port ENV.fetch("PORT") { 9292 }
+  bind "unix://#{shared_dir}/sockets/puma.sock"
+  
+  stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
+  
+  #state_path "#{shared_dir}/pids/puma.state"
+  #activate_control_app
 end
 
 # Specifies the `worker_timeout` threshold that Puma will use to wait before
@@ -35,6 +46,10 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 #=end
+
+
+
+
 =begin
 # Change to match your CPU core count
 workers 1 #2

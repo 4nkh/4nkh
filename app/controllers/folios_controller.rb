@@ -15,7 +15,7 @@ class FoliosController < ApplicationController
 
   def show
     @folio = Folio.find(params[:id])
-    @folios = Folio.all.order('position desc')
+    @folios = Folio.all.order('position asc')
     respond_to do |format|
       format.html
       format.iphone { render :layout => 'admin' }
@@ -102,9 +102,7 @@ class FoliosController < ApplicationController
    @folios = Folio.all.order('position asc')
      @folios.each do |folio|
        folio.position = params[:folio].index(folio.id.to_s) + 1
-       puts folio.position
        folio.save!
-       puts folio.position
      end
      @folios = Folio.all.order('position asc')
      render js: "#{(render_to_string partial: "shared/position_folio", locals: { folios: @folios }).gsub(/\n/, '')}"

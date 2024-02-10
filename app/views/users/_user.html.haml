@@ -5,7 +5,11 @@
     %span{:style => "font-size:25px;"} #{ user.position }
     //%span.handler{:style => "cursor: move;float:right;"} #{ image_tag 'sortable.gif', :style => 'padding:5px 0 0 5px;' }
 
-- else 
+- else
   - unless user.id == (1)
-    %li= link_to image_tag(user.photo.url, :size => '150x150'), show_user_url(user.id), :title => user.login
+    %li{ id: "user_#{user.id}", style: "width:500px;position:relative;padding-top:7px;padding-bottom:7px;border-top:1px dotted #bbb;"}
+      = link_to image_tag(user.photo.url, :size => '150x150'), show_user_url(user.id), :title => user.login
+      %span{style: "font-size:25px;"}
+        = user.position
+        = image_tag 'sortable.gif', :style => 'padding:5px 0 0 5px;'
 

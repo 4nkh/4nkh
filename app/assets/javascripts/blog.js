@@ -1,5 +1,6 @@
 function blogger(thechosenone) {
       var blog = document.getElementsByTagName("div");
+	  console.log(blog)
             for(var x=0; x<blog.length; x++) {
                   name = blog[x].getAttribute("name");
                   

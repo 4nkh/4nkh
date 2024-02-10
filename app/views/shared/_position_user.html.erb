@@ -7,7 +7,7 @@
 
         </ul>
 
-      </div>
+</div>
 
 <% content_for :js do %>
   <% javascript_tag do %>
@@ -22,7 +22,7 @@
                 type: 'post',
                 data: $('#graphic<%= current_user.id %>').sortable('serialize'),
                 dataType: 'script',
-                complete: function(request){ $('#graphic').effect('highlight');
+                complete: function(request){ /*$('#graphic').effect('highlight');*/
                   },
                 url: '/users/prioritize_tasks'})
             }

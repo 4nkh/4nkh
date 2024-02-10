@@ -1,5 +1,5 @@
 #blog_wrapper
-  #slideRoggle.pusher
+  #slideToggle.pusher
     #blog2{:name => "blog"}
       = link_to "[-] Hide create post", "javascript:blogger('blog1');",:id => "myHeader1"
     #blog1{:name => "blog", :style => "display:none;"}
@@ -118,6 +118,7 @@
       %p#submit_block
 
 = stylesheet_link_tag 'blog'
+= javascript_include_tag 'blog'
 - content_for :js do
   :javascript 
 

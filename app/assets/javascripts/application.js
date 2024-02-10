@@ -2,12 +2,12 @@
 // Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
 // be included in the compiled file accessible from http://example.com/assets/application.js
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
+// the compiled file. //= require_tree .
 //
 
-//= require jquery
+// require jquery
 //= require jquery_ujs
-// require tinymce/jscripts/tiny_mce/jquery.tinymce.js
+//= require tinymce/jscripts/tiny_mce/jquery.tinymce.js
 // require blog.js
 // require core.js
 // require flowplayer-3.2.2.min.js
@@ -22,4 +22,6 @@
 // require nivo.js
 // require products.js
 // require jquery.facebox
-//= require_tree .
+//= require shadowbox.js
+//= swfobjects.js
+//= upload.js

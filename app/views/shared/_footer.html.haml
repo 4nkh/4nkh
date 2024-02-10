@@ -6,7 +6,7 @@
       %li= link_to "Upload movies", new_movie_url 
       %li= link_to "Add employees", signup_url 
       %li= link_to 'Add folio', new_folio_url 
-      %li= link_to 'Folio position', '/positions/folios'
+      %li= link_to 'Folio position', position_folio_url
       
     - elsif current_user.id == (2)
       %li= link_to "Upload movies", new_movie_path

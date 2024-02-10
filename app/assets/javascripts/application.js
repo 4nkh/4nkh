@@ -18,7 +18,7 @@
 // require jq_javascript.js
 // require jquery.lightbox
 // require jquery.tool.js
-// require nav.js
+//= require nav.js
 //= require nivo.js
 // require products.js
 // require jquery.facebox

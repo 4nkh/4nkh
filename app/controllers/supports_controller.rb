@@ -10,12 +10,16 @@ class SupportsController < ApplicationController
   end
 
   def send_mail
-    @support = Support.new(params[:support])
+    @support = Support.new(get_params)
     if @support.save
       flash[:notice] = 'Your message was successfully delivered.'
-      redirect_to :back
+      redirect_back_or_to aboutus_url
     else
       render :mailform, :layout => false
     end
+  end
+private
+  def get_params
+    params.require(:support).permit(:name, :email, :subject, :description, :website, :mobile, :games, :api, :design, :seo, :hosting, :consulting, :job, :other)
   end
 end

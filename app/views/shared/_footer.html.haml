@@ -51,7 +51,7 @@
   %li
     - if current_user.blank?
       //= facebox_link_to 'Join', :url => signup_url 
-      = link_to 'Join', signup_path, :rel => "shadowbox;width=350;height=400;", :alt => "Join", :title => ""
+      = link_to 'Join', signup_path, :rel => "shadowbox;width=520;height=400;", :alt => "Join", :title => ""
     - else
       = link_to(current_user.login,dashboard_url)
   %li

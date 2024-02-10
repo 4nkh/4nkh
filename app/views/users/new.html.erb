@@ -1,12 +1,26 @@
-<style>
-  body {background: #EEE;}
-  
-</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<%= csrf_meta_tag %>
+<%= javascript_include_tag 'application' %>
+<%= stylesheet_link_tag 'application' %>
 
-<% #if current_user.nil? %>
-<h3>You wan't to join our team?</h3>
+<style>
+body {background: #CCC /*url(<%= asset_path 'bg_main.png' %>) top left repeat;*/}
+h2 {text-align:center;}
+.notifier {padding-left:80px; width:340px;float:left;}
+input[type="text"] {width:300px;}
+.column_left {float:left; width:100px;}
+.column_left input[type="checkbox"] {float:right;padding-right:20px;}
+.column_right {float:right; width:100px;}
+.column_right input[type="checkbox"] {float:right;}
+#errorExplanation {margin-left:-50px !important;}
+form {padding:20px;background:#EEE;width:300px;box-shadow:-3px 8px 10px 2px #999;-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;}
+.celebrity_search {width:340;}
+</style>
 <div class="clear">&nbsp;</div>
-<span>E-mail us at :   <%= mail_to '4nkh developement', 'admin@4nkh.com', :style => "color:#39c;font-size:14px;" %></span>
+<% #if current_user.nil? %>
+<h2>You wan't to join our team?</h3>
+<div class="clear">&nbsp;</div>
 <% #else %>
 <div class="celebrity_search" style="margin: 0 auto;">
 <div class="loginform">
@@ -40,5 +54,6 @@
     <% end %>
   </fieldset>
 </div>
+<span>E-mail us at :   <%= mail_to '4nkh developement', 'admin@4nkh.ca', :style => "color:#39c;font-size:14px;" %></span>
 </div>
 <% #end %>

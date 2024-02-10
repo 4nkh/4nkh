@@ -106,7 +106,7 @@ class FoliosController < ApplicationController
        folio.save!
        puts folio.position
      end
-     @folios = Folio.all.order('position desc')
+     @folios = Folio.all.order('position asc')
      render js: "#{(render_to_string partial: "shared/position_folio", locals: { folios: @folios }).gsub(/\n/, '')}"
      #render partial: "shared/position_folio", locals: { folios: @folios }
     #render :json => { :success => true, :partial => "shared/position_folio", locals: { folios: @folios } }

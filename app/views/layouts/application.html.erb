@@ -16,10 +16,10 @@
     
     <link rel="icon" type="image/gif" href="<%= asset_path 'favicon.gif' %>" />
     <%= stylesheet_link_tag 'application', "data-turbo-track": "reload"%>   
-    <!--[if IE 9]><link rel="stylesheet" href="/assets/artist_ie9.css" /><![endif]-->
-    <!--[if IE 8]><link rel="stylesheet" href="/assets/artist_ie8.css" /><![endif]-->
-    <!--[if IE 7]><link rel="stylesheet" href="/assets/artist_ie7.css" /><![endif]-->
-    <!--[if IE 6]><link rel="stylesheet" href="/assets/artist_ie6.css" /><![endif]-->
+    <!--[if IE 9]><link rel="stylesheet" href="<%= asset_path 'artist_ie9.css' %>" /><![endif]-->
+    <!--[if IE 8]><link rel="stylesheet" href="<%= asset_path 'artist_ie8.css' %>" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="<%= asset_path 'artist_ie7.css' %>" /><![endif]-->
+    <!--[if IE 6]><link rel="stylesheet" href="<%= asset_path 'artist_ie6.css' %>" /><![endif]-->
     <%= yield(:head) %>             
   </head>
   <body>  
@@ -65,9 +65,9 @@
     </div>
     <div id="footer">    
         <div id="footer_inner">
-          <%= link_to image_tag('facebookicon1.png', :onmouseover => 'this.src="/assets/facebookicon.png"', :onmouseout => 'this.src="/assets/facebookicon1.png"'), 'http://www.facebook.com/pages/4nkh/155264964487409?created', :class => 'facebook', :popup => true, :alt => 'facebook', :title => '4nkh facebook' %>
-		  <%= link_to image_tag('twittericon1.png', :onmouseover => 'this.src="/assets/twittericon.png"', :onmouseout => 'this.src="/assets/twittericon1.png"'), 'http://twitter.com/4nk', :class => 'twitter', :popup => true, :alt => 'twitter', :title => '4nkh twitter' %>
-		  <%= link_to image_tag('rss1.png', :onmouseover => 'this.src="/assets/rss.png"', :onmouseout => 'this.src="/assets/rss1.png"'), feed_path, :class => 'rss', :popup => true, :alt => 'rss', :title => '4nkh rss' %>
+          <%= link_to image_tag('facebookicon1.png', :onmouseover => "this.src=\"#{ asset_path 'facebookicon.png' }\"", :onmouseout => "this.src=\"#{ asset_path 'facebookicon1.png' }\""), 'http://www.facebook.com/pages/4nkh/155264964487409?created', :class => 'facebook', :popup => true, :alt => 'facebook', :title => '4nkh facebook' %>
+		  <%= link_to image_tag('twittericon1.png', :onmouseover => "this.src=\"#{ asset_path 'twittericon.png' }\"", :onmouseout => "this.src=\"#{ asset_path 'twittericon1.png' }\""), 'http://twitter.com/4nk', :class => 'twitter', :popup => true, :alt => 'twitter', :title => '4nkh twitter' %>
+		  <%= link_to image_tag('rss1.png', :onmouseover => "this.src=\"#{ asset_path 'rss.png' }\"", :onmouseout => "this.src=\"#{ asset_path 'rss1.png' }\""), feed_path, :class => 'rss', :popup => true, :alt => 'rss', :title => '4nkh rss' %>
           <%= yield :footer %>
           <%= render :partial => "shared/footer" %>
           <span id="copyright">copyright © 2012 4nkh development</span>

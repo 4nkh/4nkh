@@ -5,7 +5,7 @@ class Folio < ActiveRecord::Base
   has_attached_file :picture,
                     :styles => {:thumb => "200x200",:original => "800x800>" },
                     :url => '/:class/:id/:style.:extension',
-                    :default_url => '/assets/no-avatar.jpg'
+                    :default_url => 'no-avatar.jpg'
                       
   validates_presence_of :picture
   

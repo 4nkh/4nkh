@@ -1,7 +1,7 @@
 = stylesheet_link_tag 'application'
 = javascript_include_tag 'application' 
 :css
-  body {background: #CCC /*url(/assets/bg_main.png) top left repeat;*/}
+  body {background: #CCC /*url(<%= asset_path 'bg_main.png' %>) top left repeat;*/}
   h2 {text-align:center;}
   .notifier {padding-left:80px; width:340px;float:left;}
   input[type="text"] {width:300px;}

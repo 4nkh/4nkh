@@ -99,14 +99,14 @@ class FoliosController < ApplicationController
   end
   
   def prioritize_tasks
-   @folios = Folio.all
+   @folios = Folio.all.order('position desc')
      @folios.each do |folio|
        folio.position = params[:folio].index(folio.id.to_s) + 1
        puts folio.position
        folio.save!
        puts folio.position
      end
-     @folios = Folio.all
+     @folios = Folio.all.order('position desc')
      render js: "#{(render_to_string partial: "shared/position_folio", locals: { folios: @folios }).gsub(/\n/, '')}"
      #render partial: "shared/position_folio", locals: { folios: @folios }
     #render :json => { :success => true, :partial => "shared/position_folio", locals: { folios: @folios } }

@@ -99,7 +99,7 @@ class FoliosController < ApplicationController
   end
   
   def prioritize_tasks
-   @folios = Folio.all.order('position desc')
+   @folios = Folio.all.order('position asc')
      @folios.each do |folio|
        folio.position = params[:folio].index(folio.id.to_s) + 1
        puts folio.position

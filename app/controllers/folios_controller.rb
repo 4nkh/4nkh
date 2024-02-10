@@ -15,7 +15,7 @@ class FoliosController < ApplicationController
 
   def show
     @folio = Folio.find(params[:id])
-    @folios = Folio.all.order('position asc')
+    @folios = Folio.all.reorder('position asc')
     respond_to do |format|
       format.html
       format.iphone { render :layout => 'admin' }
@@ -99,12 +99,12 @@ class FoliosController < ApplicationController
   end
   
   def prioritize_tasks
-   @folios = Folio.all.order('position asc')
+   @folios = Folio.all.reorder('position asc')
      @folios.each do |folio|
        folio.position = params[:folio].index(folio.id.to_s) + 1
        folio.save!
      end
-     @folios = Folio.all.order('position asc')
+     @folios = Folio.all.reorder('position asc')
      render js: "#{(render_to_string partial: "shared/position_folio", locals: { folios: @folios }).gsub(/\n/, '')}"
      #render partial: "shared/position_folio", locals: { folios: @folios }
     #render :json => { :success => true, :partial => "shared/position_folio", locals: { folios: @folios } }

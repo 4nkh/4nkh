@@ -7,6 +7,7 @@
 
 //= require jquery
 //= require jquery_ujs
+// require tinymce/jscripts/tiny_mce/jquery.tinymce.js
 // require blog.js
 // require core.js
 // require flowplayer-3.2.2.min.js
@@ -21,5 +22,4 @@
 // require nivo.js
 // require products.js
 // require jquery.facebox
-// require tinymce/jscripts/tiny_mce/jquery.tinymce.js
 //= require_tree .

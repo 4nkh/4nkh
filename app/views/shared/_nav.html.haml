@@ -8,7 +8,7 @@
 //    %param{'name' => "bgcolor", 'value' => "transparent"}     
 //    %embed{'src' => "/assets/earth.swf", 'quality' => "high", 'bgcolor' => "transparent", 'wmode' => "transparent", 'width' => "253", 'height' => "173", 'name' => "earth", 'align' => "middle", 'allowScriptAccess' => "sameDomain", 'allowFullScreen' => "false", 'type' => "application/x-shockwave-flash", 'pluginspage' => "http://www.adobe.com/go/getflashplayer"}
 #world
-  %img#earth{:width => "60px", :height => "60px", :src => "/assets/earth1.gif", :alt => "The world"}
+  %img#earth{:width => "60px", :height => "60px", :src => "#{ asset_path 'earth1.gif' }", :alt => "The world"}
   //%img#earth_top{:src => "/assets/earth_top1.gif", :alt => "The world"}
 
 %a{:href => "/", :alt => "homepage", :title => "homepage"}

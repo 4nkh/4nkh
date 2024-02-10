@@ -13,13 +13,13 @@
 // require flowplayer-3.2.2.min.js
 // require flowplayer.controls-3.0.2.min.js
 // require flowplayer.playlist-3.0.8.min.js
-// require global.js
+//= require global.js
 // require handlers.js
 // require jq_javascript.js
 // require jquery.lightbox
 // require jquery.tool.js
-//= require nav.js
-// require nivo.js
+// require nav.js
+//= require nivo.js
 // require products.js
 // require jquery.facebox
 //= require shadowbox.js

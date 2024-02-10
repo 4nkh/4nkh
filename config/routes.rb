@@ -98,6 +98,7 @@ Rails.application.routes.draw do
   get    '/games/:id/picture/new'       =>               'folios#new_picture',                         :as => :new_position_folio
   post   '/games/create'                =>               'folios#create',                              :as => :create_folio
   post   '/games/picture/create'        =>               'folios#create_picture',                      :as => :create_folio_picture
+  post   '/folios/prioritize_tasks'     =>               'folios#prioritize_tasks',                    :as => :folio_prioritize_tasks
   delete '/games/:id/picture/destroy'   =>               'folios#destroy_picture',                     :as => :remove_folio_picture
   delete '/games/destroy/:id'           =>               'folios#destroy',                             :as => :destroy_folio
 

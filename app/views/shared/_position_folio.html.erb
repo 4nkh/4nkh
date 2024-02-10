@@ -1,33 +1,12 @@
 <div id="position_content">
         <ul id="graphic"class="graphic left">
 
-           <% folio.each do |folio| %>
+           <% folios.each do |folio| %>
              <%= render :partial => '/folios/folio', :object => folio %>
-             <%= link_to 'edit', edit_folio_path(folio.id) %>
+             <%#= link_to 'edit', edit_folio_path(folio.id) %>
            <% end %>
 
         </ul>
 
 </div>
 
-<% content_for :js do %>
-  <% javascript_tag do %>
-    $('#graphic').sortable(
-        {
-          handle: '.handle',
-          items: 'li',
-          opacity: 0.4,
-          scroll: true,
-          update: function(){
-            $.ajax({
-                type: 'post',
-                data: $('#graphic').sortable('serialize'),
-                dataType: 'script',
-                complete: function(request){
-                    /*$('.moviethumb').effect('highlight');*/
-                  },
-                url: '/folios/prioritize_tasks'})
-            }
-          })
-  <% end %>
-<% end %>

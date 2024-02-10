@@ -7,6 +7,33 @@
 <h2 class="subtitle" style="text-align:center;padding:15px 0 35px 0;">Drag & Drop</h2>
 
 <div class="position_wrapper" style="width:500px;margin:0 auto;">
-<%= render :partial => 'shared/position_folio', :locals => { :folio => @folio } %>
+<%= render :partial => 'shared/position_folio', :locals => { :folios => @folios } %>
 </div>
-
+<% content_for :js do %>
+  <% javascript_tag do %>
+    $('#graphic').sortable(
+        {
+          handle: '.handle',
+          items: 'li',
+          opacity: 0.4,
+          scroll: true,
+          update: function(){
+            $.ajax({
+                type: 'post',
+                data: $('#graphic').sortable('serialize'),
+                dataType: 'text',
+	  		    success: function(response){
+					//console.log(response)
+					jQuery('.position_wrapper').html(response);
+	  		        //alert(request.status); //will alert ok
+	  		    },
+                url: '/folios/prioritize_tasks'})
+                //complete: function(request){
+				//	console.log
+                    /*$('.moviethumb').effect('highlight');*/
+                //  },
+            }
+          })
+		  
+  <% end %>
+<% end %>

@@ -5,7 +5,7 @@ class FoliosController < ApplicationController
   def index
     @folio1 = Folio.find_by(id: 1)
     #puts @folio1.description
-    @folio = Folio.all.paginate(:page => params[:page], :per_page => 18) #find(:all).paginate(:page => params[:page], :per_page => 18)
+    @folio = Folio.all.reorder('position asc').paginate(:page => params[:page], :per_page => 18) #find(:all).paginate(:page => params[:page], :per_page => 18)
     respond_to do |format|
       format.html   # renders index.html.erb
       #format.iphone # renders index.iphone.erb
@@ -15,7 +15,7 @@ class FoliosController < ApplicationController
 
   def show
     @folio = Folio.find(params[:id])
-    @folios = Folio.all
+    @folios = Folio.all.order('position desc')
     respond_to do |format|
       format.html
       format.iphone { render :layout => 'admin' }
@@ -23,7 +23,7 @@ class FoliosController < ApplicationController
   end
 
   def position
-    @folio = Folio.all
+    @folios = Folio.all.reorder('position asc')
     respond_to do |format|
       format.html   # renders index.html.erb
       format.iphone# renders index.iphone.erb
@@ -99,12 +99,22 @@ class FoliosController < ApplicationController
   end
   
   def prioritize_tasks
-   folios = Folio.find(:all)
-     folios.each do |folio|
+   @folios = Folio.all
+     @folios.each do |folio|
        folio.position = params[:folio].index(folio.id.to_s) + 1
-       folio.save
-     end 
-    render :nothing => true
+       puts folio.position
+       folio.save!
+       puts folio.position
+     end
+     @folios = Folio.all
+     render js: "#{(render_to_string partial: "shared/position_folio", locals: { folios: @folios }).gsub(/\n/, '')}"
+     #render partial: "shared/position_folio", locals: { folios: @folios }
+    #render :json => { :success => true, :partial => "shared/position_folio", locals: { folios: @folios } }
+    #respond_to do |format|
+    #  format.js {render js: "jQuery('.position_wrapper').html('#{render_to_string partial: "shared/position_folio", locals: { folios: @folios }}');"}
+    #end
+    #head :ok, content_type: "text/html"
+    #render :nothing => true
   end 
   
 private

@@ -20,8 +20,7 @@
 // require jquery.tool.js
 //= require nav.js
 //= require nivo.js
-// require products.js
-// require jquery.facebox
+//= require products.js
 //= require shadowbox.js
 //= swfobjects.js
 //= upload.js

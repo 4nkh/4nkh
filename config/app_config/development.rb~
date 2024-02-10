@@ -1,0 +1,11 @@
+AppConfig.url = ApplicationConfiguration.new
+AppConfig.url.protocol = "http://"
+AppConfig.url.subdomain = "www."
+AppConfig.url.domain = "sc.net"
+AppConfig.url.root = "#{AppConfig.url.protocol}#{AppConfig.url.subdomain}#{AppConfig.url.domain}:3000"
+AppConfig.url.ssl_root = "http://#{AppConfig.url.subdomain}#{AppConfig.url.domain}"
+
+AppConfig.routes = ApplicationConfiguration.new
+AppConfig.routes.subdomain = "www"
+AppConfig.routes.protocol = "http"
+AppConfig.routes.secure = false

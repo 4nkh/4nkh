@@ -1,4 +1,11 @@
-site_name: "4nkh"
-site_url: "http://4nkh.ca"
-site_copyright: "copyright &copy; 2010 4nkh.ca"
-send_file_method: 'default'
+development:
+  site_name: "4nkh"
+  site_url: "http://localhost:3000" #"http://4nkh.ca"
+  site_copyright: "copyright &copy; 2010 4nkh.ca"
+  send_file_method: 'default'
+
+production:
+  site_name: "4nkh"
+  site_url: "http://4nkh.ca" #"http://4nkh.ca"
+  site_copyright: "copyright &copy; 2010 4nkh.ca"
+  send_file_method: 'default'

@@ -4,7 +4,7 @@ class FoliosController < ApplicationController
   
   def index
     @folio1 = Folio.find_by(id: 1)
-    puts @folio1.description
+    #puts @folio1.description
     @folio = Folio.all.paginate(:page => params[:page], :per_page => 18) #find(:all).paginate(:page => params[:page], :per_page => 18)
     respond_to do |format|
       format.html   # renders index.html.erb

@@ -76,7 +76,7 @@
       //form_data.append("photo", files)
       form_data.append("authenticity_token", csrf)
 	
-      fetch("http://localhost:3000/photo/create", {
+      fetch("#{ AppConfig.url.root }/photo/create" , {
         method: 'POST',
         dataType: 'script',
         body: form_data,

@@ -8,7 +8,11 @@ class DashboardController < ApplicationController
     @tags = User.tag_counts_on(:tags)
     #@user = current_user
     @post = Post.new
-    @posts = @user.posts.all.paginate(:page => params[:page], :per_page => 5)    
+    if @user
+      @posts = @user.posts.all.paginate(:page => params[:page], :per_page => 5)      
+    else
+      redirect_to root_url
+    end
   end
 
   def new_photo

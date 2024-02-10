@@ -100,6 +100,7 @@ Rails.application.configure do
      /.*\.4nkh\.ca/, # Allow requests from subdomains like `www.example.com`
      "198.71.57.57",
      "localhost",
+     /.*\.localhost.*/,
      "127.0.0.1"
   ]
   # Skip DNS rebinding protection for the default health check endpoint.

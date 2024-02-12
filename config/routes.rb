@@ -153,7 +153,7 @@ Rails.application.routes.draw do
 #PAGES
   get    '/mobile'                      =>               'pages#mobile',                                   :as => :mobile
   get    '/tools'                       =>               'pages#tools',                                    :as => :tools
-  get    '/realisations'                =>               'pages#realisation',                              :as => :realisation
+  get    '/achievements'                =>               'pages#realisation',                              :as => :realisation
   get    '/seo/plan'                    =>               'pages#show',         :page => 'seo',             :as => :seo
   get    '/hosting/plan'                =>               'pages#show',         :page => 'hosting',         :as => :hosting
   get    '/business/plan'               =>               'pages#show',         :page => 'business',        :as => :business

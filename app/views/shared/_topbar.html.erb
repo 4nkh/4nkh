@@ -29,6 +29,16 @@
   	<%= link_to 'fr |', '/fr/contact', :class => 'right' %>
   <% end %>
   
+  <% if  current_page?("/achievements") %>
+  	<%= link_to 'en', '/achievements', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/realisations', :class => 'right' %>
+  <% end %>
+  
+  <% if  current_page?("/fr/realisations") %>
+  	<%= link_to 'en', '/achievements', :class => 'right', :style => 'padding-left:4px;' %>  
+  	<%= link_to 'fr |', '/fr/realisations', :class => 'right' %>
+  <% end %>
+  
   <% if  current_page?("/services") %>
   	<%= link_to 'en', '/services', :class => 'right', :style => 'padding-left:4px;' %>  
   	<%= link_to 'fr |', '/fr/services', :class => 'right' %>

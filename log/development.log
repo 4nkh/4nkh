@@ -1758,3 +1758,798 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 9718)
 
 
+Started GET "/fr/accueil" for ::1 at 2024-02-11 23:11:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FrenchController#index as HTML
+  Rendering layout layouts/fr.html.erb
+  Rendering french/index.html.haml within layouts/fr
+  Rendered shared/_banner.html.haml (Duration: 759.0ms | Allocations: 156804)
+  Rendered french/index.html.haml within layouts/fr (Duration: 784.4ms | Allocations: 179693)
+  Rendered shared/_topbar.html.erb (Duration: 2.8ms | Allocations: 1899)
+  Rendered shared/_seofr.html.haml (Duration: 8.5ms | Allocations: 3768)
+  Rendered shared/_hostingfr.html.erb (Duration: 1.0ms | Allocations: 212)
+  Rendered shared/_businessfr.html.haml (Duration: 9.9ms | Allocations: 4656)
+  Rendered shared/_servicesfr.html.erb (Duration: 24.0ms | Allocations: 9394)
+  Rendered shared/_navfr.html.haml (Duration: 51.7ms | Allocations: 21950)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 289)
+  Rendered shared/_footerfr.html.haml (Duration: 59.2ms | Allocations: 35490)
+  Rendered layout layouts/fr.html.erb (Duration: 938.1ms | Allocations: 252054)
+Completed 200 OK in 964ms (Views: 944.4ms | ActiveRecord: 0.0ms | Allocations: 256624)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 23:11:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 23:11:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/login" for ::1 at 2024-02-11 23:11:10 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 29.9ms | Allocations: 18141)
+Completed 200 OK in 111ms (Views: 30.8ms | ActiveRecord: 10.8ms | Allocations: 35314)
+
+
+Started POST "/create_session" for ::1 at 2024-02-11 23:11:12 -0500
+Processing by UserSessionsController#create as JS
+  Parameters: {"user_session"=>{"login"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."login" = $1 ORDER BY position ASC LIMIT $2[0m  [["login", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/user_sessions_controller.rb:31:in `create'
+Completed 200 OK in 373ms (Views: 0.1ms | ActiveRecord: 4.4ms | Allocations: 37297)
+
+
+Started GET "/dashboard" for ::1 at 2024-02-11 23:11:12 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 140.6ms | Allocations: 50552)
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (3.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 34)
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 23.2ms | Allocations: 9452)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 187.7ms | Allocations: 68940)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 244)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 208)
+  Rendered shared/_business.html.haml (Duration: 5.3ms | Allocations: 4668)
+  Rendered shared/_services.html.erb (Duration: 9.2ms | Allocations: 5877)
+  Rendered shared/_nav.html.haml (Duration: 25.6ms | Allocations: 18327)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footer.html.haml (Duration: 36.4ms | Allocations: 35254)
+  Rendered layout layouts/application.html.erb (Duration: 285.4ms | Allocations: 144077)
+Completed 200 OK in 373ms (Views: 275.6ms | ActiveRecord: 17.4ms | Allocations: 169481)
+
+
+Started DELETE "/photo/destroy" for ::1 at 2024-02-11 23:11:15 -0500
+Processing by DashboardController#destroy_photo as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+[paperclip] deleting /Users/mathieub/sites/4nkh/public/user/1/original.jpg
+[paperclip] deleting /Users/mathieub/sites/4nkh/public/user/1/thumb.jpg
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/dashboard_controller.rb:78:in `destroy_photo'
+  [1m[36mUser Update (4.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "photo_file_name" = $2, "photo_content_type" = $3, "photo_file_size" = $4, "photo_updated_at" = $5 WHERE "users"."id" = $6[0m  [["updated_at", "2024-02-12 04:11:15.867797"], ["photo_file_name", nil], ["photo_content_type", nil], ["photo_file_size", nil], ["photo_updated_at", nil], ["id", 1]]
+  ↳ app/controllers/dashboard_controller.rb:78:in `destroy_photo'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  ↳ app/controllers/dashboard_controller.rb:78:in `destroy_photo'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/dashboard_controller.rb:78:in `destroy_photo'
+Redirected to http://www.localhost:3000/dashboard
+Completed 302 Found in 33ms (ActiveRecord: 7.8ms | Allocations: 8622)
+
+
+Started GET "/dashboard" for ::1 at 2024-02-11 23:11:15 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 13.1ms | Allocations: 12745)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 11.4ms | Allocations: 6031)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 36.5ms | Allocations: 25007)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 244)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.2ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footer.html.haml (Duration: 11.9ms | Allocations: 11204)
+  Rendered layout layouts/application.html.erb (Duration: 79.2ms | Allocations: 58780)
+Completed 200 OK in 85ms (Views: 78.7ms | ActiveRecord: 1.8ms | Allocations: 60570)
+
+
+Started GET "/photo/new" for ::1 at 2024-02-11 23:11:19 -0500
+Processing by DashboardController#new_photo as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering dashboard/new_photo.html.haml
+  Rendered dashboard/new_photo.html.haml (Duration: 26.6ms | Allocations: 18252)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.7ms | Allocations: 19282)
+
+
+Started POST "/photo/create" for ::1 at 2024-02-11 23:11:25 -0500
+Processing by DashboardController#create_photo as */*
+  Parameters: {"name"=>"avatar", "user"=>{"photo"=>#<ActionDispatch::Http::UploadedFile:0x000000010af4ed30 @tempfile=#<Tempfile:/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/RackMultipart20240211-42958-6bwlir.png>, @content_type="image/png", @original_filename="2674372884_small_1.png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"2674372884_small_1.png\"\r\nContent-Type: image/png\r\n">}, "authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a288eb3118014628d5735eba8630029f20240211-42958-oa60vn.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a288eb3118014628d5735eba8630029f20240211-42958-oa60vn.png[0]'
+Command :: convert '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a288eb3118014628d5735eba8630029f20240211-42958-oa60vn.png[0]' -auto-orient -resize "200x" -crop "200x200+0+0" +repage '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a288eb3118014628d5735eba8630029f20240211-42958-oa60vn20240211-42958-ilpeo5'
+Command :: file -b --mime '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a288eb3118014628d5735eba8630029f20240211-42958-oa60vn20240211-42958-ilpeo5'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a6fb24c87eec61cff7e651b33a930cff20240211-42958-rcxdsu[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a6fb24c87eec61cff7e651b33a930cff20240211-42958-rcxdsu[0]'
+Command :: convert '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a6fb24c87eec61cff7e651b33a930cff20240211-42958-rcxdsu[0]' -auto-orient -resize "75x" -crop "75x75+0+0" +repage '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a6fb24c87eec61cff7e651b33a930cff20240211-42958-rcxdsu20240211-42958-osrg64'
+Command :: file -b --mime '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a6fb24c87eec61cff7e651b33a930cff20240211-42958-rcxdsu20240211-42958-osrg64'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/dashboard_controller.rb:31:in `block in create_photo'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."login" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["login", "admin"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dashboard_controller.rb:31:in `block in create_photo'
+Command :: file -b --mime '/var/folders/lm/699k8ffs1vg0p8ywrkjw80nw0000gn/T/a288eb3118014628d5735eba8630029f20240211-42958-wj468l.png'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "photo_file_name" = $2, "photo_content_type" = $3, "photo_file_size" = $4, "photo_updated_at" = $5 WHERE "users"."id" = $6[0m  [["updated_at", "2024-02-12 04:11:26.266620"], ["photo_file_name", "2674372884_small_1.png"], ["photo_content_type", "image/png"], ["photo_file_size", 44867], ["photo_updated_at", "2024-02-12 04:11:25.983800"], ["id", 1]]
+  ↳ app/controllers/dashboard_controller.rb:31:in `block in create_photo'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  ↳ app/controllers/dashboard_controller.rb:31:in `block in create_photo'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/dashboard_controller.rb:31:in `block in create_photo'
+Completed 200 OK in 322ms (Views: 0.3ms | ActiveRecord: 7.6ms | Allocations: 13160)
+
+
+Started GET "/dashboard" for ::1 at 2024-02-11 23:11:26 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 18.1ms | Allocations: 12747)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 9.4ms | Allocations: 5496)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 37.4ms | Allocations: 23217)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 244)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.7ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footer.html.haml (Duration: 10.7ms | Allocations: 11204)
+  Rendered layout layouts/application.html.erb (Duration: 76.9ms | Allocations: 56990)
+Completed 200 OK in 82ms (Views: 76.5ms | ActiveRecord: 1.7ms | Allocations: 58764)
+
+
+Started GET "/dashboard" for ::1 at 2024-02-11 23:11:29 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 14.1ms | Allocations: 12699)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [1 times] (Duration: 8.6ms | Allocations: 5474)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 30.4ms | Allocations: 23135)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 244)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.1ms | Allocations: 2302)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footer.html.haml (Duration: 22.6ms | Allocations: 11206)
+  Rendered layout layouts/application.html.erb (Duration: 83.7ms | Allocations: 56575)
+Completed 200 OK in 89ms (Views: 83.3ms | ActiveRecord: 1.6ms | Allocations: 58363)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-12 12:10:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/tools" for ::1 at 2024-02-12 12:10:29 -0500
+Processing by PagesController#tools as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/tools.html.erb within layouts/realisation
+  Rendered pages/tools.html.erb within layouts/realisation (Duration: 855.7ms | Allocations: 154176)
+  Rendered shared/_topbar.html.erb (Duration: 3.3ms | Allocations: 1948)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 182)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 211)
+  Rendered shared/_business.html.haml (Duration: 5.9ms | Allocations: 4688)
+  Rendered shared/_services.html.erb (Duration: 11.4ms | Allocations: 5912)
+  Rendered shared/_nav.html.haml (Duration: 43.3ms | Allocations: 25043)
+  Rendered shared/_tab.html.erb (Duration: 1.0ms | Allocations: 284)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 277.8ms | Allocations: 89216)
+  Rendered layout layouts/realisation.html.erb (Duration: 1219.9ms | Allocations: 282772)
+Completed 200 OK in 1230ms (Views: 1190.8ms | ActiveRecord: 33.1ms | Allocations: 284551)
+
+
+Started GET "/tools" for ::1 at 2024-02-12 12:12:58 -0500
+Processing by PagesController#tools as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/tools.html.erb within layouts/realisation
+  Rendered pages/tools.html.erb within layouts/realisation (Duration: 70.2ms | Allocations: 20511)
+  Rendered shared/_topbar.html.erb (Duration: 3.2ms | Allocations: 1877)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 181)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 210)
+  Rendered shared/_business.html.haml (Duration: 6.5ms | Allocations: 4679)
+  Rendered shared/_services.html.erb (Duration: 10.2ms | Allocations: 5900)
+  Rendered shared/_nav.html.haml (Duration: 27.0ms | Allocations: 18375)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 283)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 82.9ms | Allocations: 55000)
+  Rendered layout layouts/realisation.html.erb (Duration: 208.0ms | Allocations: 108183)
+Completed 200 OK in 212ms (Views: 206.2ms | ActiveRecord: 4.8ms | Allocations: 109117)
+
+
+Started GET "/tools" for ::1 at 2024-02-12 12:13:39 -0500
+Processing by PagesController#tools as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/tools.html.erb within layouts/realisation
+  Rendered pages/tools.html.erb within layouts/realisation (Duration: 35.7ms | Allocations: 21814)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 1873)
+  Rendered shared/_seo.html.erb (Duration: 0.9ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 9.9ms | Allocations: 4668)
+  Rendered shared/_services.html.erb (Duration: 14.8ms | Allocations: 5856)
+  Rendered shared/_nav.html.haml (Duration: 30.5ms | Allocations: 18316)
+  Rendered shared/_tab.html.erb (Duration: 1.4ms | Allocations: 281)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 145.1ms | Allocations: 54951)
+  Rendered layout layouts/realisation.html.erb (Duration: 246.6ms | Allocations: 109016)
+Completed 200 OK in 250ms (Views: 244.5ms | ActiveRecord: 4.5ms | Allocations: 109940)
+
+
+Started GET "/realisations" for ::1 at 2024-02-12 12:14:09 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 29.2ms | Allocations: 18441)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 254)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.1ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.4ms | Allocations: 2252)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 14.5ms | Allocations: 11750)
+  Rendered layout layouts/realisation.html.erb (Duration: 62.9ms | Allocations: 43410)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.8ms | Allocations: 43695)
+
+
+Started GET "/realisations" for ::1 at 2024-02-12 12:15:57 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/realisations"):
+  
+Started GET "/tools" for ::1 at 2024-02-12 12:16:00 -0500
+Processing by PagesController#tools as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/tools.html.erb within layouts/realisation
+  Rendered pages/tools.html.erb within layouts/realisation (Duration: 54.7ms | Allocations: 21794)
+  Rendered shared/_topbar.html.erb (Duration: 12.0ms | Allocations: 1871)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.5ms | Allocations: 4668)
+  Rendered shared/_services.html.erb (Duration: 11.8ms | Allocations: 5856)
+  Rendered shared/_nav.html.haml (Duration: 37.1ms | Allocations: 18317)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 86.0ms | Allocations: 54957)
+  Rendered layout layouts/realisation.html.erb (Duration: 239.8ms | Allocations: 108996)
+Completed 200 OK in 244ms (Views: 238.4ms | ActiveRecord: 4.4ms | Allocations: 109874)
+
+
+Started GET "/achievements" for ::1 at 2024-02-12 12:16:03 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 31.5ms | Allocations: 18316)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 254)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.0ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.9ms | Allocations: 2241)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 15.2ms | Allocations: 11733)
+  Rendered layout layouts/realisation.html.erb (Duration: 68.0ms | Allocations: 43101)
+Completed 200 OK in 70ms (Views: 68.9ms | ActiveRecord: 0.8ms | Allocations: 43384)
+
+
+Started GET "/posts/all/Visible" for ::1 at 2024-02-12 12:16:08 -0500
+Processing by PostsController#state as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."tag_type" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["tag_type", "Visible"], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:113
+  Rendered collection of posts/_sheet.html.haml [1 times] (Duration: 17.6ms | Allocations: 12644)
+  Rendered posts/index.html.erb within layouts/application (Duration: 122.4ms | Allocations: 37032)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.5ms | Allocations: 2320)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 14.3ms | Allocations: 11701)
+  Rendered layout layouts/application.html.erb (Duration: 180.0ms | Allocations: 72670)
+Completed 200 OK in 227ms (Views: 178.9ms | ActiveRecord: 7.2ms | Allocations: 79057)
+
+
+Started GET "/seo/plan" for ::1 at 2024-02-12 12:16:13 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"seo"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/seo.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 25.7ms | Allocations: 17891)
+  Rendered pages/seo.html.haml within layouts/application (Duration: 119.2ms | Allocations: 99092)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.1ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 16.0ms | Allocations: 11785)
+  Rendered layout layouts/application.html.erb (Duration: 166.1ms | Allocations: 133979)
+Completed 200 OK in 169ms (Views: 167.5ms | ActiveRecord: 0.9ms | Allocations: 134373)
+
+
+Started GET "/aboutus" for ::1 at 2024-02-12 12:16:15 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 20.8ms | Allocations: 15089)
+  Rendered users/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 16272)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.1ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.9ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 14.3ms | Allocations: 11775)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 51146)
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 1.2ms | Allocations: 51806)
+
+
+Started GET "/contactus" for ::1 at 2024-02-12 12:16:17 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 7.0ms | Allocations: 2866)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 103)
+  Rendered supports/show.html.haml within layouts/application (Duration: 31.0ms | Allocations: 22889)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 273)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.3ms | Allocations: 2309)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 21.0ms | Allocations: 11731)
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 57609)
+Completed 200 OK in 140ms (Views: 82.4ms | ActiveRecord: 6.1ms | Allocations: 75821)
+
+
+Started GET "/achievements" for ::1 at 2024-02-12 12:16:19 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 30.2ms | Allocations: 17569)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 254)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.2ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.7ms | Allocations: 2246)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 15.1ms | Allocations: 11752)
+  Rendered layout layouts/realisation.html.erb (Duration: 64.6ms | Allocations: 42503)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.8ms | Allocations: 42719)
+
+
+Started GET "/achievements" for ::1 at 2024-02-12 12:19:33 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 26.6ms | Allocations: 18467)
+  Rendered shared/_topbar.html.erb (Duration: 3.3ms | Allocations: 2086)
+  Rendered shared/_seo.html.erb (Duration: 1.2ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 1.1ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 18.6ms | Allocations: 4668)
+  Rendered shared/_services.html.erb (Duration: 25.6ms | Allocations: 5856)
+  Rendered shared/_nav.html.haml (Duration: 60.4ms | Allocations: 18317)
+  Rendered shared/_tab.html.erb (Duration: 2.6ms | Allocations: 281)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 112.0ms | Allocations: 54985)
+  Rendered layout layouts/realisation.html.erb (Duration: 233.7ms | Allocations: 105935)
+Completed 200 OK in 238ms (Views: 232.6ms | ActiveRecord: 4.4ms | Allocations: 106856)
+
+
+Started GET "/realisations" for ::1 at 2024-02-12 12:19:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/realisations"):
+  
+Started GET "/realisations" for ::1 at 2024-02-12 12:20:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/realisations"):
+  
+Started GET "/fr/realisations" for ::1 at 2024-02-12 12:20:38 -0500
+Processing by FrenchController#realisation as HTML
+  Parameters: {"page"=>"realisation"}
+  Rendering layout layouts/realisationfr.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisationfr
+  Rendered pages/realisation.html.erb within layouts/realisationfr (Duration: 73.3ms | Allocations: 18463)
+  Rendered shared/_topbar.html.erb (Duration: 3.4ms | Allocations: 2076)
+  Rendered shared/_seofr.html.haml (Duration: 5.2ms | Allocations: 3760)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.6ms | Allocations: 212)
+  Rendered shared/_businessfr.html.haml (Duration: 5.7ms | Allocations: 4657)
+  Rendered shared/_servicesfr.html.erb (Duration: 15.9ms | Allocations: 9388)
+  Rendered shared/_navfr.html.haml (Duration: 36.9ms | Allocations: 21810)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 283)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 76.6ms | Allocations: 54982)
+  Rendered layout layouts/realisationfr.html.erb (Duration: 244.2ms | Allocations: 109339)
+Completed 200 OK in 251ms (Views: 245.0ms | ActiveRecord: 5.0ms | Allocations: 110195)
+
+
+Started GET "/fr/realisations" for ::1 at 2024-02-12 12:20:56 -0500
+Processing by FrenchController#realisation as HTML
+  Parameters: {"page"=>"realisation"}
+  Rendering layout layouts/realisationfr.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisationfr
+  Rendered pages/realisation.html.erb within layouts/realisationfr (Duration: 25.5ms | Allocations: 18467)
+  Rendered shared/_topbar.html.erb (Duration: 3.5ms | Allocations: 2090)
+  Rendered shared/_seofr.html.haml (Duration: 4.6ms | Allocations: 3754)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.6ms | Allocations: 205)
+  Rendered shared/_businessfr.html.haml (Duration: 6.0ms | Allocations: 4644)
+  Rendered shared/_servicesfr.html.erb (Duration: 14.1ms | Allocations: 9342)
+  Rendered shared/_navfr.html.haml (Duration: 28.2ms | Allocations: 21747)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 77.6ms | Allocations: 54945)
+  Rendered layout layouts/realisationfr.html.erb (Duration: 156.6ms | Allocations: 109246)
+Completed 200 OK in 160ms (Views: 154.8ms | ActiveRecord: 4.4ms | Allocations: 110146)
+
+
+Started GET "/achievements" for ::1 at 2024-02-12 12:20:58 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 24.1ms | Allocations: 17412)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 312)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 178)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 207)
+  Rendered shared/_business.html.haml (Duration: 8.2ms | Allocations: 4682)
+  Rendered shared/_services.html.erb (Duration: 12.8ms | Allocations: 5889)
+  Rendered shared/_nav.html.haml (Duration: 30.3ms | Allocations: 18408)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 44.2ms | Allocations: 35821)
+  Rendered layout layouts/realisation.html.erb (Duration: 127.4ms | Allocations: 83392)
+Completed 200 OK in 130ms (Views: 128.0ms | ActiveRecord: 0.8ms | Allocations: 83771)
+
+
+Started GET "/fr%C3%A9realisations" for ::1 at 2024-02-12 12:21:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fr%C3%A9realisations"):
+  
+Started GET "/fr%C3%A9realisations" for ::1 at 2024-02-12 12:21:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fr%C3%A9realisations"):
+  
+Started GET "/achievements" for ::1 at 2024-02-12 12:21:24 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 26.3ms | Allocations: 18463)
+  Rendered shared/_topbar.html.erb (Duration: 3.1ms | Allocations: 2084)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.7ms | Allocations: 4668)
+  Rendered shared/_services.html.erb (Duration: 11.0ms | Allocations: 5856)
+  Rendered shared/_nav.html.haml (Duration: 26.9ms | Allocations: 18316)
+  Rendered shared/_tab.html.erb (Duration: 0.9ms | Allocations: 281)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 79.8ms | Allocations: 54946)
+  Rendered layout layouts/realisation.html.erb (Duration: 158.8ms | Allocations: 105864)
+Completed 200 OK in 162ms (Views: 157.0ms | ActiveRecord: 4.4ms | Allocations: 106741)
+
+
+Started GET "/fr/realisations" for ::1 at 2024-02-12 12:21:26 -0500
+Processing by FrenchController#realisation as HTML
+  Parameters: {"page"=>"realisation"}
+  Rendering layout layouts/realisationfr.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisationfr
+  Rendered pages/realisation.html.erb within layouts/realisationfr (Duration: 34.6ms | Allocations: 17454)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 311)
+  Rendered shared/_seofr.html.haml (Duration: 6.0ms | Allocations: 3752)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.8ms | Allocations: 203)
+  Rendered shared/_businessfr.html.haml (Duration: 6.9ms | Allocations: 4644)
+  Rendered shared/_servicesfr.html.erb (Duration: 17.5ms | Allocations: 9336)
+  Rendered shared/_navfr.html.haml (Duration: 33.7ms | Allocations: 21726)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 38.6ms | Allocations: 35825)
+  Rendered layout layouts/realisationfr.html.erb (Duration: 132.7ms | Allocations: 86966)
+Completed 200 OK in 134ms (Views: 132.9ms | ActiveRecord: 0.7ms | Allocations: 87323)
+
+
+Started GET "/fr/realisations" for ::1 at 2024-02-12 12:21:28 -0500
+Processing by FrenchController#realisation as HTML
+  Parameters: {"page"=>"realisation"}
+  Rendering layout layouts/realisationfr.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisationfr
+  Rendered pages/realisation.html.erb within layouts/realisationfr (Duration: 25.2ms | Allocations: 17481)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 303)
+  Rendered shared/_seofr.html.haml (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_businessfr.html.haml (Duration: 0.1ms | Allocations: 54)
+  Rendered shared/_servicesfr.html.erb (Duration: 1.3ms | Allocations: 381)
+  Rendered shared/_navfr.html.haml (Duration: 4.8ms | Allocations: 2245)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 15.3ms | Allocations: 11715)
+  Rendered layout layouts/realisationfr.html.erb (Duration: 61.7ms | Allocations: 42347)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.8ms | Allocations: 42566)
+
+
+Started GET "/fr/apropos" for ::1 at 2024-02-12 12:21:34 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 16.4ms | Allocations: 13992)
+  Rendered users/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 15140)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 296)
+  Rendered shared/_seofr.html.haml (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_businessfr.html.haml (Duration: 0.1ms | Allocations: 54)
+  Rendered shared/_servicesfr.html.erb (Duration: 0.9ms | Allocations: 381)
+  Rendered shared/_navfr.html.haml (Duration: 4.0ms | Allocations: 2328)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 15.5ms | Allocations: 11795)
+  Rendered layout layouts/application.html.erb (Duration: 79.7ms | Allocations: 50871)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 1.4ms | Allocations: 51591)
+
+
+Started GET "/aboutus" for ::1 at 2024-02-12 12:21:50 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 7.0ms | Allocations: 4743)
+  Rendered users/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5463)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 296)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.1ms | Allocations: 2313)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 17.1ms | Allocations: 11702)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 40071)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 1.2ms | Allocations: 40400)
+
+
+Started GET "/aboutus" for ::1 at 2024-02-12 12:21:53 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 5.3ms | Allocations: 4716)
+  Rendered users/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 5436)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 294)
+  Rendered shared/_seo.html.erb (Duration: 0.2ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.2ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.4ms | Allocations: 2302)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 13.4ms | Allocations: 11702)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 39809)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 1.2ms | Allocations: 40138)
+
+
+Started GET "/aboutus" for ::1 at 2024-02-12 12:24:35 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 17.6ms | Allocations: 8489)
+  Rendered users/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 19616)
+  Rendered shared/_topbar.html.erb (Duration: 3.4ms | Allocations: 2054)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 1.0ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.1ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 11.9ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 27.2ms | Allocations: 18298)
+  Rendered shared/_tab.html.erb (Duration: 0.9ms | Allocations: 281)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 40.4ms | Allocations: 35894)
+  Rendered layout layouts/application.html.erb (Duration: 147.8ms | Allocations: 97855)
+Completed 200 OK in 171ms (Views: 145.8ms | ActiveRecord: 5.1ms | Allocations: 108057)
+
+
+Started GET "/fr/apropos" for ::1 at 2024-02-12 12:24:39 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 9.0ms | Allocations: 2673)
+  Rendered users/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3393)
+  Rendered shared/_topbar.html.erb (Duration: 1.1ms | Allocations: 296)
+  Rendered shared/_seofr.html.haml (Duration: 8.4ms | Allocations: 3759)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered shared/_businessfr.html.haml (Duration: 9.7ms | Allocations: 4658)
+  Rendered shared/_servicesfr.html.erb (Duration: 22.7ms | Allocations: 9367)
+  Rendered shared/_navfr.html.haml (Duration: 61.2ms | Allocations: 21850)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 21.7ms | Allocations: 11791)
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 57572)
+Completed 200 OK in 160ms (Views: 157.5ms | ActiveRecord: 1.4ms | Allocations: 57901)
+
+
+Started GET "/fr/apropos" for ::1 at 2024-02-12 12:25:08 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 4.2ms | Allocations: 2676)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3396)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 294)
+  Rendered shared/_seofr.html.haml (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_businessfr.html.haml (Duration: 0.1ms | Allocations: 54)
+  Rendered shared/_servicesfr.html.erb (Duration: 0.9ms | Allocations: 381)
+  Rendered shared/_navfr.html.haml (Duration: 3.4ms | Allocations: 2314)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 14.6ms | Allocations: 11726)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 37849)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 1.3ms | Allocations: 38178)
+
+
+Started GET "/seo/plan" for ::1 at 2024-02-12 12:25:10 -0500
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"seo"}
+  Rendering layout layouts/application.html.erb
+  Rendering pages/seo.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 28.9ms | Allocations: 17841)
+  Rendered pages/seo.html.haml within layouts/application (Duration: 103.5ms | Allocations: 98916)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 295)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.3ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 19.7ms | Allocations: 11787)
+  Rendered layout layouts/application.html.erb (Duration: 158.2ms | Allocations: 133839)
+Completed 200 OK in 161ms (Views: 159.1ms | ActiveRecord: 0.8ms | Allocations: 134362)
+
+
+Started GET "/achievements" for ::1 at 2024-02-12 12:25:19 -0500
+Processing by PagesController#realisation as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisation
+  Rendered pages/realisation.html.erb within layouts/realisation (Duration: 37.8ms | Allocations: 18465)
+  Rendered shared/_topbar.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 6.7ms | Allocations: 2244)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 26.0ms | Allocations: 11715)
+  Rendered layout layouts/realisation.html.erb (Duration: 97.6ms | Allocations: 43982)
+Completed 200 OK in 100ms (Views: 98.0ms | ActiveRecord: 1.0ms | Allocations: 44360)
+
+
+Started GET "/posts/all/Visible" for ::1 at 2024-02-12 12:25:23 -0500
+Processing by PostsController#state as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."tag_type" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["tag_type", "Visible"], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:113
+  Rendered collection of posts/_sheet.html.haml [1 times] (Duration: 13.8ms | Allocations: 12410)
+  Rendered posts/index.html.erb within layouts/application (Duration: 41.3ms | Allocations: 30803)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 296)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.1ms | Allocations: 2302)
+  Rendered shared/_tab.html.erb (Duration: 0.0ms | Allocations: 30)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 16.0ms | Allocations: 11628)
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 64911)
+Completed 200 OK in 106ms (Views: 84.9ms | ActiveRecord: 4.7ms | Allocations: 70872)
+
+
+Started GET "/tools" for ::1 at 2024-02-12 12:30:43 -0500
+Processing by PagesController#tools as HTML
+  Rendering layout layouts/realisation.html.erb
+  Rendering pages/tools.html.erb within layouts/realisation
+  Rendered pages/tools.html.erb within layouts/realisation (Duration: 55.8ms | Allocations: 21760)
+  Rendered shared/_topbar.html.erb (Duration: 0.5ms | Allocations: 276)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.5ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 7.2ms | Allocations: 2254)
+  Rendered shared/_tab.html.erb (Duration: 0.2ms | Allocations: 84)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 26.9ms | Allocations: 11786)
+  Rendered layout layouts/realisation.html.erb (Duration: 118.7ms | Allocations: 46810)
+Completed 200 OK in 120ms (Views: 118.9ms | ActiveRecord: 0.8ms | Allocations: 47094)
+
+

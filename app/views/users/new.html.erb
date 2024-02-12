@@ -19,9 +19,26 @@ form {padding:20px;background:#EEE;width:300px;box-shadow:-3px 8px 10px 2px #999
 </style>
 <div class="clear">&nbsp;</div>
 <% #if current_user.nil? %>
-<h2>You wan't to join our team?</h3>
-<div class="clear">&nbsp;</div>
+	<h2>You wan't to join our team?</h3>
+	<div class="clear">&nbsp;</div>
+	<div class="celebrity_search" style="margin: 0 auto;">
+		<div class="loginform">
+			<fieldset>
+			<%= form_with model: @user do |f| %>
+			<div class="clear">&nbsp;</div>
+			<h3>Sorry but we're not hiring right now</h3>
+			<div class="clear">&nbsp;</div>
+			<div class="clear">&nbsp;</div>
+			<div class="clear">&nbsp;</div>
+			<div class="clear">&nbsp;</div>
+			<span>E-mail us at :   <%= mail_to 'admin@4nkh.ca', '4nkh developement', :style => "color:#39c;font-size:14px;" %></span>
+			<div class="clear">&nbsp;</div>
+			<% end %>
+		</fieldset>
+		</div>
+	</div>
 <% #else %>
+<% if !current_user.nil? %>
 <div class="celebrity_search" style="margin: 0 auto;">
 <div class="loginform">
   <h3>Create an account</h3>
@@ -56,4 +73,4 @@ form {padding:20px;background:#EEE;width:300px;box-shadow:-3px 8px 10px 2px #999
 </div>
 <span>E-mail us at :   <%= mail_to 'admin@4nkh.ca', '4nkh developement', :style => "color:#39c;font-size:14px;" %></span>
 </div>
-<% #end %>
+<% end %>

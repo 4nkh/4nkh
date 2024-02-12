@@ -324,3 +324,1437 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.7ms | Allocations: 43643)
 
 
+Started GET "/" for ::1 at 2024-02-11 20:56:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 713.1ms | Allocations: 163319)
+  Rendered pages/index.html.erb within layouts/application (Duration: 715.4ms | Allocations: 164070)
+  Rendered shared/_topbar.html.erb (Duration: 5.0ms | Allocations: 1893)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 182)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 211)
+  Rendered shared/_business.html.haml (Duration: 8.2ms | Allocations: 4678)
+  Rendered shared/_services.html.erb (Duration: 12.9ms | Allocations: 5899)
+  Rendered shared/_nav.html.haml (Duration: 32.7ms | Allocations: 18541)
+  Rendered shared/_tab.html.erb (Duration: 0.8ms | Allocations: 284)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 228.5ms | Allocations: 89169)
+  Rendered layout layouts/application.html.erb (Duration: 1051.2ms | Allocations: 296979)
+Completed 200 OK in 1071ms (Views: 1041.1ms | ActiveRecord: 16.1ms | Allocations: 301653)
+
+
+Started GET "/posts/all/Visible" for ::1 at 2024-02-11 20:56:42 -0500
+Processing by PostsController#state as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."tag_type" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["tag_type", "Visible"], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:113
+  Rendered collection of posts/_sheet.html.haml [1 times] (Duration: 15.7ms | Allocations: 12788)
+  Rendered posts/index.html.erb within layouts/application (Duration: 69.1ms | Allocations: 37193)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.6ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.3ms | Allocations: 2306)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 16.0ms | Allocations: 11661)
+  Rendered layout layouts/application.html.erb (Duration: 124.6ms | Allocations: 71484)
+Completed 200 OK in 163ms (Views: 122.0ms | ActiveRecord: 7.0ms | Allocations: 77786)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 20:56:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/" for ::1 at 2024-02-11 20:56:53 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 9.5ms | Allocations: 8821)
+  Rendered pages/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 8972)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 271)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.3ms | Allocations: 2306)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 15.3ms | Allocations: 11746)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 43525)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.6ms | Allocations: 43777)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 20:56:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/notifier/mailform" for ::1 at 2024-02-11 20:56:57 -0500
+Processing by SupportsController#mailform as HTML
+  Rendering supports/mailform.html.erb
+  Rendered supports/_enform.html.haml (Duration: 71.4ms | Allocations: 46890)
+  Rendered supports/mailform.html.erb (Duration: 73.0ms | Allocations: 47124)
+Completed 200 OK in 120ms (Views: 74.4ms | ActiveRecord: 4.2ms | Allocations: 65209)
+
+
+Started GET "/contactus" for ::1 at 2024-02-11 20:57:06 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 3.9ms | Allocations: 2817)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered supports/show.html.haml within layouts/application (Duration: 27.2ms | Allocations: 22943)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.1ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 16.1ms | Allocations: 11794)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 57500)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.7ms | Allocations: 57941)
+
+
+Started GET "/contactus" for ::1 at 2024-02-11 21:02:21 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 24.9ms | Allocations: 17905)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 102)
+  Rendered supports/show.html.haml within layouts/application (Duration: 43.5ms | Allocations: 36933)
+  Rendered shared/_topbar.html.erb (Duration: 3.1ms | Allocations: 1877)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.6ms | Allocations: 4660)
+  Rendered shared/_services.html.erb (Duration: 9.1ms | Allocations: 5848)
+  Rendered shared/_nav.html.haml (Duration: 23.9ms | Allocations: 18294)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 84.6ms | Allocations: 54894)
+  Rendered layout layouts/application.html.erb (Duration: 184.8ms | Allocations: 134018)
+Completed 200 OK in 203ms (Views: 183.8ms | ActiveRecord: 7.5ms | Allocations: 142098)
+
+
+Started GET "/contactus" for ::1 at 2024-02-11 21:04:01 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered supports/show.html.haml within layouts/application (Duration: 25.7ms | Allocations: 21316)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 21424)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 4.1ms | Allocations: 29555)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check - content_for :head do
+  :css
+    p {font-size:16px;}
+
+- content_for :hd_inner do
+  = render :partial => 'shared/banner'
+  
+.clear &nbsp;
+.map
+  = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+  //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+  %br
+  %small
+    %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+
+- if  current_page?("/contactus") 
+
+  - content_for :flash do 
+    = render :partial => 'shared/header' 
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %h3 By phone
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %p (438) 393-3933
+    .clear &nbsp;
+    %p (450) 491-3909
+    .clear &nbsp;
+    %p 412 8e avenue
+    .clear &nbsp;
+    %p Deux-montagnes Qc.
+    .clear &nbsp;
+    %p J7R 3K8
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp; 
+ 
+    %h3 By e-mail
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = mail_to('admin@4nkh.ca', , raw(image_tag("mail.png"))
+    =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+
+- else
+
+  - content_for :flash do
+    = render :partial => 'shared/fr'
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+
+   
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %h3 Par téléphone
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %p (514) 984-0004
+  .clear &nbsp;
+  %p (450) 491-3909
+  .clear &nbsp;
+  %p 412 8e avenue
+  .clear &nbsp;
+  %p Deux-montagnes Qc.
+  .clear &nbsp;
+  %p J7R 3K8
+
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp; 
+
+  %h3 Par courriel
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+  = mail_to('admin@4nkh.ca', , raw(image_tag("mail.png"))
+  =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+  
+.clear &nbsp;
+.clear &nbsp;
+
+
+  
+
+):
+1:    - content_for :head do
+2:      :css
+3:        p {font-size:16px;}
+4:    
+5:    - content_for :hd_inner do
+6:      = render :partial => 'shared/banner'
+7:      
+8:    .clear &nbsp;
+9:    .map
+10:      = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+11:      //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+12:      %br
+13:      %small
+14:        %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+15:    
+16:    - if  current_page?("/contactus") 
+17:    
+18:      - content_for :flash do 
+19:        = render :partial => 'shared/header' 
+20:    
+21:      .contact_tip
+22:        %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+23:        .clear &nbsp;
+24:        .clear &nbsp;
+25:    
+26:        %h3 By phone
+27:        .clear &nbsp;
+28:        .clear &nbsp;
+29:        .clear &nbsp;
+30:    
+31:        %p (438) 393-3933
+32:        .clear &nbsp;
+33:        %p (450) 491-3909
+34:        .clear &nbsp;
+35:        %p 412 8e avenue
+36:        .clear &nbsp;
+37:        %p Deux-montagnes Qc.
+38:        .clear &nbsp;
+39:        %p J7R 3K8
+40:        .clear &nbsp;
+41:        .clear &nbsp;
+42:        .clear &nbsp; 
+43:     
+44:        %h3 By e-mail
+45:        .clear &nbsp;
+46:        .clear &nbsp;
+47:        .clear &nbsp;
+48:        = mail_to('admin@4nkh.ca', , raw(image_tag("mail.png"))
+49:        =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+50:    
+51:    - else
+52:    
+53:      - content_for :flash do
+54:        = render :partial => 'shared/fr'
+55:    
+56:      .contact_tip
+57:        %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+58:    
+59:       
+60:      .clear &nbsp;
+61:      .clear &nbsp;
+62:    
+63:      %h3 Par téléphone
+64:      .clear &nbsp;
+65:      .clear &nbsp;
+66:      .clear &nbsp;
+67:    
+68:      %p (514) 984-0004
+69:      .clear &nbsp;
+70:      %p (450) 491-3909
+71:      .clear &nbsp;
+72:      %p 412 8e avenue
+73:      .clear &nbsp;
+74:      %p Deux-montagnes Qc.
+75:      .clear &nbsp;
+76:      %p J7R 3K8
+77:    
+78:      .clear &nbsp;
+79:      .clear &nbsp;
+80:      .clear &nbsp; 
+81:    
+82:      %h3 Par courriel
+83:      .clear &nbsp;
+84:      .clear &nbsp;
+85:      .clear &nbsp;
+86:      = mail_to('admin@4nkh.ca', , raw(image_tag("mail.png"))
+87:      =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+88:      
+89:    .clear &nbsp;
+90:    .clear &nbsp;
+91:    
+92:    
+93:      
+  
+app/views/supports/show.html.haml:48: syntax error, unexpected ',', expecting ')'
+app/views/supports/show.html.haml:49: syntax error, unexpected ')', expecting `end' or dummy end
+app/views/supports/show.html.haml:86: syntax error, unexpected ',', expecting ')'
+app/views/supports/show.html.haml:87: syntax error, unexpected ')', expecting `end' or dummy end
+Started GET "/contactus" for ::1 at 2024-02-11 21:04:17 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered supports/show.html.haml within layouts/application (Duration: 16.7ms | Allocations: 21291)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 21393)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 3.7ms | Allocations: 29486)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check - content_for :head do
+  :css
+    p {font-size:16px;}
+
+- content_for :hd_inner do
+  = render :partial => 'shared/banner'
+  
+.clear &nbsp;
+.map
+  = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+  //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+  %br
+  %small
+    %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+
+- if  current_page?("/contactus") 
+
+  - content_for :flash do 
+    = render :partial => 'shared/header' 
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %h3 By phone
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %p (438) 393-3933
+    .clear &nbsp;
+    %p (450) 491-3909
+    .clear &nbsp;
+    %p 412 8e avenue
+    .clear &nbsp;
+    %p Deux-montagnes Qc.
+    .clear &nbsp;
+    %p J7R 3K8
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp; 
+ 
+    %h3 By e-mail
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = mail_to('admin@4nkh.ca', raw(image_tag("mail.png"))
+    =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+
+- else
+
+  - content_for :flash do
+    = render :partial => 'shared/fr'
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+
+   
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %h3 Par téléphone
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %p (514) 984-0004
+  .clear &nbsp;
+  %p (450) 491-3909
+  .clear &nbsp;
+  %p 412 8e avenue
+  .clear &nbsp;
+  %p Deux-montagnes Qc.
+  .clear &nbsp;
+  %p J7R 3K8
+
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp; 
+
+  %h3 Par courriel
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+  = mail_to('admin@4nkh.ca', raw(image_tag("mail.png"))
+  =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+  
+.clear &nbsp;
+.clear &nbsp;
+
+
+  
+
+):
+1:    - content_for :head do
+2:      :css
+3:        p {font-size:16px;}
+4:    
+5:    - content_for :hd_inner do
+6:      = render :partial => 'shared/banner'
+7:      
+8:    .clear &nbsp;
+9:    .map
+10:      = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+11:      //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+12:      %br
+13:      %small
+14:        %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+15:    
+16:    - if  current_page?("/contactus") 
+17:    
+18:      - content_for :flash do 
+19:        = render :partial => 'shared/header' 
+20:    
+21:      .contact_tip
+22:        %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+23:        .clear &nbsp;
+24:        .clear &nbsp;
+25:    
+26:        %h3 By phone
+27:        .clear &nbsp;
+28:        .clear &nbsp;
+29:        .clear &nbsp;
+30:    
+31:        %p (438) 393-3933
+32:        .clear &nbsp;
+33:        %p (450) 491-3909
+34:        .clear &nbsp;
+35:        %p 412 8e avenue
+36:        .clear &nbsp;
+37:        %p Deux-montagnes Qc.
+38:        .clear &nbsp;
+39:        %p J7R 3K8
+40:        .clear &nbsp;
+41:        .clear &nbsp;
+42:        .clear &nbsp; 
+43:     
+44:        %h3 By e-mail
+45:        .clear &nbsp;
+46:        .clear &nbsp;
+47:        .clear &nbsp;
+48:        = mail_to('admin@4nkh.ca', raw(image_tag("mail.png"))
+49:        =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+50:    
+51:    - else
+52:    
+53:      - content_for :flash do
+54:        = render :partial => 'shared/fr'
+55:    
+56:      .contact_tip
+57:        %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+58:    
+59:       
+60:      .clear &nbsp;
+61:      .clear &nbsp;
+62:    
+63:      %h3 Par téléphone
+64:      .clear &nbsp;
+65:      .clear &nbsp;
+66:      .clear &nbsp;
+67:    
+68:      %p (514) 984-0004
+69:      .clear &nbsp;
+70:      %p (450) 491-3909
+71:      .clear &nbsp;
+72:      %p 412 8e avenue
+73:      .clear &nbsp;
+74:      %p Deux-montagnes Qc.
+75:      .clear &nbsp;
+76:      %p J7R 3K8
+77:    
+78:      .clear &nbsp;
+79:      .clear &nbsp;
+80:      .clear &nbsp; 
+81:    
+82:      %h3 Par courriel
+83:      .clear &nbsp;
+84:      .clear &nbsp;
+85:      .clear &nbsp;
+86:      = mail_to('admin@4nkh.ca', raw(image_tag("mail.png"))
+87:      =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+88:      
+89:    .clear &nbsp;
+90:    .clear &nbsp;
+91:    
+92:    
+93:      
+  
+app/views/supports/show.html.haml:48: syntax error, unexpected ';', expecting ')'
+app/views/supports/show.html.haml:86: syntax error, unexpected ';', expecting ')'
+Started GET "/contactus" for ::1 at 2024-02-11 22:25:43 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered supports/show.html.haml within layouts/application (Duration: 25.5ms | Allocations: 21291)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 21393)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 29.7ms | Allocations: 31756)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check - content_for :head do
+  :css
+    p {font-size:16px;}
+
+- content_for :hd_inner do
+  = render :partial => 'shared/banner'
+  
+.clear &nbsp;
+.map
+  = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+  //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+  %br
+  %small
+    %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+
+- if  current_page?("/contactus") 
+
+  - content_for :flash do 
+    = render :partial => 'shared/header' 
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %h3 By phone
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+
+    %p (438) 393-3933
+    .clear &nbsp;
+    %p (450) 491-3909
+    .clear &nbsp;
+    %p 412 8e avenue
+    .clear &nbsp;
+    %p Deux-montagnes Qc.
+    .clear &nbsp;
+    %p J7R 3K8
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp; 
+ 
+    %h3 By e-mail
+    .clear &nbsp;
+    .clear &nbsp;
+    .clear &nbsp;
+    = mail_to('admin@4nkh.ca', raw(image_tag('mail.png'))
+    =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+
+- else
+
+  - content_for :flash do
+    = render :partial => 'shared/fr'
+
+  .contact_tip
+    %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+
+   
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %h3 Par téléphone
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+
+  %p (514) 984-0004
+  .clear &nbsp;
+  %p (450) 491-3909
+  .clear &nbsp;
+  %p 412 8e avenue
+  .clear &nbsp;
+  %p Deux-montagnes Qc.
+  .clear &nbsp;
+  %p J7R 3K8
+
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp; 
+
+  %h3 Par courriel
+  .clear &nbsp;
+  .clear &nbsp;
+  .clear &nbsp;
+  = mail_to('admin@4nkh.ca', raw(image_tag("mail.png"))
+  =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+  
+.clear &nbsp;
+.clear &nbsp;
+
+
+  
+
+):
+1:    - content_for :head do
+2:      :css
+3:        p {font-size:16px;}
+4:    
+5:    - content_for :hd_inner do
+6:      = render :partial => 'shared/banner'
+7:      
+8:    .clear &nbsp;
+9:    .map
+10:      = raw('<iframe width="500" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"></iframe>')
+11:      //%iframe{'width' => "500", 'height' => "500", 'frameborder' => "0", 'scrolling' => "no", 'marginheight' => "0", 'marginwidth' => "0", 'src' => "http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14&amp;output=embed"}
+12:      %br
+13:      %small
+14:        %a{:href => "http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=412+8e+Av,+Deux-Montagnes,+QC&amp;aq=0&amp;oq=412+8e+avenue+deux-montagnes&amp;sll=49.891235,-97.15369&amp;sspn=55.060066,114.433594&amp;ie=UTF8&amp;hq=&amp;hnear=412+8e+Av,+Deux-Montagnes,+Qu%C3%A9bec+J7R+3L1&amp;t=h&amp;ll=45.553307,-73.898849&amp;spn=0.021036,0.036478&amp;z=14", :style => "color:#0000FF;text-align:left"} View Larger Map
+15:    
+16:    - if  current_page?("/contactus") 
+17:    
+18:      - content_for :flash do 
+19:        = render :partial => 'shared/header' 
+20:    
+21:      .contact_tip
+22:        %h2{:style => "border-bottom:1px solid #444;"} Contact us  
+23:        .clear &nbsp;
+24:        .clear &nbsp;
+25:    
+26:        %h3 By phone
+27:        .clear &nbsp;
+28:        .clear &nbsp;
+29:        .clear &nbsp;
+30:    
+31:        %p (438) 393-3933
+32:        .clear &nbsp;
+33:        %p (450) 491-3909
+34:        .clear &nbsp;
+35:        %p 412 8e avenue
+36:        .clear &nbsp;
+37:        %p Deux-montagnes Qc.
+38:        .clear &nbsp;
+39:        %p J7R 3K8
+40:        .clear &nbsp;
+41:        .clear &nbsp;
+42:        .clear &nbsp; 
+43:     
+44:        %h3 By e-mail
+45:        .clear &nbsp;
+46:        .clear &nbsp;
+47:        .clear &nbsp;
+48:        = mail_to('admin@4nkh.ca', raw(image_tag('mail.png'))
+49:        =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+50:    
+51:    - else
+52:    
+53:      - content_for :flash do
+54:        = render :partial => 'shared/fr'
+55:    
+56:      .contact_tip
+57:        %h2{:style => "border-bottom:1px solid #444;"} Nous joindre
+58:    
+59:       
+60:      .clear &nbsp;
+61:      .clear &nbsp;
+62:    
+63:      %h3 Par téléphone
+64:      .clear &nbsp;
+65:      .clear &nbsp;
+66:      .clear &nbsp;
+67:    
+68:      %p (514) 984-0004
+69:      .clear &nbsp;
+70:      %p (450) 491-3909
+71:      .clear &nbsp;
+72:      %p 412 8e avenue
+73:      .clear &nbsp;
+74:      %p Deux-montagnes Qc.
+75:      .clear &nbsp;
+76:      %p J7R 3K8
+77:    
+78:      .clear &nbsp;
+79:      .clear &nbsp;
+80:      .clear &nbsp; 
+81:    
+82:      %h3 Par courriel
+83:      .clear &nbsp;
+84:      .clear &nbsp;
+85:      .clear &nbsp;
+86:      = mail_to('admin@4nkh.ca', raw(image_tag("mail.png"))
+87:      =# link_to image_tag('mail.png', :mouseover => 'mail1.png'), '/notifier/mailform', :rel => "shadowbox;width=500;height=600;" 
+88:      
+89:    .clear &nbsp;
+90:    .clear &nbsp;
+91:    
+92:    
+93:      
+  
+app/views/supports/show.html.haml:48: syntax error, unexpected ';', expecting ')'
+app/views/supports/show.html.haml:86: syntax error, unexpected ';', expecting ')'
+Started GET "/contactus" for ::1 at 2024-02-11 22:30:20 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 34.3ms | Allocations: 17905)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered supports/show.html.haml within layouts/application (Duration: 56.5ms | Allocations: 36941)
+  Rendered shared/_topbar.html.erb (Duration: 2.9ms | Allocations: 1877)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.8ms | Allocations: 4673)
+  Rendered shared/_services.html.erb (Duration: 13.4ms | Allocations: 5863)
+  Rendered shared/_nav.html.haml (Duration: 35.6ms | Allocations: 18297)
+  Rendered shared/_tab.html.erb (Duration: 1.6ms | Allocations: 281)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 84.0ms | Allocations: 55001)
+  Rendered layout layouts/application.html.erb (Duration: 232.6ms | Allocations: 134134)
+Completed 200 OK in 288ms (Views: 230.2ms | ActiveRecord: 45.5ms | Allocations: 142234)
+
+
+Started GET "/contactus" for ::1 at 2024-02-11 22:32:13 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 20.5ms | Allocations: 17905)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered supports/show.html.haml within layouts/application (Duration: 44.9ms | Allocations: 37876)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 1877)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.0ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 10.9ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 25.3ms | Allocations: 18280)
+  Rendered shared/_tab.html.erb (Duration: 0.8ms | Allocations: 281)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 84.2ms | Allocations: 54869)
+  Rendered layout layouts/application.html.erb (Duration: 189.7ms | Allocations: 134904)
+Completed 200 OK in 209ms (Views: 188.5ms | ActiveRecord: 7.9ms | Allocations: 142966)
+
+
+Started GET "/contactus" for ::1 at 2024-02-11 22:32:32 -0500
+Processing by SupportsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering supports/show.html.haml within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 24.2ms | Allocations: 17905)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 102)
+  Rendered supports/show.html.haml within layouts/application (Duration: 42.8ms | Allocations: 37965)
+  Rendered shared/_topbar.html.erb (Duration: 3.0ms | Allocations: 1877)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.6ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 9.0ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 23.8ms | Allocations: 18292)
+  Rendered shared/_tab.html.erb (Duration: 0.8ms | Allocations: 281)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 74.5ms | Allocations: 54887)
+  Rendered layout layouts/application.html.erb (Duration: 177.3ms | Allocations: 135016)
+Completed 200 OK in 195ms (Views: 175.5ms | ActiveRecord: 8.2ms | Allocations: 143055)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:32:37 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 11.1ms | Allocations: 8855)
+  Rendered pages/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 9330)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.0ms | Allocations: 2302)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 13.9ms | Allocations: 11715)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 43731)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.7ms | Allocations: 44202)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:32:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/notifier/mailform" for ::1 at 2024-02-11 22:32:41 -0500
+Processing by SupportsController#mailform as HTML
+  Rendering supports/mailform.html.erb
+  Rendered supports/_enform.html.haml (Duration: 68.6ms | Allocations: 45645)
+  Rendered supports/mailform.html.erb (Duration: 70.0ms | Allocations: 45876)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.0ms | Allocations: 46171)
+
+
+Started GET "/games" for ::1 at 2024-02-11 22:36:41 -0500
+Processing by FoliosController#index as HTML
+  [1m[36mFolio Load (1.1ms)[0m  [1m[34mSELECT "folios".* FROM "folios" WHERE "folios"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folios_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering folios/index.html.haml within layouts/application
+  [1m[36mFolio Load (0.5ms)[0m  [1m[34mSELECT "folios".* FROM "folios" ORDER BY position asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/folios/index.html.haml:5
+  Rendered collection of folios/_folio.html.erb [4 times] (Duration: 3.6ms | Allocations: 2800)
+  Rendered folios/index.html.haml within layouts/application (Duration: 26.7ms | Allocations: 20060)
+  Rendered shared/_topbar.html.erb (Duration: 0.6ms | Allocations: 274)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.2ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.6ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 13.6ms | Allocations: 11788)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 54492)
+Completed 200 OK in 103ms (Views: 71.7ms | ActiveRecord: 5.5ms | Allocations: 65319)
+
+
+Started GET "/notifier/mailform" for ::1 at 2024-02-11 22:36:45 -0500
+Processing by SupportsController#mailform as HTML
+  Rendering supports/mailform.html.erb
+  Rendered supports/_enform.html.haml (Duration: 16.8ms | Allocations: 9998)
+  Rendered supports/mailform.html.erb (Duration: 17.0ms | Allocations: 10062)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 10289)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:38:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started DELETE "/destroy_session" for ::1 at 2024-02-11 22:38:28 -0500
+Processing by UserSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+Redirected to http://www.localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 495)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:38:28 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 11.4ms | Allocations: 8847)
+  Rendered pages/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 8998)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 271)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.6ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footer.html.haml (Duration: 12.5ms | Allocations: 11189)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 43216)
+Completed 200 OK in 60ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 43466)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:38:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 22:38:33 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 21.5ms | Allocations: 10902)
+Completed 200 OK in 43ms (Views: 23.1ms | ActiveRecord: 1.9ms | Allocations: 15502)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:43:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/notifier/mailform" for ::1 at 2024-02-11 22:43:31 -0500
+Processing by SupportsController#mailform as HTML
+  Rendering supports/mailform.html.erb
+  Rendered supports/_enform.html.haml (Duration: 61.9ms | Allocations: 45652)
+  Rendered supports/mailform.html.erb (Duration: 63.1ms | Allocations: 45888)
+Completed 200 OK in 85ms (Views: 65.9ms | ActiveRecord: 3.6ms | Allocations: 53716)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:43:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 17.9ms | Allocations: 10219)
+Completed 200 OK in 58ms (Views: 18.9ms | ActiveRecord: 3.3ms | Allocations: 30226)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:43:46 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 17.0ms | Allocations: 9580)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 10400)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:45:29 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 14.1ms | Allocations: 10418)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 3.9ms | Allocations: 30925)
+
+
+  
+ActionView::Template::Error (undefined method `current_user?' for an instance of #<Class:0x000000012f471eb0>):
+    31: 		</div>
+    32: 	</div>
+    33: <% #else %>
+    34: <% if current_user? %>
+    35: <div class="celebrity_search" style="margin: 0 auto;">
+    36: <div class="loginform">
+    37:   <h3>Create an account</h3>
+  
+app/views/users/new.html.erb:34
+app/controllers/users_controller.rb:32:in `new'
+Started GET "/signup" for ::1 at 2024-02-11 22:45:52 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 17.2ms | Allocations: 9371)
+Completed 200 OK in 65ms (Views: 21.0ms | ActiveRecord: 4.0ms | Allocations: 29885)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:47:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 15.6ms | Allocations: 9663)
+Completed 200 OK in 59ms (Views: 17.8ms | ActiveRecord: 3.8ms | Allocations: 30177)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:48:01 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 15.6ms | Allocations: 9652)
+Completed 200 OK in 57ms (Views: 17.9ms | ActiveRecord: 4.3ms | Allocations: 30166)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:49:04 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 18.0ms | Allocations: 9660)
+Completed 200 OK in 56ms (Views: 20.2ms | ActiveRecord: 3.8ms | Allocations: 30174)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:50:40 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 23.4ms | Allocations: 24035)
+  Rendered pages/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 24598)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.2ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 8.8ms | Allocations: 5845)
+  Rendered shared/_nav.html.haml (Duration: 22.6ms | Allocations: 18282)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 49.8ms | Allocations: 35241)
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 101790)
+Completed 200 OK in 137ms (Views: 135.6ms | ActiveRecord: 0.0ms | Allocations: 102804)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:50:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/notifier/mailform" for ::1 at 2024-02-11 22:50:44 -0500
+Processing by SupportsController#mailform as HTML
+  Rendering supports/mailform.html.erb
+  Rendered supports/_enform.html.haml (Duration: 57.2ms | Allocations: 45419)
+  Rendered supports/mailform.html.erb (Duration: 58.3ms | Allocations: 45648)
+Completed 200 OK in 79ms (Views: 59.3ms | ActiveRecord: 4.4ms | Allocations: 53044)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:50:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/" for ::1 at 2024-02-11 22:51:36 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 38.7ms | Allocations: 24038)
+  Rendered pages/index.html.erb within layouts/application (Duration: 40.5ms | Allocations: 24600)
+  Rendered shared/_topbar.html.erb (Duration: 2.6ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.6ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 9.2ms | Allocations: 5845)
+  Rendered shared/_nav.html.haml (Duration: 23.8ms | Allocations: 18282)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 129.1ms | Allocations: 35242)
+  Rendered layout layouts/application.html.erb (Duration: 229.2ms | Allocations: 101808)
+Completed 200 OK in 235ms (Views: 233.5ms | ActiveRecord: 0.0ms | Allocations: 102822)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:51:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:51:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 22:51:41 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 13.6ms | Allocations: 9558)
+Completed 200 OK in 52ms (Views: 14.7ms | ActiveRecord: 3.9ms | Allocations: 29658)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:52:01 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 14.9ms | Allocations: 9648)
+Completed 200 OK in 55ms (Views: 17.1ms | ActiveRecord: 3.8ms | Allocations: 30095)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:52:04 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 25.3ms | Allocations: 24050)
+  Rendered pages/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 24603)
+  Rendered shared/_topbar.html.erb (Duration: 2.6ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.5ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 9.3ms | Allocations: 5845)
+  Rendered shared/_nav.html.haml (Duration: 23.1ms | Allocations: 18282)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 43.3ms | Allocations: 35245)
+  Rendered layout layouts/application.html.erb (Duration: 126.1ms | Allocations: 101669)
+Completed 200 OK in 129ms (Views: 127.9ms | ActiveRecord: 0.0ms | Allocations: 102267)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:52:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:52:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 22:52:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 22.9ms | Allocations: 8890)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 9710)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:52:18 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 28.3ms | Allocations: 24037)
+  Rendered pages/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 24601)
+  Rendered shared/_topbar.html.erb (Duration: 3.4ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.5ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 8.9ms | Allocations: 5845)
+  Rendered shared/_nav.html.haml (Duration: 23.8ms | Allocations: 18282)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 30.6ms | Allocations: 35240)
+  Rendered layout layouts/application.html.erb (Duration: 119.9ms | Allocations: 101781)
+Completed 200 OK in 124ms (Views: 122.4ms | ActiveRecord: 0.0ms | Allocations: 102795)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:52:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 22:52:22 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 14.8ms | Allocations: 9569)
+Completed 200 OK in 55ms (Views: 16.0ms | ActiveRecord: 4.0ms | Allocations: 29667)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:52:37 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 23.1ms | Allocations: 24093)
+  Rendered pages/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 24657)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 12.3ms | Allocations: 4665)
+  Rendered shared/_services.html.erb (Duration: 15.7ms | Allocations: 5851)
+  Rendered shared/_nav.html.haml (Duration: 29.7ms | Allocations: 18288)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 283)
+  Rendered shared/_footer.html.haml (Duration: 37.1ms | Allocations: 35249)
+  Rendered layout layouts/application.html.erb (Duration: 129.1ms | Allocations: 101854)
+Completed 200 OK in 133ms (Views: 131.6ms | ActiveRecord: 0.0ms | Allocations: 102868)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:52:38 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 22:52:40 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 17.8ms | Allocations: 9587)
+Completed 200 OK in 60ms (Views: 19.1ms | ActiveRecord: 3.9ms | Allocations: 29685)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:52:53 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 24.7ms | Allocations: 24034)
+  Rendered pages/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 24598)
+  Rendered shared/_topbar.html.erb (Duration: 2.8ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.1ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 9.4ms | Allocations: 5845)
+  Rendered shared/_nav.html.haml (Duration: 24.1ms | Allocations: 18282)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 45.6ms | Allocations: 35245)
+  Rendered layout layouts/application.html.erb (Duration: 130.7ms | Allocations: 101782)
+Completed 200 OK in 134ms (Views: 133.0ms | ActiveRecord: 0.0ms | Allocations: 102796)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:52:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:52:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 22:52:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 16.1ms | Allocations: 9579)
+Completed 200 OK in 55ms (Views: 17.2ms | ActiveRecord: 3.9ms | Allocations: 29679)
+
+
+Started GET "/login" for ::1 at 2024-02-11 22:53:02 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 23.3ms | Allocations: 15749)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 16315)
+
+
+Started GET "/login" for ::1 at 2024-02-11 22:54:24 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 19.9ms | Allocations: 15849)
+Completed 200 OK in 51ms (Views: 22.0ms | ActiveRecord: 2.2ms | Allocations: 26976)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:55:29 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 22.5ms | Allocations: 24035)
+  Rendered pages/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 24599)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 1874)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.0ms | Allocations: 4662)
+  Rendered shared/_services.html.erb (Duration: 9.7ms | Allocations: 5848)
+  Rendered shared/_nav.html.haml (Duration: 26.4ms | Allocations: 18298)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 36.3ms | Allocations: 35242)
+  Rendered layout layouts/application.html.erb (Duration: 129.9ms | Allocations: 101800)
+Completed 200 OK in 135ms (Views: 132.9ms | ActiveRecord: 0.0ms | Allocations: 102814)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:55:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:55:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/login" for ::1 at 2024-02-11 22:55:32 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 20.7ms | Allocations: 15819)
+Completed 200 OK in 45ms (Views: 21.7ms | ActiveRecord: 1.7ms | Allocations: 26470)
+
+
+Started GET "/signup" for ::1 at 2024-02-11 22:55:38 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 13.7ms | Allocations: 9336)
+Completed 200 OK in 30ms (Views: 14.7ms | ActiveRecord: 2.2ms | Allocations: 19384)
+
+
+Started GET "/login" for ::1 at 2024-02-11 22:55:42 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 20.0ms | Allocations: 8459)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 8673)
+
+
+Started GET "/login" for ::1 at 2024-02-11 22:58:58 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 23.2ms | Allocations: 17013)
+Completed 200 OK in 54ms (Views: 25.2ms | ActiveRecord: 1.7ms | Allocations: 28142)
+
+
+Started GET "/login" for ::1 at 2024-02-11 22:59:33 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 22.3ms | Allocations: 16988)
+Completed 200 OK in 49ms (Views: 24.4ms | ActiveRecord: 1.8ms | Allocations: 28116)
+
+
+Started GET "/" for ::1 at 2024-02-11 22:59:51 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 23.5ms | Allocations: 24098)
+  Rendered pages/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 24661)
+  Rendered shared/_topbar.html.erb (Duration: 2.6ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.4ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 8.8ms | Allocations: 5845)
+  Rendered shared/_nav.html.haml (Duration: 22.3ms | Allocations: 18282)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 54.2ms | Allocations: 35248)
+  Rendered layout layouts/application.html.erb (Duration: 135.9ms | Allocations: 101863)
+Completed 200 OK in 140ms (Views: 138.5ms | ActiveRecord: 0.0ms | Allocations: 102879)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 22:59:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 22:59:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/login" for ::1 at 2024-02-11 22:59:54 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 22.8ms | Allocations: 16976)
+Completed 200 OK in 48ms (Views: 23.9ms | ActiveRecord: 1.8ms | Allocations: 27627)
+
+
+Started GET "/" for ::1 at 2024-02-11 23:00:04 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 51.7ms | Allocations: 24036)
+  Rendered pages/index.html.erb within layouts/application (Duration: 53.2ms | Allocations: 24600)
+  Rendered shared/_topbar.html.erb (Duration: 8.3ms | Allocations: 1872)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.5ms | Allocations: 4666)
+  Rendered shared/_services.html.erb (Duration: 10.7ms | Allocations: 5854)
+  Rendered shared/_nav.html.haml (Duration: 44.0ms | Allocations: 18292)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footer.html.haml (Duration: 37.9ms | Allocations: 35243)
+  Rendered layout layouts/application.html.erb (Duration: 206.5ms | Allocations: 101811)
+Completed 200 OK in 211ms (Views: 209.0ms | ActiveRecord: 0.0ms | Allocations: 102825)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 23:00:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 23:00:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/login" for ::1 at 2024-02-11 23:00:08 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 25.0ms | Allocations: 16974)
+Completed 200 OK in 51ms (Views: 26.1ms | ActiveRecord: 1.9ms | Allocations: 27625)
+
+
+Started GET "/login" for ::1 at 2024-02-11 23:00:42 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 56.2ms | Allocations: 17223)
+Completed 200 OK in 112ms (Views: 58.8ms | ActiveRecord: 1.7ms | Allocations: 28350)
+
+
+Started GET "/fr/accueil" for ::1 at 2024-02-11 23:01:03 -0500
+Processing by FrenchController#index as HTML
+  Rendering layout layouts/fr.html.erb
+  Rendering french/index.html.haml within layouts/fr
+  Rendered shared/_banner.html.haml (Duration: 24.3ms | Allocations: 23926)
+  Rendered french/index.html.haml within layouts/fr (Duration: 44.8ms | Allocations: 40151)
+  Rendered shared/_topbar.html.erb (Duration: 2.9ms | Allocations: 1872)
+  Rendered shared/_seofr.html.haml (Duration: 4.5ms | Allocations: 3757)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.8ms | Allocations: 208)
+  Rendered shared/_businessfr.html.haml (Duration: 5.2ms | Allocations: 4655)
+  Rendered shared/_servicesfr.html.erb (Duration: 14.6ms | Allocations: 9369)
+  Rendered shared/_navfr.html.haml (Duration: 29.8ms | Allocations: 21774)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 38.7ms | Allocations: 35232)
+  Rendered layout layouts/fr.html.erb (Duration: 138.2ms | Allocations: 110582)
+Completed 200 OK in 141ms (Views: 139.8ms | ActiveRecord: 0.0ms | Allocations: 111023)
+
+
+Started GET "/images/favicon.gif" for ::1 at 2024-02-11 23:01:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/images/favicon.gif"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 23:01:06 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 23:01:09 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 16.2ms | Allocations: 9510)
+Completed 200 OK in 34ms (Views: 17.3ms | ActiveRecord: 2.2ms | Allocations: 19560)
+
+
+Started GET "/fr/accueil" for ::1 at 2024-02-11 23:01:53 -0500
+Processing by FrenchController#index as HTML
+  Rendering layout layouts/fr.html.erb
+  Rendering french/index.html.haml within layouts/fr
+  Rendered shared/_banner.html.haml (Duration: 23.4ms | Allocations: 23968)
+  Rendered french/index.html.haml within layouts/fr (Duration: 41.8ms | Allocations: 40205)
+  Rendered shared/_topbar.html.erb (Duration: 2.9ms | Allocations: 1872)
+  Rendered shared/_seofr.html.haml (Duration: 9.8ms | Allocations: 3756)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered shared/_businessfr.html.haml (Duration: 6.0ms | Allocations: 4668)
+  Rendered shared/_servicesfr.html.erb (Duration: 19.0ms | Allocations: 9380)
+  Rendered shared/_navfr.html.haml (Duration: 33.2ms | Allocations: 21778)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 36.9ms | Allocations: 35242)
+  Rendered layout layouts/fr.html.erb (Duration: 135.7ms | Allocations: 110801)
+Completed 200 OK in 139ms (Views: 137.7ms | ActiveRecord: 0.0ms | Allocations: 111721)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-02-11 23:01:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/button_gr.png" for ::1 at 2024-02-11 23:01:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 23:01:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 16.2ms | Allocations: 9567)
+Completed 200 OK in 58ms (Views: 17.4ms | ActiveRecord: 4.0ms | Allocations: 29667)
+
+
+Started GET "/login" for ::1 at 2024-02-11 23:02:01 -0500
+Processing by UserSessionsController#new as HTML
+  Rendering user_sessions/new.html.haml
+  Rendered user_sessions/new.html.haml (Duration: 21.2ms | Allocations: 17064)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 17606)
+
+
+Started GET "/fr/realisations" for ::1 at 2024-02-11 23:02:12 -0500
+Processing by FrenchController#realisation as HTML
+  Parameters: {"page"=>"realisation"}
+  Rendering layout layouts/realisationfr.html.erb
+  Rendering pages/realisation.html.erb within layouts/realisationfr
+  Rendered pages/realisation.html.erb within layouts/realisationfr (Duration: 52.5ms | Allocations: 18836)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 254)
+  Rendered shared/_seofr.html.haml (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_businessfr.html.haml (Duration: 0.1ms | Allocations: 54)
+  Rendered shared/_servicesfr.html.erb (Duration: 0.8ms | Allocations: 381)
+  Rendered shared/_navfr.html.haml (Duration: 3.3ms | Allocations: 2260)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 21.5ms | Allocations: 11182)
+  Rendered layout layouts/realisationfr.html.erb (Duration: 95.8ms | Allocations: 43741)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.0ms | Allocations: 44097)
+
+
+Started GET "/fr/posts/all/Visible" for ::1 at 2024-02-11 23:02:18 -0500
+Processing by PostsController#visiblefr as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."tag_type" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["tag_type", "Visible"], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:118
+  Rendered collection of posts/_sheet.html.haml [1 times] (Duration: 12.7ms | Allocations: 12399)
+  Rendered posts/index.html.erb within layouts/application (Duration: 44.8ms | Allocations: 30824)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered shared/_seofr.html.haml (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hostingfr.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_businessfr.html.haml (Duration: 0.2ms | Allocations: 54)
+  Rendered shared/_servicesfr.html.erb (Duration: 0.9ms | Allocations: 381)
+  Rendered shared/_navfr.html.haml (Duration: 3.7ms | Allocations: 2327)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 85)
+  Rendered shared/_footer.html.haml (Duration: 32.7ms | Allocations: 35153)
+  Rendered layout layouts/application.html.erb (Duration: 118.1ms | Allocations: 89752)
+Completed 200 OK in 136ms (Views: 118.3ms | ActiveRecord: 4.3ms | Allocations: 95778)
+
+
+Started GET "/button_gr.png" for ::1 at 2024-02-11 23:03:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/button_gr.png"):
+  
+Started GET "/signup" for ::1 at 2024-02-11 23:03:22 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb
+  Rendered users/new.html.erb (Duration: 13.5ms | Allocations: 8889)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 9718)
+
+

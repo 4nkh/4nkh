@@ -5,30 +5,40 @@
 = stylesheet_link_tag 'application'
 
 :css
-  body {background: #EEE;}
+  body {background: #CCC /*url(<%= asset_path 'bg_main.png' %>) top left repeat;*/}
   h2 {text-align:center;}
-  .form_wrapper{width:200px;margin:0 auto;}
-  label {font-size:12px;}
-  input[type="text"] {width:200px;}
-  input[type="password"] {width:200px;}
+  .notifier {padding-left:80px; width:340px;float:left;}
+  input[type="text"] {width:300px;}
+  .column_left {float:left; width:100px;}
+  .column_left input[type="checkbox"] {float:right;padding-right:20px;}
+  .column_right {float:right; width:100px;}
+  .column_right input[type="checkbox"] {float:right;}
+  #errorExplanation {margin-left:-50px !important;}
+  form {padding:20px;background:#EEE;width:300px;box-shadow:-3px 8px 10px 2px #999;-moz-box-shadow:-3px 8px 10px 2px #999;-webkit-box-shadow:-5px 10px 10px #999;}
+  .celebrity_search {width:340;}
+
 .clear &nbsp;
 %h2 Login
-.clear &nbsp;  
-= form_for @user_session, :url => create_session_url, :method => :post, :remote => true do |f|
-  = f.error_messages 
-  .form_wrapper
-    %p
-      = f.label :login, 'Username'
-      %br
-      = f.text_field :login
+.clear &nbsp;
+
+.celebrity_search{ style: "margin: 0 auto;"}
+  .loginform
+    %fieldset
+      = form_for @user_session, :url => create_session_url, :method => :post, :remote => true do |f|
+        = f.error_messages 
+        .form_wrapper
+          %p
+            = f.label :login, 'Username'
+            %br
+            = f.text_field :login
       
-    .clear &nbsp;
+          .clear &nbsp;
     
-    %p  
-      = f.label :password
-      %br
-      = f.password_field :password
-    
-    = f.submit 'Login'
+          %p  
+            = f.label :password
+            %br
+            = f.password_field :password
+          .clear &nbsp;
+          = f.submit 'Login'
 
 

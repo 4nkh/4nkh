@@ -51,13 +51,13 @@
   %li
     - if current_user.blank?
       //= facebox_link_to 'Join', :url => signup_url 
-      = link_to 'Join', signup_path, :rel => "shadowbox;width=520;height=400;", :alt => "Join", :title => ""
+      = link_to 'Join', signup_path, :rel => "shadowbox;width=520;height=260;", :alt => "Join", :title => ""
     - else
       = link_to(current_user.login,dashboard_url)
   %li
     - if current_user.blank? 
       //= facebox_link_to 'Login', :url => login_url
-      = link_to 'Login', login_path, :rel => "shadowbox;width=350;height=200;", :alt => "Login", :title => ""
+      = link_to 'Login', login_path, :rel => "shadowbox;width=520;height=260;", :alt => "Login", :title => ""
     - else 
       = link_to('Logout', destroy_session_url, :confirm => 'Are you sure you want to logout?', :method => :delete) 
 

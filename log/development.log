@@ -237,3 +237,90 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 111ms (Views: 109.4ms | ActiveRecord: 0.6ms | Allocations: 82535)
 
 
+Started GET "/" for ::1 at 2024-02-11 20:52:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 1345.3ms | Allocations: 306327)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1348.1ms | Allocations: 307078)
+  Rendered shared/_topbar.html.erb (Duration: 3.0ms | Allocations: 1893)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 182)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 211)
+  Rendered shared/_business.html.haml (Duration: 8.1ms | Allocations: 4680)
+  Rendered shared/_services.html.erb (Duration: 12.0ms | Allocations: 5905)
+  Rendered shared/_nav.html.haml (Duration: 41.4ms | Allocations: 18513)
+  Rendered shared/_tab.html.erb (Duration: 0.9ms | Allocations: 284)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 195.9ms | Allocations: 88966)
+  Rendered layout layouts/application.html.erb (Duration: 1638.3ms | Allocations: 439623)
+Completed 200 OK in 1658ms (Views: 1630.3ms | ActiveRecord: 14.8ms | Allocations: 444298)
+
+
+Started GET "/aboutus" for ::1 at 2024-02-11 20:52:58 -0500
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY position ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:9
+  Rendered collection of users/_user.html.haml [3 times] (Duration: 19.8ms | Allocations: 15196)
+  Rendered users/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 16439)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered shared/_seo.html.erb (Duration: 0.8ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 1.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 2.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 11.9ms | Allocations: 2304)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 40.7ms | Allocations: 11735)
+  Rendered layout layouts/application.html.erb (Duration: 145.1ms | Allocations: 50914)
+Completed 200 OK in 150ms (Views: 146.3ms | ActiveRecord: 1.4ms | Allocations: 51612)
+
+
+Started GET "/games" for ::1 at 2024-02-11 20:53:07 -0500
+Processing by FoliosController#index as HTML
+  [1m[36mFolio Load (2.1ms)[0m  [1m[34mSELECT "folios".* FROM "folios" WHERE "folios"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/folios_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering folios/index.html.haml within layouts/application
+  [1m[36mFolio Load (0.5ms)[0m  [1m[34mSELECT "folios".* FROM "folios" ORDER BY position asc LIMIT $1 OFFSET $2[0m  [["LIMIT", 18], ["OFFSET", 0]]
+  ↳ app/views/folios/index.html.haml:5
+  Rendered collection of folios/_folio.html.erb [4 times] (Duration: 3.5ms | Allocations: 2725)
+  Rendered folios/index.html.haml within layouts/application (Duration: 26.8ms | Allocations: 19975)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.2ms | Allocations: 2304)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 14.8ms | Allocations: 11754)
+  Rendered layout layouts/application.html.erb (Duration: 69.6ms | Allocations: 54323)
+Completed 200 OK in 117ms (Views: 69.9ms | ActiveRecord: 8.1ms | Allocations: 68704)
+
+
+Started GET "/" for ::1 at 2024-02-11 20:53:10 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 9.6ms | Allocations: 8838)
+  Rendered pages/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 8989)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 271)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.0ms | Allocations: 2302)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footer.html.haml (Duration: 29.1ms | Allocations: 11754)
+  Rendered layout layouts/application.html.erb (Duration: 73.3ms | Allocations: 43393)
+Completed 200 OK in 74ms (Views: 73.1ms | ActiveRecord: 0.7ms | Allocations: 43643)
+
+

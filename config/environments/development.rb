@@ -41,8 +41,25 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
   
-  #for devise
+  config.action_controller.raise_on_missing_callback_actions = false #true
+  
+  config.action_mailer.default_url_options = { host: '4nkh.ca' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.ionos.com',
+    port: 25,
+    domain: '4nkh.ca',
+    user_name: 'admin',
+    password: ENV['MAIL_PASSWORD'],
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+  
+  #Paperclip.options[:image_magick_path] = "/usr/local/Cellar/ImageMagick-7.0.10/bin" #/opt/ImageMagick/bin"
+  #Paperclip.options[:command_path] = "/usr/local/Cellar/ImageMagick-7.0.10/bin" #"/opt/ImageMagick/bin"
+  #for devise                        
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -75,8 +92,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   # Raise error when a before_action's only/except options reference missing actions
-  
-  config.action_controller.raise_on_missing_callback_actions = false #true
   
   config.hosts = [
      "4nkh.ca",     # Allow requests from example.com

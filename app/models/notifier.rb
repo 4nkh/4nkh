@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: 'admin@4nkh.ca'
+  default from: 'mathieub@4nkh.ca'
   
    #this is the method that actually sends the email
   #def multipart_alternative(email_params)
@@ -40,7 +40,6 @@ class Notifier < ActionMailer::Base
     #     @subject = email_params[:subject]
     #     @mail = email_params[:address]
     #content_type "text/html"
-    
     #@support = support
     mail(to: 'admin@4nkh.ca', subject: support[:subject], from: support[:email]) do |format|
       format.text { render plain: support[:description].to_s }

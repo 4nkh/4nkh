@@ -122,7 +122,7 @@ group :development do
     gem 'capistrano3-puma',   require: false
 end
 =end
-
+gem 'dotenv-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 

@@ -41,7 +41,8 @@
       %p Meet our experts, ask advice and you will see that your goals are accessible at competitive price.
       .clear &nbsp;  
       .clear &nbsp;
-      = link_to "soumission", mailform_path, :class => "btn-more", :rel => "shadowbox;width=500;height=600", :title => ""
+      = mail_to "admin@4nkh.ca", "submission", class: "btn-more"
+      =# link_to "soumission", mailform_path, :class => "btn-more", :rel => "shadowbox;width=500;height=600", :title => ""
       .clear &nbsp;
       .clear &nbsp;
 
@@ -72,7 +73,8 @@
       %p Rencontrez nos experts, demandez des conseils et vous verrez que vos objectifs sont accessibles à un prix concurenciel.
       .clear &nbsp;
       .clear &nbsp;
-      = link_to "soumission", mailformfr_path, :class => "btn-more", :rel => "shadowbox;width=500;height=600", :title => ""
+      = mail_to "admin@4nkh.ca", "soumission", class: "btn-more"
+      =# link_to "soumission", mailformfr_path, :class => "btn-more", :rel => "shadowbox;width=500;height=600", :title => ""
       .clear &nbsp;
       .clear &nbsp;
 

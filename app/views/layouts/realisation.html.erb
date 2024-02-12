@@ -126,16 +126,20 @@
                <% end %>
                    </div>
                    <div id="footer">    
-                       <div id="footer_inner">
-                         <%= link_to image_tag('facebookicon1.png', :mouseover => 'facebookicon.png'), 'http://www.facebook.com/pages/4nkh/155264964487409?created', :class => 'facebook', :popup => true, :alt => 'facebook', :title => '4nkh facebook' %>
-               <%= link_to image_tag('twittericon1.png', :mouseover => 'twittericon.png'), 'http://twitter.com/4nk', :class => 'twitter', :popup => true, :alt => 'twitter', :title => '4nkh twitter' %>
-               <%= link_to image_tag('rss1.png', :mouseover => 'rss.png'), feed_path, :class => 'rss', :popup => true, :alt => 'rss', :title => '4nkh rss' %>
-                         <%= yield :footer %>
-                         <%= render :partial => "shared/footer" %>
-                         <span id="copyright">copyright © 2012 4nkh development</span>
-                       </div>
+			           <div id="footer_inner">
+			             <%= link_to image_tag('facebookicon1.png', :onmouseover => "this.src=\"#{ asset_path 'facebookicon.png' }\"", :onmouseout => "this.src=\"#{ asset_path 'facebookicon1.png' }\""), 'http://www.facebook.com/pages/4nkh/155264964487409?created', :class => 'facebook', :popup => true, :alt => 'facebook', :title => '4nkh facebook' %>
+			   		  <%= link_to image_tag('twittericon1.png', :onmouseover => "this.src=\"#{ asset_path 'twittericon.png' }\"", :onmouseout => "this.src=\"#{ asset_path 'twittericon1.png' }\""), 'http://twitter.com/4nk', :class => 'twitter', :popup => true, :alt => 'twitter', :title => '4nkh twitter' %>
+			   		  <%= link_to image_tag('rss1.png', :onmouseover => "this.src=\"#{ asset_path 'rss.png' }\"", :onmouseout => "this.src=\"#{ asset_path 'rss1.png' }\""), feed_path, :class => 'rss', :popup => true, :alt => 'rss', :title => '4nkh rss' %>
+			             <%= yield :footer %>
+			             <% if current_page?('/fr/accueil') || ('/fr/posts/all/Visible') || current_page?('/fr/contact') || current_page?('/fr/services') || current_page?('/fr/apropos') || current_page?('/fr/folios') || current_page?('/fr/realisations') || current_page?('/fr/outils') || current_page?('/fr/business/plan') || current_page?('/fr/seo/plan') || current_page?('/fr/mobile') || current_page?('/fr/hosting/plan') %>
+			               <%= render :partial => "shared/footerfr" %>
+			             <% else %>
+			   	           <%= render :partial => "shared/footer" %>
+			             <% end %>
+			             <span id="copyright">copyright © 2012 4nkh development</span>
+			           </div>
                    </div>      
-
+					
                     <script type="text/javascript">
                        Shadowbox.init({  overlayColor: "#000",  overlayOpacity: "0.5",  handleOversize: "drag",  displayNav: true,  handleUnsupported:  "remove" });     //window.onload = function() {  Shadowbox.setup({  width:   600,  height: "640px"  }); };
                      </script>

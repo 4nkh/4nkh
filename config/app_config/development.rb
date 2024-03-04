@@ -1,6 +1,6 @@
 AppConfig.url = ApplicationConfiguration.new
 AppConfig.url.protocol = "http://"
-AppConfig.url.subdomain = "www."
+AppConfig.url.subdomain = "" #"www."
 AppConfig.url.domain = "localhost" #"socialship"#"sc.net"
 AppConfig.url.port = ":3000"
 AppConfig.url.root = "#{AppConfig.url.protocol}#{AppConfig.url.subdomain}#{AppConfig.url.domain}#{AppConfig.url.port}"

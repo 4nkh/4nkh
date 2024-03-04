@@ -45,7 +45,8 @@ class DashboardController < ApplicationController
       #redirect_to dashboard_url
       else
         flash[:notice] = "We accept JPG - JPEG - PNG - BMP format only!"
-        format.js {render js: "parent.location.href = \"#{dashboard_path}\";"}
+        #format.js {render js: "parent.location.href = \"#{dashboard_path}\";"}
+        format.json {render :json => {response: 'error', data: "parent.location.href = \"#{dashboard_path}\";" }}
         #redirect_to dashboard_url
       end
     end

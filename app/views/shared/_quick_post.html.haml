@@ -106,5 +106,5 @@
       //  %fieldset
       //    %input#user_terms_of_service{:type => "checkbox", :value => "1", :name => "tumblr"}
       //    %span{:style => "font:size:12px;"} Post to tumblr
-
-    %p#submit_block
+    %fieldset
+      = f.submit 'Submit', id: "submit_block", style: "width:150px;"

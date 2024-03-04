@@ -27,7 +27,7 @@
 .clear &nbsp;
 
 .notifier
-  = form_for current_user, :url => create_photo_url,:method => :post, :remote => true, authenticity_token: true do |f|
+  = form_for current_user, :url => create_photo_url, :method => :post, :remote => true, authenticity_token: true do |f|
     = f.error_messages
 
     %h3 Choose at least a square Picture, NEAR 200 X 200

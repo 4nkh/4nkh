@@ -66,7 +66,7 @@ end
 #gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '3543363026121ee28d98dfce4cb6366980c055ee'
 #gem 'mimemagic', '~> 0.4.3'
 gem 'pg'
-gem 'mysql2'
+gem 'mysql2', '~> 0.5.6'
 #gem 'mongrel2'
 gem 'thinking-sphinx'
 gem 'paperclip', '~> 4.2' 

@@ -86,7 +86,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find_by_id(params[:id])
     params[:post][:recorded_url] = @post.fetch_oembed_data(params[:post][:url]) if params[:post][:model].tableize == "videos"
-    if @post.update_attributes(params[:post])
+    if @post.update(post_params)#(params[:post])
       flash[:notice] = "The post was successfully updated"
       redirect_to dashboard_url
     else

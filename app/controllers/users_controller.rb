@@ -50,17 +50,20 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user #User.find(params[:id])
+    #@user = User.find(params[:id])
     respond_to do |format|
-      if @user.update_attributes(params[:user])      
+      if @user.update(user_params) #(params[:user])      
         flash[:notice] = "Your update has been applied."
         #expire_page :action => :show
-        format.html {redirect_to dashboard_path}
-        format.js {render :text => "parent.location.href = \"#{dashboard_path}\";"}
+        #format.html {redirect_to dashboard_path}
+        format.json {render json: "parent.location.href = \"#{dashboard_path}\";", :content_type => 'text/javascript'}
+        #format.json {render :json => {response: 'success', data: "parent.location.href = \"#{dashboard_path}\";" }}
       else
         flash[:error] = "You probably made a mistake, *CAREFULL WITH* (max lenght& required field)"
-        format.html {redirect_to dashboard_url}
-        format.js {render :text => "window.location=\"#{request.referer ? request.referer : dashboard_path}\";"}
+        #format.html {redirect_to dashboard_url}
+        format.json {render json:  "window.location=\"#{request.referer ? request.referer : dashboard_path}\";"} 
+        #format.json {render :json => {response: 'error', data: "window.location=\"#{request.referer ? request.referer : dashboard_path}\";" }}
+        #render :text => 
       end
     end
   end
@@ -76,12 +79,13 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:login, :password, :password_confirmation)
+    params.require(:user).permit(:login, :password, :password_confirmation, :email, :password, :password_confirmation, :phone, :location, :dob, :tag_type)
   end
 
   def get_user
      @user = current_user
   end
+  
   def get_tag
     @tags = User.tag_counts_on([:tags], :order => 'created_at ASC')
     @tagdir = User.by_tag('directors')

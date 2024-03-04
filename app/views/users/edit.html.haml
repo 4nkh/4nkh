@@ -1,3 +1,6 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+= csrf_meta_tag
 = javascript_include_tag 'application'
 = stylesheet_link_tag 'application' 
 :css
@@ -5,7 +8,7 @@
 %h3 Edit Profile
 %p.tagline Add or modify the information about your account
 .clear &nbsp;
-= form_for @user, :url => user_update_path(@user.id), :remote => true do |f| 
+= form_for @user, :url => user_update_path(@user.id), :method => :patch, :remote => true, authenticity_token: true do |f| 
   = f.error_messages
   = f.label :login
   %br
@@ -58,3 +61,55 @@
   %br
   = f.submit 'Update' 
 
+:javascript
+  const form = document.getElementById("edit_user_#{@user.id}");
+
+  form.addEventListener("submit", submitForm);
+
+  function submitForm(e) {
+    e.preventDefault();
+    let csrf = e.target.authenticity_token.value;
+    let login = e.target.user[login].value;
+    let email = e.target.user[email].value;
+    let password = e.target.user[password].value;
+    let password_conf = e.target.user[password_confirmation].value;
+    let phone = e.target.user[phone].value;
+    let location = e.target.user[location].value;
+    let dob1 = e.target.user[dob(1i)].value;
+    let dob2 = e.target.user[dob(2i)].value;
+    let dob3 = e.target.uuser[dob(3i)].value;
+    let tag_type = e.target.user[tag_type].value;	
+	
+    const form_data = new FormData();
+    const path = window.location.pathname;
+	
+    var id = path.split('/');
+    id = id[1];
+    alert('wow');
+    form_data.append("authenticity_token", csrf)
+    let user_data = {user: {login: login, email: email, password: password, password_confirmation: password_conf, phone: phone, location: location, dob(1i): dob1, dob(2i): dob2, dob(3i): dob3, tag_type: tag_type}}
+    for (let dataKey in user_data) {
+      if(dataKey === 'user') {
+      //  append nested object
+        for (let userKey in user_data[dataKey]) {
+          form_data.append(`user[${userKey}]`, user_data[dataKey][userKey]);
+        }
+      }
+    }
+    fetch("#{ AppConfig.url.root }/account/update/#{@user.id}" , {
+      method: 'PATCH',
+      dataType: 'script',
+      body: form_data,
+      headers: { "X-CSRFToken": getCookie("csrftoken") },
+    }).then(res => res.json()).then(res => {
+      console.log('res: ', res)
+      if(res.response == "success"){
+        eval(res.data);
+      } else {
+        var cont = document.getElementById('container')
+        cont.innerHTML = "<div id='flash_error'>" + res.data + "</div>"
+      }
+      console.log('res: ', res)
+    }).catch((err) => ("Error occured", err));
+  }
+	

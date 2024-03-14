@@ -1,6 +1,6 @@
 function blogger(thechosenone) {
       var blog = document.getElementsByTagName("div");
-	  console.log(blog)
+	  //console.log(blog)
             for(var x=0; x<blog.length; x++) {
                   name = blog[x].getAttribute("name");
                   
@@ -15,7 +15,7 @@ function blogger(thechosenone) {
                   }
             }
       }
-}
+};
 
 function navnews(thechosenone) {
       var news = document.getElementsByTagName("li");
@@ -33,7 +33,7 @@ function navnews(thechosenone) {
                   }
             }
       }
-}
+};
 function showonlyone(thechosenone) { 
 	var post = document.getElementsByTagName("div"); 
 	for(var x=0; x<post.length; x++) { 
@@ -62,7 +62,7 @@ function showonlyone(thechosenone) {
 		jQuery('#url_blog_field').show(); 
 		jQuery('#post_model').val('videos'); 
 		jQuery('.post_url_new').attr('placeholder', 'Paste your YOUTUBE of VIMEO url');}
-}
+};
 
 /*function showonlyone(thechosenone) {
       var post = document.getElementsByTagName("div");

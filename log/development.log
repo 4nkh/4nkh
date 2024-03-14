@@ -8391,3 +8391,1891 @@ Processing by PostsController#state as HTML
 Completed 200 OK in 110ms (Views: 89.4ms | ActiveRecord: 6.1ms | Allocations: 71841)
 
 
+Started GET "/dashboard" for ::1 at 2024-03-04 16:24:44 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (19.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 48.8ms | Allocations: 49280)
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 32.4ms | Allocations: 12278)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 101.0ms | Allocations: 69917)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.3ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.0ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 5.4ms | Allocations: 2327)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 15.2ms | Allocations: 11231)
+  Rendered layout layouts/application.html.erb (Duration: 153.6ms | Allocations: 103789)
+Completed 200 OK in 188ms (Views: 151.7ms | ActiveRecord: 32.3ms | Allocations: 111649)
+
+
+Started GET "/posts/1/blogpost" for ::1 at 2024-03-04 16:46:19 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:82:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.haml within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "Post"]]
+  ↳ app/views/posts/edit.html.haml:96
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Post"]]
+  ↳ app/views/posts/edit.html.haml:96
+  Rendered posts/edit.html.haml within layouts/application (Duration: 85.3ms | Allocations: 64080)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 267)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 6.0ms | Allocations: 2319)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 17.3ms | Allocations: 11190)
+  Rendered layout layouts/application.html.erb (Duration: 142.2ms | Allocations: 97565)
+Completed 200 OK in 170ms (Views: 140.8ms | ActiveRecord: 31.1ms | Allocations: 102285)
+
+
+Started GET "/posts/1/css/content.css" for ::1 at 2024-03-04 16:46:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1/css/content.css"):
+  
+Started GET "/posts/1/blogpost" for ::1 at 2024-03-04 16:46:51 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:82:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.haml within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "Post"]]
+  ↳ app/views/posts/edit.html.haml:96
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Post"]]
+  ↳ app/views/posts/edit.html.haml:96
+  Rendered posts/edit.html.haml within layouts/application (Duration: 25.0ms | Allocations: 17534)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 267)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 5.4ms | Allocations: 2327)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 16.0ms | Allocations: 11256)
+  Rendered layout layouts/application.html.erb (Duration: 74.7ms | Allocations: 51197)
+Completed 200 OK in 81ms (Views: 74.2ms | ActiveRecord: 2.1ms | Allocations: 52840)
+
+
+Started GET "/posts/1/css/content.css" for ::1 at 2024-03-04 16:46:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 16:52:19 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 45.5ms | Allocations: 49426)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 29.0ms | Allocations: 12314)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 88.0ms | Allocations: 70386)
+  Rendered shared/_topbar.html.erb (Duration: 2.9ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.5ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 12.1ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 26.6ms | Allocations: 18305)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 34.8ms | Allocations: 35276)
+  Rendered layout layouts/application.html.erb (Duration: 182.7ms | Allocations: 147542)
+Completed 200 OK in 266ms (Views: 182.7ms | ActiveRecord: 11.8ms | Allocations: 183399)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 16:54:39 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 44.0ms | Allocations: 49425)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 19.3ms | Allocations: 12277)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 1325.0ms | Allocations: 428458)
+  Rendered layout layouts/application.html.erb (Duration: 1325.3ms | Allocations: 428550)
+Completed 500 Internal Server Error in 1400ms (ActiveRecord: 13.8ms | Allocations: 462482)
+
+
+  
+ActionView::Template::Error (Asset `tinymce/jscripts/tiny_mce/jquery.tinymce.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link tinymce/jscripts/tiny_mce/jquery.tinymce.js
+
+and restart your server):
+    73: <% content_for :js do %>
+    74: <%= javascript_include_tag 'blog' %>
+    75:   <%= javascript_include_tag 'tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
+    76: <% javascript_tag do %>
+    77: 
+    78: 	$().ready(function() {
+    79: 
+  
+app/views/dashboard/show.html.erb:76
+app/views/dashboard/show.html.erb:74
+Started GET "/posts/1/blogpost" for ::1 at 2024-03-04 16:57:53 -0500
+Started GET "/posts/1/blogpost" for ::1 at 2024-03-04 16:57:56 -0500
+Started GET "/posts/1/blogpost" for ::1 at 2024-03-04 16:57:58 -0500
+Started GET "/" for ::1 at 2024-03-04 17:00:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 1436.4ms | Allocations: 309842)
+  Rendered pages/index.html.erb within layouts/application (Duration: 1439.3ms | Allocations: 310604)
+  Rendered shared/_topbar.html.erb (Duration: 5.3ms | Allocations: 2067)
+  Rendered shared/_seo.html.erb (Duration: 0.9ms | Allocations: 182)
+  Rendered shared/_hosting.html.erb (Duration: 1.0ms | Allocations: 211)
+  Rendered shared/_business.html.haml (Duration: 10.2ms | Allocations: 4678)
+  Rendered shared/_services.html.erb (Duration: 16.6ms | Allocations: 5899)
+  Rendered shared/_nav.html.haml (Duration: 43.1ms | Allocations: 18514)
+  Rendered shared/_tab.html.erb (Duration: 1.0ms | Allocations: 284)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 346.3ms | Allocations: 89157)
+  Rendered layout layouts/application.html.erb (Duration: 1908.6ms | Allocations: 443872)
+Completed 200 OK in 1934ms (Views: 1885.9ms | ActiveRecord: 28.7ms | Allocations: 448545)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-03-04 17:00:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:00:30 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 68.0ms | Allocations: 51171)
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 34)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 21.0ms | Allocations: 13382)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 107.4ms | Allocations: 73571)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.3ms | Allocations: 2325)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 13.6ms | Allocations: 11221)
+  Rendered layout layouts/application.html.erb (Duration: 166.4ms | Allocations: 107416)
+Completed 200 OK in 301ms (Views: 160.3ms | ActiveRecord: 14.3ms | Allocations: 132876)
+
+
+Started GET "/posts/1/blogpost" for ::1 at 2024-03-04 17:00:44 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:82:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.haml within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "Post"]]
+  ↳ app/views/posts/edit.html.haml:96
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "Post"]]
+  ↳ app/views/posts/edit.html.haml:96
+  Rendered posts/edit.html.haml within layouts/application (Duration: 65.0ms | Allocations: 62588)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 267)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.4ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.6ms | Allocations: 2312)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 22.6ms | Allocations: 11237)
+  Rendered layout layouts/application.html.erb (Duration: 115.3ms | Allocations: 96061)
+Completed 200 OK in 122ms (Views: 115.6ms | ActiveRecord: 2.1ms | Allocations: 98086)
+
+
+Started GET "/posts/1/css/content.css" for ::1 at 2024-03-04 17:00:45 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1/css/content.css"):
+  
+Started GET "/" for ::1 at 2024-03-04 17:03:38 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 20.3ms | Allocations: 24113)
+  Rendered pages/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 24679)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 2052)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.6ms | Allocations: 4662)
+  Rendered shared/_services.html.erb (Duration: 8.9ms | Allocations: 5848)
+  Rendered shared/_nav.html.haml (Duration: 22.4ms | Allocations: 18303)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 139.2ms | Allocations: 55025)
+  Rendered layout layouts/application.html.erb (Duration: 224.5ms | Allocations: 122154)
+Completed 200 OK in 228ms (Views: 220.8ms | ActiveRecord: 5.9ms | Allocations: 123170)
+
+
+Started GET "/btn-gr.png" for ::1 at 2024-03-04 17:03:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/btn-gr.png"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:03:41 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2185)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2283)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 4.7ms | Allocations: 16708)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :head do %>
+<style>
+  body {background: #222;}
+  #footer {background: #999;}
+</style>
+<% end %>
+
+<% content_for :hd_inner do %>
+
+<div class="photo">
+  <%= link_to(image_tag(current_user.photo.url, :size => '200x200'), new_photo_url(@user.id), :title => current_user.login) %>
+</div>
+
+<div class="user_info">
+<h2><%= @user.login %> </h2>
+<% unless @user.tag_type.blank? %>
+<h3 style="font-size:22px;"><%= @user.tag_type.humanize %></h3>
+<% end %>
+<h3 style="font-size:22px;"><%= @user.location %> </h3>
+<!--<h3><%= @user.phone %> </h3>
+<h3><%= @user.email %> </h3>
+<h3><%= @user.dob %> </h3>-->
+</div>
+
+<% end %>
+
+<% if current_user.photo_file_name.blank? %>
+
+  <span class="upload picture">
+    <%#= facebox_link_to("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture", :url => new_photo_url) %>
+    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture"), new_photo_url, :rel => "shadowbox;width=500;height=300;") %>
+  </span>
+<% else %>
+
+<%= button_to "Destroy picture", { :controller=>'dashboard', :action=>'destroy_photo' }, :method => :delete, :confirm => "Are you sure?" %>
+<% end %>
+<% if current_user.demo_file_name.blank? %>
+
+<span class="upload" style="position:absolute;left:10px;top:50px;"><%#= facebox_link_to("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie", :url => new_demo_url) %>
+    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie"), new_demo_url, :rel => "shadowbox;width=500;height=400;") %>  
+  </span>
+
+<% else %>
+
+<span style="position:absolute;left:10px;top:50px;"><%= button_to "Destroy movie", { :controller=>'dashboard', :action=>'destroy_demo' }, method: :delete, :confirm => "Are you sure?" %></span>
+<% end %>
+<span class="upload" style="position:absolute;left:10px;top:80px;">
+	<%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add games"), new_folio_url) %>
+</span>
+<span class="upload" style="position:absolute;left:10px;top:110px;">
+<%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Edit games"), position_folio_url) %>
+</span>
+  
+     <div id="blog_wrapper">
+       <div class="pusher" id="slideToggle">
+       
+         <div id="blog2" name="blog"><%= link_to "[-] Hide create post", "javascript:blogger('blog1');",:id => "myHeader1" %>
+         </div> 
+       
+         <div id="blog1" name="blog" style="display:none;"><%= link_to "[+] Show create post", "javascript:blogger('blog2');",:id => "myHeader2" %>
+         </div>
+         <div class="clear">&nbsp;</div>
+       </div>
+       
+          <%= render 'shared/quick_post', :object => @post %>
+        
+       <div class="posts">
+         <%= render @posts %>
+         <div class="paginate"><%= will_paginate @posts %></div>
+       </div>
+       </div>
+      
+<% content_for :js do %>
+<%= javascript_include_tag 'blog' %>
+  <%#= javascript_include_tag 'tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
+<% javascript_tag do %>
+
+	$().ready(function() {
+
+		$('textarea.tinymce').tinymce({
+
+			// Location of TinyMCE script
+
+			script_url : '/assets/tinymce/jscripts/tiny_mce/tiny_mce.js',
+
+
+
+			// General options
+
+			mode : "exact",
+			elements : "elm1",
+			theme : "advanced",
+			skin : "o2k7",
+			skin_variant : "black",
+
+			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+
+
+
+			// Theme options
+
+			theme_advanced_buttons1 : "save,newdocument,|,styleselect,|,formatselect,|,fontselect,|,fontsizeselect",
+
+			theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,|,bold,italic,underline,strikethrough,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,fullscreen",
+
+			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,ltr,rtl",
+
+			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,|,charmap,emotions,iespell,media,advhr",
+			theme_advanced_buttons5 : "cut,copy,paste,pastetext,pasteword,|,insertdate,inserttime,preview,|,forecolor,backcolor,|,print,|,link,unlink,anchor,image,cleanup,help,code",
+
+			theme_advanced_toolbar_location : "top",
+
+			theme_advanced_toolbar_align : "center",
+
+			theme_advanced_statusbar_location : "bottom",
+
+			theme_advanced_resizing : true,
+
+
+			// Example content CSS (should be your site CSS)
+
+			//content_css : "css/content.css",
+
+
+
+			// Drop lists for link/image/media/template dialogs
+
+			template_external_list_url : "lists/template_list.js",
+
+			external_link_list_url : "lists/link_list.js",
+
+			external_image_list_url : "lists/image_list.js",
+
+			media_external_list_url : "lists/media_list.js",
+
+
+
+			// Replace values for the template plugin
+
+			template_replace_values : {
+
+				username : "<%= current_user.login %>",
+
+				staffid : "<%= current_user.id %>"
+
+			}
+
+		});
+
+	   jQuery('<input>').attr('type', 'hidden').attr('name','authenticity_token').val('<%= form_authenticity_token %>').prependTo('#submit_block');
+     jQuery('form#new_post').attr('method', 'POST');
+     jQuery('<input>').attr('type', 'submit').attr('name','commit').val('Submit Post').attr('id', "post_submit").appendTo('#submit_block');
+});
+
+
+jQuery(document).ready(function (){
+jQuery('.post_full iframe').each(function(){
+var url = jQuery(this).attr("src")
+jQuery(this).attr("src",url+"?wmode=transparent")
+});
+});
+<% end %>
+<% end %>
+<script type="text/javascript">
+if (document.location.protocol == 'file:') {
+	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+}
+</script>
+
+
+
+
+
+
+
+
+
+<% content_for :js do %> 
+<% javascript_tag do %>
+
+    $().ready(function() {
+
+    		$('textarea.tinymce').tinymce({
+
+    			// Location of TinyMCE script
+
+    			script_url : '/assets/tinymce/jscripts/tiny_mce/tiny_mce.js',
+
+
+
+    			// General options
+
+    			mode : "exact",
+    			elements : "elm1",
+    			theme : "advanced",
+    			skin : "o2k7",
+    			skin_variant : "black",
+
+    			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+
+
+
+    			// Theme options
+
+    			theme_advanced_buttons1 : "save,newdocument,|,styleselect,|,formatselect,|,fontselect,|,fontsizeselect",
+
+    			theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,|,bold,italic,underline,strikethrough,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,fullscreen",
+
+    			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,ltr,rtl",
+
+    			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,|,charmap,emotions,iespell,media,advhr",
+    			theme_advanced_buttons5 : "cut,copy,paste,pastetext,pasteword,|,insertdate,inserttime,preview,|,forecolor,backcolor,|,print,|,link,unlink,anchor,image,cleanup,help,code",
+
+    			theme_advanced_toolbar_location : "top",
+
+    			theme_advanced_toolbar_align : "center",
+
+    			theme_advanced_statusbar_location : "bottom",
+
+    			theme_advanced_resizing : true,
+
+
+    			// Example content CSS (should be your site CSS)
+
+    			content_css : "css/content.css",
+
+
+
+    			// Drop lists for link/image/media/template dialogs
+
+    			template_external_list_url : "lists/template_list.js",
+
+    			external_link_list_url : "lists/link_list.js",
+
+    			external_image_list_url : "lists/image_list.js",
+
+    			media_external_list_url : "lists/media_list.js",
+
+
+
+    			// Replace values for the template plugin
+
+    			template_replace_values : {
+
+    				username : "#{ current_user.login }",
+
+    				staffid : "#{ current_user.id }"
+
+    			}
+
+    		});
+
+    	   jQuery('<input>').attr('type', 'hidden').attr('name','authenticity_token').val('#{ form_authenticity_token }').prependTo('#submit_block');
+         jQuery('form#new_post').attr('method', 'POST');
+         jQuery('<input>').attr('type', 'submit').attr('name','commit').val('Submit Post').attr('id', "post_submit").appendTo('#submit_block');
+    });
+
+ 
+  jQuery(document).ready(function (){
+  jQuery('.post_full iframe').each(function(){
+  var url = jQuery(this).attr("src")
+  jQuery(this).attr("src",url+"?wmode=transparent")
+  });
+  });
+
+  if (document.location.protocol == 'file:') {
+  	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+  }
+<% end %>
+
+
+
+
+):
+1:    <% content_for :head do %>
+2:    <style>
+3:      body {background: #222;}
+4:      #footer {background: #999;}
+5:    </style>
+6:    <% end %>
+7:    
+8:    <% content_for :hd_inner do %>
+9:    
+10:    <div class="photo">
+11:      <%= link_to(image_tag(current_user.photo.url, :size => '200x200'), new_photo_url(@user.id), :title => current_user.login) %>
+12:    </div>
+13:    
+14:    <div class="user_info">
+15:    <h2><%= @user.login %> </h2>
+16:    <% unless @user.tag_type.blank? %>
+17:    <h3 style="font-size:22px;"><%= @user.tag_type.humanize %></h3>
+18:    <% end %>
+19:    <h3 style="font-size:22px;"><%= @user.location %> </h3>
+20:    <!--<h3><%= @user.phone %> </h3>
+21:    <h3><%= @user.email %> </h3>
+22:    <h3><%= @user.dob %> </h3>-->
+23:    </div>
+24:    
+25:    <% end %>
+26:    
+27:    <% if current_user.photo_file_name.blank? %>
+28:    
+29:      <span class="upload picture">
+30:        <%#= facebox_link_to("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture", :url => new_photo_url) %>
+31:        <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '200X200'} Add Picture"), new_photo_url, :rel => "shadowbox;width=500;height=300;") %>
+32:      </span>
+33:    <% else %>
+34:    
+35:    <%= button_to "Destroy picture", { :controller=>'dashboard', :action=>'destroy_photo' }, :method => :delete, :confirm => "Are you sure?" %>
+36:    <% end %>
+37:    <% if current_user.demo_file_name.blank? %>
+38:    
+39:    <span class="upload" style="position:absolute;left:10px;top:50px;"><%#= facebox_link_to("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie", :url => new_demo_url) %>
+40:        <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add Movie"), new_demo_url, :rel => "shadowbox;width=500;height=400;") %>  
+41:      </span>
+42:    
+43:    <% else %>
+44:    
+45:    <span style="position:absolute;left:10px;top:50px;"><%= button_to "Destroy movie", { :controller=>'dashboard', :action=>'destroy_demo' }, method: :delete, :confirm => "Are you sure?" %></span>
+46:    <% end %>
+47:    <span class="upload" style="position:absolute;left:10px;top:80px;">
+48:    	<%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Add games"), new_folio_url) %>
+49:    </span>
+50:    <span class="upload" style="position:absolute;left:10px;top:110px;">
+51:    <%= link_to(raw("#{image_tag 'add.gif', :size => '18x18', :title => '30mb/max'} Edit games"), position_folio_url) %>
+52:    </span>
+53:      
+54:         <div id="blog_wrapper">
+55:           <div class="pusher" id="slideToggle">
+56:           
+57:             <div id="blog2" name="blog"><%= link_to "[-] Hide create post", "javascript:blogger('blog1');",:id => "myHeader1" %>
+58:             </div> 
+59:           
+60:             <div id="blog1" name="blog" style="display:none;"><%= link_to "[+] Show create post", "javascript:blogger('blog2');",:id => "myHeader2" %>
+61:             </div>
+62:             <div class="clear">&nbsp;</div>
+63:           </div>
+64:           
+65:              <%= render 'shared/quick_post', :object => @post %>
+66:            
+67:           <div class="posts">
+68:             <%= render @posts %>
+69:             <div class="paginate"><%= will_paginate @posts %></div>
+70:           </div>
+71:           </div>
+72:          
+73:    <% content_for :js do %>
+74:    <%= javascript_include_tag 'blog' %>
+75:      <%#= javascript_include_tag 'tinymce/jscripts/tiny_mce/jquery.tinymce.js' %>  
+76:    <% javascript_tag do %>
+77:    
+78:    	$().ready(function() {
+79:    
+80:    		$('textarea.tinymce').tinymce({
+81:    
+82:    			// Location of TinyMCE script
+83:    
+84:    			script_url : '/assets/tinymce/jscripts/tiny_mce/tiny_mce.js',
+85:    
+86:    
+87:    
+88:    			// General options
+89:    
+90:    			mode : "exact",
+91:    			elements : "elm1",
+92:    			theme : "advanced",
+93:    			skin : "o2k7",
+94:    			skin_variant : "black",
+95:    
+96:    			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+97:    
+98:    
+99:    
+100:    			// Theme options
+101:    
+102:    			theme_advanced_buttons1 : "save,newdocument,|,styleselect,|,formatselect,|,fontselect,|,fontsizeselect",
+103:    
+104:    			theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,|,bold,italic,underline,strikethrough,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,fullscreen",
+105:    
+106:    			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,ltr,rtl",
+107:    
+108:    			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,|,charmap,emotions,iespell,media,advhr",
+109:    			theme_advanced_buttons5 : "cut,copy,paste,pastetext,pasteword,|,insertdate,inserttime,preview,|,forecolor,backcolor,|,print,|,link,unlink,anchor,image,cleanup,help,code",
+110:    
+111:    			theme_advanced_toolbar_location : "top",
+112:    
+113:    			theme_advanced_toolbar_align : "center",
+114:    
+115:    			theme_advanced_statusbar_location : "bottom",
+116:    
+117:    			theme_advanced_resizing : true,
+118:    
+119:    
+120:    			// Example content CSS (should be your site CSS)
+121:    
+122:    			//content_css : "css/content.css",
+123:    
+124:    
+125:    
+126:    			// Drop lists for link/image/media/template dialogs
+127:    
+128:    			template_external_list_url : "lists/template_list.js",
+129:    
+130:    			external_link_list_url : "lists/link_list.js",
+131:    
+132:    			external_image_list_url : "lists/image_list.js",
+133:    
+134:    			media_external_list_url : "lists/media_list.js",
+135:    
+136:    
+137:    
+138:    			// Replace values for the template plugin
+139:    
+140:    			template_replace_values : {
+141:    
+142:    				username : "<%= current_user.login %>",
+143:    
+144:    				staffid : "<%= current_user.id %>"
+145:    
+146:    			}
+147:    
+148:    		});
+149:    
+150:    	   jQuery('<input>').attr('type', 'hidden').attr('name','authenticity_token').val('<%= form_authenticity_token %>').prependTo('#submit_block');
+151:         jQuery('form#new_post').attr('method', 'POST');
+152:         jQuery('<input>').attr('type', 'submit').attr('name','commit').val('Submit Post').attr('id', "post_submit").appendTo('#submit_block');
+153:    });
+154:    
+155:    
+156:    jQuery(document).ready(function (){
+157:    jQuery('.post_full iframe').each(function(){
+158:    var url = jQuery(this).attr("src")
+159:    jQuery(this).attr("src",url+"?wmode=transparent")
+160:    });
+161:    });
+162:    <% end %>
+163:    <% end %>
+164:    <script type="text/javascript">
+165:    if (document.location.protocol == 'file:') {
+166:    	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+167:    }
+168:    </script>
+169:    
+170:    
+171:    
+172:    
+173:    
+174:    
+175:    
+176:    
+177:    
+178:    <% content_for :js do %> 
+179:    <% javascript_tag do %>
+180:    
+181:        $().ready(function() {
+182:    
+183:        		$('textarea.tinymce').tinymce({
+184:    
+185:        			// Location of TinyMCE script
+186:    
+187:        			script_url : '/assets/tinymce/jscripts/tiny_mce/tiny_mce.js',
+188:    
+189:    
+190:    
+191:        			// General options
+192:    
+193:        			mode : "exact",
+194:        			elements : "elm1",
+195:        			theme : "advanced",
+196:        			skin : "o2k7",
+197:        			skin_variant : "black",
+198:    
+199:        			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+200:    
+201:    
+202:    
+203:        			// Theme options
+204:    
+205:        			theme_advanced_buttons1 : "save,newdocument,|,styleselect,|,formatselect,|,fontselect,|,fontsizeselect",
+206:    
+207:        			theme_advanced_buttons2 : "justifyleft,justifycenter,justifyright,justifyfull,|,bold,italic,underline,strikethrough,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,fullscreen",
+208:    
+209:        			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,ltr,rtl",
+210:    
+211:        			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,|,charmap,emotions,iespell,media,advhr",
+212:        			theme_advanced_buttons5 : "cut,copy,paste,pastetext,pasteword,|,insertdate,inserttime,preview,|,forecolor,backcolor,|,print,|,link,unlink,anchor,image,cleanup,help,code",
+213:    
+214:        			theme_advanced_toolbar_location : "top",
+215:    
+216:        			theme_advanced_toolbar_align : "center",
+217:    
+218:        			theme_advanced_statusbar_location : "bottom",
+219:    
+220:        			theme_advanced_resizing : true,
+221:    
+222:    
+223:        			// Example content CSS (should be your site CSS)
+224:    
+225:        			content_css : "css/content.css",
+226:    
+227:    
+228:    
+229:        			// Drop lists for link/image/media/template dialogs
+230:    
+231:        			template_external_list_url : "lists/template_list.js",
+232:    
+233:        			external_link_list_url : "lists/link_list.js",
+234:    
+235:        			external_image_list_url : "lists/image_list.js",
+236:    
+237:        			media_external_list_url : "lists/media_list.js",
+238:    
+239:    
+240:    
+241:        			// Replace values for the template plugin
+242:    
+243:        			template_replace_values : {
+244:    
+245:        				username : "#{ current_user.login }",
+246:    
+247:        				staffid : "#{ current_user.id }"
+248:    
+249:        			}
+250:    
+251:        		});
+252:    
+253:        	   jQuery('<input>').attr('type', 'hidden').attr('name','authenticity_token').val('#{ form_authenticity_token }').prependTo('#submit_block');
+254:             jQuery('form#new_post').attr('method', 'POST');
+255:             jQuery('<input>').attr('type', 'submit').attr('name','commit').val('Submit Post').attr('id', "post_submit").appendTo('#submit_block');
+256:        });
+257:    
+258:     
+259:      jQuery(document).ready(function (){
+260:      jQuery('.post_full iframe').each(function(){
+261:      var url = jQuery(this).attr("src")
+262:      jQuery(this).attr("src",url+"?wmode=transparent")
+263:      });
+264:      });
+265:    
+266:      if (document.location.protocol == 'file:') {
+267:      	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+268:      }
+269:    <% end %>
+  
+app/views/dashboard/show.html.erb:276: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/dashboard" for ::1 at 2024-03-04 17:03:57 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 53.9ms | Allocations: 49418)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 16.0ms | Allocations: 12274)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 82.3ms | Allocations: 70442)
+  Rendered shared/_topbar.html.erb (Duration: 2.6ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.9ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 9.3ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 25.6ms | Allocations: 18286)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 30.2ms | Allocations: 35264)
+  Rendered layout layouts/application.html.erb (Duration: 167.0ms | Allocations: 147553)
+Completed 200 OK in 245ms (Views: 168.0ms | ActiveRecord: 9.6ms | Allocations: 181475)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:03:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:04:53 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 46.9ms | Allocations: 49417)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 17.0ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 76.0ms | Allocations: 70061)
+  Rendered shared/_topbar.html.erb (Duration: 3.1ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.7ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.5ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 9.6ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 22.8ms | Allocations: 18286)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 39.2ms | Allocations: 35265)
+  Rendered layout layouts/application.html.erb (Duration: 170.8ms | Allocations: 147178)
+Completed 200 OK in 246ms (Views: 171.4ms | ActiveRecord: 10.3ms | Allocations: 181063)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:05:31 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 15.2ms | Allocations: 12799)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 13.4ms | Allocations: 9430)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 38.0ms | Allocations: 27237)
+  Rendered shared/_topbar.html.erb (Duration: 0.4ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.7ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 6.3ms | Allocations: 2312)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 15.0ms | Allocations: 11147)
+  Rendered layout layouts/application.html.erb (Duration: 87.2ms | Allocations: 60793)
+Completed 200 OK in 93ms (Views: 86.9ms | ActiveRecord: 1.9ms | Allocations: 62627)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:05:43 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 47.2ms | Allocations: 49417)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 18.3ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 77.3ms | Allocations: 70445)
+  Rendered shared/_topbar.html.erb (Duration: 2.4ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.8ms | Allocations: 4673)
+  Rendered shared/_services.html.erb (Duration: 11.9ms | Allocations: 5863)
+  Rendered shared/_nav.html.haml (Duration: 32.5ms | Allocations: 18304)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 31.1ms | Allocations: 35266)
+  Rendered layout layouts/application.html.erb (Duration: 171.8ms | Allocations: 147579)
+Completed 200 OK in 242ms (Views: 172.7ms | ActiveRecord: 9.7ms | Allocations: 181476)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:05:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:06:13 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 51.0ms | Allocations: 49417)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 17.1ms | Allocations: 12270)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 82.2ms | Allocations: 70438)
+  Rendered shared/_topbar.html.erb (Duration: 2.6ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 4.7ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 7.9ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 21.2ms | Allocations: 18286)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 29.4ms | Allocations: 35264)
+  Rendered layout layouts/application.html.erb (Duration: 164.8ms | Allocations: 147549)
+Completed 200 OK in 243ms (Views: 166.6ms | ActiveRecord: 8.6ms | Allocations: 181481)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:06:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:06:40 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 48.1ms | Allocations: 49416)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 19.9ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 81.4ms | Allocations: 70283)
+  Rendered shared/_topbar.html.erb (Duration: 2.4ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 1.4ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 17.9ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 23.9ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 43.2ms | Allocations: 18286)
+  Rendered shared/_tab.html.erb (Duration: 1.2ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 66.0ms | Allocations: 35265)
+  Rendered layout layouts/application.html.erb (Duration: 231.4ms | Allocations: 147400)
+Completed 200 OK in 301ms (Views: 237.5ms | ActiveRecord: 9.2ms | Allocations: 181291)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:06:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:07:02 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 58.0ms | Allocations: 49417)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 21.1ms | Allocations: 12289)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 91.3ms | Allocations: 70306)
+  Rendered shared/_topbar.html.erb (Duration: 3.4ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.8ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 9.0ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 24.7ms | Allocations: 18288)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 31.4ms | Allocations: 35264)
+  Rendered layout layouts/application.html.erb (Duration: 179.5ms | Allocations: 147421)
+Completed 200 OK in 249ms (Views: 180.3ms | ActiveRecord: 9.4ms | Allocations: 181287)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:07:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:07:51 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 96.3ms | Allocations: 49416)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 34.5ms | Allocations: 12292)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 145.9ms | Allocations: 70202)
+  Rendered shared/_topbar.html.erb (Duration: 2.6ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.3ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 8.8ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 24.2ms | Allocations: 18300)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 42.8ms | Allocations: 35272)
+  Rendered layout layouts/application.html.erb (Duration: 243.7ms | Allocations: 147348)
+Completed 200 OK in 315ms (Views: 244.7ms | ActiveRecord: 9.2ms | Allocations: 181242)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:07:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:08:18 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 45.6ms | Allocations: 49416)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 16.9ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 74.5ms | Allocations: 70086)
+  Rendered shared/_topbar.html.erb (Duration: 3.4ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 4.9ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 8.2ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 22.9ms | Allocations: 18289)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 32.6ms | Allocations: 35282)
+  Rendered layout layouts/application.html.erb (Duration: 167.9ms | Allocations: 147224)
+Completed 200 OK in 242ms (Views: 169.0ms | ActiveRecord: 8.9ms | Allocations: 181118)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:08:47 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 52.4ms | Allocations: 49416)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 18.5ms | Allocations: 12274)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 81.9ms | Allocations: 70199)
+  Rendered shared/_topbar.html.erb (Duration: 2.7ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 4.9ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 8.2ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 23.1ms | Allocations: 18286)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 40.2ms | Allocations: 35265)
+  Rendered layout layouts/application.html.erb (Duration: 179.0ms | Allocations: 147324)
+Completed 200 OK in 252ms (Views: 180.3ms | ActiveRecord: 8.6ms | Allocations: 181210)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:08:49 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:08:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:09:48 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 79.3ms | Allocations: 49416)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 41.9ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 138.6ms | Allocations: 70165)
+  Rendered shared/_topbar.html.erb (Duration: 3.8ms | Allocations: 2025)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.1ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 8.3ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 23.8ms | Allocations: 18301)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 33.6ms | Allocations: 35273)
+  Rendered layout layouts/application.html.erb (Duration: 241.9ms | Allocations: 147311)
+Completed 200 OK in 321ms (Views: 243.1ms | ActiveRecord: 9.5ms | Allocations: 181210)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:09:54 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 11.8ms | Allocations: 12799)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 13.2ms | Allocations: 9414)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 32.8ms | Allocations: 27240)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 2.9ms | Allocations: 2310)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 29.6ms | Allocations: 11146)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 60759)
+Completed 200 OK in 94ms (Views: 88.6ms | ActiveRecord: 1.8ms | Allocations: 62595)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:10:34 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 58.0ms | Allocations: 49417)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 16.2ms | Allocations: 12286)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 92.3ms | Allocations: 70220)
+  Rendered shared/_topbar.html.erb (Duration: 3.7ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 4.8ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 8.0ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 22.1ms | Allocations: 18287)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 43.6ms | Allocations: 35265)
+  Rendered layout layouts/application.html.erb (Duration: 191.1ms | Allocations: 147346)
+Completed 200 OK in 255ms (Views: 192.2ms | ActiveRecord: 8.7ms | Allocations: 181220)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:10:45 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 47.4ms | Allocations: 49416)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.6ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 23.8ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 86.6ms | Allocations: 70212)
+  Rendered shared/_topbar.html.erb (Duration: 5.5ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.7ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 2.1ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 9.7ms | Allocations: 4661)
+  Rendered shared/_services.html.erb (Duration: 16.7ms | Allocations: 5849)
+  Rendered shared/_nav.html.haml (Duration: 61.3ms | Allocations: 18289)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered shared/_footerfr.html.haml (Duration: 37.0ms | Allocations: 35279)
+  Rendered layout layouts/application.html.erb (Duration: 245.0ms | Allocations: 147357)
+Completed 200 OK in 323ms (Views: 245.9ms | ActiveRecord: 9.4ms | Allocations: 181279)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:10:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:11:08 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 48.2ms | Allocations: 49416)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 19.8ms | Allocations: 12274)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 80.5ms | Allocations: 70174)
+  Rendered shared/_topbar.html.erb (Duration: 2.8ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.4ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 4.8ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 8.0ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 21.7ms | Allocations: 18286)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 34.6ms | Allocations: 35282)
+  Rendered layout layouts/application.html.erb (Duration: 176.5ms | Allocations: 147317)
+Completed 200 OK in 257ms (Views: 177.6ms | ActiveRecord: 8.8ms | Allocations: 181229)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:11:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:11:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:11:42 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 49.2ms | Allocations: 49416)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 15.7ms | Allocations: 12274)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 75.9ms | Allocations: 70137)
+  Rendered shared/_topbar.html.erb (Duration: 3.5ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.9ms | Allocations: 4666)
+  Rendered shared/_services.html.erb (Duration: 11.7ms | Allocations: 5856)
+  Rendered shared/_nav.html.haml (Duration: 35.4ms | Allocations: 18304)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 35.8ms | Allocations: 35268)
+  Rendered layout layouts/application.html.erb (Duration: 178.6ms | Allocations: 147283)
+Completed 200 OK in 251ms (Views: 179.8ms | ActiveRecord: 8.8ms | Allocations: 181190)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:12:26 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 11.0ms | Allocations: 12799)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 12.5ms | Allocations: 9414)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 38.4ms | Allocations: 28496)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.3ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 4.5ms | Allocations: 2310)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 39.5ms | Allocations: 11187)
+  Rendered layout layouts/application.html.erb (Duration: 117.3ms | Allocations: 62159)
+Completed 200 OK in 123ms (Views: 116.7ms | ActiveRecord: 1.9ms | Allocations: 64002)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:12:50 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 93.1ms | Allocations: 49416)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.5ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 38.8ms | Allocations: 12292)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 149.9ms | Allocations: 70203)
+  Rendered shared/_topbar.html.erb (Duration: 3.2ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.0ms | Allocations: 4663)
+  Rendered shared/_services.html.erb (Duration: 8.5ms | Allocations: 5851)
+  Rendered shared/_nav.html.haml (Duration: 25.6ms | Allocations: 18303)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 30.7ms | Allocations: 35271)
+  Rendered layout layouts/application.html.erb (Duration: 240.2ms | Allocations: 147354)
+Completed 200 OK in 313ms (Views: 240.9ms | ActiveRecord: 10.3ms | Allocations: 181252)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:12:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:13:14 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 48.3ms | Allocations: 49416)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 16.9ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 76.5ms | Allocations: 68990)
+  Rendered shared/_topbar.html.erb (Duration: 3.6ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.1ms | Allocations: 4670)
+  Rendered shared/_services.html.erb (Duration: 9.8ms | Allocations: 5860)
+  Rendered shared/_nav.html.haml (Duration: 31.8ms | Allocations: 18301)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 31.6ms | Allocations: 35271)
+  Rendered layout layouts/application.html.erb (Duration: 173.4ms | Allocations: 146245)
+Completed 200 OK in 244ms (Views: 174.3ms | ActiveRecord: 10.0ms | Allocations: 180139)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:13:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:13:48 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 54.0ms | Allocations: 49417)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 20.9ms | Allocations: 12286)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 87.9ms | Allocations: 70166)
+  Rendered shared/_topbar.html.erb (Duration: 2.8ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.5ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 5.3ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 8.6ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 23.3ms | Allocations: 18303)
+  Rendered shared/_tab.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 30.4ms | Allocations: 35273)
+  Rendered layout layouts/application.html.erb (Duration: 176.3ms | Allocations: 147309)
+Completed 200 OK in 248ms (Views: 178.0ms | ActiveRecord: 9.3ms | Allocations: 181206)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:14:03 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 53.4ms | Allocations: 49416)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 18.5ms | Allocations: 12269)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 84.0ms | Allocations: 70152)
+  Rendered shared/_topbar.html.erb (Duration: 2.5ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.6ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.8ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 10.8ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 24.8ms | Allocations: 18287)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 44.2ms | Allocations: 35277)
+  Rendered layout layouts/application.html.erb (Duration: 183.5ms | Allocations: 147286)
+Completed 200 OK in 260ms (Views: 184.7ms | ActiveRecord: 9.4ms | Allocations: 181212)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:14:22 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 58.9ms | Allocations: 49422)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 15.9ms | Allocations: 12301)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 84.6ms | Allocations: 69090)
+  Rendered shared/_topbar.html.erb (Duration: 8.1ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 1.0ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 1.2ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 19.6ms | Allocations: 4659)
+  Rendered shared/_services.html.erb (Duration: 27.2ms | Allocations: 5847)
+  Rendered shared/_nav.html.haml (Duration: 82.6ms | Allocations: 18290)
+  Rendered shared/_tab.html.erb (Duration: 2.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 34.8ms | Allocations: 35277)
+  Rendered layout layouts/application.html.erb (Duration: 257.7ms | Allocations: 146338)
+Completed 200 OK in 330ms (Views: 258.6ms | ActiveRecord: 8.8ms | Allocations: 180235)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:14:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/img/corners.gif" for ::1 at 2024-03-04 17:14:58 -0500
+Started GET "/img/horizontal.gif" for ::1 at 2024-03-04 17:14:58 -0500
+Started GET "/img/vertical.gif" for ::1 at 2024-03-04 17:14:58 -0500
+Started GET "/img/buttons.gif" for ::1 at 2024-03-04 17:14:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/img/horizontal.gif"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/corners.gif"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/vertical.gif"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/buttons.gif"):
+  
+Started POST "/create/post" for ::1 at 2024-03-04 17:15:25 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>Magnifique petit<span style=\"color: #339966;\"><strong><span style=\"text-decoration: underline;\"><span style=\"font-size: large;\"> truc </span></span></strong></span>pour faire des <span style=\"color: #ff6600;\">post</span></p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 961)
+
+
+  
+NoMethodError (undefined method `request_uri' for an instance of ActionDispatch::Request):
+  
+app/controllers/application_controller.rb:88:in `store_location'
+app/controllers/application_controller.rb:75:in `require_user'
+Started POST "/create/post" for ::1 at 2024-03-04 17:18:33 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>Magnifique petit<span style=\"color: #339966;\"><strong><span style=\"text-decoration: underline;\"><span style=\"font-size: large;\"> truc </span></span></strong></span>pour faire des <span style=\"color: #ff6600;\">post</span></p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 910)
+
+
+  
+NoMethodError (undefined method `request_uri' for an instance of ActionDispatch::Request):
+  
+app/controllers/application_controller.rb:88:in `store_location'
+app/controllers/application_controller.rb:75:in `require_user'
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:18:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:18:42 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 68.3ms | Allocations: 49418)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.5ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [2 times] (Duration: 39.9ms | Allocations: 12274)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 122.3ms | Allocations: 69061)
+  Rendered shared/_topbar.html.erb (Duration: 9.7ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.7ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.7ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 7.3ms | Allocations: 4663)
+  Rendered shared/_services.html.erb (Duration: 13.1ms | Allocations: 5853)
+  Rendered shared/_nav.html.haml (Duration: 41.6ms | Allocations: 18299)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 34.4ms | Allocations: 35266)
+  Rendered layout layouts/application.html.erb (Duration: 260.1ms | Allocations: 146309)
+Completed 200 OK in 334ms (Views: 261.6ms | ActiveRecord: 9.4ms | Allocations: 180161)
+
+
+Started POST "/create/post" for ::1 at 2024-03-04 17:18:47 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"ededed", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+[31mUnpermitted parameter: :tag_list. Context: { controller: PostsController, action: create, request: #<ActionDispatch::Request:0x000000019f3b2b30>, params: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"ededed", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit", "controller"=>"posts", "action"=>"create"} }[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mPost Create (10.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "tag_type", "url", "photo", "title", "body", "model", "created_at", "updated_at", "recorded_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 1], ["tag_type", "Restricted"], ["url", ""], ["photo", ""], ["title", ""], ["body", "ededed"], ["model", "textos"], ["created_at", "2024-03-04 22:18:47.473955"], ["updated_at", "2024-03-04 22:18:47.473955"], ["recorded_url", nil]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mUser Update All (4.1ms)[0m  [1m[33mUPDATE "users" SET "posts_count" = COALESCE("posts_count", 0) + $1 WHERE "users"."id" = $2[0m  [["posts_count", 1], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "Post"]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 31ms (ActiveRecord: 16.7ms | Allocations: 8061)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:18:47 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 14.8ms | Allocations: 12799)
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 20.3ms | Allocations: 13638)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 42.8ms | Allocations: 30345)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.0ms | Allocations: 2310)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 15.9ms | Allocations: 11146)
+  Rendered layout layouts/application.html.erb (Duration: 86.9ms | Allocations: 63984)
+Completed 200 OK in 92ms (Views: 85.7ms | ActiveRecord: 2.4ms | Allocations: 65825)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:20:19 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 49.8ms | Allocations: 49417)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.2ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 22.2ms | Allocations: 16516)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 84.2ms | Allocations: 73333)
+  Rendered shared/_topbar.html.erb (Duration: 3.6ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.7ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.6ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 6.0ms | Allocations: 4658)
+  Rendered shared/_services.html.erb (Duration: 9.9ms | Allocations: 5846)
+  Rendered shared/_nav.html.haml (Duration: 25.0ms | Allocations: 18287)
+  Rendered shared/_tab.html.erb (Duration: 0.7ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 40.0ms | Allocations: 35264)
+  Rendered layout layouts/application.html.erb (Duration: 182.9ms | Allocations: 150565)
+Completed 200 OK in 258ms (Views: 183.7ms | ActiveRecord: 9.4ms | Allocations: 184484)
+
+
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:20:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started POST "/create/post" for ::1 at 2024-03-04 17:20:26 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>tsteee</p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 908)
+
+
+  
+NoMethodError (undefined method `request_uri' for an instance of ActionDispatch::Request):
+  
+app/controllers/application_controller.rb:88:in `store_location'
+app/controllers/application_controller.rb:75:in `require_user'
+Started GET "/css/content.css" for ::1 at 2024-03-04 17:22:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/css/content.css"):
+  
+Started GET "/dashboard" for ::1 at 2024-03-04 17:22:31 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 45.4ms | Allocations: 49416)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [3 times] (Duration: 22.7ms | Allocations: 16491)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 79.4ms | Allocations: 74563)
+  Rendered shared/_topbar.html.erb (Duration: 2.5ms | Allocations: 2023)
+  Rendered shared/_seo.html.erb (Duration: 0.4ms | Allocations: 174)
+  Rendered shared/_hosting.html.erb (Duration: 0.5ms | Allocations: 203)
+  Rendered shared/_business.html.haml (Duration: 9.1ms | Allocations: 4663)
+  Rendered shared/_services.html.erb (Duration: 12.4ms | Allocations: 5853)
+  Rendered shared/_nav.html.haml (Duration: 37.1ms | Allocations: 18306)
+  Rendered shared/_tab.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered shared/_footerfr.html.haml (Duration: 46.5ms | Allocations: 35266)
+  Rendered layout layouts/application.html.erb (Duration: 194.8ms | Allocations: 151699)
+Completed 200 OK in 263ms (Views: 195.5ms | ActiveRecord: 9.0ms | Allocations: 185549)
+
+
+Started POST "/create/post" for ::1 at 2024-03-04 17:22:36 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>tester</p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+[31mUnpermitted parameter: :tag_list. Context: { controller: PostsController, action: create, request: #<ActionDispatch::Request:0x000000019f3744c0>, params: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>tester</p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit", "controller"=>"posts", "action"=>"create"} }[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mPost Create (1.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "tag_type", "url", "photo", "title", "body", "model", "created_at", "updated_at", "recorded_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 1], ["tag_type", "Restricted"], ["url", ""], ["photo", ""], ["title", ""], ["body", "<p>tester</p>"], ["model", "textos"], ["created_at", "2024-03-04 22:22:36.497961"], ["updated_at", "2024-03-04 22:22:36.497961"], ["recorded_url", nil]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mUser Update All (0.4ms)[0m  [1m[33mUPDATE "users" SET "posts_count" = COALESCE("posts_count", 0) + $1 WHERE "users"."id" = $2[0m  [["posts_count", 1], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "Post"]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 16ms (ActiveRecord: 3.7ms | Allocations: 5995)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:22:36 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 11.1ms | Allocations: 12839)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 4], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [4 times] (Duration: 29.1ms | Allocations: 18019)
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 50.7ms | Allocations: 35952)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 3.2ms | Allocations: 2325)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 13.1ms | Allocations: 11206)
+  Rendered layout layouts/application.html.erb (Duration: 98.7ms | Allocations: 69789)
+Completed 200 OK in 104ms (Views: 97.4ms | ActiveRecord: 2.5ms | Allocations: 71612)
+
+
+Started POST "/create/post" for ::1 at 2024-03-04 17:23:01 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>sadad dsd <span style=\"color: #ff00ff; font-size: x-large;\">sd a d ad ad </span>as d a</p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+[31mUnpermitted parameter: :tag_list. Context: { controller: PostsController, action: create, request: #<ActionDispatch::Request:0x000000019f393a28>, params: {"authenticity_token"=>"[FILTERED]", "post"=>{"model"=>"textos", "photo"=>"", "url"=>"", "title"=>"", "body"=>"<p>sadad dsd <span style=\"color: #ff00ff; font-size: x-large;\">sd a d ad ad </span>as d a</p>", "tag_list"=>"", "tag_type"=>"Restricted"}, "commit"=>"Submit", "controller"=>"posts", "action"=>"create"} }[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mPost Create (1.9ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "tag_type", "url", "photo", "title", "body", "model", "created_at", "updated_at", "recorded_url") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["user_id", 1], ["tag_type", "Restricted"], ["url", ""], ["photo", ""], ["title", ""], ["body", "<p>sadad dsd <span style=\"color: #ff00ff; font-size: x-large;\">sd a d ad ad </span>as d a</p>"], ["model", "textos"], ["created_at", "2024-03-04 22:23:01.386694"], ["updated_at", "2024-03-04 22:23:01.386694"], ["recorded_url", nil]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mUser Update All (0.3ms)[0m  [1m[33mUPDATE "users" SET "posts_count" = COALESCE("posts_count", 0) + $1 WHERE "users"."id" = $2[0m  [["posts_count", 1], ["id", 1]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 5], ["taggable_type", "Post"]]
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:71:in `create'
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms | Allocations: 5394)
+
+
+Started GET "/dashboard" for ::1 at 2024-03-04 17:23:01 -0500
+Processing by DashboardController#show as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/show.html.erb within layouts/application
+  Rendered shared/_quick_post.html.haml (Duration: 12.7ms | Allocations: 12839)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1 ORDER BY created_at DESC LIMIT $2 OFFSET $3[0m  [["user_id", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/dashboard/show.html.erb:69
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 5], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 4], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 3], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.0ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "Post"], ["context", "tags"]]
+  ↳ app/views/posts/_post.html.erb:152
+  Rendered collection of posts/_tag.html.erb [0 times] (Duration: 0.1ms | Allocations: 28)
+  Rendered collection of posts/_post.html.erb [5 times] (Duration: 36.7ms | Allocations: 22565)
+  [1m[36mPost Count (5.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/dashboard/show.html.erb:70
+  Rendered dashboard/show.html.erb within layouts/application (Duration: 66.0ms | Allocations: 41097)
+  Rendered shared/_topbar.html.erb (Duration: 0.2ms | Allocations: 266)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 0.8ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 2.9ms | Allocations: 2325)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_footerfr.html.haml (Duration: 16.1ms | Allocations: 11206)
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | Allocations: 74935)
+Completed 200 OK in 116ms (Views: 101.5ms | ActiveRecord: 9.0ms | Allocations: 76757)
+
+
+Started GET "/" for ::1 at 2024-03-04 19:08:40 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 66.5ms | Allocations: 24024)
+  Rendered pages/index.html.erb within layouts/application (Duration: 72.7ms | Allocations: 24572)
+  Rendered shared/_topbar.html.erb (Duration: 0.6ms | Allocations: 295)
+  Rendered shared/_seo.html.erb (Duration: 0.2ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.2ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.5ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 9.9ms | Allocations: 2325)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (29.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 76.9ms | Allocations: 14823)
+  Rendered layout layouts/application.html.erb (Duration: 243.0ms | Allocations: 62551)
+Completed 200 OK in 255ms (Views: 203.6ms | ActiveRecord: 43.2ms | Allocations: 63083)
+
+
+Started GET "/" for ::1 at 2024-03-04 20:23:42 -0500
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered shared/_banner.html.haml (Duration: 34.3ms | Allocations: 8893)
+  Rendered pages/index.html.erb within layouts/application (Duration: 34.9ms | Allocations: 9039)
+  Rendered shared/_topbar.html.erb (Duration: 0.3ms | Allocations: 293)
+  Rendered shared/_seo.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered shared/_hosting.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered shared/_business.html.haml (Duration: 0.1ms | Allocations: 53)
+  Rendered shared/_services.html.erb (Duration: 1.0ms | Allocations: 376)
+  Rendered shared/_nav.html.haml (Duration: 7.1ms | Allocations: 2325)
+  Rendered shared/_tab.html.erb (Duration: 0.1ms | Allocations: 84)
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY position ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:49:in `current_user'
+  Rendered shared/_footerfr.html.haml (Duration: 45.3ms | Allocations: 14783)
+  Rendered layout layouts/application.html.erb (Duration: 137.0ms | Allocations: 46938)
+Completed 200 OK in 139ms (Views: 105.0ms | ActiveRecord: 32.7ms | Allocations: 47188)
+
+

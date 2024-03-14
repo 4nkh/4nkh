@@ -32,6 +32,7 @@ class DashboardController < ApplicationController
         #photo_file_name: params[:user][:photo].original_filename)
         # puts @user.photo_file_name.nil?
         #photo_file_name: params[:user][:photo].original_filename, photo_content_type: params[:user][:photo].content_type)#, photo_file_size: params[:user][:photo].original_file_name#user_avatar_params)
+        #puts is good too
         #Rails.logger.debug("my content_type :  #{user_photo_params}")
         #Rails.logger.debug("my object :  #{params[:user][:photo].content_type}")
         #add_column :users, :photo_file_name, :string
@@ -42,7 +43,7 @@ class DashboardController < ApplicationController
         #photo_file_name: params[:user][:original_filename], photo_content_type: params[:user][:content_type])
         flash[:notice] = "Your picture was successfully created"
         format.json {render :json => {response: 'success', data: "parent.location.href = \"#{dashboard_path}\";" }}
-      #redirect_to dashboard_url
+        #redirect_to dashboard_url
       else
         flash[:notice] = "We accept JPG - JPEG - PNG - BMP format only!"
         #format.js {render js: "parent.location.href = \"#{dashboard_path}\";"}

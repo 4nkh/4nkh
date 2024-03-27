@@ -23,7 +23,9 @@ module Ankh
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-  
+    #
+    
+    
     #config.require_dependency 'uglifier'
    
     config.plugins = [ :all ]
